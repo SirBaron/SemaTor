@@ -1,10 +1,10 @@
-![SemaTor](./banner.png)
+![SemaTor](https://sirbaron.github.io/SemaTor/readme/banner.png)
 
 # SemaTor
 
-**An Atari ST translation layer. Not an emulator.**
+**An Atari ST compatibility and translation layer built for games.**
 
-SemaTor runs Atari ST games by translating them: the 68000 code executes,
+SemaTor runs Atari ST games using a 68000 interpreter: the game code executes,
 the ST's hardware and operating-system interface are reproduced, and where
 a game's hot routines are understood they can be replaced with native code
 that does the same job faster. There is no Atari TOS ROM inside it and none
@@ -13,49 +13,57 @@ SemaTor's own implementations, written from scratch for this project.
 
 You supply the disk image. SemaTor supplies the machine.
 
-> **What it contains none of:** no Atari TOS ROM, no game code, graphics,
-> audio or data of any kind, and no source from any other emulator. The full
-> statement ships with every download as `COPYRIGHT.txt`.
+> **Bring your own games.** Public builds contain no Atari TOS ROM or playable
+> game disk images. Compatibility profiles include identifiers and small
+> executable patches; third-party components carry their own licences.
 
 <p align="center">
   <a href="https://discord.gg/DdHfSGrdFc"><b>Discord</b></a> &nbsp;·&nbsp;
   <a href="https://www.youtube.com/@SemaTorST"><b>YouTube</b></a> &nbsp;·&nbsp;
-  <a href="https://github.com/SirBaron/SemaTor/releases/latest"><b>Latest release</b></a>
+  <a href="https://github.com/SirBaron/SemaTor/releases/latest"><b>Windows / Linux releases</b></a>
 </p>
 
 ---
 
+Documentation checked against development build **1.1.211**. Public downloads
+are compiled Windows and Linux builds; the source remains private. The public
+Releases page may lag behind development.
+
 ## What makes it different
 
-**It is not trying to be a general-purpose ST.** Emulators aim to run
-everything by being a faithful machine. SemaTor aims to run *games* well —
+**It is not trying to be a general-purpose ST.** It uses CPU interpretation
+and hardware emulation alongside game-specific native replacements. SemaTor
+aims to run *games* well —
 and for the ones it knows, better than the original hardware could — by
 understanding what the game is doing and meeting it halfway.
 
-- **Native routines, audited against the original.** A game profile can
-  mark hot 68000 routines — a raster loop, a sprite blit, a sound driver —
-  for replacement by native code. `--audit-native` runs both the native
-  routine *and* the 68000 code it replaces, keeps the 68000 answer, and
-  reports every disagreement. A replacement cannot change behaviour without
-  being caught.
+- **Native routines with comparison tools.** Profiles can identify hot 68000
+  routines for native replacements. `--audit-native` compares supported,
+  exercised routines against interpreter execution and retains the reference
+  result. These isolated comparisons can find differences; they do not prove
+  every game path or interrupt-timing case correct.
 - **Enhancements, per game.** Where a game is understood, its profile can
   offer things the ST never had: cleaner scrolling, extended play areas
-  (Arkanoid II's wide mode), audio fixes, cheats. Each is a switch, on or
-  off, and `--safe` turns them all off.
+  (including supported widescreen profiles), audio fixes and cheats. Use the
+  game’s settings to disable these. `--safe` is a diagnostic startup mode,
+  not an all-enhancements-off switch.
 - **No TOS.** The operating-system interface is documented behaviour, and
   SemaTor implements it. That is why it needs no ROM — and why it is not a
   copy of one.
-- **Frame generation.** Optional generated in-between frames, on the GPU,
-  with a native optical-flow path on NVIDIA and a compute path elsewhere.
+- **Frame generation.** Optional generated in-between frames using CPU methods,
+  GPU compute or NVIDIA optical flow where supported.
+  Availability and fallbacks depend on the selected backend and driver.
 - **Presentation built for the ST's picture.** Sharp pixels, simple
   filters, or a full CRT studio — beam, phosphor, mask, glass, colour —
-  with HDR output where the display offers it, and beam-accurate timing on
-  Android through `VK_GOOGLE_display_timing`.
-- **Written from scratch, and shown to be.** The 68000 interpreter, the
+  with HDR on supported desktop Vulkan/display combinations. Experimental
+  temporal Beam depends on timing support, refresh rate and configuration;
+  it is not guaranteed merely because a device supports Vulkan.
+- **A project-developed core.** The 68000 interpreter, the
   video and YM2149 and MFP, the WD1772 and its disk formats, the ACIA and
   IKBD, the scheduler, the cycle clock, the profile system, the debugger
-  and the test suites. `docs/PROVENANCE.txt`, in every download,
-  records the similarity measurements taken against other emulators.
+  and the test suites are developed for this project. Third-party components
+  are separately credited. Historical provenance notes describe earlier
+  comparisons; they are not a certification of every subsequent build.
 
 ---
 
@@ -63,17 +71,19 @@ understanding what the game is doing and meeting it halfway.
 
 | | |
 |---|---|
-| **Linux** | x86-64 binary. Needs only SDL2 (SDL2_image optional, for cover art). |
-| **Windows** | `SemaTor.exe` with `SDL2.dll` beside it. |
-| **Android** | arm64 APK. Phones, and dual-screen handhelds — on the **AYN Thor** the game runs on the top screen while the F11/F12 menus, the controls and a per-game page live on the lower one. |
+| **Linux** | Public x86-64 build. Requires SDL2 and appropriate graphics drivers. PNG/JPEG/BMP decoding is bundled; network artwork fetching uses `curl`. |
+| **Windows** | Public build: `SemaTor.exe` with `SDL2.dll` beside it. |
+| **Android** | ARM64 development/test build for phones and supported dual-screen handhelds, including **AYN Thor**. Android is not part of the stated public Windows/Linux release offering. |
 
 Debug builds ship for Linux and Windows alongside the release builds; they
-write a continuous machine trace per game session.
+support full capture with ten matching diagnostic files per game session.
+Run a debug build or pass `--debug`; `--debug-log` alone is the trace option,
+not the complete capture. Reports update during play and finish on normal exit.
 
-![The library on a desktop](./desktop-library.png)
+![The library on a desktop](https://sirbaron.github.io/SemaTor/readme/desktop-library.png)
 
-<sub>Screenshots show SemaTor's own placeholder disks, not game artwork — no
-game content is included with SemaTor, and none is shown here.</sub>
+<sub>Screenshots illustrate the interface; appearance can vary by version and
+selected layout.</sub>
 
 ---
 
@@ -83,20 +93,25 @@ game content is included with SemaTor, and none is shown here.</sub>
 - A menu of lists — recently played, all games, enhanced, favourites,
   compilations, hidden — with one list on screen at a time.
 - Cards that carry their own name, a brass **ENHANCED** plate on any game
-  with a profile, and a mark for saved games; the focused game described
+  with available enhancements, and a mark for saved games; the focused game described
   beside them.
 - Cover art fetched per game or for the whole collection, from
   libretro-thumbnails, with your own covers kept.
+- Alternate sources grouped under one title share its Enhanced badge and
+  enhancement settings. Launch still verifies executable compatibility; the
+  badge alone does not verify an unknown disk version.
+- Desktop cover import and game-folder selection open built-in file browsers.
+  Several folders can be scanned without moving the disks.
 - Search as you type, an A–Z jump that offers only the letters you own games
   under, sort by title, year, publisher or last played, and *Surprise me*.
 - Saved games with previews, and *Continue* straight into the latest.
 - A desktop layout with a permanent details rail, hover, mouse-wheel
   scrolling and a cover-size slider; a phone layout built for a thumb; and
   the AYN Thor's second screen used as a disk sleeve for the chosen game.
-  Console-style and classic desktop layouts are a keypress apart (F9).
+  Desktop and classic library layouts are a keypress apart (F9).
 - Starting a game flies its cover into the dark before the ST takes over.
 
-![The library on a phone](./phone-library.png)
+![The library on a phone](https://sirbaron.github.io/SemaTor/readme/phone-library.png)
 
 ### The machine
 - 68000 interpreter with cycle clock and scheduler; ST video, YM2149, MFP,
@@ -113,19 +128,24 @@ game content is included with SemaTor, and none is shown here.</sub>
 - **Sharp pixels**, **simple filters** (scanlines, blur, glow, curvature,
   mask, motion) and a **CRT studio** — beam, phosphor persistence, mask
   type, tube glass and reflections, calibration — each a page of steppers.
-- **HDR** output where the display supports it, with white and peak
-  controls.
+- **HDR** through supported desktop Vulkan/display configurations, with white
+  and peak controls. OpenGL and current Android presentation use SDR.
 - **Frame generation** with an NVIDIA optical-flow path (`VK_NV_optical_flow`)
-  and a GPU compute path for everything else; native frames are always one
-  press away.
-- OpenGL and Vulkan back ends; on Android, native Vulkan presentation with
-  beam timing.
+  alongside GPU compute and CPU modes. The chosen mode and hardware determine
+  availability; generated frames can still show artefacts.
+- OpenGL and Vulkan backends. Temporal Beam is experimental and requires
+  compatible timing/presentation support; it may remain unavailable.
+- In 1.1.211, the full CRT preserves finer frame-generated movement while
+  retaining the original ST scanline spacing. This does not eliminate every
+  optical-flow artefact.
 
-![The AYN Thor's lower screen](./thor-deck.png)
+![The AYN Thor's lower screen](https://sirbaron.github.io/SemaTor/readme/thor-deck.png)
 
 ### Sound
-- YM2149 with the game's own sound driver observed, so effects and music
-  are what the game intended; a mixer that records to WAV on request.
+- YM2149 synthesis, separate music/effects options for supported profiles,
+  and WAV recording. Sound compatibility is still per game. Xenon’s modern
+  engine received a repeated-envelope-trigger fix in 1.1.210; all effects
+  have not yet been verified in a gameplay test.
 
 ### For understanding games
 The debugger is part of the product, not a build option:
@@ -148,9 +168,9 @@ Profiles identify a game by the hash of its program, not by its file name.
 |---|---|
 | Arkanoid II: Revenge of Doh | native routines, wide mode, enhancements |
 | Black Lamp | |
-| Return to Genesis | audio |
-| SWIV | |
-| Turrican II | |
+| Return to Genesis | independent music/effects; 16:9 and 21:9 world-view options |
+| SWIV | profile-specific enhancements and cheats |
+| Turrican II | guarded drawing acceleration, widescreen options and audio controls |
 | Xenon | sound driver |
 | Xenon 2: Megablast | |
 | Zynaps | |
@@ -172,17 +192,18 @@ native or enhancement work. See the caveats below.
   worked on in depth. Anything else is running on the general machine and
   may be perfect, imperfect or not start at all. A disk that decodes but
   has no recognised startup is reported as such rather than guessed at.
-- **It is a translation layer.** Where a native routine has replaced 68000
-  code, the two have been audited against each other — but a profile is a
-  claim about a specific game, and a modified or unusual version of that
-  game may not match it.
+- **Profiles target particular executable versions.** Native replacements
+  and patches require a compatible match. A modified or unusual version
+  may run without those enhancements or may not work.
 - **Frame generation is optional and, on mobile, experimental.** Original
   frames are recommended there and are one press away.
 - **NVIDIA optical flow needs an NVIDIA GPU and driver that expose
-  `VK_NV_optical_flow`.** Elsewhere the compute path is used automatically.
+  `VK_NV_optical_flow`.** Other modes are available; fallback behavior depends
+  on the selected mode and backend.
 - **Simple filters and the CRT studio depend on the GPU driver.** The
-  chain checks its own output and steps aside if a driver produces nothing,
-  rather than leaving a black screen.
+  OpenGL chain performs a controlled startup output check, and detected CRT
+  setup failures retain normal rendering. These checks cannot catch every
+  driver or runtime rendering fault.
 - **Cover art comes from the network** (libretro-thumbnails) and only when
   you ask for it. Nothing is fetched without a press.
 - **Android needs "All files access"** so it can read your games folder in
@@ -194,23 +215,35 @@ native or enhancement work. See the caveats below.
 
 ## Getting started
 
-**Linux**
+**Linux** — extract the desktop download, open a terminal in its folder, then:
 ```sh
-chmod +x semator-linux-x86_64        # downloads arrive without the execute bit
-./semator-linux-x86_64               # run from a terminal the first time
+sh install-linux.sh
 ```
-or `sh run-semator.sh`, which does the chmod and names the SDL2 package for
-your distribution.
+The installer requires Python 3 and defaults to `~/Games/SemaTor`. Double-clicking
+an `.sh` file may open an editor because of your file-manager association;
+running the command above executes it.
+
+For portable use, run `sh run-semator.sh`, or:
+```sh
+chmod +x semator-linux-x86_64
+./semator-linux-x86_64
+```
 
 **Windows** — run `SemaTor.exe` with `SDL2.dll` beside it.
 
-**Android** — sideload the APK, grant "All files access", drop disks into
+**Android test builds** — if supplied an APK, sideload it, grant "All files access", and put disks into
 `Internal storage/SemaTor/games`.
 
 Then add your games folder in the library, or:
 ```sh
 ./semator-linux-x86_64 --disk "Xenon 2.st"
 ```
+
+Settings, saves, imported covers and registered game-folder locations live
+outside the release folder: normally `~/.local/share/semator` on Linux
+(or `$XDG_DATA_HOME/semator`) and `%LOCALAPPDATA%/SemaTor` on Windows.
+Replacing application files should therefore retain your setup. The in-app
+**Settings → User data** page identifies the active location.
 
 Full notes ship with the download: `RUNNING.txt` for each platform and
 `INPUT.txt` for the controls.
@@ -219,11 +252,14 @@ Full notes ship with the download: `RUNNING.txt` for each platform and
 
 ## About the source
 
-SemaTor's source is not published. The releases here are the finished
-binaries, built from one tree for Linux, Windows and Android, and every
-release is checked against the project's own test suite — several hundred
-targets covering the 68000 core, the hardware layer, the disk formats, the
-audio, the GPU chains and every interface layout at every screen shape.
+SemaTor's source remains private. Public releases are compiled Windows and
+Linux builds, not source distributions. Android ARM64 builds are developed and
+tested separately.
+
+The project has an extensive automated test suite. Each release receives
+checks relevant to its changes; this does not mean every test, game, graphics
+driver or device was exercised for every release. Hardware gameplay reports
+remain essential.
 
 Faults and compatibility reports are very welcome through
 [Issues](https://github.com/SirBaron/SemaTor/issues) or on Discord, and get
@@ -248,10 +284,11 @@ SemaTor © David Baron. Written from scratch. All rights reserved — see
 [LICENSE](LICENSE): the binaries are free to download and use, and the code
 is not licensed for reuse.
 
-It links against SDL2 and, optionally, SDL2_image, and includes the Vulkan
-headers and stb_image, which carry their own licences — `docs/LICENSING.txt`
-in the download has the detail. What SemaTor does and does not contain is set
-out in `COPYRIGHT.txt`, which ships with every release.
+It uses SDL2, Vulkan headers and bundled image-decoding code, with platform
+system libraries where appropriate. Third-party notices and licences remain
+in the download. Historical `COPYRIGHT.txt`, `LICENSING.txt` and provenance
+notes should be read alongside those component notices, rather than as a
+current independent certification of the entire build.
 
 Atari and Atari ST are trademarks of their respective owners. This project
 is not affiliated with them.
