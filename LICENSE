@@ -1,0 +1,34 @@
+SemaTor
+Copyright (C) 2026 David Baron. All rights reserved.
+
+SemaTor's source code is not published. This notice covers the released
+binaries and everything distributed with them.
+
+YOU MAY
+  Download, install and use the released binaries, for any purpose,
+  including at work, with no fee and no registration.
+  Write about SemaTor, review it, record it, stream it, and show it running.
+  Report faults and suggest changes, through Issues or Discord.
+
+YOU MAY NOT, without written permission
+  Redistribute modified binaries.
+  Disassemble, decompile or reverse engineer SemaTor in order to reuse its
+  design or its code in another project.
+  Sell it, or bundle it with anything sold.
+
+THIRD-PARTY COMPONENTS
+  SemaTor links against SDL2 (zlib licence) and optionally SDL2_image, and
+  includes the Vulkan headers (Apache-2.0 OR MIT) and stb_image (public
+  domain). Those components keep their own licences; this notice covers
+  SemaTor's own work only. docs/LICENSING.txt in the download has the detail.
+
+NO GAME CONTENT
+  This project contains no Atari TOS ROM and none is required, and no game
+  code, graphics, audio or data. COPYRIGHT.txt in the download sets this out
+  in full.
+
+NO WARRANTY
+  SemaTor is provided as is, without warranty of any kind. The author is
+  not liable for any damage arising from its use.
+
+Permission beyond this notice: open an issue, or ask.

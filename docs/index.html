@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SemaTor — an Atari ST translation layer</title>
+<meta name="description" content="SemaTor runs Atari ST games by translating them. No TOS ROM needed, none included. Linux, Windows and Android.">
+<meta property="og:title" content="SemaTor — an Atari ST translation layer">
+<meta property="og:description" content="Not an emulator. Runs the 68000 games natively. No TOS ROM needed.">
+<meta property="og:image" content="readme/banner.png">
+<style>
+/* The library's own palette: navy, cyan, magenta, and a vector grid. */
+:root{
+  --ink:#eafdff; --dim:#9fc0d6; --faint:#6d8ca4;
+  --cyan:#7cf2fb; --magenta:#cd8bc7; --amber:#e0a05a;
+  --bg:#060d18; --panel:#16293c; --panel2:#0a141f; --edge:#2a3f55;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.65 ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--cyan)}
+.grid{
+  position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    linear-gradient(180deg,#14273c 0%,#050a12 100%);
+}
+.grid::after{  /* the horizon lines, fading down */
+  content:""; position:absolute; inset:38% 0 0 0;
+  background:
+    repeating-linear-gradient(to bottom, rgba(20,48,74,.55) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(to right, rgba(20,48,74,.35) 0 1px, transparent 1px 90px);
+  mask-image:linear-gradient(to bottom, transparent, #000 40%, #000);
+}
+.scan{position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:repeating-linear-gradient(to bottom, rgba(3,7,14,.35) 0 1px, transparent 1px 3px)}
+.wrap{max-width:1100px; margin:0 auto; padding:0 20px}
+header{padding:54px 0 28px}
+.brand{display:flex; gap:26px; align-items:center; flex-wrap:wrap}
+.brand img{width:132px; height:auto; border-radius:14px; box-shadow:0 8px 30px rgba(0,0,0,.6)}
+h1{font-size:clamp(34px,6vw,58px); margin:0; letter-spacing:.5px}
+.tag{color:var(--cyan); font-size:clamp(17px,2.4vw,24px); margin:6px 0 0}
+.sub{color:var(--dim); max-width:62ch; margin:14px 0 0}
+.rule{height:3px; width:220px; margin:26px 0 0;
+  background:linear-gradient(90deg,var(--cyan),var(--magenta))}
+.cta{display:flex; gap:14px; flex-wrap:wrap; margin:30px 0 0}
+.btn{
+  display:inline-block; padding:14px 26px; border-radius:14px; text-decoration:none;
+  color:var(--ink); background:linear-gradient(180deg,#1d5e74,#0f3547);
+  border:1px solid #2c6f88; box-shadow:0 3px 0 #050c16;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-1px); box-shadow:0 5px 0 #050c16}
+.btn:active{transform:translateY(3px); box-shadow:none}
+.btn.quiet{background:linear-gradient(180deg,#18293a,#0d1724); border-color:#2b4058}
+.btn.discord{background:linear-gradient(180deg,#4a4f9c,#2d3170); border-color:#6a70c8}
+.btn.tube{background:linear-gradient(180deg,#8e2b2b,#5d1b1b); border-color:#c14545}
+section{padding:34px 0}
+h2{font-size:26px; margin:0 0 6px; letter-spacing:.4px}
+h2 .mark{color:var(--magenta)}
+.lead{color:var(--dim); margin:0 0 22px; max-width:70ch}
+.cards{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{
+  background:linear-gradient(180deg,var(--panel),var(--panel2));
+  border:1px solid var(--edge); border-radius:16px; padding:20px 22px;
+}
+.card h3{margin:0 0 8px; font-size:17px; color:var(--ink)}
+.card p{margin:0; color:var(--dim); font-size:15px}
+.shot{margin:22px 0 0; border:1px solid var(--edge); border-radius:16px; overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,.55); background:#0a141f}
+.shot img{display:block; width:100%; height:auto}
+.shot figcaption{padding:11px 16px; color:var(--faint); font-size:13px;
+  border-top:1px solid var(--edge)}
+.two{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.note{border-left:3px solid var(--amber); background:rgba(224,160,90,.07);
+  padding:14px 18px; border-radius:0 12px 12px 0; color:#ffd9ab; margin:18px 0 0}
+ul.plain{margin:0; padding-left:20px; color:var(--dim)}
+ul.plain li{margin:7px 0}
+footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
+  border-top:1px solid var(--edge); margin-top:30px}
+@media (prefers-color-scheme: light){ /* the library has one look; keep it */ }
+</style>
+</head>
+<body>
+<div class="grid"></div><div class="scan"></div>
+
+<header class="wrap">
+  <div class="brand">
+    <img src="readme/logo.png" alt="SemaTor">
+    <div>
+      <h1>SemaTor</h1>
+      <p class="tag">An Atari ST translation layer. Not an emulator.</p>
+    </div>
+  </div>
+  <p class="sub">The 68000 code executes, the ST's hardware and operating-system
+     interface are reproduced, and where a game's hot routines are understood they
+     can be replaced with native code that does the same job faster.
+     <strong>No TOS ROM needed — none included, none required.</strong></p>
+  <div class="rule"></div>
+  <div class="cta">
+    <a class="btn" href="https://github.com/SirBaron/SemaTor/releases/latest">Download the latest release</a>
+    <a class="btn quiet" href="https://github.com/SirBaron/SemaTor">Source and issues</a>
+    <a class="btn discord" href="https://discord.gg/DdHfSGrdFc">Discord</a>
+    <a class="btn tube" href="https://www.youtube.com/@SemaTorST">YouTube</a>
+  </div>
+</header>
+
+<section class="wrap">
+  <h2>What makes it <span class="mark">different</span></h2>
+  <p class="lead">Emulators aim to run everything by being a faithful machine.
+     SemaTor aims to run <em>games</em> well — and for the ones it knows, better
+     than the original hardware could.</p>
+  <div class="cards">
+    <div class="card"><h3>Native routines, audited</h3>
+      <p>A profile can mark hot 68000 routines for native replacement.
+         <code>--audit-native</code> runs both, keeps the 68000 answer, and reports
+         every disagreement — a replacement cannot change behaviour unnoticed.</p></div>
+    <div class="card"><h3>Enhancements, per game</h3>
+      <p>Cleaner scrolling, extended play areas, audio fixes, cheats. Each a
+         switch, and <code>--safe</code> turns them all off.</p></div>
+    <div class="card"><h3>No TOS</h3>
+      <p>GEMDOS, BIOS and XBIOS are implemented directly. That is why no ROM is
+         needed — and why it is not a copy of one.</p></div>
+    <div class="card"><h3>Frame generation</h3>
+      <p>Optional generated in-between frames on the GPU, with a native
+         optical-flow path on NVIDIA and a compute path elsewhere.</p></div>
+    <div class="card"><h3>A picture worth the pixels</h3>
+      <p>Sharp pixels, simple filters, or a full CRT studio — beam, phosphor,
+         mask, glass, colour — with HDR where the display offers it.</p></div>
+    <div class="card"><h3>Built for two screens</h3>
+      <p>On a dual-screen handheld the game runs on top while the menus, the
+         controls and a per-game page live on the lower panel.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>The <span class="mark">library</span></h2>
+  <p class="lead">One place for your disks: lists, covers, saved games with
+     previews, search as you type, and a layout that suits the screen it is on.</p>
+  <figure class="shot"><img src="readme/desktop-library.png" alt="The SemaTor library on a desktop">
+    <figcaption>Desktop — a menu of lists, the grid, and everything about the chosen game on the right. The brass plate marks a game with a profile. Screenshots show SemaTor’s own placeholder disks, not game artwork.</figcaption></figure>
+  <div class="two" style="margin-top:18px">
+    <figure class="shot" style="margin:0"><img src="readme/phone-library.png" alt="The library on a phone">
+      <figcaption>Phone — built for a thumb.</figcaption></figure>
+    <figure class="shot" style="margin:0"><img src="readme/thor-deck.png" alt="The lower screen of an AYN Thor">
+      <figcaption>AYN Thor — the settings live on the lower screen, the game keeps running.</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Before you <span class="mark">download</span></h2>
+  <ul class="plain">
+    <li><strong>No games are included, and none ever will be.</strong> Bring your own disk images.</li>
+    <li><strong>Compatibility is per game.</strong> Eight titles have profiles and have been worked on in depth; everything else runs on the general machine and may be perfect, imperfect, or not start.</li>
+    <li><strong>Frame generation is experimental on mobile.</strong> Original frames are recommended there and are one press away.</li>
+    <li><strong>Filters depend on your GPU driver.</strong> The chain checks its own output and steps aside rather than leaving a black screen.</li>
+    <li><strong>Android needs “All files access”</strong> to read your games folder.</li>
+  </ul>
+  <p class="note">SemaTor contains no Atari TOS ROM and requires none, and no game
+     code, graphics, audio or data of any kind. What it is and is not is set out in
+     COPYRIGHT.txt, written by the people who built it — not legal advice.</p>
+</section>
+
+<section class="wrap">
+  <h2>Come and say <span class="mark">hello</span></h2>
+  <p class="lead">Questions, game reports, and the thing actually running.</p>
+  <div class="cards">
+    <div class="card"><h3><a href="https://discord.gg/DdHfSGrdFc">Discord</a></h3>
+      <p>Ask, report a game, or see what is being worked on.</p></div>
+    <div class="card"><h3><a href="https://www.youtube.com/@SemaTorST">YouTube</a></h3>
+      <p>SemaTor running — worth more than any description of it.</p></div>
+    <div class="card"><h3><a href="https://github.com/SirBaron/SemaTor/issues">Issues</a></h3>
+      <p>Bugs and compatibility reports. The form asks for the logs, and for
+         which earlier version worked.</p></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  SemaTor © David Baron. Written from scratch.
+  Links against SDL2 (zlib) and optionally SDL2_image; includes the Vulkan headers
+  (Apache-2.0 OR MIT) and stb_image (public domain).<br>
+  Atari and Atari ST are trademarks of their respective owners. This project is not
+  affiliated with them.
+</footer>
+</body>
+</html>

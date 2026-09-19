@@ -1,0 +1,51 @@
+SEMATOR - REPO PACK
+===================
+Everything for a fresh, public, binaries-only github.com/SirBaron/SemaTor.
+Nothing here contains source code.
+
+WHAT IS IN THIS ZIP
+  README.md            the repo's front page (image paths point at the root)
+  LICENSE              all rights reserved: binaries free to use, no reuse
+  banner.png + 6 more  the README's pictures, root level
+  docs/index.html      the website
+  docs/readme/*.png    the website's pictures
+  .github/             two issue forms, so reports arrive with the logs
+
+START FRESH
+  1. Settings -> Danger Zone -> Delete this repository.
+  2. New repository, name SemaTor, PUBLIC.
+     UNTICK "Add a README", "Add .gitignore", "Choose a licence".
+     That gives a repo with no commits at all.
+  3. On the empty repo: "uploading an existing file".
+  4. Select EVERYTHING in this folder - both files and the docs and .github
+     folders - and drag it in together. Commit.
+     If the folders will not drag, upload the loose files first, then repeat
+     the upload with the docs folder, then again with .github.
+
+TURN THE WEBSITE ON
+  Settings -> Pages -> Source: Deploy from a branch
+  Branch: main    Folder: /docs    -> Save
+  A minute later: https://sirbaron.github.io/SemaTor/
+
+THE ABOUT BOX  (pencil, top right of the repo page)
+  Description  Atari ST translation layer - not an emulator. Runs the 68000
+               games natively, no TOS ROM.
+  Website      https://sirbaron.github.io/SemaTor/
+  Topics       atari-st  68000  retro-gaming  android  vulkan  sdl2
+
+SOCIAL PREVIEW  (Settings -> General -> Social preview)
+  Upload banner.png. That is what shows when the link is pasted anywhere.
+
+THE FIRST RELEASE
+  Right sidebar -> Create a new release.
+  Tag: v1.1.203    Title: SemaTor 1.1.203
+  Attach: the APK, and the source-free pack.
+  Notes: paste CHANGES-1.1.203.txt, or a few lines on what is new.
+
+  IMPORTANT: the normal -complete.zip contains semator-1.1.xxx-src/. Do not
+  upload that one. Use the source-free pack.
+
+IF THE IMAGES BREAK
+  README.md expects the seven PNGs in the REPO ROOT, beside it.
+  docs/index.html expects its own copies in docs/readme/.
+  Both sets are in this zip. Keep them where they are and it works.
