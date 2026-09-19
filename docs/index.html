@@ -6,7 +6,7 @@
 <title>SemaTor — an Atari ST translation layer</title>
 <meta name="description" content="SemaTor runs Atari ST games by translating them. No TOS ROM needed, none included. Linux, Windows and Android.">
 <meta property="og:title" content="SemaTor — an Atari ST translation layer">
-<meta property="og:description" content="Not an emulator. Runs the 68000 games natively. No TOS ROM needed.">
+<meta property="og:description" content="Game-focused Atari ST compatibility layer with a 68000 interpreter and selected native replacements. No TOS ROM needed.">
 <meta property="og:image" content="readme/banner.png">
 <style>
 /* The library's own palette: navy, cyan, magenta, and a vector grid. */
@@ -94,17 +94,17 @@ footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
     <img src="readme/logo.png" alt="SemaTor">
     <div>
       <h1>SemaTor</h1>
-      <p class="tag">An Atari ST translation layer. Not an emulator.</p>
+      <p class="tag">An Atari ST compatibility and translation layer built for games.</p>
     </div>
   </div>
-  <p class="sub">The 68000 code executes, the ST's hardware and operating-system
+  <p class="sub">A 68000 interpreter executes the game code, the ST's hardware and operating-system
      interface are reproduced, and where a game's hot routines are understood they
      can be replaced with native code that does the same job faster.
      <strong>No TOS ROM needed — none included, none required.</strong></p>
   <div class="rule"></div>
   <div class="cta">
-    <a class="btn" href="https://github.com/SirBaron/SemaTor/releases/latest">Download the latest release</a>
-    <a class="btn quiet" href="https://github.com/SirBaron/SemaTor">Source and issues</a>
+    <a class="btn" href="https://github.com/SirBaron/SemaTor/releases/latest">Windows / Linux releases</a>
+    <a class="btn quiet" href="https://github.com/SirBaron/SemaTor">Project and issues</a>
     <a class="btn discord" href="https://discord.gg/DdHfSGrdFc">Discord</a>
     <a class="btn tube" href="https://www.youtube.com/@SemaTorST">YouTube</a>
   </div>
@@ -112,29 +112,28 @@ footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
 
 <section class="wrap">
   <h2>What makes it <span class="mark">different</span></h2>
-  <p class="lead">Emulators aim to run everything by being a faithful machine.
-     SemaTor aims to run <em>games</em> well — and for the ones it knows, better
+  <p class="lead">SemaTor combines CPU interpretation and hardware emulation with
+     game-specific native replacements. It aims to run <em>games</em> well — and for the ones it knows, better
      than the original hardware could.</p>
   <div class="cards">
     <div class="card"><h3>Native routines, audited</h3>
       <p>A profile can mark hot 68000 routines for native replacement.
          <code>--audit-native</code> runs both, keeps the 68000 answer, and reports
-         every disagreement — a replacement cannot change behaviour unnoticed.</p></div>
+         differences in supported, exercised routines. These isolated checks do not certify every game path or interrupt-timing case.</p></div>
     <div class="card"><h3>Enhancements, per game</h3>
       <p>Cleaner scrolling, extended play areas, audio fixes, cheats. Each a
-         switch, and <code>--safe</code> turns them all off.</p></div>
+         option in the game’s settings. <code>--safe</code> is a diagnostic startup mode, not an all-enhancements-off switch.</p></div>
     <div class="card"><h3>No TOS</h3>
       <p>GEMDOS, BIOS and XBIOS are implemented directly. That is why no ROM is
          needed — and why it is not a copy of one.</p></div>
     <div class="card"><h3>Frame generation</h3>
       <p>Optional generated in-between frames on the GPU, with a native
-         optical-flow path on NVIDIA and a compute path elsewhere.</p></div>
+         optical-flow path on supported NVIDIA configurations, GPU compute and CPU alternatives. Availability depends on the backend and driver.</p></div>
     <div class="card"><h3>A picture worth the pixels</h3>
       <p>Sharp pixels, simple filters, or a full CRT studio — beam, phosphor,
-         mask, glass, colour — with HDR where the display offers it.</p></div>
+         mask, glass, colour — with HDR on supported desktop Vulkan configurations. OpenGL and current Android output use SDR. Temporal Beam requires compatible timing support.</p></div>
     <div class="card"><h3>Built for two screens</h3>
-      <p>On a dual-screen handheld the game runs on top while the menus, the
-         controls and a per-game page live on the lower panel.</p></div>
+      <p>Android development builds support phones and compatible dual-screen handhelds, including AYN Thor. On supported two-screen setups, the game uses the top screen and controls/settings use the lower panel.</p></div>
   </div>
 </section>
 
@@ -143,12 +142,12 @@ footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
   <p class="lead">One place for your disks: lists, covers, saved games with
      previews, search as you type, and a layout that suits the screen it is on.</p>
   <figure class="shot"><img src="readme/desktop-library.png" alt="The SemaTor library on a desktop">
-    <figcaption>Desktop — a menu of lists, the grid, and everything about the chosen game on the right. The brass plate marks a game with a profile. Screenshots show SemaTor’s own placeholder disks, not game artwork.</figcaption></figure>
+    <figcaption>Desktop — a menu of lists, the grid, and everything about the chosen game on the right. A gold ENHANCED tag marks available enhancements and can be shared across sources grouped under one title. Executable compatibility is still checked at launch. Screenshots may differ from the current layout.</figcaption></figure>
   <div class="two" style="margin-top:18px">
     <figure class="shot" style="margin:0"><img src="readme/phone-library.png" alt="The library on a phone">
       <figcaption>Phone — built for a thumb.</figcaption></figure>
     <figure class="shot" style="margin:0"><img src="readme/thor-deck.png" alt="The lower screen of an AYN Thor">
-      <figcaption>AYN Thor — the settings live on the lower screen, the game keeps running.</figcaption></figure>
+      <figcaption>AYN Thor development build — settings and controls on the lower screen. Some menus and actions pause gameplay.</figcaption></figure>
   </div>
 </section>
 
@@ -158,12 +157,24 @@ footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
     <li><strong>No games are included, and none ever will be.</strong> Bring your own disk images.</li>
     <li><strong>Compatibility is per game.</strong> Eight titles have profiles and have been worked on in depth; everything else runs on the general machine and may be perfect, imperfect, or not start.</li>
     <li><strong>Frame generation is experimental on mobile.</strong> Original frames are recommended there and are one press away.</li>
-    <li><strong>Filters depend on your GPU driver.</strong> The chain checks its own output and steps aside rather than leaving a black screen.</li>
+    <li><strong>Filters depend on your GPU driver.</strong> Startup and framebuffer checks detect some failures and can retain normal rendering; they cannot guarantee against every driver fault.</li>
     <li><strong>Android needs “All files access”</strong> to read your games folder.</li>
   </ul>
-  <p class="note">SemaTor contains no Atari TOS ROM and requires none, and no game
-     code, graphics, audio or data of any kind. What it is and is not is set out in
-     COPYRIGHT.txt, written by the people who built it — not legal advice.</p>
+  <p class="note">No Atari TOS ROM or playable game disk images are supplied. Profiles contain compatibility metadata and small executable patches. Third-party components have their own notices and licences.</p>
+</section>
+
+<section class="wrap">
+  <h2>Current <span class="mark">development</span></h2>
+  <p class="lead">Checked against SemaTor 1.1.211. Public releases are compiled Windows and Linux builds. The source remains private; Android builds are for development/testing.</p>
+  <ul class="plain">
+    <li><strong>Shared Enhanced titles.</strong> Grouped sources and companion disks share the title badge and preferences, while launch-time checks protect executable compatibility.</li>
+    <li><strong>Browse for files.</strong> Desktop cover import and game-folder selection use built-in file browsers.</li>
+    <li><strong>CRT plus frame generation.</strong> The full CRT preserves fine generated movement without doubling the original scanline spacing. Other interpolation artefacts can still occur.</li>
+    <li><strong>Xenon sound.</strong> The modern sound engine preserves repeated envelope triggers. Remaining effects still need gameplay verification.</li>
+    <li><strong>Useful debug captures.</strong> Debug builds or <code>--debug</code> produce ten matching diagnostic files with live report updates.</li>
+  </ul>
+  <p>On Linux, extract a desktop release and run <code>sh install-linux.sh</code> in its folder. Python 3 is required; the default application location is <code>~/Games/SemaTor</code>. Settings and saves are stored separately from application files. On Windows, run <code>SemaTor.exe</code> with the supplied <code>SDL2.dll</code>.</p>
+  <p class="note">The public Releases page may lag behind development. Release-specific checks are not a claim that every game and device has been tested.</p>
 </section>
 
 <section class="wrap">
@@ -182,8 +193,8 @@ footer{padding:40px 0 60px; color:var(--faint); font-size:14px;
 
 <footer class="wrap">
   SemaTor © David Baron. Written from scratch.
-  Links against SDL2 (zlib) and optionally SDL2_image; includes the Vulkan headers
-  (Apache-2.0 OR MIT) and stb_image (public domain).<br>
+  Uses SDL2 (zlib), Vulkan headers (Apache-2.0 OR MIT), bundled stb_image
+  (MIT or public domain), and platform system libraries. Component notices accompany downloads.<br>
   Atari and Atari ST are trademarks of their respective owners. This project is not
   affiliated with them.
 </footer>
