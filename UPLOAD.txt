@@ -1,51 +1,26 @@
-SEMATOR - REPO PACK
-===================
-Everything for a fresh, public, binaries-only github.com/SirBaron/SemaTor.
-Nothing here contains source code.
+SEMATOR PUBLIC REPOSITORY PACK — 1.1.217
 
-WHAT IS IN THIS ZIP
-  README.md            the repo's front page (image paths point at the root)
-  LICENSE              all rights reserved: binaries free to use, no reuse
-  banner.png + 6 more  the README's pictures, root level
-  docs/index.html      the website
-  docs/readme/*.png    the website's pictures
-  .github/             two issue forms, so reports arrive with the logs
+Update the existing SirBaron/SemaTor repository with this pack's contents.
+Preserve repository history, existing releases and settings. Do not delete or recreate the repository.
+README.md, LICENSE, images, docs/ and .github/ belong in the repository root.
+UPLOAD.txt is maintainer guidance; it may be kept locally.
+The site entry point is docs/index.html (GitHub Pages /docs configuration).
 
-START FRESH
-  1. Settings -> Danger Zone -> Delete this repository.
-  2. New repository, name SemaTor, PUBLIC.
-     UNTICK "Add a README", "Add .gitignore", "Choose a licence".
-     That gives a repo with no commits at all.
-  3. On the empty repo: "uploading an existing file".
-  4. Select EVERYTHING in this folder - both files and the docs and .github
-     folders - and drag it in together. Commit.
-     If the folders will not drag, upload the loose files first, then repeat
-     the upload with the docs folder, then again with .github.
+Create a public preview release tagged v1.1.217 and describe the actual changes.
+Attach ONLY:
+  SemaTor-1_1_217-linux-public-preview.zip
+  SemaTor-1_1_217-windows-public-preview.zip
 
-TURN THE WEBSITE ON
-  Settings -> Pages -> Source: Deploy from a branch
-  Branch: main    Folder: /docs    -> Save
-  A minute later: https://sirbaron.github.io/SemaTor/
+Never upload the complete ZIP, private desktop ZIP, source, research,
+development tools, debug builds or the private Android APK.
+The repo pack is website/documentation content, not a third application download.
+State that Windows needs broader real-machine testing. Android/Thor are development previews.
 
-THE ABOUT BOX  (pencil, top right of the repo page)
-  Description  Atari ST translation layer - not an emulator. Runs the 68000
-               games natively, no TOS ROM.
-  Website      https://sirbaron.github.io/SemaTor/
-  Topics       atari-st  68000  retro-gaming  android  vulkan  sdl2
-
-SOCIAL PREVIEW  (Settings -> General -> Social preview)
-  Upload banner.png. That is what shows when the link is pasted anywhere.
-
-THE FIRST RELEASE
-  Right sidebar -> Create a new release.
-  Tag: v1.1.203    Title: SemaTor 1.1.203
-  Attach: the APK, and the source-free pack.
-  Notes: paste CHANGES-1.1.203.txt, or a few lines on what is new.
-
-  IMPORTANT: the normal -complete.zip contains semator-1.1.xxx-src/. Do not
-  upload that one. Use the source-free pack.
-
-IF THE IMAGES BREAK
-  README.md expects the seven PNGs in the REPO ROOT, beside it.
-  docs/index.html expects its own copies in docs/readme/.
-  Both sets are in this zip. Keep them where they are and it works.
+EVERY RELEASE
+Review README, docs/index.html, installation steps, issue forms, supported
+platforms, release filenames and screenshots alongside the source/public builds.
+Update text and images when behaviour or appearance changes. Keep brand assets
+unless branding changes. Use actual app captures; label sample data and older
+mobile previews. Do not publish private Debug/Tools menus, paths or research.
+This check is part of the private source release checklist and packaging workflow.
+Nothing in the packaging workflow publishes to GitHub automatically.

@@ -20,12 +20,11 @@ THIRD-PARTY COMPONENTS
   SemaTor links against SDL2 (zlib licence) and optionally SDL2_image, and
   includes the Vulkan headers (Apache-2.0 OR MIT) and stb_image (public
   domain). Those components keep their own licences; this notice covers
-  SemaTor's own work only. docs/LICENSING.txt in the download has the detail.
+  SemaTor's own work only. Media/licenses in the download has the detail.
 
-NO GAME CONTENT
-  This project contains no Atari TOS ROM and none is required, and no game
-  code, graphics, audio or data. COPYRIGHT.txt in the download sets this out
-  in full.
+NO BUNDLED DISKS OR ROMS
+  No commercial game disk images or Atari TOS ROM are supplied.
+  No Atari TOS ROM is required. Bring your own disk images.
 
 NO WARRANTY
   SemaTor is provided as is, without warranty of any kind. The author is
