@@ -1,4 +1,4 @@
-SEMATOR PUBLIC REPOSITORY PACK — 1.1.221
+SEMATOR PUBLIC REPOSITORY PACK — 1.1.222
 
 Update the existing SirBaron/SemaTor repository with this pack's contents.
 Preserve repository history, existing releases and settings. Do not delete or recreate the repository.
@@ -6,10 +6,10 @@ README.md, LICENSE, images, docs/ and .github/ belong in the repository root.
 UPLOAD.txt is maintainer guidance; it may be kept locally.
 The site entry point is docs/index.html (GitHub Pages /docs configuration).
 
-Create a public preview release tagged v1.1.221 and describe the actual changes.
+Create a public preview release tagged v1.1.222 and describe the actual changes.
 Attach ONLY:
-  SemaTor-1_1_221-linux-public-preview.zip
-  SemaTor-1_1_221-windows-public-preview.zip
+  SemaTor-1_1_222-linux-public-preview.zip
+  SemaTor-1_1_222-windows-public-preview.zip
 
 Never upload the complete ZIP, private desktop ZIP, source, research,
 development tools, debug builds or the private Android APK.
