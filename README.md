@@ -24,6 +24,10 @@ The update button stays in the library header: it shows the current status and h
 
 Read the [changelog from 1.1.227 to 1.1.230](./CHANGELOG.md).
 
+## Game guides
+
+Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for all 11 profiled titles. Each guide includes edition-specific options, original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
+
 ## A library that feels like home
 
 Browse covers or lists, search your collection, keep favourites and return to recently played games. Supported titles stand out with a gold **ENHANCED** badge. Add game folders and choose custom covers using a file browser; fetch artwork for one game or the whole library.
