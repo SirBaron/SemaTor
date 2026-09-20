@@ -1,28 +1,27 @@
-SEMATOR PUBLIC REPOSITORY PACK — 1.1.222
+SEMATOR PUBLIC REPOSITORY PACK — 1.1.226
 
-Update the existing SirBaron/SemaTor repository with this pack's contents.
-Preserve repository history, existing releases and settings. Do not delete or recreate the repository.
-README.md, LICENSE, images, docs/ and .github/ belong in the repository root.
-UPLOAD.txt is maintainer guidance; it may be kept locally.
-The site entry point is docs/index.html (GitHub Pages /docs configuration).
+Update the existing SirBaron/SemaTor repository. Preserve its history, releases
+and settings; no new repository is needed.
 
-Create a public preview release tagged v1.1.222 and describe the actual changes.
-Attach ONLY:
-  SemaTor-1_1_222-linux-public-preview.zip
-  SemaTor-1_1_222-windows-public-preview.zip
+README.md, CHANGELOG.md, LICENSE, images, docs/ and .github/ belong in the repo
+root. The GitHub Pages entry point is docs/index.html; use the /docs setting.
+UPLOAD.txt is maintainer guidance and can stay local.
 
-Never upload the complete ZIP, private desktop ZIP, source, research,
-development tools, debug builds or the private Android APK.
-The repo pack is website/documentation content, not a third application download.
-State that Windows needs broader real-machine testing. Android/Thor are development previews.
+RELEASE FIRST, WEBSITE SECOND
+1. Create the v1.1.226 desktop public preview release.
+2. Attach these four public files from the matching release-assets bundle:
+   SemaTor-1_1_226-linux-public-preview.zip
+   SemaTor-1_1_226-windows-public-preview.zip
+   SemaTor-1_1_226-linux.supdate
+   SemaTor-1_1_226-windows.supdate
+3. Use CHANGELOG.md for the public release text; keep the notes user-facing.
+4. Upload this repository pack after the release links are available.
 
-EVERY RELEASE
-Review README, docs/index.html, installation steps, issue forms, supported
-platforms, release filenames and screenshots alongside the source/public builds.
-Update text and images when behaviour or appearance changes. Keep brand assets
-unless branding changes. Use actual app captures; label sample data and older
-mobile previews. Do not publish private Debug/Tools menus, paths or research.
-This check is part of the private source release checklist and packaging workflow.
-Nothing in the packaging workflow publishes to GitHub automatically.
+Never upload the complete ZIP, private desktop ZIP, source, research, tools,
+debug builds, game disks, saved states or signing-key backup. The two .supdate
+files are signed PUBLIC runtime payloads for the in-app updater. Preserve the
+existing signing identity for future releases.
 
-SIGNED UPDATES (1.1.219+): upload both platform .supdate files beside the two public ZIPs in the matching vVERSION GitHub release. These are public, signed runtime payloads. Never upload the PRIVATE signing-key backup or complete source bundle. Keep the signing key on your private computer/NAS for future releases.
+The website/README target 1.1.226 consistently. Windows needs broader
+real-machine testing. Android/Thor images are labelled development previews.
+This pack prepares files only; it does not publish to GitHub automatically.
