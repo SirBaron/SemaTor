@@ -1,27 +1,24 @@
 ![SemaTor](./banner.png)
 
-# SemaTor · 1.1.226 public preview
+# SemaTor · 1.1.227 public preview
 
 **Your Atari ST collection. A wider horizon.**
 
 SemaTor runs Atari ST 68000 game code, provides the hardware and operating-system interfaces it needs, and adds optional enhancements for supported titles. Browse your disks in a visual library, tune the picture, and return to the games you remember. **No Atari TOS ROM required.**
 
-[Download 1.1.226](https://github.com/SirBaron/SemaTor/releases/tag/v1.1.226) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
+[Download 1.1.227](https://github.com/SirBaron/SemaTor/releases/tag/v1.1.227) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
 Linux x86-64 and Windows x64 desktop previews. This repository contains the website, public documentation and issue tracker; SemaTor's source is private. Created by David Baron with AI assistance in development, research, documentation and this website.
 
-## What's new in 1.1.226
+## What's new in 1.1.227
 
-This update brings together the improvements since 1.1.222:
+- **An update button that keeps you informed.** A gently pulsing gold button shows when an update is available, and the last successful check survives a restart.
+- **One popup from download to restart.** Click the gold button to download, follow progress and verification, then choose **Install and restart**. Close the popup to keep browsing while it downloads; reopen it whenever you like.
+- **Clear retry states.** Failed checks and downloads are shown honestly, with a way to retry. Games, saves, settings and artwork remain preserved.
 
-- **Time Bandit, with room to breathe.** Optional 16:9 and 21:9 gameplay for supported editions, steadier framing on small maps and around text, and a fix for the early 0.96 edition's level-selection crash.
-- **Saves you can actually find.** New states use game-named folders and readable game/slot filenames. Existing saves still load; separate editions keep their own states.
-- **A better adventure session.** Zak McKracken mouse-input fixes and game-specific crop behaviour keep its picture steady without changing your global auto-crop preference.
-- **Less disk juggling.** Better companion-disk matching, automatic changes for recognised requests, and a focused in-game picker when you need to choose a disk yourself.
-- **Controls within reach.** Updated per-game control pages and gamepad defaults for profiled games.
-- **A calmer library.** Revised default scale, an always-visible update control with a clear status, and more varied drive sounds that follow loading activity.
+Also included from 1.1.226: steadier Time Bandit widescreen framing, the early 0.96 level-selection fix, readable game-named save folders, and the refreshed desktop website and documentation.
 
-[Read the release notes](https://github.com/SirBaron/SemaTor/releases/tag/v1.1.226).
+[Read the release notes](https://github.com/SirBaron/SemaTor/releases/tag/v1.1.227).
 
 ## Browse, play, come back later
 
@@ -70,16 +67,16 @@ Gamepad users can select session header actions with **LB/RB**, then **A**. Game
 ![Picture and game settings](./settings-overview.png)
 *Public settings layout preview.*
 
-## Install 1.1.226
+## Install 1.1.227
 
 | Platform | Download | Start here |
 | --- | --- | --- |
-| Linux x86-64 | [Linux public preview](https://github.com/SirBaron/SemaTor/releases/download/v1.1.226/SemaTor-1_1_226-linux-public-preview.zip) | Extract the ZIP and run `sh install.sh`. SDL2 runtime and Python 3 are required. |
-| Windows x64 | [Windows public preview](https://github.com/SirBaron/SemaTor/releases/download/v1.1.226/SemaTor-1_1_226-windows-public-preview.zip) | Extract into a writable folder and launch `SemaTor.exe`. Keep `SDL2.dll` beside it. |
+| Linux x86-64 | [Linux public preview](https://github.com/SirBaron/SemaTor/releases/download/v1.1.227/SemaTor-1_1_227-linux-public-preview.zip) | Extract the ZIP and run `sh install.sh`. SDL2 runtime and Python 3 are required. |
+| Windows x64 | [Windows public preview](https://github.com/SirBaron/SemaTor/releases/download/v1.1.227/SemaTor-1_1_227-windows-public-preview.zip) | Extract into a writable folder and launch `SemaTor.exe`. Keep `SDL2.dll` beside it. |
 
 The Linux installer defaults to `~/Games/SemaTor`. Run the command from the extracted folder; double-clicking a shell script may open it in an editor instead.
 
-**Already using SemaTor?** Open **Updates**, choose **Download update**, then **Install and restart** when a newer signed desktop release is available. The update control also shows when you're up to date. Optional daily startup checks include public previews. Builds from 1.1.219 onward support signed in-app updates; older installations need a manual update first.
+**Already using SemaTor?** Click the gold **Update available** button to start downloading, then choose **Install and restart** in the same popup once verification finishes. The update control also shows when you're up to date. Optional daily startup checks include public previews. Builds from 1.1.219 onward support signed in-app updates; older installations need a manual update first.
 
 Keep your **Games**, **Media** and **User** folders. Updates preserve games, saves, settings and custom artwork. Add game folders from the library after starting the app.
 
