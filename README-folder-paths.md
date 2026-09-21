@@ -1,4 +1,4 @@
-![SemaTor](./banner.png)
+![SemaTor](./docs/readme/banner.png)
 
 # SemaTor
 
@@ -32,10 +32,10 @@ Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) 
 
 Browse covers or lists, search your collection, keep favourites and return to recently played games. Supported titles stand out with a gold **ENHANCED** badge. Add game folders and choose custom covers using a file browser; fetch artwork for one game or the whole library.
 
-![Desktop library](./desktop-library.png)
+![Desktop library](./docs/readme/desktop-library.png)
 *Desktop UI example rendered with sample entries and placeholder covers; no games are bundled.*
 
-![Ultrawide library](./desktop-ultrawide.png)
+![Ultrawide library](./docs/readme/desktop-ultrawide.png)
 *Room for a larger collection on a wider display.*
 
 ## Make it your ST
@@ -47,10 +47,10 @@ Browse covers or lists, search your collection, keep favourites and return to re
 - **A more comfortable desktop:** F11/F12 menus keep Resume, Library and Quit in the header. Click them, or use LB/RB then A on a gamepad. **F11 → Controls for this game** shows live button mappings and supported game-specific notes. Public builds include basic diagnostics and an optional local support report.
 - **Your own disk collection:** ST, IMG, MSA, full-sector DIM, STX and supported disk images inside ZIP archives.
 
-![Session controls](./session-overview.png)
+![Session controls](./docs/readme/session-overview.png)
 *Desktop header actions stay within reach: click, or use LB/RB then A. Sample game label shown.*
 
-![Settings](./settings-overview.png)
+![Settings](./docs/readme/settings-overview.png)
 *F12 settings in the public build.*
 
 ## Install the desktop preview
@@ -74,8 +74,8 @@ Keep your **Games**, **Media** and **User** folders when updating. Games holds y
 
 Android and AYN Thor interfaces are also in development. They are **not included in the desktop downloads**. Earlier ARM64 test builds include Mega lo Mania controls for Thor. No 1.1.302 APK is included; the Android fixes still need a full build and physical-device validation. These earlier development screenshots show the phone library and lower-screen interface; their appearance may change.
 
-![Phone library, development preview](./phone-library.png)
-![AYN Thor lower screen, development preview](./thor-deck.png)
+![Phone library, development preview](./docs/readme/phone-library.png)
+![AYN Thor lower screen, development preview](./docs/readme/thor-deck.png)
 
 ## Help improve compatibility
 
