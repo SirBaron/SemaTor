@@ -1,0 +1,225 @@
+{
+  "version": "1.1.320",
+  "games": [
+    {
+      "game_page": "arkanoid-ii",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Arkanoid II: Revenge of Doh (1988, Imagine)",
+          "programs": "DOH.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "5b6e577149dbdd36973af1df191c9412d9156030",
+          "text_bytes": 2658,
+          "alternate_identities": [
+            {
+              "sha1": "8c1c8536a39fcfa76e69c0bf1c9b161fa5dee3a1",
+              "text_bytes": 204
+            }
+          ]
+        }
+      ],
+      "validation": "The supplied original Imagine disk contains an AUTO helper before DOH.PRG. 1.1.320 selects the verified game loader. A 160-million-instruction run reached the game, with 2,530 exact reconstructed frames, live sprite/audio guards accepted and no CPU fault. Later rounds and complete-game completion are not certified.",
+      "disk": {
+        "filename": "Arkanoid II - Revenge of Doh (1988)(Imagine).stx",
+        "bytes": 1856470,
+        "sha256": "a2e17d3c4d0984ab7adbec51d691158803be2a28bd6e8b2285515835aef51e8d"
+      }
+    },
+    {
+      "game_page": "black-lamp",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Black Lamp (1988, Firebird)",
+          "programs": "BALCKLAM.PRG|BLACKLAM.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "54b4b640c8e7c819acec38b343055536a3a6d184",
+          "text_bytes": 171
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "dungeon-master",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Dungeon Master (1987, FTL, English, v1.1 HD)",
+          "programs": "DM_LOAD.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "f36fdca30773838bafb1d995a7471533c4111efc",
+          "text_bytes": 4506
+        }
+      ],
+      "validation": "Tested in 1.1.320: 46 scheduled interface interactions, enhanced portraits/items, mirror portraits, formation controls, tiled background and torch fixtures. This does not certify a complete dungeon playthrough.",
+      "disk": {
+        "filename": "Dungeon Master v1.1 (1987)(FTL)[f hard disk version].st",
+        "bytes": 819200,
+        "sha256": "5f3d83acaffcc2b579057eeec1d924c140f0afc7802554e9f76dfe3b1f753899"
+      }
+    },
+    {
+      "game_page": "mega-lo-mania",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Mega lo Mania (1991, Image Works, French)",
+          "programs": "BOOT",
+          "identity_type": "boot-sector SHA-1",
+          "sha1": "1da29bb726e6adb8e95915c3e88613fd3a6cd999",
+          "text_bytes": 512
+        },
+        {
+          "name": "Mega lo Mania (1991, Image Works, English, Pompey Pirates)",
+          "programs": "MEGALOMA.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "69f1a0e4ae2770c53a4a7ada6a130fe3a296cb4a",
+          "text_bytes": 72014
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "return-to-genesis",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Return to Genesis (1988, Firebird)",
+          "programs": "BOOT",
+          "identity_type": "boot-sector SHA-1",
+          "sha1": "06236ffe57d0b60445d22c4b65362bc5ad1db0ad",
+          "text_bytes": 512
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "swiv",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "SWIV (1991, Storm)",
+          "programs": "BOOT",
+          "identity_type": "boot-sector SHA-1",
+          "sha1": "b510afd483d9e4cb28d2d4f3b7d1f15c8e8f239d",
+          "text_bytes": 512
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "time-bandit",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Time Bandit v0.96 (1985, MichTron)",
+          "programs": "BANDIT,TB",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "c3b8ccdddb8f6195408201cf9e7a3e816442e886",
+          "text_bytes": 97436
+        },
+        {
+          "name": "Time Bandit v2.0 (1985, MichTron)",
+          "programs": "BANDIT,TB",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "6370e831978b31f7ac15bcc84a9b3cacd5ef6f3a",
+          "text_bytes": 646
+        },
+        {
+          "name": "Time Bandit v2.1 (1985, MichTron)",
+          "programs": "BANDIT,TB",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "9572435c5d57ef69e87f880a2d6e4dd6b5bddb2d",
+          "text_bytes": 646
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "turrican-ii",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Turrican II (1991, Rainbow Arts)",
+          "programs": "BOOT",
+          "identity_type": "boot-sector SHA-1",
+          "sha1": "cb9e91829556704965fdd5e8b592d967e2572c7a",
+          "text_bytes": 512
+        }
+      ],
+      "validation": "Exact supplied profile edition. Its supplied gameplay log exposed a Vulkan allocation failure, fixed in 1.1.320. The live checkpoint save/preview/reload test also passes and resumes gameplay. Physical NVIDIA validation of the reported crash remains outstanding.",
+      "disk": {
+        "filename": "Turrican II (1991)(Rainbow Arts).stx",
+        "bytes": 1971338,
+        "sha256": "35414bb1116a5dfae8f1f540e39414a529dca15ec3943bcef874b3b2f25d914e"
+      }
+    },
+    {
+      "game_page": "xenon-2",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Xenon 2 - Megablast (1989, The Bitmap Brothers)",
+          "programs": "BOOT",
+          "identity_type": "boot-sector SHA-1",
+          "sha1": "7f59cf71891b17c8220713e3dae89212e4d14d39",
+          "text_bytes": 512
+        }
+      ],
+      "validation": "Tested in 1.1.320 for 600 million instructions, including 10,161 observed gameplay frames, without a CPU fault or host crash. GPU optical-flow behavior was not exercised by that headless run.",
+      "disk": {
+        "filename": "Xenon 2 - Megablast.st",
+        "bytes": 819200,
+        "sha256": "36be46b4d622eaa2930af3fbd38e2842975157b3e56a3542202116ab3e46f42b"
+      }
+    },
+    {
+      "game_page": "xenon",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Xenon (1988, The Bitmap Brothers)",
+          "programs": "ERIC.PRG|XENON.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "5a831978b09937ce5bfafa94ffafa49745805c7e",
+          "text_bytes": 46414
+        }
+      ],
+      "validation": "Existing exact enhanced profile edition; no new full-game certification in 1.1.320.",
+      "disk": {
+        "filename": "Xenon.st",
+        "bytes": 409600,
+        "sha256": "660e544ffa7eb8e0f9201614711f5d4b2a935870bb89f5ea707fed314e056f9e"
+      }
+    },
+    {
+      "game_page": "zak-mckracken",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Zak McKracken and the Alien Mindbenders (1988, Lucasfilm)",
+          "programs": "ZAK.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "2dd79463643149952d95a599bb6926345e18e3d0",
+          "text_bytes": 74434
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "zynaps",
+      "release": "1.1.320",
+      "profiles": [
+        {
+          "name": "Zynaps (1988, Hewson)",
+          "programs": "ZYNAPS17.PRG|ZYNAPS.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "a8acab53fdf39a233b316821ebb165184b4f19e3",
+          "text_bytes": 40774
+        }
+      ],
+      "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    }
+  ]
+}
