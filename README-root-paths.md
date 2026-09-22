@@ -10,15 +10,17 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.320 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.328 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-The update button stays in the library header: it shows the current status and highlights available updates in gold. Select it to download with progress in the update popup, then choose **Install and restart**. You can also check under **Library Settings → Updates**. Optional daily startup checks include public previews. Choose **Download update**, then **Install and restart**: signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Users updating from versions before 1.1.320 should follow the manual installation note below.
+The update button stays in the library header: it shows the current status and highlights available updates in gold. Select it to download with progress in the update popup, then choose **Install and restart**. You can also check under **Library Settings → Updates**. Optional daily startup checks include public previews. Choose **Download update**, then **Install and restart**: signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
-## New in 1.1.320
+## New in 1.1.328
 
 Clearer compatibility guidance, prefilled GitHub game reports and a smoother library. Untested editions get an optional launch warning with **Play anyway** and **Request compatibility check**. Basic **Confirmed playable** profiles can record tested editions without inventing enhancements. Empty searches offer a clear-search action; disk-picker cancellation and pasted-path handling are fixed. Screenshot saving is more robust.
 
-**Updating to 1.1.320:** install the full platform ZIP once. Earlier helpers cannot accept the expanded Dungeon Master artwork. The new helper supports the accompanying signed updates. Keep your Games, Media and User folders.
+[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.328/SemaTor-Dungeon-Master-artwork-addon-1.zip)
+
+**Optional Dungeon Master artwork:** extract the separate artwork add-on ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
 
 Dungeon Master's optional native interface remains available for wider testing and is still experimental.
 
@@ -57,8 +59,8 @@ Browse covers or lists, search your collection, keep favourites and return to re
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_320-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_320-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_328-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_328-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. Linux requires an SDL2 runtime and Python 3 for installation.
 
@@ -66,7 +68,7 @@ The Linux installer copies the application into its installation folder; it does
 
 **Optional drive sounds:** F12 → Sound → ST Drive Sounds adds floppy-drive noise during virtual disk activity. Switch it off there, or adjust Effects / speech volume.
 
-Keep your **Games**, **Media** and **User** folders when updating. Games holds your disk collection, Media holds artwork and runtime resources, and User holds settings and saves. Add your game folders from the library after starting the app.
+Keep your **Games**, **Media**, **User** and **Add-ons** folders when updating. Games holds your disk collection, Media holds artwork and runtime resources, and User holds settings and saves. Add your game folders from the library after starting the app.
 
 **Bring your own disk images.** No commercial game disk images or Atari TOS ROM are supplied. Compatibility varies by game and disk edition. This public release continues the preview series: Linux has received hands-on testing; Windows has been built and checked automatically but still needs broader real-machine testing.
 

@@ -1,91 +1,17 @@
-# SemaTor changelog — 1.1.300 to 1.1.320
+# SemaTor 1.1.328
 
-Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
+A live controller page: F12 > Controls > Controller layout draws your pad, lights up each control as you press it - including each D-pad direction and the sticks, which lean the way you push them - and labels every control with what it does in the game you are playing.
 
-**Upgrading to 1.1.320:** install the full platform ZIP once, preserving Games, Media and User. Older update helpers cannot accept the expanded artwork file list. The new helper supports the accompanying signed `.supdate` packages.
+Optional fast disk loading, off by default: F12 > Speed & loading > DISK LOADING. It shortens only the drive's waiting, keeps the real data rate, leaves timing-sensitive commands alone and switches itself back off if a game starts re-reading. Measured: Speedball 2 spent 106.5 seconds waiting on the drive, now 0.4.
 
-Compatibility remains game- and disk-edition-specific. Bounded test runs are not full-game certification; some tested titles still have graphics or loader problems.
+Switchblade II now loads: a disk whose last track image is a few bytes shorter than declared is no longer refused.
 
-## 1.1.320
+Fixed the SemaTor badge on the CRT bezel drawing as diagonal streaks under OpenGL.
 
-Fixed Vulkan descriptor exhaustion during busy rendering and optical-flow frames. Improved protected-disk reading and library rescans; corrected Lombard Rally data-disk file lookup and Arkanoid II launcher selection. Added enhanced-edition checksums to the game guides. Dungeon Master now repeats the supplied dark stone background seamlessly, with softer torch lighting. Public packages include the latest artwork and expanded signed-update support.
+Menus: clearer names throughout, one duplicate brightness entry removed, the Picture & CRT page reordered so the picture mode comes first and no longer repeating its own section list, and a live example on the scanlines, blur and glow page. The Mega lo Mania command centre no longer offers INSIDE BEZEL, which covered the game's own screen; saved settings open as the side panel.
 
-## 1.1.319
+Correction: a package built after 1.1.326 was released briefly carried the 1.1.326 version number as well. Everything it added is in this release; no 1.1.326 download is changed by it.
 
-Brighter Dungeon Master interface, corrected spell and party alignment, updated close-up mirror portraits, repaired items and HD cursors. Added warm torch lighting and party-formation dragging.
+Installing this one: the controller artwork is a new file, and updaters from 1.1.327 and earlier only accept files they already know about, so they will refuse this update rather than install a package they cannot check. Install the full platform ZIP once; automatic updates work normally again afterwards.
 
-## 1.1.318
-
-Restored complete desktop packages with Windows/Linux release and debug builds, debug launchers, tools, installers and an offline source/build kit.
-
-## 1.1.317
-
-Expanded Dungeon Master UI artwork, character portraits, inventory items and controls; repaired mouse-event delivery and interaction handling.
-
-## 1.1.316
-
-Fixed register preservation across guest VBL callbacks, helping games that rely on those callbacks. Expanded compatibility checks across varied disk editions.
-
-## 1.1.315
-
-Tightened public packaging and removed development metadata from public binaries.
-
-## 1.1.314
-
-Improved frame generation for small moving objects and after rewinding. Fixed graphics-copy and clipping issues.
-
-## 1.1.313
-
-Improved fine-detail preservation with optional graphics filters and their interaction with frame generation.
-
-## 1.1.312
-
-Corrected CPU bus accesses and floppy seek verification; added text queries and clipping fixes.
-
-## 1.1.311
-
-Added classic GEM resource loading, relocation, lookup and lifecycle handling, with malformed-file checks.
-
-## 1.1.310
-
-Expanded GEM bitmap conversion, graphics attributes, dialog layout and image drawing.
-
-## 1.1.309
-
-Expanded TOS and graphics services; improved drive access, MIDI, file handling and save-state validation.
-
-## 1.1.308
-
-Added independent drive B, optional procedural MIDI synthesis and per-game dither, gradient and edge controls.
-
-## 1.1.307
-
-Added live keyboard buffering, guest-timed key repeat and waiting console input; improved save-state handling.
-
-## 1.1.306
-
-Added loader execution modes, inherited environments and ST-RAM allocation support; improved console errors.
-
-## 1.1.305
-
-Corrected CPU error-handler information, protected-sector reads, disk swapping and sector-write handling.
-
-## 1.1.304
-
-Improved floppy timing and hardware/CPU compatibility; made unsupported services report failures consistently.
-
-## 1.1.303
-
-Improved library sorting/search, F11/F12 navigation, save naming and keyboard/controller focus.
-
-## 1.1.302
-
-Added clearer compatibility notices and prefilled game-report drafts; improved library empty states, disk-picker cancellation and screenshot saving.
-
-## 1.1.301
-
-Introduced the experimental Dungeon Master native party interface, packaged its artwork and fixed its Vulkan presentation. Corrected system calls, keyboard waits and stale palettes.
-
-## 1.1.300
-
-Starting point for this changelog; subsequent compatibility, interface and packaging changes are listed above.
+Public Windows/Linux packages include signed .supdate files and omit expanded artwork. Dungeon Master artwork add-on version 1 remains compatible. No new Android/macOS binary is supplied.
