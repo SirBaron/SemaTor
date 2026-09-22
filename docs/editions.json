@@ -1,5 +1,5 @@
 {
-  "version": "1.1.320",
+  "version": "1.1.324",
   "games": [
     {
       "game_page": "arkanoid-ii",
@@ -220,6 +220,51 @@
         }
       ],
       "validation": "Existing exact enhanced-profile identities. These editions are recognised by the release; no new complete-game test was performed in 1.1.320. Options marked TEST retain their individual limitations."
+    },
+    {
+      "game_page": "fire-and-ice",
+      "release": "1.1.324",
+      "profiles": [
+        {
+          "name": "Fire and Ice (1992, Graftgold, ICS)",
+          "programs": "BOOT",
+          "identity_type": "decoded boot-sector SHA-1",
+          "sha1": "1ee517dd515f1f1ed295fe2f0a8723ee6927b0f5",
+          "text_bytes": 512
+        }
+      ],
+      "validation": "Prior 1.1.323 full-map coverage: All 27 distinct map layouts / 35 loader slots: 280 start frames, 630 edge frames, 1926 full-map grid frames at 4:3/16:9/21:9. Every map pixel covered; exact original playfield equality required. SDL HUD, native-motion and reload checks pass. Controlled camera/loader tests; not a complete campaign or NVIDIA hardware certification. Original enemy activation and physics remain. 1.1.324 adds 50 Hz presentation-clock and SDL sampling tests across the same 35 starting-fixture sets plus controlled timing/playback cases; no new campaign playthrough.",
+      "disks": [
+        {
+          "filename": "Fire and Ice (1992)(Graftgold)(Disk 1 of 2)[cr ICS].st",
+          "bytes": 829440,
+          "sha256": "ca0c26b1d25eec11dceb673fda5e6498419fd8e5055771966b91f549222f49f9"
+        },
+        {
+          "filename": "Fire and Ice (1992)(Graftgold)(Disk 2 of 2)[cr ICS].st",
+          "bytes": 819200,
+          "sha256": "9eecf80f9c3786eff925f1d0116bf400c0d0964aed3908098b6cd83dd17b0531"
+        }
+      ]
+    },
+    {
+      "game_page": "bubble-bobble",
+      "release": "1.1.321",
+      "profiles": [
+        {
+          "name": "Bubble Bobble (1987, Firebird)",
+          "programs": "BUBBLE.PRG",
+          "identity_type": "raw program-text SHA-1",
+          "sha1": "d9bd8321676138c8db559f10228b6e6e8f6114a4",
+          "text_bytes": 572
+        }
+      ],
+      "validation": "Menu, one-player start and bounded first-round gameplay; reproduced palette, character and tile corruption fixed. No complete-game certification.",
+      "disk": {
+        "filename": "Bubble Bobble (1987)(Firebird)(2).stx",
+        "bytes": 881942,
+        "sha256": "a442744fda6a5eb5e637f6ef6e4f932a1d5d83b9c9452663c30617a5a0db1012"
+      }
     }
   ]
 }
