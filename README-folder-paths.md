@@ -10,15 +10,15 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.328 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.337 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
 The update button stays in the library header: it shows the current status and highlights available updates in gold. Select it to download with progress in the update popup, then choose **Install and restart**. You can also check under **Library Settings → Updates**. Optional daily startup checks include public previews. Choose **Download update**, then **Install and restart**: signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
-## New in 1.1.328
+## New in 1.1.337
 
 Clearer compatibility guidance, prefilled GitHub game reports and a smoother library. Untested editions get an optional launch warning with **Play anyway** and **Request compatibility check**. Basic **Confirmed playable** profiles can record tested editions without inventing enhancements. Empty searches offer a clear-search action; disk-picker cancellation and pasted-path handling are fixed. Screenshot saving is more robust.
 
-[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.328/SemaTor-Dungeon-Master-artwork-addon-1.zip)
+[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.337/SemaTor-Dungeon-Master-artwork-addon-1.zip)
 
 **Optional Dungeon Master artwork:** extract the separate artwork add-on ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
 
@@ -46,7 +46,7 @@ Browse covers or lists, search your collection, keep favourites and return to re
 - **Picture controls:** sharp pixels, simple filters and CRT presets with controls for the look of the screen and bezel.
 - **Smoother motion:** optional frame generation, with availability and results depending on the graphics backend, GPU and driver.
 - **Pick up where you left off:** four manual save slots with previews, plus rewind and session features where supported.
-- **A more comfortable desktop:** F11/F12 menus keep Resume, Library and Quit in the header. Click them, or use LB/RB then A on a gamepad. **F11 → Controls for this game** shows live button mappings and supported game-specific notes. Public builds include basic diagnostics and an optional local support report.
+- **A more comfortable desktop:** F11 is an overlay along the bottom of the game - save and load with a picture of every slot, rewind, disks and controls, with Resume, Library and Quit on its bar. Arrow keys or the D-pad reach every button. **F11 → Controls** shows the live controller picture with each button's action in the game you are playing. Public builds include basic diagnostics and an optional local support report.
 - **Your own disk collection:** ST, IMG, MSA, full-sector DIM, STX and supported disk images inside ZIP archives.
 
 ![Session controls](./docs/readme/session-overview.png)
@@ -59,8 +59,8 @@ Browse covers or lists, search your collection, keep favourites and return to re
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_328-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_328-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_337-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_337-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. Linux requires an SDL2 runtime and Python 3 for installation.
 

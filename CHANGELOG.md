@@ -1,10 +1,44 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.328)
+# SemaTor — changes since public 1.1.230 (through 1.1.337)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
 **Public downloads:** expanded artwork is omitted. Both platform ZIPs and signed `.supdate` files are provided; existing artwork and user data are preserved.
 
 Compatibility remains game- and disk-edition-specific. Bounded test runs are not full-game certification; some tested titles still have graphics or loader problems.
+
+## 1.1.337
+
+F11 > Controls has two tabs, Gamepad and Keyboard. The pad's own settings - dead zone, autofire, left stick, mouse speed and restore defaults - sit under the button bindings beside the controller picture. The bar's Shot button is now called Screenshot.
+
+## 1.1.336
+
+F11 is now an overlay along the bottom of the game instead of a separate page. It opens on Save / Load, with Rewind, Disks and Controls beside it on a bar, then Shot, Fast fwd and Pause, then Resume, Library and Quit. Arrow keys and the D-pad move to whatever is next in that direction, so every button can be reached from the keyboard or a pad; Left and Right change a setting, Enter or A presses, Escape or B closes, Tab or the shoulder buttons change section, and F12 or Start opens settings.
+
+Save / Load shows every slot with its picture, which slot quick save and quick load use, and warns when a save will replace one. Keys 1 to 4 choose a slot. Rewind sets how far back rewind reaches and how far each step goes. Disks names each disk by its number, shows which is in drive A, and offers drive B, eject and Restart game. Controls has the live controller picture with its bindings, the keyboard keys, and the pad's own settings. Controls has moved out of F12 into F11.
+
+Restart, Library and Quit ask in a small box in the middle of the screen, and going back puts you where you were.
+
+Ejecting a disk, loading, rewinding or restarting no longer announces that a recording ended when nothing was recording.
+
+## 1.1.331
+
+Native motion now draws its in-between frames on your display's own rate instead of the Atari's 50 Hz field rate. On a 60 Hz display one frame in five used to be a repeat of the one before, and on a 120 Hz display nearly three in five; both are now around one in twenty. Original game timing and physics are unchanged - only which in-between positions get drawn.
+
+## 1.1.330
+
+Added MOTION FEEL under F12 > Screen & frame rate, for games using frame generation or native motion. SMOOTHEST keeps the present behaviour; BALANCED and RESPONSIVE show the newest picture sooner, which makes controls feel tighter.
+
+Measured on Fire and Ice with the game's own frame timing, 60 to 240 Hz displays: the picture sits 50 ms behind the game's newest frame on SMOOTHEST, 45 ms on BALANCED and 38 ms on RESPONSIVE. When the game itself has a long frame, the delay used to spike to 120 ms; BALANCED holds that spike to 99 ms and RESPONSIVE to 78 ms. None of the three shows fewer in-between frames than before.
+
+Interpolation cannot show the newest frame immediately - it has to hold it back while the in-between frames play - so some delay remains by design. The original game's own input timing is unchanged.
+
+## 1.1.329
+
+Fixed the CRT cabinet drawing hard pixel edges instead of the blended picture a tube gives. Filtering now follows the picture mode alone: the CRT cabinet and the screen filters both blend, frame generation never changes it, and the plain picture keeps the ST's own sharp pixels.
+
+Fixed the Picture & CRT page hiding its list of sections (glass, focus, phosphor mask, tube, persistence, calibration, brightness, beam) on wider windows, which left four settings and no visible way to the rest. Every section is reachable from the list at any window size; the side rail remains a shortcut.
+
+Both faults were introduced in 1.1.328. Each is now held in place by a test.
 
 ## 1.1.328
 

@@ -1,17 +1,11 @@
-# SemaTor 1.1.328
+# SemaTor 1.1.337 (test build)
 
-A live controller page: F12 > Controls > Controller layout draws your pad, lights up each control as you press it - including each D-pad direction and the sticks, which lean the way you push them - and labels every control with what it does in the game you are playing.
+F11 > Controls has two tabs now, Gamepad and Keyboard. The pad's own settings - dead zone, autofire, left stick, mouse speed and restore defaults - sit under the button bindings, beside the controller picture, instead of on a third tab of their own. On a small window the rows get a little shorter first; on a very small one the bindings and settings go side by side.
 
-Optional fast disk loading, off by default: F12 > Speed & loading > DISK LOADING. It shortens only the drive's waiting, keeps the real data rate, leaves timing-sensitive commands alone and switches itself back off if a game starts re-reading. Measured: Speedball 2 spent 106.5 seconds waiting on the drive, now 0.4.
+The bar's Shot button is called Screenshot.
 
-Switchblade II now loads: a disk whose last track image is a few bytes shorter than declared is no longer refused.
+A row too short to show a second line keeps its setting at the right-hand end instead of losing it.
 
-Fixed the SemaTor badge on the CRT bezel drawing as diagonal streaks under OpenGL.
-
-Menus: clearer names throughout, one duplicate brightness entry removed, the Picture & CRT page reordered so the picture mode comes first and no longer repeating its own section list, and a live example on the scanlines, blur and glow page. The Mega lo Mania command centre no longer offers INSIDE BEZEL, which covered the game's own screen; saved settings open as the side panel.
-
-Correction: a package built after 1.1.326 was released briefly carried the 1.1.326 version number as well. Everything it added is in this release; no 1.1.326 download is changed by it.
-
-Installing this one: the controller artwork is a new file, and updaters from 1.1.327 and earlier only accept files they already know about, so they will refuse this update rather than install a package they cannot check. Install the full platform ZIP once; automatic updates work normally again afterwards.
+This is a test build for feedback, not a public release. F12 is unchanged.
 
 Public Windows/Linux packages include signed .supdate files and omit expanded artwork. Dungeon Master artwork add-on version 1 remains compatible. No new Android/macOS binary is supplied.
