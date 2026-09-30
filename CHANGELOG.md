@@ -1,10 +1,630 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.337)
+# SemaTor — changes since public 1.1.230 (through 1.1.359)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
 **Public downloads:** expanded artwork is omitted. Both platform ZIPs and signed `.supdate` files are provided; existing artwork and user data are preserved.
 
 Compatibility remains game- and disk-edition-specific. Bounded test runs are not full-game certification; some tested titles still have graphics or loader problems.
+
+## 1.1.359
+
+Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.490
+
+IPF disk images play (5th Gear); Angel Nieto Pole 500 gets past Space; 'Nam shows its picture; SemaOS has desktop folders, a right-click menu and icons on a grid, and windowed SemaOS's Settings button works.
+
+## 1.1.489
+
+SemaOS: drag the desktop icons anywhere; they stay where you put them.
+
+## 1.1.488
+
+SemaOS's desktop icons grouped, the Bin top right; Drives, Documents and Console off the desktop.
+
+## 1.1.487
+
+Programs calling the Line-A mouse and timer vectors no longer crash at $28 - 1000 Bornes runs.
+
+## 1.1.486
+
+A save state that will not load now says exactly why; keyboard and save-state tests up to date.
+
+## 1.1.485
+
+68000 bus/address error frames match the manual again; 33 silently broken tests run again.
+
+## 1.1.484
+
+OpenGL and Vulkan draw identical pixels through every effect; a Vulkan wrapper fault with other renderers' textures fixed.
+
+## 1.1.483
+
+The YM2149 no longer aliases: folded harmonics went from 16-27 dB down to 61-83 dB down.
+
+## 1.1.482
+
+The YM2149 envelope has its real 32 steps; release checks for the sound chip and the CRT settings.
+
+## 1.1.481
+
+Diagnostic runs end with the last 32 OS calls a program made and their answers.
+
+## 1.1.480
+
+SemaSynth is a YM2149 suite of sixteen ST-style patches; SemaOS no longer opens the Games window every time.
+
+## 1.1.479
+
+SemaOS: Explorer, Documents, Notes, Help and Console; Drives, Eject and Shutdown icons; drive sounds and icon size in Settings; two fixes.
+
+## 1.1.478
+
+SemaOS: a damaged or unusual disk in a drive window no longer crashes SemaTor.
+
+## 1.1.477
+
+Buggy Boy keeps its 16:9 and 21:9 views and its speeds with the game's own motion; the smooth-motion options are removed.
+
+## 1.1.476
+
+Buggy Boy: RUN-AHEAD MOTION removed - the picture jumped between run-ahead's guess and the real frames.
+
+## 1.1.475
+
+The F12 menu walk is a release check; tools/burst-check.py checks a burst the same way every time.
+
+## 1.1.474
+
+From the first library check: false unimplemented reports removed, the CPU's last jumps logged when it stops, log floods folded and capped.
+
+## 1.1.473
+
+Buggy Boy: the in-between playhead no longer goes back, and the HUD comes from the game's own frame; bursts name each in-between's source.
+
+## 1.1.472
+
+Buggy Boy: in-between pictures no longer jump back in time; its speed options are one choice; bursts save the game's own frame at each step.
+
+## 1.1.471
+
+The Tools crash is fixed; crashes leave a report in the log; enhancements are named in the log; Alt+F12 burst capture; Dragon Ninja boots.
+
+## 1.1.470
+
+SemaOS: David's icon set with soft shadows, the logo on the desktop with a retro shine; HFE and SCP disks; a disk report; CRT on the new frame types.
+
+## 1.1.469
+
+HFE and SCP disk images play; a disk report says why a disk would or would not start on a real ST; CRT on medium / high-res and border frames.
+
+## 1.1.468
+
+SemaOS: the retro launch scene as a live backdrop, GEM-style window chrome and buttons; the big-library check no longer lags the desktop.
+
+## 1.1.467
+
+SemaTor's workspace out of the ST's RAM (the top of memory is the program's, as on a real ST); left and right borders shown at full width.
+
+## 1.1.466
+
+Games that open the top or bottom border show their extra lines; the sync register is a real register now.
+
+## 1.1.465
+
+Medium (640x200) and high (640x400) resolution shown properly; checked pixel by pixel.
+
+## 1.1.464
+
+What a game writes to its disk is kept and loaded next time (the original image untouched); each game's files in their own folder.
+
+## 1.1.463
+
+The boot reaches the same instruction on every machine and run (the intro ran the machine by host time); proven identical under load, interrupt by interrupt.
+
+## 1.1.462
+
+CPU core reads plain memory inline, the MFP is asked less, Buggy Boy captures filtered by a bitmap; proven identical on the saved stretch.
+
+## 1.1.461
+
+Rewind stores only the memory that changed since the last snapshot: a third of the memory, less time, checked byte for byte.
+
+## 1.1.460
+
+Every game cheaper: the ST's chips serviced when due instead of after every instruction (93% fewer checks), proven identical on a 60-million-instruction stretch.
+
+## 1.1.459
+
+Faster for every game: adapter checks once per game, display colours once per line; Buggy Boy's rows from a table. Checked bit for bit.
+
+## 1.1.458
+
+Profiled and cut: rewind snapshots less than half the cost; Buggy Boy's renderer reads rows, not pixels (real tick 17.6 -> 9.6 ms here).
+
+## 1.1.457
+
+Run-ahead groundwork: whole-program audit of what a guess touches; interrupt statistics and the panel no longer count guessed ticks.
+
+## 1.1.456
+
+Run-ahead groundwork: the running machine's state in one place, a guess proven to leave nothing behind, and counters a guess could change restored.
+
+## 1.1.455
+
+AES: editable dialog fields (G_FTEXT / G_FBOXTEXT) were drawn blank - drawn now, and redrawn by objc_edit.
+
+## 1.1.454
+
+SemaOS: disk windows as on TOS; disk reads timed and sounded as a real ST drive would (motor, steps, sectors).
+
+## 1.1.453
+
+SemaOS: folders on disks can be opened; double-clicking a program starts it, from any folder.
+
+## 1.1.452
+
+GEM programs can start the next program when they end (shel_write), tested with a two-program disk.
+
+## 1.1.451
+
+AES: evnt_dclick, clipboard, shel_get/put, graf_rubberbox and objc_edit implemented and tested; SemaOS arrow keys without a click first.
+
+## 1.1.450
+
+Buggy Boy's in-between frames drawn on their own thread; SemaOS driven by keyboard or pad, and remembers its windows.
+
+## 1.1.449
+
+Buggy Boy: run-ahead re-predicts on a change of input, so steering reaches the picture about twice as fast.
+
+## 1.1.448
+
+Buggy Boy gates hold together; F12 tabs fit their content; SemaOS at the display's refresh rate; Details keeps the covers; run-ahead's gain said plainly.
+
+## 1.1.447
+
+Run-ahead's state and gain on the performance panel; sound no longer drops out during run-ahead guesses; SemaOS starts a .PRG on double-click.
+
+## 1.1.446
+
+SemaOS fast with big libraries (category windows no longer re-sort the library every frame); Xenon run-ahead no longer switches off in pauses and menus.
+
+## 1.1.445
+
+Buggy Boy wide view: the horizon no longer slips a pixel at the wing seams in smooth motion.
+
+## 1.1.444
+
+Buggy Boy smooth motion: objects reused within a pair of real frames; panel rates no longer garbage with run-ahead; run-ahead cost measured without the idle wait.
+
+## 1.1.443
+
+SemaOS polish: clicks no longer reach the hidden library (the top-right corner could quit SemaTor); the Bin works; menus reach every window and the selected game; maximise; Esc.
+
+## 1.1.442
+
+Buggy Boy smooth/remastered much cheaper and an object-cache height bug fixed; run-ahead snapshot several times cheaper; F12 Picture: CRT Simple and CRT Advanced; SemaOS pacing and cheaper shadows, clicks and frame times logged.
+
+## 1.1.441
+
+SemaSynth: play the YM2149 or the SemaTor synth from the SemaOS desktop, with the computer keyboard or on-screen keys.
+
+## 1.1.440
+
+SemaOS Jukebox and Pictures; Tiny pictures in the viewer; screenshots no longer overwrite earlier sessions' shots.
+
+## 1.1.439
+
+F11: Record / Replay tab and a Discord button on the main menu; the lower row fits its buttons when split.
+
+## 1.1.438
+
+SemaOS: drag games onto drives, type-to-search, Details and Continue windows, disk sets, accent themes and wallpaper, Spectrum 512 pictures.
+
+## 1.1.437
+
+SemaOS: Insert into Drive A / B with Eject (Drive B goes into the ST's second drive), a file viewer for text, Degas and NEOchrome pictures and hex.
+
+## 1.1.436
+
+SemaOS: fades into a game and back; covers fade in as they load.
+
+## 1.1.435
+
+SemaOS visual pass: glass menu bar and taskbar, vignetted desktop, rounded shadowed windows that open and close with animation, dark menus.
+
+## 1.1.434
+
+F12 reorganised into seven tabs (Display, Picture, Motion, Sound, Machine, Game, Tools); game-specific settings only under Game. Crop black borders is per game (Game > View), off by default.
+
+## 1.1.433
+
+Buggy Boy races at the ST's own speed by default (10 fps steady); FAST SPEED, ST SPEED EXACT and 60 HZ MACHINE options; SemaOS window drags paced by the display, titles fitted to their cards.
+
+## 1.1.432
+
+RUN-AHEAD for 50 fps games, switched on by measurement: kept while a guess fits in a quarter of a frame on your computer.
+
+## 1.1.431
+
+RUN-AHEAD motion setting for any game: frame generation gets the next picture early (Buggy Boy: 88 ms -> 8 ms behind the game); detects tick rate and buffering itself; leaves no trace.
+
+## 1.1.430
+
+Buggy Boy: remastered objects move and grow continuously until they pass the player; the tunnel is drawn again and walls sit between far and near objects - pixel-identical to the game on both test stretches.
+
+## 1.1.429
+
+Buggy Boy: REMASTERED OBJECTS (TEST) - sub-pixel object growth from close-up art, supersampled; run-ahead now smooths the game's alternate-tick object steps without lag.
+
+## 1.1.428
+
+Buggy Boy: RUN-AHEAD MOTION (TEST) - smooth motion without holding the picture behind the game (input lag as on a real ST); proven to leave no trace in the machine.
+
+## 1.1.427
+
+Buggy Boy: BB2 is now the adapter (wide view and smooth motion in one path, pixel-identical to the game at 4:3); smooth motion's rate estimate fixed; water drawn; LOW LATENCY MOTION option.
+
+## 1.1.426
+
+User data in a User folder beside SemaTor (existing data copied in once); recording status reworded and the file named in the log; no empty saves folders per library title; "Buggy Boy motion" statistics line; BB2, the rewritten Buggy Boy adapter, behind a private switch (pixel-identical to the game at 4:3; one path for wide view and smooth motion).
+
+## 1.1.425
+
+Buggy Boy smooth object scaling: sizes from the game's own per-type table (no shape guess), tall pictures no longer cut at capture, lamp posts follow the game's quarter-row sizes; in-between frames paced by a continuous playhead on host time (no hitch at every game frame); "motion clock" line in the session log.
+
+## 1.1.424
+
+SemaOS: one card per title, clicks and right-click menu, clipped covers, window animation; AES form_alert/form_do/file selector/pointer.
+
+## 1.1.423
+
+screenpt starts at zero (the flickering menu since 1.1.416; old states migrated); Buggy Boy in-between frames whole; SemaOS 2 part 1: AES windows and menus.
+
+## 1.1.422
+
+screenpt starts at zero (the flickering menu since 1.1.416; old states migrated); Buggy Boy in-between frames: HUD lines from the pass, gate rows whole.
+
+## 1.1.421
+
+SemaOS polish: resize from any edge, X close box, category windows with the Enhanced glow, compilation folders, right-click menu, the logo.
+
+## 1.1.420
+
+Native picture is the frame at the last VBL (no more half-drawn menus at high frame caps); Buggy Boy wings keep objects whole in the HUD lines.
+
+## 1.1.419
+
+SemaOS 1: Boot into SemaOS, a GEM-shaped desktop drawn by SemaTor - Games, Drives, Settings, windows and menus.
+
+## 1.1.418
+
+SemaTor's guest workspace moved from $e000-$ffff to the top of RAM; programs load where TOS does. Switchblade (Replicants) plays.
+
+## 1.1.417
+
+OS audit: deferred Setpalette, GEMDOS/XBIOS clocks in step, keypad key tables, CON:/AUX:/PRN: names and negative handles; honest sweep labels.
+
+## 1.1.416
+
+OS audit fixes: Getmpb/BPB memory collisions, root DTA, VBL stub to TOS's contract (vblsem, vbclock, screenpt to hardware).
+
+## 1.1.415
+
+Disk sets by trailing number; automatic insertion into drive B. War in Middle Earth plays with all three disks.
+
+## 1.1.414
+
+GEMDOS 8.3 names keep their extension; Line-A honours the program's screen variables; a stand-in Line-A font; Malloc(-1) capped at a 1 MB ST's. War in Middle Earth comes up.
+
+## 1.1.413
+
+F12 from a pad no longer opens and shuts on one Start press.
+
+## 1.1.412
+
+Buggy Boy wings: objects from the game's sprite calls (no more sky-to-road posts); Lombard WIDE WINDSCREEN 21:9 (TEST).
+
+## 1.1.411
+
+Desktop library add-on card (diagonal gold-green glow, ADDON plate); no frame generation on Wizball's wide picture.
+
+## 1.1.410
+
+Sharp sampling for the 3x picture (Lombard road, Wizball art) - the overall blur is gone.
+
+## 1.1.409
+
+Library: add-on games get ENHANCED on top, ADDON below and a diagonal gold-green glow; Wizball pack tiles' holes filled at load.
+
+## 1.1.408
+
+Lombard RAC Rally: HIGH RES ROAD (TEST) - the road redrawn at 3x from the game's own road spans, no art.
+
+## 1.1.407
+
+Wizball: SemaTor draws objects from the table as the game drew them (copied when its object routine returns) - no more split enemies at the join.
+
+## 1.1.406
+
+F11 Restart on the bottom bar; Wizball: ground in front of tile bases from row 15, edge strips draw only culled objects, tiles stay within the map.
+
+## 1.1.405
+
+Wizball intro: the overlaid face, ball and mask parts are the pack's redraws too.
+
+## 1.1.404
+
+TOS call sweep (132 checks; Getmpb and Ssbrk added); the whole core suite passes.
+
+## 1.1.403
+
+Wizball: no camera hold at a level's edge - the backdrop and fixed pieces stay put; a side view past the map shows backdrop only.
+
+## 1.1.403
+
+Wizball: no camera hold at a level's edge, solid cans/pipes in the side views; 68000 bus-error frame I/N bit fixed.
+
+## 1.1.402
+
+Wizball wide view rebuilt: the game's routines draw only floor and tiles; SemaTor draws every object from the object table.
+
+## 1.1.401
+
+Wizball: the intro's wizard frames are the pack's redraws; the intro no longer passes as a level (1.1.400 fault).
+
+## 1.1.400
+
+Wizball: no extra ball at a level's edge (the middle is the game's own frame moved); wide view and art through the warp's fades.
+
+## 1.1.398
+
+Wizball: landscape = floor and tile routines only; the Wizball and pickups are sprites (no copies in the wings, not under the ground band).
+
+## 1.1.397
+
+Sealed, signed add-on packs; Wizball: front ground band before the landscape, no enemy-culling strip beside the score panels.
+
+## 1.1.396
+
+Artwork add-ons are sealed, signed .semapack files (encrypted; SemaTor loads only packs signed with its key).
+
+## 1.1.395
+
+Glowing green ADDON tag for games with artwork add-ons; Wizball side-view drawings no longer fail (OS traps return at once in a drawing).
+
+## 1.1.394
+
+Artwork add-ons are Discord-only (F12 > Advanced > Get add-ons on Discord; "On / no pack"); Getbpb from a mounted image.
+
+## 1.1.393
+
+Dungeon Master artwork add-on in the private package; F12 audited across every game (EXPERIMENTAL badge, SWIV help).
+
+## 1.1.392
+
+F12 > This game holds every game option (motion options moved in; test-thisgame390); Wizball pack: level art only, banded pebble ground.
+
+## 1.1.391
+
+Wizball side views: no more failing drawings (shot list no longer blanked), fixed pieces and the Wizball kept out of the wings, the moon stays put at a level's edge.
+
+## 1.1.390
+
+Sound: a device left paused with nothing holding it is resumed (Lombard alt-tab).
+
+## 1.1.389
+
+Wizball: side views drawn as landscape plus objects (no more wiped cans/pipes); pack sprites keyed by graphics address; the Wizball's picture turned per frame.
+
+## 1.1.388
+
+Wizball art pack: no more dark cans and towers (tile pixels without a colour step keep their own colour); floor past the map's end replaced by the pack's ground.
+
+## 1.1.387
+
+Wizball: no holes round swapped sprites, left-side spawns at the wide edge, pause keeps the wide picture, tune volume as gain; tests brought up to date.
+
+## 1.1.386
+
+Wizball: no more last-level objects over the title and credits pages (the 3x art layer only on the adapter's own frames).
+
+## 1.1.385
+
+Wizball ADD-ON MUSIC on a second virtual YM2149; level-start wing fix; F12 hover and steady height.
+
+## 1.1.384
+
+Wizball art pack at 3x: the pack's tiles and sprites over its panoramas and sky.
+
+## 1.1.384
+
+F12 holds its height across a topic's parts; menu text size fixed; the Wizball pack ships in the private package's Add-ons folder.
+
+## 1.1.383
+
+Wizball art pack, stage A: panoramas, ground, twinkling sky, galaxy and exact colour restore behind the landscape.
+
+## 1.1.382
+
+Lombard's frame-rate modes really switch now (patches can keep their own variables: work = ...). Every profile checked for the same trap.
+
+## 1.1.381
+
+F12: each topic's parts in a list on the left (like the CRT studio), the chosen part on the right.
+
+## 1.1.380
+
+Lombard RAC Rally profile: SMOOTH MODE (50 fps), STEADY 25, ARCADE SPEED, half-speed clock. Zynaps STEADY SPEED.
+
+## 1.1.379
+
+Xenon layered sound: no louder music after fire presses (the music ghost only fills channels an effect owns). Zynaps: INFINITE LIVES.
+
+## 1.1.378
+
+Beam simulation in F12; F11-style save naming; toasts in the menus' type; SESSION header; HUD fits short windows.
+
+## 1.1.377
+
+HUD: frame-time graph against the display's own pacing, 1% low, recent counts, wrapped values; sound dropouts counted only while playing.
+
+## 1.1.376
+
+Wizball: the wide camera stops at a level's ends; the drifting hills no longer flicker.
+
+## 1.1.375
+
+Wizball: the laser shows again with the drifting backdrop and in redrawn frames.
+
+## 1.1.374
+
+F12 sub-pages in the new style with Back; buttons in columns; CRT studio header trimmed; Wizball wing shots fixed; backdrop capture.
+
+## 1.1.373
+
+F12 in five tabs; game motion beside frame generation; This game in sections; one-line help where it fits.
+
+## 1.1.372
+
+Wizball: no see-through holes in the wings, no junk past the map's ends, shots redrawn, shadows and layers in the wings.
+
+## 1.1.372
+
+F12 sized to its tab bar and topic, Picture in columns, Display grouped; Fire and Ice score bar centred again; Wizball wing holes, level-start garbage and missing shots fixed.
+
+## 1.1.371
+
+F12 sized to its content, tiles for settings and compact buttons for actions; F11 saves, rewind and disks compact.
+
+## 1.1.370
+
+Wizball looks restyled: pixel shadows, palette-step explosion light on surfaces only, dithered backdrop join.
+
+## 1.1.369
+
+Wizball EXPLOSION LIGHT (TEST): explosions (object types $18-$1f) light the landscape and backdrop.
+
+## 1.1.368
+
+Wizball layer map; SMOOTH OUTLINES and COLOUR FADE-IN (TEST); profiles hold 24 options.
+
+## 1.1.367
+
+Wizball SUB-PIXEL SCROLLING (TEST) with smooth motion; spawn edge moved into the adapter.
+
+## 1.1.366
+
+Wizball looks: BACKDROP PARALLAX, GROUND SHADOWS, FULL-WIDTH PANELS (all TEST).
+
+## 1.1.365
+
+Wizball: pickups stay until they leave the wider view; smooth motion draws the Wizball and Catellite with the game's own sprite routine (no grey square); wings at level ends.
+
+## 1.1.364
+
+Wizball SMOOTH MOTION; enemies arrive at the wider view's edge; 21:9 buffer overrun fixed (560 wide); wide/smooth frames only in play.
+
+## 1.1.363
+
+Wizball wider view: floor strips reach the edges, the backdrop continues instead of repeating.
+
+## 1.1.362
+
+Wizball: WIDER VIEW (TEST) 16:9 and 21:9 - the game's own draw list re-run with the camera moved. Zynaps needs its disk.
+
+## 1.1.361
+
+F12 check at all text sizes: ALL GAMES tags complete, no clipped names, two-line help, correct tab notes, mouse wheel and Home/End.
+
+## 1.1.360
+
+Performance HUD (Shift+F12) with 68000 work rate, ST blank rate, sound buffer, drive and patch state; open the log folder from F12; docs/DEBUG.md and a list of every debug switch.
+
+## 1.1.358
+
+F12 deep check: help of its own on every tile, calmer values, resets ask twice, Effects / speech volume for every game.
+
+## 1.1.357
+
+Buggy Boy SMOOTH MOTION moves at an even speed: one more game frame of look-ahead evens out the game's 1-2-1 steps (frame-to-frame speed varies ~7% instead of 2x).
+
+## 1.1.356
+
+F12 laid out like F11: topic bar at the bottom, F11's tiles and help line; This game gets Reset to the shared settings and Use for all games; one Escape leaves the CRT studio.
+
+## 1.1.355
+
+F12 settings are tiles like F11's; F12 rises from the bottom with a slide; Enter picks a setting up and Left/Right change it.
+
+## 1.1.354
+
+F12 rebuilt like F11: tabs for Display, Picture, Smoothness, This game, Speed, Sound and Advanced; every setting in one place; ALL GAMES tags; the CRT studio unchanged.
+
+## 1.1.353
+
+Buggy Boy widescreen: walls near the end of Offroad drawn properly in the wings; no extra buggies beside yours when jumping.
+
+## 1.1.352
+
+Buggy Boy: SMOOTH MOTION lets the game draw every object again (no gate or board glitches); continuous object scaling moves to its own experimental option, off by default.
+
+## 1.1.351
+
+Buggy Boy SMOOTH MOTION: objects no longer hop at the game's rate; gates drawn in the game's order; no extra buggies when jumping in widescreen; lamp heads kept at the old edge.
+
+## 1.1.350
+
+Buggy Boy SMOOTH MOTION: roadside objects grow smoothly as they approach - SemaTor draws them itself, scaled between the game's own sizes.
+
+## 1.1.349
+
+Buggy Boy widescreen: posts, gates and roadside objects stay whole as they cross into the wide area.
+
+## 1.1.348
+
+F12 > Speed & loading: CPU boost and Steady speed get proper names and help; Disk loading is no longer labelled Native replacements.
+
+## 1.1.347
+
+Buggy Boy: the HUD no longer loses its black parts (map outline, flag numbers, gear knob) in widescreen with SMOOTH MOTION.
+
+## 1.1.346
+
+STEADY SPEED now covers Fire and Ice: busy scenes keep the game's own pace (late frames 59 to 2 in the same play-through).
+
+## 1.1.345
+
+STEADY SPEED (F12 > Speed & loading, on by default): busy scenes no longer slow the game - the CPU gets more time just for those frames. Buggy Boy's race runs at its designed 12.5 frames a second. Buggy Boy SMOOTH MOTION draws a picture for every screen refresh, up to 240 Hz.
+
+## 1.1.344
+
+Buggy Boy SMOOTH MOTION: every step of the roadside objects glides now, all twelve rows, including the step where the game moves its object grid on a row.
+
+## 1.1.343
+
+Buggy Boy SMOOTH MOTION: road stripes slide continuously and roadside objects glide towards you instead of stepping; the game's own frames are unchanged.
+
+## 1.1.342
+
+Buggy Boy SMOOTH MOTION (test): in-between frames drawn by the game's own code, at 4:3 or with the wider views; speed, timing and controls stay original.
+
+## 1.1.341
+
+Game profiles can make one option change several places at once, written together or not at all - ready for Lombard RAC Rally's smoother frame-rate modes. Wizball's cauldron cheat uses it.
+
+## 1.1.340
+
+CPU BOOST in F12 > Speed & loading (AUTO, OFF, 2X to 16X): more CPU per frame while the ST's clocks, sound and disk keep real time. Profiles can link several patches into one option and make options exclude each other. Wizball gets PAUSE+C FILLS CAULDRON.
+
+## 1.1.339
+
+Buggy Boy in 16:9 and 21:9 (test, F12 > Enhancements > WIDER VIEW): the road, horizon and roadside objects carry on beyond the old screen edge, drawn by the game's own code on a private copy of its memory, with the original speed, timing and controls.
+
+## 1.1.338
+
+WINDOW SIZE replaces WINDOW SCALE: 1.0x is 1200 x 800, in steps of 0.1x from 0.5x to 3.0x. SemaTor checks for updates every time it starts, and falls back to the releases page when GitHub's API is busy. New profiles for Wizball (seven cheats) and Buggy Boy (infinite time). Fire and Ice in 16:9 and 21:9 moves the score bar to the far left and draws the world beside it (test).
 
 ## 1.1.337
 
