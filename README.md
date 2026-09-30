@@ -10,15 +10,15 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.337 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.490 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
 The update button stays in the library header: it shows the current status and highlights available updates in gold. Select it to download with progress in the update popup, then choose **Install and restart**. You can also check under **Library Settings → Updates**. Optional daily startup checks include public previews. Choose **Download update**, then **Install and restart**: signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
-## New in 1.1.337
+## New in 1.1.490
 
 Clearer compatibility guidance, prefilled GitHub game reports and a smoother library. Untested editions get an optional launch warning with **Play anyway** and **Request compatibility check**. Basic **Confirmed playable** profiles can record tested editions without inventing enhancements. Empty searches offer a clear-search action; disk-picker cancellation and pasted-path handling are fixed. Screenshot saving is more robust.
 
-[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.337/SemaTor-Dungeon-Master-artwork-addon-1.zip)
+[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.490/SemaTor-Dungeon-Master-artwork-addon-1.zip)
 
 **Optional Dungeon Master artwork:** extract the separate artwork add-on ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
 
@@ -59,8 +59,8 @@ Browse covers or lists, search your collection, keep favourites and return to re
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_337-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_337-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_490-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_490-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL2.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. Linux requires an SDL2 runtime and Python 3 for installation.
 
