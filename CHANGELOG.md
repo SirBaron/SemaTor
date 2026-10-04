@@ -1,14 +1,154 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.359)
+# SemaTor — changes since public 1.1.230 (through 1.1.528)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
 **Public downloads:** expanded artwork is omitted. Both platform ZIPs and signed `.supdate` files are provided; existing artwork and user data are preserved.
 
-Compatibility remains game- and disk-edition-specific. Bounded test runs are not full-game certification; some tested titles still have graphics or loader problems.
+Most ST disks run. Bounded test runs are not full-game certification; please report any game that misbehaves.
 
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.528
+
+Start-up as TOS does it: the AUTO folder on every boot and AUTO programs where TOS loads them, the reset vector, the boot sector's stack, the floppy lines and sound chip as TOS leaves them, Setscreen's registers. 9-sector filesystems on 10-sector disks; the program named after the disk starts first; writes above RAM no longer stop a game. Kick Off 2, Alpha Waves, Sapiens, Crazy Boy, Rock Star and many menu disks now run. SemaOS: two-line desktop labels, fuller Help, quieter logs.
+
+## 1.1.527
+
+SemaOS is how SemaTor starts (the classic library is a setting away). No more freezes on Wayland when the window is covered. The Jukebox keeps playing your favourites in order. A SemaSynth crash fixed.
+
+## 1.1.526
+
+The public release is built on SDL3.
+
+## 1.1.524
+
+SemaOS's Video window: screen resolution and refresh rate, variable refresh, HDR and pointer speed.
+
+## 1.1.521
+
+An I/O address nothing answers is a bus error, as on a real ST: programs probing for hardware find what an ST has.
+
+## 1.1.520
+
+SemaTor moves to SDL3 3.4.18, carried with the app; sound through SDL3 streams.
+
+## 1.1.519
+
+A MIDI keyboard for SemaSynth, and Find.
+
+## 1.1.518
+
+Save as SNDH: SemaSynth songs as real ST tunes.
+
+## 1.1.517
+
+SemaSynth: A/B comparison, the song library, the screensaver.
+
+## 1.1.516
+
+SemaSynth makes what real ST tunes make.
+
+## 1.1.515
+
+Open a tune in SemaSynth without playing it first.
+
+## 1.1.514
+
+SemaSynth becomes a music studio.
+
+## 1.1.513
+
+Covers for files named by hand; favourites in the Jukebox.
+
+## 1.1.512
+
+Covers for every disk of a game, covers that stay put while resizing, launch sources in SemaOS.
+
+## 1.1.511
+
+Compatibility from a library-wide test run: disks that never started now do.
+
+## 1.1.510
+
+Bigger disks, a card size you choose, scroll bars that work, look-alike disks told apart.
+
+## 1.1.509
+
+Pictures no longer sit too high; your floppy on the handwritten labels.
+
+## 1.1.508
+
+Disks labelled by hand, like a copy from a mate; game cards drawn twice as fast.
+
+## 1.1.507
+
+SNDH tunes play live, with everything their timers do; SemaOS and the Jukebox much lighter.
+
+## 1.1.506
+
+The Jukebox's channel scopes, windows that stand off the desktop, typing that stays typing.
+
+## 1.1.505
+
+The 68000 runs on the ST's bus: counted delays, borders and raster effects land where they should.
+
+## 1.1.504
+
+Menu disks boot as on an ST, mouse clicks reach VDI programs, the Jukebox browses the SNDH archive.
+
+## 1.1.503
+
+SemaOS polished: the Jukebox rebuilt (search, filters, sort, trim, remove, shuffle/repeat, seek, the archive found by itself); every window checked and given a minimum size; compilation counts and disk numbers; David's new icons, folders, floppy cards and full-resolution logo; a new retro wallpaper. Fixed: Enter swallowed by SemaSynth.
+
+## 1.1.502
+
+The SNDH archive in the Jukebox (index once, add a game's tunes or all games); ICE depacking fixed and proven on 613 real files; the SNDH player plays 89% of real archive tunes (OS calls, timer interrupts); tunes inside files on disks.
+
+## 1.1.501
+
+SemaOS: the Jukebox plays SNDH on the 68000, unpacks LHA YM files, ICE depacking (unproven), records a game's music; a Disk Workshop (open, extract, import, delete, blank, save .st); a Program Lab (editor, 68000 assembler, put on disk and run).
+
+## 1.1.500
+
+SemaOS: visible, draggable scrollbars; search bars with a caret and hint on games and folder windows; Documents from the selected game's disk; Details disk line; Home/End/Page keys. SemaSynth: 32 patches, a 16-step sequencer with a piano roll, Record to WAV.
+
+## 1.1.499
+
+Boot sector first (TOS order; profiled games keep the program path; SEMATOR_BOOT_FIRST=0 for the old order); STOP is a wait, not an end; a stack in the TOS variable area is served by the ROM trap gate; an unhandled ILLEGAL stops with a report. Brat plays.
+
+## 1.1.498
+
+'Nam plays through to the campaign map: the AES counts double-clicks, the Line-A mouse position follows the AES one, headless pictures of medium/high resolution are 640x400. SemaOS: wrapped Help, richer game cards, View > Sort, window snapping.
+
+## 1.1.497
+
+The boot sequence: after the start program ends, the rest of the AUTO folder runs in order, then the desktop autostart (Air Strike USA, Chaos Strikes Back play through). Writes above RAM are swallowed as Hatari does; SEMATOR_STRICT_BUS=1 for the real ST's bus error.
+
+## 1.1.496
+
+Timer C now saves all registers around a game's timer handler, as TOS does (Dogfight and babytor's group B); default handlers for exception vectors 2-9 and the unused TRAPs; STX revision 1 and unformatted tracks accepted.
+
+## 1.1.495
+
+Frame generation for any size made good: scrolling scenes work (1.1.494 treated them as cuts), quality measured against the truth beats the 320x200 generator, analysis on a worker thread, medium/high resolution on the GPU with a GPU method.
+
+## 1.1.494
+
+Frame generation for a picture of any size: wide views, medium and high resolution get in-between pictures, the same size as the source, on the CPU or the GPU. Test build - wide views not yet run in a game.
+
+## 1.1.493
+
+SemaOS game windows show a search field.
+
+## 1.1.492
+
+Programs that call or chain to the OS's disk and critical-error hooks no longer jump to address 0.
+
+## 1.1.491
+
+Disks whose boot sector says 0 reserved sectors are no longer refused as an unrecognised format.
 
 ## 1.1.490
 
