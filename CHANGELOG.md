@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.529)
+# SemaTor — changes since public 1.1.230 (through 1.1.530)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.530
+
+SemaOS with a gamepad: the D-pad moves a focus over everything, A opens or starts, B goes back, X details, Y favourite, LB / RB switch windows, Start the menu, the right stick scrolls and its press opens a game's menu. A hint when a game waits on its title for one input. What's new after an update, with Restore my previous look. Report a problem from a game's menu. Details gathers the play count and time, the saves with their pictures, your notes, the enhancements and the game's music. New shelves: recently added, most played, never played. Next disk for games on several disks (F11 Disks, F12 Session). The joystick in the mouse port fires with the right button. Saves of disks that boot from their boot sector show in the library and Continue. Return to Genesis: Return, then 1 or 2, starts a game. Windows minimise; the Jukebox minimised is a mini player in the menu bar. An update button in the menu bar installs new releases. Each game window keeps its own sort order; Fetch all artwork from the File menu; a redesigned What's new; the question about a game not yet confirmed answers to the keyboard (Enter plays anyway, Esc goes back); a deep round of SemaOS fixes.
 
 ## 1.1.529
 
