@@ -1,0 +1,44 @@
+name: Game compatibility
+description: Tell us how a game runs
+title: "[Game] "
+body:
+  - type: textarea
+    id: game
+    attributes:
+      label: Game title and the disk's name
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: SemaTor version and operating system
+      placeholder: "1.1.529, Linux or Windows"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: App-supplied details (review before submitting)
+      description: Prefilled by SemaTor when available. Remove anything you do not want to share.
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened, and how can we reproduce it?
+      description: Describe what works or fails, the steps to reach it, and what you expected. Do not attach disks or ROMs.
+      placeholder: |
+        1. Launch this disk with these enhancements...
+        2. Choose...
+        3. The game...
+    validations:
+      required: true
+
+  - type: input
+    id: renderer
+    attributes:
+      label: Renderer and graphics device
+      placeholder: OpenGL or Vulkan; GPU model; fullscreen or windowed
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Comparison with enhancements disabled
+      description: Which options change the result? For Dungeon Master, compare Native Party Interface on and off. Attach a public support report if possible, not game data.

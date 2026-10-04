@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.528)
+# SemaTor — changes since public 1.1.230 (through 1.1.529)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.529
+
+Dungeon Master runs again (1.1.528 showed a white screen). SemaOS shows its own icons and disk labels on every install: installs that began before SemaOS, and Linux installs made with the installer, showed stand-in shapes and blank floppies. The handwritten disk labels are in the public download. SCP flux images load, and READ TRACK reads a track as the drive does - Return to Genesis's flux dump passes its protection. Untested editions of profiled games boot from their own boot sector (Buggy Boy & Ikari Warriors shows its menu). The retro desktop is the default and the desktop icons sit in pairs that belong together; SemaOS's look settings are refreshed once, your library, saves, music and desktop folders kept. The Windows program and its update file are much smaller.
 
 ## 1.1.528
 

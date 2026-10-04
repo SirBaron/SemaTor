@@ -1,0 +1,24 @@
+name: Request a game compatibility check
+description: Ask for a game or disk that does not run to be investigated
+title: "[Compatibility request] "
+body:
+  - type: markdown
+    attributes:
+      value: "This is a compatibility request, not a confirmed bug. Do not attach game disks or ROMs."
+  - type: textarea
+    id: game
+    attributes:
+      label: Game and the disk's name
+      description: Include the disk image filename and language if known.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: SemaTor version and operating system
+      placeholder: "1.1.529, Linux or Windows"
+  - type: textarea
+    id: context
+    attributes:
+      label: Compatibility details and additional information
+      description: Explain what you would like checked. You do not need to launch the game first.

@@ -10,11 +10,13 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.528 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.529 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
 The update button stays in the library header: it shows the current status and highlights available updates in gold. Select it to download with progress in the update popup, then choose **Install and restart**. You can also check under **Library Settings → Updates**. Optional daily startup checks include public previews. Choose **Download update**, then **Install and restart**: signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
-## New in 1.1.528
+## New in 1.1.529
+
+**Fixes on top of 1.1.528.** Dungeon Master runs again. SemaOS shows its own icons and disk labels on every install - older installs and Linux installs made with the installer showed stand-in shapes. Handwritten labels are in the public download, SCP flux images load, the retro desktop is the default with the icons grouped in pairs, and the Windows program and its update file are much smaller.
 
 **Most ST disks now run.** Games, demos and menu disks that never started do now. SemaTor's start-up follows TOS's own: the AUTO folder on every boot, programs where TOS loads them, the boot sector's stack, the reset vector. The 68000 runs to the ST's bus timing, so counted delays, raster effects and opened borders land where they should. SemaTor is tested against a library of over 14,000 disks.
 
@@ -26,9 +28,7 @@ The update button stays in the library header: it shows the current status and h
 
 **SDL3, carried with it.** Nothing to install for graphics or sound on Linux. On Wayland the window no longer freezes when it is covered.
 
-[Download optional Dungeon Master artwork](https://github.com/SirBaron/SemaTor/releases/download/v1.1.502/SemaTor-Dungeon-Master-artwork-addon-1.zip)
-
-**Optional Dungeon Master artwork:** extract the separate artwork add-on ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
+**Optional Dungeon Master artwork:** the artwork add-on is shared on the [SemaTor Discord](https://discord.gg/DdHfSGrdFc). Extract its ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
 
 Dungeon Master's optional native interface remains available for wider testing and is still experimental.
 
@@ -67,8 +67,8 @@ Browse covers or lists, search your collection, keep favourites and return to re
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_528-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_528-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_529-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_529-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 

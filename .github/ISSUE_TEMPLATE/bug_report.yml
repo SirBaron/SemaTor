@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a problem with the public preview
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: SemaTor version
+      placeholder: "1.1.529"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: OS, GPU and graphics driver
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game and the disk's name, if relevant
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Renderer, CRT, frame generation and sound settings
+  - type: input
+    id: regression
+    attributes:
+      label: Last working version, if known
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or optional support report
+      description: "F12 → Support & diagnostics can create a local report. Review it before attaching. Do not upload game disks or ROMs."
