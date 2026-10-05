@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.530)
+# SemaTor — changes since public 1.1.230 (through 1.1.531)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.531
+
+Jukebox: tunes from the SNDH archive play again. The index kept the archive's old location, so after SemaTor was moved or installed elsewhere every tune "could not be read or unpacked" - the Jukebox now follows the archive to its new place (User/sndh or a games folder), and a missing archive is reported as missing.
 
 ## 1.1.530
 
