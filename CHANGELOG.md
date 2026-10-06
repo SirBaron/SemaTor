@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.531)
+# SemaTor — changes since public 1.1.230 (through 1.1.532)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,12 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.532
+
+Compatibility: hundreds more disks start or show their picture. SemaTor's 68000, floppy drive, interrupts and TOS now behave much more like a real ST - boot-sector entry registers, bus-error status, Supexec, the AUTO folder's load address, I/O access times and wait states, VBL and HBL interrupt timing, exact divide timing, DMA and WD1772 details, GEMDOS memory and wait behaviour - each measured against a reference. Newly working include the Medway Boys and Cynix protected menus (Dizzy, Creatures, Mean Machine), many Fuzion and Automation menus, OXYD on SuperGAU 355, 1st Division Manager, Marble Madness and Special Forces.
+
+SemaOS: it no longer crashes after a while when SemaSynth and the Jukebox have both played (a tune ending shut the sound down under SemaSynth), or when you seek in a YM tune. Also: pad A opens desktop folders and icons, Compilations browse with the keyboard, taskbar buttons shrink instead of vanishing, minimised folders reopen, Details > Music shows exactly the game's tunes, saves reload for the selected game, a failed resume says so, per-game notes, and many smaller fixes.
 
 ## 1.1.531
 
