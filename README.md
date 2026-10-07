@@ -10,13 +10,17 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.532 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.533 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
-## New in 1.1.532
+## New in 1.1.533
 
-**More games run.** Hundreds more disks start or show their picture: SemaTor's 68000, floppy drive, interrupts and TOS now behave much more like a real ST, each change measured against a reference. Newly working include the Medway Boys and Cynix protected menus, many Fuzion and Automation menus, Marble Madness and Special Forces - plus many SemaOS fixes (pad A opens folders, keyboard browsing of Compilations, a taskbar that shrinks instead of hiding buttons).
+**Super ST colour and frame generation everywhere.** Super ST colour shows a game at 2x-4x its pixel count with smooth shades and sharp outlines; frame generation now works at any picture size - widescreen views, medium and high resolution, opened borders - including NVIDIA optical flow. Auto HDR for the CRT cabinet.
+
+**86 enhancement profiles for 69 games.** Out Run gets widescreen and smooth 3D; [see every profile and the disk it was made for](https://sirbaron.github.io/SemaTor/games/profiles.html). When a game has several versions, SemaTor starts the one its profile was made for.
+
+**Create on the ST.** SemaPaint, the Maker (your own Atari ST intro or game disk), the Code Reader, a Hardware Check and SemaSynth export - plus a GEM-style look for SemaOS.
 
 **SemaOS with a gamepad.** The D-pad moves a focus over the whole desktop - icons, menus, buttons, games - A opens or starts, B goes back, X shows details, Y favourites, LB / RB switch windows, Start opens the menu.
 
@@ -66,7 +70,7 @@ Prefer the classic library? **Settings → Start in** chooses SemaOS or the libr
 
 ## Game guides
 
-Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for all 17 profiled titles. Each guide lists the game's options, its original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
+Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for guides to the best-known enhanced games, and the [list of all 86 profiles and their disks](https://sirbaron.github.io/SemaTor/games/profiles.html). Each guide lists the game's options, its original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
 
 ## The classic library
 
@@ -97,8 +101,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_532-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_532-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_533-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_533-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 

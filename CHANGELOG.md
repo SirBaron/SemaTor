@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.532)
+# SemaTor — changes since public 1.1.230 (through 1.1.533)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,18 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.533
+
+Picture: SUPER ST COLOUR (F12 > Picture, per game) shows the game at 2x, 3x or 4x its pixel count: every original pixel stays, and the new pixels between two close colours take their mix, so dithered shades turn smooth while outlines and text stay sharp - on every resolution, including widescreen views. It replaces the old dither blending and smoother-gradient options. Frame generation now works at any picture size and in every mode (CPU, GPU, NVIDIA optical flow): widescreen views, medium and high resolution, opened borders and Super ST colour all get in-between pictures. AUTO HDR for the CRT cabinet turns ordinary pictures into HDR highlights on an HDR display. Colours changed in the middle of a line (Spectrum 512 pictures) appear where they belong. The CRT picture no longer softens when the F12 menu is open, while paused or in widescreen views.
+
+Games: Enhancement profiles now cover 86 versions of 69 games - see the new list of every profile and the disk it was made for on the website. Out Run: widescreen 16:9 and 21:9, smooth 3D at 25 or 50 fps, the radio and the engine together, and the joystick works from the start. Blood Money: disk 2 goes in by itself and a second gamepad is player 2. Widescreen views for Lemmings, Kick Off, Kick Off 2 and Oids. Newly working or fixed include Civilization, SimCity, Damocles, Starglider 2, Stunt Car Racer, Pirates!, North & South, Defender of the Crown, Deuteros, Llamatron and The Chaos Engine's status panel. Multi-disk games get their next disk automatically in many more cases, a save state made on a game's second disk loads in a new session, and F12 > Disks offers a blank disk for games that save to one.
+
+Library: When a game has several versions, SemaTor starts the one its profile was made for. The Enhanced shelf shows enhanced games kept in zips and games with cheats only. Game options and cheats are remembered reliably (they could be forgotten when a game loaded at another address), and options can be on by default.
+
+SemaOS: A Create menu with new tools: SemaPaint (an ST pixel editor), the Maker (turn a picture, a song and a scroll text into a real Atari ST intro or a small game disk), the Code Reader, a Hardware Check that tells whether a disk would run on a real 520 ST, 1040 ST or 1040 STE, and Statistics. SemaSynth exports WAV, YM, SNDH and MP3. A second look for SemaOS in Atari's own GEM desktop style (Settings > Style). Surprise me picks a random game.
+
+Fixes: SemaTor no longer freezes when a widescreen view is switched on with NVIDIA optical flow, and a game no longer stops when the F12 menu stays open. The VERY FAST disk loading setting is removed - games could crash on it; FAST remains.
 
 ## 1.1.532
 
