@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.535)
+# SemaTor — changes since public 1.1.230 (through 1.1.536)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.536
+
+More disks run: a disk whose first file table is damaged is read through its second copy (Vectronix 910), a disk's shape comes from its boot sector when the rest is not a filesystem (SuperGAU 521), and a menu's chosen game loads right above the menu as on an ST (Blue Software 19, A-Ha Menu, Vectronix 745, Circus Games). Keyboard checks take an ST's time, so games that time their screens by them show them for as long as they should (Out Run's title and hall of fame). A save state made with a game's second disk in drive B loads in a new session and puts that disk back by itself (Gods). Profiles can tell apart two builds of a game behind the same loader (Elite v1.3 and v1.01).
 
 ## 1.1.535
 
