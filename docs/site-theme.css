@@ -1,0 +1,48 @@
+/* Shared SemaTor identity across the desktop showcase and all reference pages. */
+:root{color-scheme:dark;--bg:#090d18;--paper:#090d18;--panel:#111a2a;--ink:#edf3ff;--text:#edf3ff;--muted:#a8b6ce;--line:#2c3953;--red:#84e6ef;--cyan:#84e6ef;--gold:#c6abff;--dark:#0e1525;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+.nav,.site-header{width:100%;max-width:none;margin:0;padding:22px 4vw;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);background:#0c1220}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);font-size:22px;font-weight:800;letter-spacing:.12em;text-decoration:none}
+.brand img{width:40px;height:40px;border-radius:0}
+.brand span{font:9px/1.5 var(--mono);letter-spacing:.08em;max-width:90px;border-left:1px solid var(--line);padding-left:14px}
+.nav nav,.site-header nav{display:flex;flex-wrap:wrap;align-items:center;gap:24px;font-size:13px;font-weight:600}
+.nav nav a,.site-header nav a{color:var(--text);text-decoration:none;font-size:13px}
+.nav nav a:hover,.site-header nav a:hover{color:var(--cyan)}
+.nav-download{border:1px solid var(--line);padding:10px 18px;background:var(--panel)}
+.hero{background:radial-gradient(ellipse at 90% 10%,#29205265,transparent 60%),var(--bg)}
+.hero h1{font-size:clamp(66px,9.5vw,145px);line-height:.94;letter-spacing:-.065em}
+.hero-aside .translation-slogan{font-size:18px;color:var(--text);line-height:1.5;border-left:2px solid var(--gold);padding-left:18px;margin:24px 0}
+.translation-slogan strong{color:var(--cyan);font-weight:500}
+.button,.pale{background:var(--cyan);color:#09131f;border:1px solid var(--cyan)}
+.button:hover,.pale:hover{background:#b2f4fa;color:#09131f}
+.hero-screen{background:var(--panel);border:1px solid var(--line);box-shadow:0 20px 65px #0005}
+.screen-label{color:var(--muted)}
+.ticker{background:var(--panel);color:var(--cyan);border-block:1px solid var(--line)}
+.shot span{background:#111a2aeb;color:var(--text);border:1px solid var(--line)}
+.theme,.filters button{color:var(--muted);background:var(--panel)}
+.theme.active,.filters .active{background:#273755;color:var(--cyan);border-color:var(--cyan)}
+.theme-shot{border-color:var(--line)}
+.studio,.download{background:#0e1525}
+.app-card,.download-options article{background:var(--panel);border:1px solid var(--line)}
+.more-apps dl div,.play-grid article,details{border-color:var(--line)}
+.play{background:var(--bg);color:var(--text);border-bottom:1px solid var(--line)}
+.play .section-heading>p,.play .small-note,.play-grid p{color:var(--muted)}
+.number{color:var(--gold)}
+.workflow-steps>div{border-color:var(--line)}
+.skip,dialog{background:var(--panel);color:var(--text);border-color:var(--line)}
+dialog::backdrop{background:#040710ed}
+footer{background:#0c1220}
+/* Guide content keeps its tables and controller diagrams within the same palette. */
+.guide-page{font-size:16px;line-height:1.65}
+.guide-page main{width:min(1320px,90%);max-width:1320px;padding:60px 0 70px}
+.guide-page h1,.guide-page h2,.guide-page h3{font-family:Arial,Helvetica,sans-serif;letter-spacing:-.035em;font-weight:600}
+.guide-page h1{font-size:clamp(38px,5vw,72px);line-height:1.08}
+.guide-page .eyebrow,.guide-page .tag,.guide-page .card-foot{font-family:var(--mono)}
+.guide-page .feature-grid article,.guide-page .game-card,.guide-page .controller-card,.guide-page .table-wrap,.guide-page input,.guide-page .note,.guide-page .readout,.guide-page code.checksum{background:var(--panel);border-color:var(--line);border-radius:2px}
+.guide-page .note{border-left-color:var(--gold)}
+.guide-page .game-card:hover{border-color:var(--cyan)}
+.guide-page .table-wrap tbody tr:nth-child(odd){background:#131e31}
+.guide-page .table-wrap tbody tr:hover,.guide-page .table-wrap tbody tr.active{background:#243450}
+.guide-page footer{width:100%;max-width:none;margin:0;padding:36px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+@media(max-width:1050px){.brand span{display:none}.nav nav,.site-header nav{gap:16px}.hero-copy{gap:5vw}}
+@media(max-width:650px){.nav,.site-header{padding:16px 5vw;align-items:center}.brand{font-size:17px;gap:7px}.brand img{width:31px;height:31px}.nav nav,.site-header nav{gap:10px}.nav nav>a:not(.nav-download){display:none}.site-header{flex-wrap:wrap}.site-header nav{width:100%;justify-content:space-between;gap:12px}.site-header nav a{font-size:11px}.nav-download{font-size:11px;padding:8px 12px}.hero h1{font-size:clamp(65px,16vw,104px)}.guide-page main{padding-top:35px}.hero-aside .translation-slogan{font-size:17px}}

@@ -1,0 +1,26 @@
+{
+  "version": "1.1.538",
+  "method": "Unmodified public UI renderer, driven by an isolated SDL offscreen test harness. PNG output is the application framebuffer; no compositing or UI artwork replacement.",
+  "platform": "Linux / SDL3 software renderer",
+  "capture_source": "tests/site-capture.c (private capture tooling; not distributed)",
+  "content": {
+    "library": "Five actual local disk images; no disks distributed.",
+    "semasynth": "Built-in Studio demo song.",
+    "program-lab": "Built-in example source.",
+    "semapaint": "Empty canvas.",
+    "maker": "Default intro template.",
+    "disk-workshop": "New blank disk.",
+    "hardware-check": "Setup screen; no result claimed."
+  },
+  "images": [
+    "desktop-original.png",
+    "desktop-gem.png",
+    "style-original.png",
+    "semasynth.png",
+    "semapaint.png",
+    "program-lab.png",
+    "maker.png",
+    "disk-workshop.png",
+    "hardware-check.png"
+  ]
+}
