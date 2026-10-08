@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.536)
+# SemaTor — changes since public 1.1.230 (through 1.1.537)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.537
+
+Elite v1.01 on SuperGAU Compilation 386 gets its own profile: SemaTor tells it apart from Elite v1.3, which uses the same loader, and switches to the right options when the game is in memory. Two builds that share an options file keep each other's saved settings. 99 profiles for 75 games.
 
 ## 1.1.536
 

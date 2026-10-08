@@ -12,7 +12,7 @@ body:
     id: version
     attributes:
       label: SemaTor version and operating system
-      placeholder: "1.1.536, Linux or Windows"
+      placeholder: "1.1.537, Linux or Windows"
     validations:
       required: true
   - type: textarea
