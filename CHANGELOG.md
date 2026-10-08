@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.534)
+# SemaTor — changes since public 1.1.230 (through 1.1.535)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.535
+
+Profiles: 12 new profiles cover more versions of the profiled games - Chaos Strikes Back, Stunt Car Racer on the E.M.T. compilation, Elite v1.01, F-19 v1.02, Kick Off 2 v1.4e, Starglider [a], Captain Blood (Mindscape), Hunter (Replicants), Populous II (D-Bug 078), Llamatron's menu-disk builds and Time Bandit 0.96b - and every profiled game's other editions were checked and fixed; 98 profiles for 75 games in all. A program asked for with its folder starts exactly that file (a compilation with two programs of the same name). Disk sets lettered A, B, C change disks by themselves like numbered ones (F-19 Europe). A save state that needs another disk now says which drive it wants.
 
 ## 1.1.534
 
