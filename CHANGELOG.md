@@ -1,4 +1,4 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.533)
+# SemaTor — changes since public 1.1.230 (through 1.1.534)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +9,10 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.534
+
+Fixes. Game options and cheats beyond the 16th in a profile now work (Wizball's US edition cheats among them). A program chosen from SemaOS or a compilation starts in its own folder, so it finds its files. A profile recognised through a game's launcher or a menu waits for the game itself before it applies. Profiles load in the same order everywhere. Files whose disk chain is shorter than their listed size open as on an ST (custom Dungeon Master dungeons). Running SemaTor with --help no longer sets up a data folder. Out Run: widescreen stays on under the in-race menu, the title loads in about 15 seconds instead of 41, and on a gamepad Y starts a race / opens the menu and the right stick pauses.
 
 ## 1.1.533
 
