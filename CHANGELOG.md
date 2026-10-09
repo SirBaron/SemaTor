@@ -1,5 +1,16 @@
 # SemaTor release history
 
+## 1.1.547 — Smoother SemaOS and desktop music
+
+Changes since the previous public release, 1.1.546.
+
+- GEM folders now use shaded grey artwork matching Explorer, with a small label plate and a contents mark. Desktop and nested folders share the same scaling and hover treatment.
+- The menu-bar player and update status use smooth anti-aliased symbols and readable states in both Retro and GEM. Retro button outlines are also anti-aliased to match the desktop artwork.
+- Live music spectrum bars sit at the bottom-right of the desktop, behind icons and windows. They follow Jukebox audio, fade when paused or muted, and use the selected Retro palette or a restrained GEM style. Settings > Appearance includes a saved on/off option.
+- SemaOS does less background work: window coverage is calculated at window edges rather than every scanline, shadow blur tables are reused, and music spectrum analysis pauses when the visualiser is disabled, covered, muted or no longer on screen.
+- The desktop's Bin is now named Trash, matching English TOS. Searching for Bin still finds it; its contents and saved layout are unchanged.
+- Updating across several releases shows each missed release in order, with Back, Next and Skip all. Long notes scroll, and completed pages are remembered if you leave before finishing. The notes are bundled for offline reading.
+
 ## 1.1.546 — Interface scaling hotfix
 
 **Changes since the previous public release, 1.1.545.**
