@@ -1,5 +1,22 @@
 # SemaTor release history
 
+## 1.1.545 — Faster libraries, scoped artwork and Linux startup
+
+**Changes since the previous public release, 1.1.544.**
+
+- **Linux startup fixed:** removes an accidental AVX-512 / x86-64-v4 requirement introduced by the build machine's startup libraries. Builds now target baseline x86-64, including SDL and the updater. Normal operating-system and driver requirements still apply.
+- **Keep your library cache:** product updates retain known disk identities, including migration from 544. A separate internal compatibility revision retries unreadable or no-startup disks after relevant disk/core changes; UI and music updates do not trigger that retry. Background folder checks still find additions, deletions and edits, and manual full Rescan remains available.
+- **Large-library metadata:** collection overrides are read once per collection during a scan instead of reopening and parsing the same file for every disk.
+- **Artwork for one window:** right-click a SemaOS game window or a game inside it and choose Fetch artwork for this window. Choose only missing artwork or replace existing fetched artwork; custom covers stay intact. The request respects search, includes offscreen titles and compilation contents, and shows its title count before starting. Both Retro and GEM use their own prompt styling.
+- **Less idle CPU use:** SemaOS waits for input when it has no frame to present, avoiding a busy loop after a previous vsync measurement.
+- **Safer music recording:** SemaSynth writes WAV files on a worker rather than in the audio callback. Write failures and queue overflow stop recording with a visible error; incomplete files remain separate from finished recordings.
+- **Faster app browsing:** Workshop reuses directory listings until the disk or folder changes. SemaSynth reuses unchanged song headers and keeps the selected song when the list reorders. Windows song lists use the metadata already returned by directory enumeration.
+- **Jukebox stability:** fixes allocation-failure handling while growing track metadata.
+
+The expanded creative tools, embedded playtests, desktop organisation, scaling and both themes from 544 are retained. Linux x86-64 and Windows x64 ZIPs and signed in-app updates are supplied; games, saves, settings and custom artwork are preserved. No game disks or new Android/macOS binaries are included.
+
+Validation covers generated large libraries, cache migration and selective retry, recording failures, both artwork-dialog themes, Linux and Windows under Wine. Baseline and Zen 3 CPU emulation supplement the Linux startup checks; the reported physical Ryzen 5800X and native Windows hardware are not available locally.
+
 ## 1.1.544 — SemaOS studio and desktop update
 
 **Changes since the previous public release, 1.1.538.**

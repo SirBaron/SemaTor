@@ -10,15 +10,15 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.544 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.545 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.541 SemaOS:** expanded Maker scenes, levels and sprites; precise disk-art copies; nested Workshop editing; named playlists; desktop percentage scaling; complete Retro colour palettes and redesigned Settings. Includes the Windows visibility fix from 538.
+**1.1.545:** Linux starts without an accidental AVX-512 requirement. Library identities survive updates, failed disk checks retry after relevant core changes, and artwork downloads can target one SemaOS window. Workshop and Synth browsing are faster, recording avoids disk I/O in the audio callback, and idle desktop CPU use is reduced. [Changes since 544](./CHANGELOG.md).
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
 ## Highlights and recent changes
 
-**1.1.539: more useful SemaOS tools.** Paint adds a subtle grid, snap, selections, transforms and supported artwork editing into a separate disk copy. Maker saves editable projects with their assets. Explorer, Notes, Viewer and Workshop gain practical editing and navigation features, with save reliability and layouts reviewed in both themes.
+**1.1.544: the expanded SemaOS studio.** Paint adds a subtle grid, snap, selections, transforms and supported artwork editing into a separate disk copy. Maker saves editable projects with their assets. Explorer, Notes, Viewer and Workshop gain practical editing and navigation features, with save reliability and layouts reviewed in both themes.
 
 **1.1.536: more disks run.** Damaged first file tables, boot-sector disk shapes, menu games loaded as on an ST, keyboard-check timing, and save states that put a game's second disk back by themselves.
 
@@ -111,8 +111,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_544-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_544-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_545-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_545-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 
