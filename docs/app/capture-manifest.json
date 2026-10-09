@@ -1,26 +1,79 @@
 {
-  "version": "1.1.538",
-  "method": "Unmodified public UI renderer, driven by an isolated SDL offscreen test harness. PNG output is the application framebuffer; no compositing or UI artwork replacement.",
-  "platform": "Linux / SDL3 software renderer",
-  "capture_source": "tests/site-capture.c (private capture tooling; not distributed)",
-  "content": {
-    "library": "Five actual local disk images; no disks distributed.",
-    "semasynth": "Built-in Studio demo song.",
-    "program-lab": "Built-in example source.",
-    "semapaint": "Empty canvas.",
-    "maker": "Default intro template.",
-    "disk-workshop": "New blank disk.",
-    "hardware-check": "Setup screen; no result claimed."
-  },
+  "version": "1.1.541",
+  "method": "Actual production framebuffer captures on Linux with isolated data. Individual entries retain the version they depict; no interface redraws.",
+  "fixtures": "Five real game filenames, built-in Synth demo, original sunset demo art and synthetic FAT12 art disk. No commercial artwork extraction implied.",
   "images": [
-    "desktop-original.png",
-    "desktop-gem.png",
-    "style-original.png",
-    "semasynth.png",
-    "semapaint.png",
-    "program-lab.png",
-    "maker.png",
-    "disk-workshop.png",
-    "hardware-check.png"
+    {
+      "file": "desktop-original.png",
+      "version": "1.1.540",
+      "sha256": "51662600d68489f365fb21a47f22f4d07b1589691edf310e82795c2b67e5c9ba",
+      "width": 2052,
+      "height": 1283,
+      "source": "desktop-session-original-normal.png"
+    },
+    {
+      "file": "desktop-gem.png",
+      "version": "1.1.540",
+      "sha256": "775c58e1d234e0df2e1d3ee579fd300f11e177717369ff559d6e4d55e6aae12e",
+      "width": 2052,
+      "height": 1283,
+      "source": "desktop-session-gem-normal.png"
+    },
+    {
+      "file": "style-original.png",
+      "version": "1.1.541",
+      "sha256": "934ab7377acb764c30c46474b219b4a7514269a1bfb50f24ffbb2239733a9eab",
+      "width": 1600,
+      "height": 1000,
+      "source": "settings-appearance-original-normal.png"
+    },
+    {
+      "file": "semasynth.png",
+      "version": "1.1.540",
+      "sha256": "836b92cb711c1330ef60fb0d9af8777ad686be6be599a0c84059b33d7263b8d9",
+      "width": 2052,
+      "height": 1283,
+      "source": "synth-edit-original-normal.png"
+    },
+    {
+      "file": "semapaint.png",
+      "version": "1.1.540",
+      "sha256": "ebc0a8e1a10d1af4896b88a20dd762699e0a980eb62e14b1be8d14892778f709",
+      "width": 2052,
+      "height": 1283,
+      "source": "paint-disk-original-normal.png"
+    },
+    {
+      "file": "maker.png",
+      "version": "1.1.541",
+      "sha256": "b0fb33a3c932cba2fb31d854b939433f637971c32b9480bb3bf3e2fe66e04cd6",
+      "width": 1600,
+      "height": 1000,
+      "source": "maker-levels-original-normal.png"
+    },
+    {
+      "file": "disk-workshop.png",
+      "version": "1.1.541",
+      "sha256": "4363944b3e902aea883e543bcfbb95f10c0d17b089efa488865b65aa8048d110",
+      "width": 1600,
+      "height": 1000,
+      "source": "workshop-original-normal.png"
+    },
+    {
+      "file": "program-lab.png",
+      "version": "1.1.541",
+      "sha256": "d054829525f4e620846dca4a94fbac2262e737aac6081f52a14b51e7dd9ddbfe",
+      "width": 1600,
+      "height": 1000,
+      "source": "lab-examples-original-normal.png"
+    },
+    {
+      "file": "hardware-check.png",
+      "version": "1.1.540",
+      "sha256": "96abccdef03da849f854c057b69e0bcfcaed6cb3dcfb253501913c0b6b9d4561",
+      "width": 2052,
+      "height": 1283,
+      "source": "hardware-original-normal.png"
+    }
   ]
 }

@@ -1,4 +1,4 @@
-/* Shared SemaTor identity across the desktop showcase and all reference pages. */
+
 :root{color-scheme:dark;--bg:#090d18;--paper:#090d18;--panel:#111a2a;--ink:#edf3ff;--text:#edf3ff;--muted:#a8b6ce;--line:#2c3953;--red:#84e6ef;--cyan:#84e6ef;--gold:#c6abff;--dark:#0e1525;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;font-family:Arial,Helvetica,sans-serif}
 body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
 .nav,.site-header{width:100%;max-width:none;margin:0;padding:22px 4vw;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);background:#0c1220}
@@ -32,7 +32,7 @@ body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-ser
 .skip,dialog{background:var(--panel);color:var(--text);border-color:var(--line)}
 dialog::backdrop{background:#040710ed}
 footer{background:#0c1220}
-/* Guide content keeps its tables and controller diagrams within the same palette. */
+
 .guide-page{font-size:16px;line-height:1.65}
 .guide-page main{width:min(1320px,90%);max-width:1320px;padding:60px 0 70px}
 .guide-page h1,.guide-page h2,.guide-page h3{font-family:Arial,Helvetica,sans-serif;letter-spacing:-.035em;font-weight:600}

@@ -1,4 +1,12 @@
-# SemaTor — changes since public 1.1.230 (through 1.1.538)
+## 1.1.544 — SemaOS quality pass
+
+Fixed maximised-window scaling, exhausted closed-window slots, stuck synth notes after focus changes, lingering pointer drags, deeply nested folder cycles and damaged layout recovery. Find is clearer and routes Settings results to their page. Menu-bar controls fit narrow desktops, and GEM playtest guidance is readable. Existing creative tools and embedded playtesting are retained.
+
+## 1.1.543
+
+Playtest Maker projects, Lab programs and disk copies inside SemaOS. Keep editing while the game runs; pause, step, inspect named values and apply compatible Lab value changes live. Choose ST/STE test presets and rebuild in place. Original disks remain intact.
+
+# SemaTor — changes since public 1.1.230 (through 1.1.544)
 
 Windows x64 and Linux x86-64 desktop preview. Normal optical-flow modes remain available. No new Android or macOS binary is included.
 
@@ -9,6 +17,52 @@ Most ST disks run. Bounded test runs are not full-game certification; please rep
 ## 1.1.359
 
 Performance HUD (Shift+F12): FPS and frame times, the game's own speed, CPU boost and STEADY SPEED at work, motion, sound and disk, beside the picture. F12 Display order list fixed.
+
+## 1.1.542
+
+A follow-up SemaOS polish and bug-fix pass. New folder names are selected for replacement, support Ctrl+A/C/X/V and caret movement, and reject blank names. Renaming reveals the item in its folder even after searching or scrolling. Folder contents have a visible scrollbar and cannot cover or steal clicks from the search bar; the minimum folder window gives icons and labels more room.
+
+Ctrl+/− and Ctrl+0 now scale SemaOS consistently while app editors are focused. Maker file-picker scrolling stays with the picker even when the source view is open. Jukebox playlist names keep a usable fallback after clearing, Escape restores the previous name, and all 32 playlists remain reachable without covering the navigation buttons. Newly created playlists scroll into view, and selecting or reopening a list keeps it visible. Program Lab reports source-file read failures. The What's new panel now describes the current SemaOS tools and themes.
+
+The expanded Maker, Paint, Workshop, Lab and Jukebox tools from 541 and the Windows visibility fix are retained. Tests cover both Original and GEM styles, scale/icon combinations, editing, scrolling and persistence. Native Windows GPU testing remains outstanding; Windows UI qualification uses Wine. No new Android or macOS binary is included.
+
+## 1.1.541
+
+SemaOS now scales the entire desktop by percentage: text, buttons, borders and icons together. Display settings offer 75%, 100%, 125%, 150%, 175% and 200%, with keyboard adjustment in 5% steps. Small windows reduce the effective scale enough to keep app controls reachable; Settings shows both the requested and effective value. Small, normal and large desktop icons have consistent label placement, two-line wrapping and spacing. Layout reflow preserves saved icon positions, and custom folders and game shortcuts follow the icon-size setting too.
+
+Settings is organised into Appearance, Display, Behaviour and System, with persistent navigation and scrollable content. Violet, Teal, Amber and Crimson are complete Retro palettes: controls, windows, sky, sun, mountains, stars and the animated grid follow the chosen colour. Pictures, artwork, brand assets and semantic warning/success colours keep their meaning. GEM retains its own Atari-inspired typography, light windows and green desktop.
+
+Maker now has editable multiscene intros and multilevel games. Intros support up to eight scenes, individual backgrounds, scrollers, cut/fade/reveal/palette-cycle effects and four moving sprite layers per scene. Games support up to eight levels, a 20 x 12 tile playfield, wall/hazard tiles, collectibles, patrols, exits, timers, lives and three objective types. Sixteen editable 16 x 16 assets support up to four animation frames. Paint exchanges backgrounds and sprite selections. Named projects retain the full document and embedded music, with undo/redo. Builds produce separate ST disks and complete assembly source that reassembles to the exported program. The game playfield uses 192 lines; the remaining eight lines are the HUD.
+
+SemaPaint can inspect unpacked planar artwork inside ordinary disk files using explicit byte offset, dimensions, one/two/four planes, three planar layouts and an optional palette offset. Saving writes a new named disk copy and changes only the specified file bytes. Standalone PI1/NEO/raw-screen editing is retained. Arbitrary compressed, custom-coded and protected game graphics still require specific decoding; this feature does not automatically find every game's sprites.
+
+Workshop gains a direct file picker, nested folders, transactional file import/replace/move/rename/delete, recursive extraction, and undo/redo. Invalid directory links, cross-linked chains and failed full-disk edits are rejected without changing the working disk. Program Lab has direct source opening and four editable examples; its build/run workflow creates its own disk without disturbing Workshop's edits. Jukebox adds named playlists with reorder, available-song playback, missing-file retention and removal that leaves music files intact.
+
+This includes the earlier SemaOS app and shared-control improvements and the Windows visibility fix. Desktop layout persistence handles long shortcut paths safely. No new Android or macOS binary is included. Windows qualification is through Wine; native Windows GPU testing is still outstanding.
+
+## 1.1.540
+
+SemaOS gets a consistent desktop and control polish pass in Original and GEM. Buttons, fields, window controls, menus, taskbar and scrollbars share clear hover, pressed, selected and disabled states. Original keeps its dark neon identity with quieter surfaces; GEM keeps its crisp Atari character. Labels are centred and contained, narrow toolbars wrap, and unavailable actions are visibly disabled.
+
+This release includes all 539 editing improvements and the 538 Windows visibility fix. A second populated-app review found and fixed reversed Notes/Console scrollbar dragging, unscrollable Program Lab and Code Reader file pickers, Console filtering that missed the end of long lines, Explorer/Documents blank overscroll, and overlapping Launch sources labels. Program Lab now follows the caret across long lines while preserving syntax colours. Details actions wrap onto another row instead of disappearing. Hardware Check identifies incomplete reports instead of treating missing observations as a pass.
+
+SemaPaint remains a 320 x 200 image editor. Its 8/16/32-pixel grid and snap refer to image pixels, not screen pixels. At 16-pixel spacing the canvas has 20 columns, 12 full rows and an 8-pixel bottom strip; 8-pixel spacing divides it into 40 x 25 tiles exactly. Snapped selections now cover the intended tile without an extra pixel. Pixel guides appear at 8x zoom or greater; guides are not exported and the pencil remains pixel-accurate.
+
+539 features carried forward include supported standalone disk-art import and separate disk-copy export, named Maker projects with complete generated assembly, stronger Notes/Viewer/Explorer editing and navigation, Workshop undo and safer saves, and improved music, code, help and settings tools. These do not imply universal extraction of packed game sprites or protected disks.
+
+## 1.1.539
+
+SemaOS tools receive a practical editing and reliability update in both Original and GEM styles.
+
+SemaPaint has a quieter 8/16/32-pixel grid, independent snap, selection/cut/copy/paste, flips and rotation, colour replacement, balanced undo/redo and correct ST/STE palette editing. Game art browses supported standalone picture files on the selected game, a drive or the Workshop disk. PI1, NEO and recognised raw screens can be edited and written into a new named .st copy; original image bytes and unrelated files remain unchanged. Packed graphics, sprites embedded in code and protected-disk reconstruction need game-specific support and are not promised.
+
+Maker saves named .smp projects containing artwork, music and settings. Its complete generated assembly includes the assets and reproduces the generated program. Build creates separate disk files. The preview is larger and controls scroll on shorter windows.
+
+Explorer keeps complete filenames and large lists, with path entry, search, history and sorting. Notes adds selection, find, word wrap, copy/cut and export. Viewer adds search, wrapping, text size and image zoom, preserving disk context when artwork is sent to Paint. Documents searches nested folders. Pictures exposes older screenshots; Continue retains more saved games.
+
+Workshop adds undo/redo and safer copy saves. Code Reader rejects malformed PRGs and adds bookmarks, line copy and routine navigation. Help adds search/contents; Console adds export and horizontal navigation. Details, Statistics, Jukebox and SemaSynth layouts fit smaller windows. Synth saves report failures and avoid filename collisions; GEM keeps distinct channel colours. Hardware Check locks each run's configuration and improves cancellation/report readability. Machine and Video scroll, with Windows system-settings links.
+
+Failed saves retain edits. Exit checks cover Paint recovery, Workshop, Maker, Notes, Lab and Synth. The 538 fix for black Windows/Wine panels remains in place.
 
 ## 1.1.538
 
