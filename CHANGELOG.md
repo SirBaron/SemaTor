@@ -1,5 +1,13 @@
 # SemaTor release history
 
+## 1.1.546 — Interface scaling hotfix
+
+**Changes since the previous public release, 1.1.545.**
+
+- **Vulkan interface scaling fixed:** at 75% on a 3440×1440 desktop, SemaOS needs a 4586×1920 drawing surface. That exceeded a fixed 32 MiB upload buffer and stopped the renderer. Upload memory now grows to fit large canvases, including 4K desktops, and is reused safely after the GPU finishes each frame.
+- **Large uploads remain intact:** multiple texture uploads in the same frame retain separate storage. The change also covers shared upload storage used by game rendering and CRT effects.
+- **Settings and library cache stay intact:** this hotfix keeps your chosen theme, scale, desktop layout and cached disk identities. The internal disk-compatibility revision remains unchanged because disk-loading behaviour has not changed.
+
 ## 1.1.545 — Faster libraries, scoped artwork and Linux startup
 
 **Changes since the previous public release, 1.1.544.**
