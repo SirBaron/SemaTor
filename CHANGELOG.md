@@ -1,5 +1,45 @@
 # SemaTor release history
 
+## 1.1.550 — Release-note presentation
+
+Changes since 1.1.549.
+
+- **A familiar welcome:** The update page returns to the shaded two-column cards, full-width header and prominent version badge. Retro follows the original purple styling and selected palette; GEM uses polished silver-grey surfaces.
+- **Every missed update:** Each version retains its own page, with Back, Next and Skip all, saved progress and scrolling for longer notes. Small windows use a single readable column.
+
+## 1.1.549 — Rendering, music timing and clearer updates
+
+Changes since 1.1.548.
+
+- **Turrican II Amiga music:** Removed a duplicate sequencer update that made the title music play too fast without raising its pitch. The original audio interrupt now controls this tune; gameplay speed and the other music banks keep their own timing.
+
+- **NVIDIA frame generation:** Fixed a GPU resource-lifetime bug when games switch between normal and opened-border picture sizes. It could leave games such as Turrican II and SWIV black with invisible menus.
+
+- **Consistent CRT picture:** Original and generated frames use the same continuous CRT filtering, keeping the selected tube softness when frame generation is enabled or disabled. Turrican II also uses matching source scaling for native and generated frames, with corrected CPU-generated cropping and HUD filtering.
+
+- **Display recovery:** If Vulkan fails during a game, SemaTor switches to software rendering for the rest of the run, keeping the game state and menus available. Saved renderer preferences are retained.
+
+- **Updates at a glance:** Individual changes have separate cards with clear titles, a version badge and theme-matched colours. Retro uses rounded cards; GEM keeps its square styling. Older catch-up pages are split into readable items too.
+- **Better use of space:** A lone item fills the available width. Full notes remain scrollable, with Back, Next, Skip all and remembered progress.
+
+## 1.1.548 — Engine reliability and Turrican II options
+
+Changes since the previous public release, 1.1.547.
+
+- **Safer GEMDOS file handling:** Closing a direct device handle no longer writes outside the handle table. Closing a redirected standard handle restores its normal device and releases the file when its last binding closes.
+- **Faster file reads:** Small sequential GEMDOS reads keep file buffering instead of repeatedly seeking to the end and back. Shared handles, read/write alternation and oversized read-to-end requests keep their existing checks.
+- **Floppy saves:** XBIOS can write ordinary STX sectors and read them back, including requests crossing a side boundary. Protected, damaged or ambiguous sectors are refused before either disk representation changes. Partial BIOS writes now invalidate the affected disk cache even if a later sector fails.
+- **Safer disk-save files:** Identical edits to different disks are saved independently. Failed writes are retried, and a failed replacement keeps the previous save. Mounting or ejecting a disk flushes pending changes; temporary disk probes preserve the original save state. Corrupt save sector numbers are rejected. Original disk images remain untouched, and periodic save checks compare each sector once instead of twice.
+- **Inserted disks remember saves:** Disks inserted later in the game, including drive B, now restore and retain that game's disk changes. STX restoration updates both disk views. Starting another game clears the previous game's binding.
+- **Rendering reliability:** Vulkan reports failed texture operations correctly with SDL3 and rejects textures belonging to another renderer before accessing their resources.
+- **Boxed release notes:** What's new uses cards again in both Retro and GEM, with two columns where space permits. Missed-release pages, scrolling, Back, Next, Skip all and remembered progress remain available.
+- **Targeted compatibility refresh:** The internal disk-compatibility revision advances for these foundation fixes. Previously unreadable or no-startup disks are reconsidered; successful cached identities are retained.
+- **Compatibility corrections:** More accurate CPU bus/address errors, supervisor and callback context, GEMDOS process loading, cached BIOS disk geometry and classic AES resource calls. Bounded tests now reach play in Pac-land, The Immortal and Super Cars, and an animated Dragonflight intro; these are not full-game compatibility guarantees. Ranarama's initial crash is fixed, but its later display still needs work.
+- **Rewind repaired:** Restored CPU/device state, timer origins, scheduler and audio resynchronisation now agree with the saved timeline. Rewind storage boundaries protect disk writes, and the actual application save/rewind controls have regression coverage.
+- **Safer IPF decoding:** Malformed gap recipes are rejected before they can write outside the track buffer. Companion imports have bounded decoding work.
+- **Turrican II companion media:** Optional Amiga music and separate effects/voices use your own verified companion disk. Optional first-level artwork provides Amiga scenery and player poses at normal and wide widths. No game music, artwork or disk images are included; original ST sound/art remain available, and water effects are independently selectable.
+- **Experimental Turrican II timing:** An optional first-stage 50 Hz mode updates supported movement and projectiles at 20 ms intervals. It remains guarded and off by default; full-campaign, boss completion and later-stage compatibility are not certified. Companion music restarts its tune after a state restore rather than restoring the exact sample phase.
+
 ## 1.1.547 — Smoother SemaOS and desktop music
 
 Changes since the previous public release, 1.1.546.
@@ -117,7 +157,13 @@ Profiles: 12 new profiles cover more versions of the profiled games - Chaos Stri
 
 ## 1.1.534
 
-Fixes. Game options and cheats beyond the 16th in a profile now work (Wizball's US edition cheats among them). A program chosen from SemaOS or a compilation starts in its own folder, so it finds its files. A profile recognised through a game's launcher or a menu waits for the game itself before it applies. Profiles load in the same order everywhere. Files whose disk chain is shorter than their listed size open as on an ST (custom Dungeon Master dungeons). Running SemaTor with --help no longer sets up a data folder. Out Run: widescreen stays on under the in-race menu, the title loads in about 15 seconds instead of 41, and on a gamepad Y starts a race / opens the menu and the right stick pauses.
+- **More game options:** Game options and cheats beyond the 16th in a profile now work, including Wizball's US edition cheats.
+- **Programs find their files:** Programs opened from SemaOS or a compilation start in their own folder.
+- **Profiles at the right time:** A profile recognised through a launcher or menu waits for the game itself before applying.
+- **Consistent profiles:** Profiles load in the same order everywhere.
+- **ST-compatible file reads:** Files with a disk chain shorter than their listed size open as on an ST, including custom Dungeon Master dungeons.
+- **Cleaner startup:** Running SemaTor with --help no longer creates a data folder.
+- **Out Run:** Widescreen stays on beneath the in-race menu. The title loads in about 15 seconds instead of 41. On a gamepad, Y starts a race or opens the menu, and the right stick pauses.
 
 ## 1.1.533
 

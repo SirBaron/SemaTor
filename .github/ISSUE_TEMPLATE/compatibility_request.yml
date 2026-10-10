@@ -16,7 +16,7 @@ body:
     id: version
     attributes:
       label: SemaTor version and operating system
-      placeholder: "1.1.547, Linux or Windows"
+      placeholder: "1.1.550, Linux or Windows"
   - type: textarea
     id: context
     attributes:
