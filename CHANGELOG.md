@@ -1,5 +1,15 @@
 # SemaTor release history
 
+## 1.1.551 — Turrican II hotfix
+
+Changes since the previous public release, 1.1.550.
+
+- **Original gameplay timing:** Removed the experimental Turrican II 50 Hz option after reports of broken player movement and animation. The normal 25 Hz mode remains. Older enabled settings cannot reactivate the experiment; an active old save returns to normal timing at a safe frame boundary.
+- **Music that carries on:** Switching between ST and Amiga music now keeps the companion soundtrack advancing, so switching back to Amiga music continues instead of restarting. Track changes still follow the game. Loading a saved state continues to restart the mapped Amiga tune.
+
+- **Cleaner Amiga artwork:** Corrected sprite transparency in the extended view so shots and moving enemies no longer bring rectangular patches of ST background through the Amiga scenery. Native sprite colours and gameplay are retained.
+- **Stable title borders:** Run-ahead now restores the captured screen borders with the predicted state. This fixes the title picture jumping between bordered and unbordered sizes with Crop black off. CRT sizing also accounts for opened borders before fitting the picture inside the bezel. Ordinary save/load and rewind still discard future border pixels.
+
 ## 1.1.550 — Release-note presentation
 
 Changes since 1.1.549.
