@@ -1,5 +1,17 @@
 # SemaTor release history
 
+## 1.1.552 — Expanded Turrican II artwork
+
+Changes since the previous public release, 1.1.551.
+
+- **Expanded Amiga scenery:** Turrican II now uses artwork from your Amiga disk across all eight walking stages and the first flying stage’s static scenery, with normal, 16:9 and 21:9 views.
+
+- **Enemies and power-ups:** Added 382 mapped actor pose slots across 60 banks, including all 11 shared pickups, enemies and selected boss parts. Matching Amiga poses follow the original animation slots; hit flashes retain native rendering.
+
+- **Separate effects and voices:** Amiga action sound effects and spoken pickup announcements have independent switches. Existing effects settings retain action sounds; voices start off until selected. Music remains separate and keeps its switching continuity.
+
+- **Experimental coverage:** Custom bosses and unmapped secondary parts, the flying ship, animated flying terrain and the other two flying stages’ terrain still use ST artwork. Original 25 Hz gameplay remains; the withdrawn 50 Hz mode stays disabled.
+
 ## 1.1.551 — Turrican II hotfix
 
 Changes since the previous public release, 1.1.550.
