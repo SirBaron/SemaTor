@@ -1,5 +1,12 @@
 # SemaTor release history
 
+## 1.1.555 — Jukebox audio hotfix
+
+Changes since the previous public release, 1.1.554.
+
+- **Audible imported Amiga music:** Fixed silent playback of supported Turrican II Amiga tracks in SemaOS Jukebox. Stereo output and volume now work correctly, including for tracks already imported.
+- **Clear playback limits:** Imported Amiga tracks now show “7m limit” or “3m limit” in Music and Favourites. These are playback windows, not measured song lengths.
+
 ## 1.1.554 — Rendering efficiency, Turrican II and disk music
 
 Changes since the previous public release, 1.1.553.
