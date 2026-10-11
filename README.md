@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.553 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.554 public preview — Linux x86-64 and Windows x64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.553:** Fixed dark rectangles beneath Turrican II’s moving bridge with Amiga artwork enabled. Includes the expanded artwork and separate effects/voices from 552. [Changes since 552](./CHANGELOG.md).
+**1.1.554:** Reduced rendering and run-ahead overhead, expanded Turrican II’s optional Amiga artwork and sounds, and supported disk-music import in SemaOS Jukebox. [Changes since 553](./CHANGELOG.md).
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
@@ -65,7 +65,7 @@ SemaTor starts in **SemaOS**, a desktop of its own in the spirit of the ST. Ever
 - **Details for every game.** Times played and time spent, your saves with their pictures (click one to carry on), your notes, the SemaTor profile and its enhancements, and the game's music - with Play, Continue, Notes, Music and Report a problem as buttons. Click the **i** on a selected game.
 - **Continue** lists every game you have saved, newest first, with a picture of the save.
 - **Drive A and Drive B.** Drag a game onto a drive, look inside the disk, start any program on it, or add a second disk.
-- **Jukebox.** The games' music and the SNDH archive of ST tunes, played live, with favourites. Minimise it and it becomes a mini player in the menu bar with a glowing three-channel visualiser, play, pause and stop.
+- **Jukebox.** Play supported music from inserted ST disks, the SNDH archive and your verified Turrican II Amiga disk. Imported tracks stay available after ejecting the disk. Keep favourites or minimise to the menu-bar player with its visualiser, play, pause and stop. Amiga imports currently support the verified Turrican II IPF edition or a ZIP containing it.
 - **SemaSynth.** A three-channel music studio that makes what real ST tunes make. Play it from a MIDI keyboard and save your songs as real SNDH tunes.
 - **Notes, Pictures, Explorer, Documents, Disk Workshop, Program Lab.** Your notes for each game, your screenshots, the folders on your computer, the text files on your disks, a disk editor that copies files onto and off .ST images (the original is never changed), and a 68000 assembler whose program goes straight onto a new disk.
 - **Find (Ctrl+F)** searches windows, settings, games, your SemaSynth songs, the Jukebox and the SNDH archive at once.
@@ -111,8 +111,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_553-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_553-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_554-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_554-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 

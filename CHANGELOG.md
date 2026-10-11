@@ -1,5 +1,22 @@
 # SemaTor release history
 
+## 1.1.554 — Rendering efficiency, Turrican II and disk music
+
+Changes since the previous public release, 1.1.553.
+
+- **More responsive presentation:** Supported Vulkan views can present completed frames during longer CPU ticks, without changing the game's instruction timing.
+- **Less work per frame:** Reduced repeated screen capture, image conversion and uploads. Vulkan reuses unchanged ST pictures and prepared wide-view textures while keeping palette changes, CRT effects and recovery working.
+- **More efficient frame generation:** Vulkan Frame Blend and supported fades can stay on the GPU. NVIDIA frame generation and its software assistance do less repeated work, and Turrican II's wide view prepares the displayed phases as needed while retaining its HUD and water detail.
+- **Lighter CPU and run-ahead work:** Reduced interpreter bookkeeping and the cost of saving and restoring prediction state. Existing instruction timing and save-file compatibility are retained.
+- **More Turrican II artwork:** Added scenery for all three flying stages, animated panels in the first flight, the ship and shield, further enemy and boss parts, and the remaining custom vertical, gate and final-boss pieces. These use artwork from your own verified Amiga disk at normal and wide widths.
+- **Independent Amiga sounds:** Action effects and pickup voices now have separate playback. Optional positional Amiga effects and voices follow their on-screen sources; music retains its original stereo mix and ST fallback sounds remain unchanged.
+- **Music from inserted disks:** SemaOS Jukebox checks newly inserted ST disks for supported YM/SNDH music, with Scan A and Scan B for manual retries. Imported tracks remain available after ejecting a disk or restarting.
+- **Turrican II in the Jukebox:** Insert a supported Turrican II Amiga IPF, or a ZIP containing it, to add the title and ten stage selections. Tracks use the existing transport and volume controls, with theme-matched import/status controls and safe cache removal.
+
+Your original disks remain untouched, and no game images, artwork or music are included. Amiga Jukebox support initially covers the verified Turrican II edition; its listed durations are playback windows rather than measured song lengths. Unmapped artwork keeps its native fallback, and Turrican II retains its original gameplay timing.
+
+These changes reduce verified processing and transfer work. They are not a guarantee of higher frame rates or perfectly even physical-display pacing. Windows continues to need broader real-machine testing.
+
 ## 1.1.553 — Turrican II bridge fix
 
 Changes since the previous public release, 1.1.552.
