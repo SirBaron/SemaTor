@@ -1,5 +1,11 @@
 # SemaTor release history
 
+## 1.1.553 — Turrican II bridge fix
+
+Changes since the previous public release, 1.1.552.
+
+- **Moving bridge artwork:** Fixed dark rectangles beneath the moving bridge in Turrican II when Amiga artwork is enabled. The bridge’s sky fill now matches the enhanced scenery, while its other pixels retain their original artwork. Applies to both first-world stages and normal/widescreen views.
+
 ## 1.1.552 — Expanded Turrican II artwork
 
 Changes since the previous public release, 1.1.551.
