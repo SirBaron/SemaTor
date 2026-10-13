@@ -1,5 +1,49 @@
 # SemaTor release history
 
+## 1.1.558 — More disks start, and a Cheats category
+
+Changes since 1.1.557. This release also includes 1.1.556's and 1.1.557's changes (stereo sound, the friendlier Jukebox and experimental frame generation, which remains optional and off by default).
+
+A check of every disk in a large ST collection found these, and each fix was compared against working disks before it went in.
+
+- **Menu disks that run their menu from AUTO:** disks whose only program is in the AUTO folder behind a boot sector now start their menu, as on an ST. Many Automation menu disks showed nothing before.
+- **Games that unpack onto a RAM disk:** some loaders unpack a game to a drive they create themselves and start it from there. These now run - among them Illusion, DragonForce, The Light Corridor, Bubble Bobble and Spy vs Spy 3 from compilation disks, Asgard and Alphamax.
+- **Raster timing:** the raster timer now fires at the end of each displayed line, as the ST's does. Colour splits are steadier and effects that follow the picture beam work.
+- **Keyboard chip timing:** Artura no longer freezes on its first screen.
+- **Floppy start-up:** Archipelagos (both releases) gets past its loader.
+- **More games that now start:** 10th Frame, Advanced Rugby Simulator, Advanced Ski Simulator, Amaze, and programs built with the Alcyon C compiler now end cleanly.
+- **GEM programs:** a program that opens its graphics with unusual settings now draws (Automation 039's Poker shows its message, Autoduel's menu its border).
+- **Cheats category:** a game whose profile has only cheats now shows a lilac CHEATS badge and sits in its own Cheats category, so it is no longer listed as Enhanced.
+- **Saves:** save states from earlier versions still load.
+
+## 1.1.557 — Stereo sound and a friendlier Jukebox
+
+Changes since the experimental 1.1.556 prerelease.
+
+**Experimental manual prerelease. SemaTor 1.1.555 remains the stable release.** It includes 1.1.556's experimental frame-generation changes, which still have the known issue described under 1.1.556.
+
+- **Stereo for ST music:** Sound > Stereo spreads the ST sound chip's three voices across the speakers. Auto keeps bass, drums and sampled sounds centred and places the melody voices left and right; Classic A-B-C and A-C-B are the traditional layouts. Stereo width sets how far apart they sit. Off, the default, is the original mono sound, unchanged.
+- **Mono-compatible:** a stereo layout only moves voices between the speakers; mixed back to mono it is the original sound.
+- **Amiga blend:** the Amiga plays each voice fully left or fully right. Sound > Amiga blend mixes some of each side into the other, so a melody is not alone in one ear. Off, the default, is the original.
+- **Jukebox stereo:** Stereo and Amiga blend buttons for YM, SNDH and Amiga tunes, remembered between sessions.
+- **Songs in the archive:** a tune with several songs opens in the list with one click, showing every song - with its name and length when the file includes them - so any song is one click away. Click the tune again to close it.
+- **Sorting everywhere:** every Jukebox list, Favourites included, sorts by its column headings; click a heading again to reverse the order.
+- **Tidier Jukebox:** the sound options sit together, duplicate buttons are gone, and Scan A/B is retired - inserted disks are still checked for music automatically.
+- **Per-game stereo profiles:** a game's profile can choose its own layout, and can place sound effects at their on-screen source once that game has been researched.
+
+## 1.1.556 — Experimental frame generation and Fire and Ice music
+
+Changes since the previous public release, 1.1.555.
+
+**Experimental manual prerelease. SemaTor 1.1.555 remains the stable release.**
+
+- **Fire and Ice in Jukebox:** Import the supported two-IPF Amiga disk ZIP to add 23 tracks. Imported tracks are cached for later playback; the original disks are preserved. This adds verified Fire and Ice support, not support for every Amiga music format.
+- **Experimental frame generation:** Revised visibility handling improves the captured Turrican II rifle and character breakup when moving past scenery. This is a candidate improvement, not a complete fix for frame-generation artifacts.
+- **Known frame-generation regression:** The focused 396-case detail test changes from 13 baseline failures to one new crossing failure, with two extra sampled foreground pixels. The remaining failure is disclosed rather than counted as a pass; animated objects and overlapping scenery can still show artifacts.
+- **Small gradient correction:** Reliable motion can now transport subtle gradients instead of holding nearly identical endpoint colours. Known-motion tests show a correction of at most one colour level; the captured real Turrican II pair was unchanged. This does not establish a fix for the reported bridge or sky flicker.
+
+You must supply your own supported game disks. No game artwork or music is bundled.
+
 ## 1.1.555 — Jukebox audio hotfix
 
 Changes since the previous public release, 1.1.554.
