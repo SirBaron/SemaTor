@@ -1,24 +1,17 @@
-# SemaTor 1.1.528
+# SemaTor 1.1.559 — Widescreen Batman, New Zealand Story, Sensible Soccer and Lotus; library folders in SemaOS; many more disks start
 
-**Most ST disks now run.** Games, demos and menu disks that never started do now. SemaTor's start-up follows TOS's own:
-the AUTO folder on every boot and AUTO programs where TOS loads them, the boot sector's stack, the reset vector, the floppy
-lines and sound chip as TOS leaves them. The 68000 runs to the ST's bus timing, so counted delays, raster effects and opened
-borders land where they should. Kick Off 2, Alpha Waves, Sapiens, Crazy Boy, Rock Star and many menu disks are among the
-newly working.
+Changes since 1.1.558. A second check of a large ST collection found most of these; each fix was compared against working disks before it went in.
 
-**SemaOS is how SemaTor starts.** A desktop of its own opens first; the classic library is under Settings.
+- **Widescreen:** Batman - The Movie (both platform levels), The New Zealand Story, Sensible Soccer and Lotus Esprit Turbo Challenge (one- and two-player races) get 16:9 and 21:9 views. The extra picture at the sides is drawn by each game's own code - real scenery and live enemies or players, not stretched or invented - and with the option off the games run exactly as before.
+- **SemaOS library folders and rescanning:** add and remove game folders in Settings > Library or from Explorer (Add to library), and rescan with F5 or the Games window's Rescan button. New disks appear while the check runs, the taskbar shows its progress and a note says how many were found. A check interrupted by starting a game carries on afterwards. On Windows a folder can no longer be added twice in different letter case.
+- **Starting a game from SemaOS:** a choice of hand-over in Settings > Behaviour > When a game starts. Sunset hand-over (the windows dissolve into the retro scene and the game's disk sets in front of the sun), GEM drive (the disk slides into an ST drive in a GEM window) or Title card; Match the desktop, the default, picks the sunset on the Retro themes and the GEM drive on the GEM style. They follow the desktop's colours and play while the game boots, so starting is no slower; a key or click skips them. The start-up screen is now drawn at the window's full resolution.
+- **Disk cards in the library:** the library now offers SemaOS's disk labels - cover art, a blue disk with a printed label, or a hand-written marker-pen label - drawn the same way in both, from one shared setting. The library's side panel also shows how often and how long a game was played and which disk of a set it is.
+- **Games that now start or get further:** Turbo Out Run, Lotus Turbo Challenge II, Barbarian (Palace, both builds, including The Ultimate Warrior), F-16 Combat Pilot, Asterix in the Dungeons of Doom, Super Hang-On, Alternate Reality - The City, Hard Drivin' and Dungeon Master v1.0 (the cracked editions that keep the game in memory across a reset), Bivouac, Black & Mortimer, Livingstone 2, Pacman on E's and Automation 131.
+- **Menu disks:** menus that hide their games behind names with a colon (:RANGER.PRG) start them now - Rocket Ranger from Automation 184 among about 50 such disks; menus that keep packed game files beside their menu program boot again; Automation 200's menu no longer crashes when the mouse moves.
+- **Robocop** no longer slows to a crawl at its disk-2 prompt.
+- **GEM programs:** fewer GEM calls are refused, and dialogs answer the keyboard and mouse as TOS's do; The Colonel's Bequest shows its menu bar.
+- **Cheats and speed:** infinite lives for Strider, Rick Dangerous II (also bombs and ammo) and The New Zealand Story; Strider gets FAST (12.5 fps) and ST EXACT speed options. Steady speed now measures game frames correctly in games that wait for the frame in a loop (Wizball).
+- **Profiles:** a game with a profile now runs on the same accurate TOS machine as a game without one; the older profiles keep their tuned setup until each is checked. The Turrican II playable demo is no longer listed as Enhanced.
+- **Saves:** save states from earlier versions still load.
 
-**Music on the ST, old and new.** The Jukebox plays the SNDH archive live, with channel scopes and favourites (and keeps
-playing your favourites in order). SemaSynth is a music studio: play it from a MIDI keyboard and save songs as real SNDH tunes.
-
-**SDL3, carried with it.** Nothing to install for graphics or sound on Linux. On Wayland the window no longer freezes when
-it is covered.
-
-**Game guides for 17 titles**, now including Wizball, Buggy Boy and Lombard RAC Rally.
-
-**Updating from 1.1.502 or earlier: install this one from the ZIP.** SemaTor now carries SDL3, and the updater in older
-versions does not accept its files, so the in-app update will say it could not verify the package. Download the ZIP for
-your system and install it over your current one (your games, saves and settings stay). Later updates work in the app again.
-
-Includes everything since 1.1.502. Windows is built and checked automatically and still needs broader real-machine testing.
-Bring your own disk images; no game disks or TOS ROM are included.
+You must supply your own supported game disks. No game artwork or music is bundled.

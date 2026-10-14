@@ -1,5 +1,21 @@
 # SemaTor release history
 
+## 1.1.559 — Widescreen Batman, New Zealand Story, Sensible Soccer and Lotus; library folders in SemaOS; many more disks start
+
+Changes since 1.1.558. A second check of a large ST collection found most of these; each fix was compared against working disks before it went in.
+
+- **Widescreen:** Batman - The Movie (both platform levels), The New Zealand Story, Sensible Soccer and Lotus Esprit Turbo Challenge (one- and two-player races) get 16:9 and 21:9 views. The extra picture at the sides is drawn by each game's own code - real scenery and live enemies or players, not stretched or invented - and with the option off the games run exactly as before.
+- **SemaOS library folders and rescanning:** add and remove game folders in Settings > Library or from Explorer (Add to library), and rescan with F5 or the Games window's Rescan button. New disks appear while the check runs, the taskbar shows its progress and a note says how many were found. A check interrupted by starting a game carries on afterwards. On Windows a folder can no longer be added twice in different letter case.
+- **Starting a game from SemaOS:** a choice of hand-over in Settings > Behaviour > When a game starts. Sunset hand-over (the windows dissolve into the retro scene and the game's disk sets in front of the sun), GEM drive (the disk slides into an ST drive in a GEM window) or Title card; Match the desktop, the default, picks the sunset on the Retro themes and the GEM drive on the GEM style. They follow the desktop's colours and play while the game boots, so starting is no slower; a key or click skips them. The start-up screen is now drawn at the window's full resolution.
+- **Disk cards in the library:** the library now offers SemaOS's disk labels - cover art, a blue disk with a printed label, or a hand-written marker-pen label - drawn the same way in both, from one shared setting. The library's side panel also shows how often and how long a game was played and which disk of a set it is.
+- **Games that now start or get further:** Turbo Out Run, Lotus Turbo Challenge II, Barbarian (Palace, both builds, including The Ultimate Warrior), F-16 Combat Pilot, Asterix in the Dungeons of Doom, Super Hang-On, Alternate Reality - The City, Hard Drivin' and Dungeon Master v1.0 (the cracked editions that keep the game in memory across a reset), Bivouac, Black & Mortimer, Livingstone 2, Pacman on E's and Automation 131.
+- **Menu disks:** menus that hide their games behind names with a colon (:RANGER.PRG) start them now - Rocket Ranger from Automation 184 among about 50 such disks; menus that keep packed game files beside their menu program boot again; Automation 200's menu no longer crashes when the mouse moves.
+- **Robocop** no longer slows to a crawl at its disk-2 prompt.
+- **GEM programs:** fewer GEM calls are refused, and dialogs answer the keyboard and mouse as TOS's do; The Colonel's Bequest shows its menu bar.
+- **Cheats and speed:** infinite lives for Strider, Rick Dangerous II (also bombs and ammo) and The New Zealand Story; Strider gets FAST (12.5 fps) and ST EXACT speed options. Steady speed now measures game frames correctly in games that wait for the frame in a loop (Wizball).
+- **Profiles:** a game with a profile now runs on the same accurate TOS machine as a game without one; the older profiles keep their tuned setup until each is checked. The Turrican II playable demo is no longer listed as Enhanced.
+- **Saves:** save states from earlier versions still load.
+
 ## 1.1.558 — More disks start, and a Cheats category
 
 Changes since 1.1.557. This release also includes 1.1.556's and 1.1.557's changes (stereo sound, the friendlier Jukebox and experimental frame generation, which remains optional and off by default).
