@@ -1,5 +1,25 @@
 # SemaTor release history
 
+## 1.1.562 — Smooth motion for Turrican, Rainbow Islands and Xenon; Turrican II at 32:9; an update prompt; options that switch together; a front end that never waits
+
+Changes since 1.1.561. Unless noted, each enhancement is an option that is off until chosen; it is drawn by the game's own code and leaves the game exactly as it was when off.
+
+- **Smooth motion** for Turrican (also in its wide view, and still stopping at a level's edge), Rainbow Islands and Xenon - a picture every ST refresh, 50 a second. Xenon's playfield is also never shown torn with the option on.
+- **Xenon:** STEADY SPEED (an even 16.7 frames a second where the ST wobbled) and ST SPEED EXACT. Games whose loop does not wait for the display now hold to the display's own blanks, which also fixed Xenon running 16% fast.
+- **Widescreen:** Turrican II reaches 32:9 with FIT THE WINDOW, stopping at a level's edge; The Chaos Engine gets FIT THE WINDOW up to 21:9 width.
+- **Frame generation, last in line:** frame generation now works from whatever picture is shown - smooth-motion and widescreen pictures included - so on a fast monitor it adds its in-betweens on top of smooth motion instead of being switched off.
+- **Update prompt:** when a newer SemaTor is out, the library and SemaOS say so as soon as they are up, with a few lines of what is new, and offer Update now or Not now. Update now downloads, checks and installs it and opens the new version; Not now asks again at a later start, at most once a day. Never during a game, offline, or with update checks turned off.
+- **Options that go together switch together.** Switching on an option that needs another now switches that one on too, and switches off what it cannot run with, with a one-line note saying so - in the library, SemaOS and F12, by keyboard, mouse or pad. Xenon's SMOOTH MOTION turns on STEADY SPEED and turns off ST SPEED EXACT; Toki's SMOOTH MOTION and its widescreen views switch each other off; Out Run's SMOOTH 3D and ST SPEED EXACT likewise; Lombard RAC Rally's WIDE WINDSCREEN turns on HIGH RES ROAD. Switching a needed option off switches off what needs it.
+- **Damaged disks:** a disk that cannot be read (a ZIP cut short, an image that does not decode) shows a DAMAGED badge, a plain explanation and, when another copy of the same game reads, "Play <that copy> instead"; a Damaged filter finds them. SemaTor never changes or deletes your files.
+- **A front end that never waits:** starting a game, Rescan and adding or removing a folder no longer wait for a library check - even one stuck on a missing network drive - and quitting never hangs on one. Folders list much faster (a 14,500-game folder in milliseconds), covers found for another edition now show on Windows, and cover downloads that GitHub limits stop politely. With a 14,000-game library a rescan takes about a third of the time, a first scan a fifth less, start-up half as long, and scrolling the library is smoother.
+- **First start:** an empty library and Games window now say SemaTor comes with no games and show both ways to add yours - add a folder, or copy disks into the games folder and rescan.
+- **Smaller screens:** on a first start at 1024x768 or 1280x720 SemaOS arranges itself to fit, with the making tools in one folder; at any size the first Games window opens beside the icons, and a narrow Games window keeps Rescan, the sort and Filters behind a "..." menu.
+- **Keyboard and gamepad:** every new control - the graphics backend and reset buttons, their questions, the library's Graphics & reset page, F12's backend switch (now asked in the menu, no pop-up) and the screenshot size - works without a mouse; the first press acts when the focus is already on a control. Back from a game, SemaOS shows the game you just played.
+- **Safer files:** settings, music indexes, SemaSynth exports and covers are written to the side and renamed, so a crash cannot leave a half-written file; background work pauses properly while a game runs.
+- **Stability:** an audit of the new code fixed 19 rare problems - smooth-motion and widescreen pictures that could read past their buffers, Turrican II drawing an old picture after a save state was loaded, and library checks that could be lost or left paused around a game.
+- **Profiles:** Bubble Bobble, Populous II, Another World, Indiana Jones and the Last Crusade, Maniac Mansion, Pirates!, SimCity, Kick Off, Civilization, Starglider 1 and 2, Zak McKracken, Arkanoid II, Gauntlet II and Super Sprint now run on the accurate TOS machine with every option checked.
+- **Saves:** save states from earlier versions still load.
+
 ## 1.1.561 — Every game shows its picture with OpenGL, Vulkan by default; smooth motion for Strider, Gods and Toki; settings reset
 
 Changes since 1.1.560. Unless noted, each enhancement is an option that is off until chosen; it is drawn by the game's own code and leaves the game exactly as it was when off.
