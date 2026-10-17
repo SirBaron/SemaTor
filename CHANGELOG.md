@@ -1,5 +1,11 @@
 # SemaTor release history
 
+## 1.1.565 — Vroom widescreen stability
+
+- **Vroom widescreen:** keeps the side views visible when the dashboard updates independently of the driving scene, fixing intermittent flashes back to the native view.
+- **Vroom scenery:** aligns generated tunnel and building endpoints with the widened road. Applies with smooth motion on or off; the original driving physics remain unchanged.
+- **Vroom controls:** moves pause from X to right-stick click. Unchanged saved default layouts migrate automatically; custom button layouts are retained.
+
 ## 1.1.564 — Vroom and Windows update hotfix
 
 - **Vroom widescreen:** restores WIDESCREEN FIT THE WINDOW in F12 → This game → Enhancements. The FIT-only option was hidden by the combined widescreen selector logic.
