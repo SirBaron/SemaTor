@@ -2,9 +2,9 @@
 
 # SemaTor
 
-**Your Atari ST library. A new way to play.**
+**Atari ST games. A whole new view.**
 
-SemaTor is an Atari ST translation layer: it runs 68000 game code, reproduces the hardware and operating-system interfaces it needs, and adds native enhancements for supported titles. No Atari TOS ROM is required.
+Play your Atari ST favourites on **Windows and Linux** with **widescreen enhancements, smooth motion, CRT bezels, Auto HDR and run-ahead**. Bring your own game disks; no Atari TOS ROM is required. Choose enhancements per game, save your progress and jump back in. Feature support varies by game, disk edition and display hardware.
 
 Created by David Baron with AI assistance in development, research, documentation and this website.
 
@@ -15,6 +15,15 @@ Created by David Baron with AI assistance in development, research, documentatio
 **1.1.563:** Sharper Xenon background scrolling, more smooth-motion and widescreen options, Vroom track detail, Phantasie fixes, a tidier library and clearer jukebox durations. [Changes since 562](./CHANGELOG.md).
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
+
+## Made for playing
+
+- **See more:** game-specific widescreen and ultrawide views, up to 32:9 where supported, with FIT adapting within each profile’s limits.
+- **Smoother action:** dedicated smooth motion in supported games, plus frame generation and run-ahead options.
+- **Make it look yours:** CRT bezels, scanlines, glow, Super ST colour and Auto HDR on compatible Vulkan/HDR setups.
+- **Keep your place:** save states, rewind, per-game settings and a searchable library with editions grouped under their game.
+
+SemaOS is the built-in library and desktop interface inside SemaTor. Its music, pixel-art and programming tools are included extras to explore between games.
 
 ## Highlights and recent changes
 
