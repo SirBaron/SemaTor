@@ -1,5 +1,11 @@
 # SemaTor release history
 
+## 1.1.564 — Vroom and Windows update hotfix
+
+- **Vroom widescreen:** restores WIDESCREEN FIT THE WINDOW in F12 → This game → Enhancements. The FIT-only option was hidden by the combined widescreen selector logic.
+- **Vroom track:** removes HIGH RESOLUTION TRACK and ignores old requests for it. Widescreen and smooth motion retain the original track rendering.
+- **Windows updates:** reads the live download size while the file is still being written, so the progress bar advances during the download instead of jumping from zero to complete.
+
 ## 1.1.563 — Sharper motion, wider games and a tidier library
 
 Changes since 1.1.562. Game enhancements remain optional and depend on the supported disk edition.
