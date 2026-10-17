@@ -1,5 +1,18 @@
 # SemaTor release history
 
+## 1.1.563 — Sharper motion, wider games and a tidier library
+
+Changes since 1.1.562. Game enhancements remain optional and depend on the supported disk edition.
+
+- **Smooth motion:** new options for Speedball 2, Cannon Fodder, Turrican II, Wizball, Zynaps, Rick Dangerous II and Lemmings. Xenon and Xenon 2 background scrolling now keeps its sharp pixel detail through the smooth-motion path.
+- **Fit your screen:** more games support FIT THE WINDOW, reaching 32:9 where their scenery permits it. Views respect supported game boundaries and retain their HUDs. Vroom gains optional widescreen, continuous high-resolution track detail and smooth motion.
+- **Frame generation:** improved handling of sharp motion and Super ST colour, exact source frames, transitions and game-session restarts. CRT effects remain the final display stage.
+- **Library:** game editions and companion disks share a main game card. This includes Vroom's data disk, Civilization, Llamatron's memory variants, Bubble Bobble's Extended Screens variant and Nebulus/Tower Toppler. Original disk choices remain accessible; genuine sequels remain separate. Searches work across the grouped entries.
+- **Phantasie:** fixes the overworld terrain and mouse pointer, preserves the game's full viewport, and adds optional interface improvements.
+- **Compatibility:** more profiles use SemaTor's TOS-compatible machine, including Buggy Boy, Captain Blood, F1 Grand Prix, Deuteros, M1 Tank Platoon, F-19 Stealth Fighter and Blood Money. Fixes also cover disk changes, saved enhancement state and Rick Dangerous II ammunition options.
+- **Presentation fixes:** Lotus keeps its widescreen view stable; Buggy Boy's drawing worker and the frame-generation worker restart correctly between sessions.
+- **Jukebox:** tunes with no supplied duration display a playback limit, such as "3m limit", instead of presenting that fallback as the song's length.
+
 ## 1.1.562 — Smooth motion for Turrican, Rainbow Islands and Xenon; Turrican II at 32:9; an update prompt; options that switch together; a front end that never waits
 
 Changes since 1.1.561. Unless noted, each enhancement is an option that is off until chosen; it is drawn by the game's own code and leaves the game exactly as it was when off.
