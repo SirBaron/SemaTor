@@ -1,5 +1,14 @@
 # SemaTor release history
 
+## 1.1.568 — Clearer game titles and steadier motion
+
+- **Library cards:** larger, centred game titles now wrap onto two lines, with subtitle breaks where possible. Year and publisher remain in Details. Gold Enhanced cards and the top/bottom caption setting are preserved.
+- **Startup loading:** the SemaTor loading overlay retires as soon as the first game picture appears. It stays off for the rest of that session, including later fades to black or white and disk activity.
+- **Wizball:** fixes the doubled ball during bounce interpolation with Smooth Motion enabled.
+- **The Chaos Engine:** keeps widescreen side views paired with completed game pictures when screen buffers are reused, preventing death/respawn flicker. Smooth Motion also covers slower source frames in crowded areas while preserving the original game and audio timing.
+
+Windows x64 and Linux x86-64 public builds and signed updates. Enhancements remain specific to supported game editions and scenes. Android APK qualification remains separate.
+
 ## 1.1.567 — Smoother games, clearer sound and a better library
 
 - **Sound and timing:** fixes uneven audio delivery and incorrect resampling when a game uses 60 Hz. ST refresh (Auto / 50 Hz / 60 Hz), playback speed and the desktop frame-rate cap are now separate controls.
