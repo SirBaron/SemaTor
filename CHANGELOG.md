@@ -1,5 +1,18 @@
 # SemaTor release history
 
+## 1.1.567 — Smoother games, clearer sound and a better library
+
+- **Sound and timing:** fixes uneven audio delivery and incorrect resampling when a game uses 60 Hz. ST refresh (Auto / 50 Hz / 60 Hz), playback speed and the desktop frame-rate cap are now separate controls.
+- **Fast forward and loading:** Pause / Break toggles fast forward; an unassigned right-stick click (R3) does the same on a gamepad. Blank disk-loading screens show animated guidance inside the CRT bezel, local cover art or SemaOS disk labels, useful tips and a fade into the game. Slow loading does not count as an error.
+- **Chaos Engine:** fixes the loader losing its receive interrupt, restoring controls when starting from disk 1 and continuing through the disk change. Restart from disk 1 if an older save was made with input already stuck.
+- **Wider, smoother games:** Zynaps gains widescreen FIT with an expanded playable area for the ship, enemies, shots and collisions. Toki can combine widescreen and Smooth Motion. Turrican extends actor activation and terrain collisions into the wider view. Turrican II improves widescreen / Smooth Motion / optional Amiga-graphics combinations and final-boss movement.
+- **More game fixes:** smoother Xenon 2 background scrolling, less repeated rendering in The New Zealand Story, steadier Gods motion, and corrections to Batman and Sensible Soccer widescreen transitions. Smooth 3D also supports the verified Elite v1.01 and alternate Starglider editions.
+- **Game Details and Continue:** redesigned Details lets you change enhancements and per-game options before playing, with cheats kept separate. Continue shows four recent saves above a searchable game library; open a game to see its saves.
+- **A more comfortable interface:** compact desktop buttons and F11/F12 panels, independent cover sizes for each window, restored gold enhanced cards, and larger centred game titles. Captions default to the bottom, with a top-position option.
+- **Jukebox:** returns to the same track and playback position after a game. Get SNDH links to the official archive and guides you through importing a downloaded ZIP.
+
+Windows x64 and Linux x86-64 public builds and signed updates. Enhancements remain game- and edition-specific; some scenes fall back to the original view. Android startup and portable-folder fixes are included in the private source, but Android APK/device qualification remains separate and there is no Android download in this release.
+
 ## 1.1.566 — Game fixes and games-first phone mode
 
 - **Chaos Engine:** adds optional Smooth Motion for gameplay, using isolated rendering passes while keeping the original game timing.
