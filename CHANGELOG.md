@@ -1,5 +1,16 @@
 # SemaTor release history
 
+## 1.1.566 — Game fixes and games-first phone mode
+
+- **Chaos Engine:** adds optional Smooth Motion for gameplay, using isolated rendering passes while keeping the original game timing.
+- **The New Zealand Story:** preserves smooth-motion history and activates actors visible in the widened side views.
+- **Xenon:** reuses identical smooth-motion background subrow draws to avoid unnecessary rendering work.
+- **Batman:** adds widescreen support for the Axis Chemicals and cathedral stages of the supported two-disk edition.
+- **Library and controls:** keeps companion disk names readable after ZIP extraction, corrects session quit and launcher destination labels, and fixes keyboard input reporting. SemaOS gains improved touch actions and gamepad scrolling.
+- **SemaOS phone mode:** games, Continue, Jukebox and Options come first in portrait or landscape. Creator tools are hidden by default and can be enabled under Options → Behaviour. Auto/Phone/Desktop selection is available; existing projects and desktop window positions are preserved.
+
+Windows x64 and Linux x86-64 public builds and signed updates. Android APK/device qualification remains separate; this release does not include an Android download.
+
 ## 1.1.565 — Vroom widescreen stability
 
 - **Vroom widescreen:** keeps the side views visible when the dashboard updates independently of the driving scene, fixing intermittent flashes back to the native view.
