@@ -1,5 +1,23 @@
 # SemaTor release history
 
+## 1.1.570 — Steadier Xenon audio and refreshed app icons
+
+- **Xenon audio:** fixes missed music callbacks while Steady Speed holds the game CPU. The independent music callback now runs correctly without waking or changing the held game CPU.
+- **Audio efficiency:** caches unchanged sound-chip oscillator rates and Timer A periods, and uses exact integer sample timing. These shared engine changes preserve the generated audio samples.
+- **Application icons:** uses the SemaTor ST artwork for Windows executable and taskbar icons and Linux window and application-launcher icons. Normal, debug and public Windows builds embed the icon; the loose ICO is no longer shipped in the desktop runtime.
+
+Windows x64 and Linux x86-64 public builds and signed updates. Desktop layouts are unchanged. Android phone library, Jukebox and touch-menu work remains a separate test preview; it is not a public Android or Play Store release.
+
+## 1.1.569 — Android phone preview
+
+- **Phone library:** returns to the classic game library, with SemaOS colour themes and GEM, Jukebox, music imports and Android update checks.
+- **Phone menus:** separate touch layouts for Session and Settings, with the game visible alongside landscape adjustments. Desktop menus are unchanged.
+- **Android playback:** Jukebox background playback uses a media service and lock-screen controls; games and rendering remain held while the app is in the background.
+- **Audio and CPU:** clears stale STOP/prefetch state in Xenon's independent music callback; caches unchanged synthesis rates and Timer A intervals without changing guest timing; restores the game audio device after returning to the app.
+- **Phone graphics:** caches touch-stick coverage and avoids repeatedly blending empty overlay regions.
+
+Android device qualification is in progress. This preview is separate from the published desktop release.
+
 ## 1.1.568 — Clearer game titles and steadier motion
 
 - **Library cards:** larger, centred game titles now wrap onto two lines, with subtitle breaks where possible. Year and publisher remain in Details. Gold Enhanced cards and the top/bottom caption setting are preserved.
