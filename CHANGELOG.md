@@ -1,5 +1,62 @@
 # SemaTor release history
 
+## 1.1.576 — Vertical modes, Smooth Motion at any refresh rate, FidelityFX, sturdier sound and Linux ARM64
+
+- **Smooth Motion at any refresh rate:** every Smooth Motion game now draws its in-between pictures for the moment each display refresh is shown, at 60, 90, 120, 144, 240 Hz and in between, without changing game speed, timing or sound. A new per-game "Smooth motion rate" row offers Match display (default), 60, 120, 144, 240 Hz or the previous 50 Hz exact pictures. Heavy scenes step down gracefully instead of stuttering, and frame generation no longer interpolates on top.
+- **Vertical modes (experimental):** Xenon and Xenon 2 can fill a tall window or a monitor turned upright. The original view sits slightly above the bottom by default, with the stretch already flown below and what is coming above; choose Bottom, 10%, 15%, 20% or Middle under "Original view position". Xenon 2 shows upcoming formations flying in, every member on its own way with its own animation, and the wall enemies animate in the extra rows. A "Shot range" option lets shots travel their original distance beyond the 4:3 view. Both games stay vertical from the title and attract flyby to game over. Restart after changing the option.
+- **FidelityFX Optical Flow:** a new experimental frame generation method using AMD’s open-source FidelityFX optical flow on any Vulkan GPU (AMD, Intel or NVIDIA). NVIDIA Optical Flow is unchanged.
+- **Sturdier sound:** the sound queue is kept steady with tiny rate corrections instead of pausing and refilling, absorbs brief stalls, follows headphones or Bluetooth devices being plugged in or removed, and reliably comes back after the window regains focus.
+- **Presentation thread:** on Vulkan, waiting for the display and submitting frames now happen on their own thread, so the game and its sound keep a steady pace while the display catches up. F12 > Debug > Performance & diagnostics can switch it off.
+- **Smoother interface:** save-slot previews, SemaOS thumbnails and Continue cards load in the background, menu and library uploads are smaller, and the Jukebox scope and desktop music visualiser cost much less while looking the same.
+- **Widescreen:** pausing a widescreen game keeps the widescreen picture, and the Zynaps title colour bars now run across the full width. A raster timing fix removes a faint colour flicker above Zynaps’ panel; colour changes written just after a line’s last pixel now count from the next line, as on the ST.
+- **SemaOS and menus:** GEM windows look more like real GEM dialogs, the Jukebox has icon playback buttons and a sidebar that scrolls in small windows, and the F11/F12 menus fit small windows better.
+- **Linux ARM64 (new):** a native Linux ARM64 build for Arm Linux devices such as Valve’s Steam Frame, with its own signed updates. It has been tested under emulation; real Arm hardware reports are welcome.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds and signed updates. Android remains a separate test preview; it is not a public Android or Play Store release.
+
+## 1.1.575 — Vertical layout for both Xenons, phone polish, hardware page, FidelityFX
+
+- **Vertical modes (experimental):** the original view now sits slightly above the bottom by default, with the stretch already flown below it and what's coming above; choose Bottom, 10%, 15%, 20% or Middle under "Original view position". Xenon 2 previews upcoming enemy waves, which fly in from the top edge; the shop, bosses, level ends and star screens stay vertical. Xenon 1's title and attract pages sit in the middle of the tall view.
+- **Phone:** Jukebox in SemaOS's look with its scope; Library settings, Saved games, Enhancements, Collections as proper dialogs (real GEM dialogs in GEM); pages always fit their window; pickers for more options; fades on Vulkan; smoother launch into games; touch wording in help.
+- **Phone performance:** menus draw faster and redraw every frame while moving; presentation locked to the display; Android performance hints; a new F12 > Debug "Performance & hardware" page shows renderer, refresh rate, frame times, thermal state and audio.
+- **Frame generation:** new experimental "FidelityFX Optical Flow" method (AMD, open source) for any Vulkan GPU; NVIDIA Optical Flow is unchanged.
+- **SemaOS desktop and F11/F12:** tidy-ups, icon buttons in the Jukebox, names that fit on small windows.
+
+Android phone-test APK only; physical device testing is required.
+
+## 1.1.574 — Xenon 2 vertical mode, smoother phone presentation
+
+- **Xenon 2 vertical mode (experimental):** a taller view above the original playfield, drawn by the game's own background and sprite code, with upcoming enemy formations shown as previews. Your shots stop at the original screen top, as on the ST. It stays vertical from title to game over and is light enough for phones. Restart after changing it.
+- **Xenon vertical mode:** no more single-frame flashes of the landscape picture.
+- **Phones:** frames are presented in step with the display, and a running game asks the phone for a refresh rate that fits its 50/60 Hz fields, for steadier motion.
+
+Android phone-test APK only; physical device testing is required.
+
+## 1.1.573 — Phone UI in SemaOS's look, steadier Xenon vertical mode
+
+- **Phone menus:** F11/F12 rebuilt as one scrolling, sectioned list with switches, option pickers, inline help that is never cut off, save slots with screenshots, a key grid and a two-pane landscape layout. Icons, eased animations and a Reduce motion switch (F12 > Phone). Desktop menus are unchanged.
+- **Phone library:** drawn with SemaOS's own code: its desktop, windows, disk cards (cover art, printed or handwritten labels), a Details page with badges, card sizes and SemaOS's launch hand-over. The five phone themes are SemaOS's, including a proper GEM look.
+- **Xenon vertical mode (experimental):** the game stays in the vertical layout from start to finish (title, attract, static, restart prompt, game over), which removes the brief flicks to the landscape picture. The player's shots stop at the original screen top again outside boss fights, as on the ST.
+
+Android phone-test APK only; physical device testing is required.
+
+## 1.1.572 — Phone menus and experimental Xenon vertical mode
+
+- **Phone menus:** refreshed F11/F12 sheets, consistent Back/Resume navigation, clearer setting controls and matching key/save-name dialogs. Desktop menus are unchanged.
+- **Phone orientation:** library and Jukebox stay landscape; games follow device rotation and Android rotation lock.
+- **Xenon vertical mode (experimental):** enable from the game enhancements. Taller gameplay fits the window and relocates original HUD artwork below the action. Includes extended enemy/projectile and boss handling, and correct native restart/title transitions. Restart after changing the option. CRT and frame generation are bypassed; full campaign validation is pending.
+- Includes the per-game touch-control editor and supplied launcher icon from 1.1.571.
+
+Android phone-test APK only; physical device testing is required.
+
+## 1.1.571 — Phone touch-control editor preview
+
+- **Per-game controls:** tap Edit controls to select, drag and pinch-resize buttons or the joystick over the paused game. Add ST keys, joystick actions and mouse buttons, change button shapes, or remove controls.
+- **Saved layouts:** portrait and landscape have separate layouts for each game. Done saves them in the portable User settings folder; Cancel discards changes. Reset restores the current orientation's default controls.
+- **Android icon:** the phone test APK uses the supplied SemaTor ST artwork at all five launcher densities.
+
+Android phone-test APK only. Desktop UI and the detached control deck retain their existing behaviour. Physical phone testing is still required.
+
 ## 1.1.570 — Steadier Xenon audio and refreshed app icons
 
 - **Xenon audio:** fixes missed music callbacks while Steady Speed holds the game CPU. The independent music callback now runs correctly without waking or changing the held game CPU.
