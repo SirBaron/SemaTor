@@ -1,5 +1,19 @@
 # SemaTor release history
 
+## 1.1.579 — Turrican II GPU Smooth Motion and lighter picture preparation
+
+- **Turrican II on the GPU:** Smooth Motion now uses indexed Vulkan composition in Original, Fit and wider views, including Amiga artwork, native sprite masks, scanline colours and environmental effects. Layers are prepared once per game interval and reused for its display-rate pictures. The GPU route takes priority over the older Auto/Processor preference. CPU replay remains the fallback for an unavailable compatible renderer or a rejected scene check.
+- **Picture processing on the GPU:** Colour processing, comparison view and Super ST 2x/3x/4x work with the new renderer. Ordinary display-rate Smooth Motion stays on the GPU through these stages. Original 50 Hz pictures with frame generation and explicit diagnostic captures retain their required readback paths.
+- **Less repeated CPU work:** Shared native-screen decoding reuses unchanged bitplanes and palettes. Enhanced pictures avoid duplicate uploads, snapshots copy changed RAM blocks into their owned buffers, and common CPU timing calculations do less work. These changes apply on desktop and Android while preserving emulated timing and game behaviour.
+- **Turrican II threaded rendering:** Smooth Motion and Fit compose from owned snapshots beside the running emulation. Camera, artwork and reset state stay with the selected snapshot; loading a state or starting another game invalidates retained drawing data.
+- **Sound reliability:** Native output cannot replay an already consumed audio range after a delayed flush. State loads clear old resampler/fade history, paused time no longer biases the producer-rate estimate, and device-status publication avoids racing an output reopen. Native/SDL labels report the actual backend. Existing ST gain, filters and stereo mixing are preserved.
+- **Input and save requests:** One-shot requests are consumed atomically, and Save/Load keeps the slot selected when the action was pressed. Input-ring overflow reconciles held controls so a dropped release cannot leave a key or button stuck.
+- **Phone test: saves and menus:** Visible landscape Save/Load actions open the correct slot page. Settings use Display, Picture, Sound, Controls, Game options, and System & diagnostics, with advanced choices inside. Choice previews avoid temporary settings writes; touch focus, scrolling, navigation and diagnostics sharing receive fixes.
+- **Phone test: loading and placement:** The SemaTor loading screen stays correctly sized during game-launch preparation. Fast-core controls cover registered game threads, performance updates run on the UI owner, top controls follow rotation, and Turrican fire presets no longer send an extra mouse click.
+- **More useful diagnostics:** GPU picture counts report completed composition, captures record the actual GPU image, and native shortages are counted even when resampler lookahead remains queued. A status-indicator bug that could draw into an offscreen image is fixed.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds and signed updates. Android remains a private phone-test APK; it is not included in the public release. Further game-specific GPU conversions follow separately.
+
 ## 1.1.578 — Threaded runtime, one frame rate setting and native sound
 
 - **One frame rate:** the frame cap, the Smooth Motion rate and the motion rate are now one Frame rate for all games (F12 > Display and SemaOS Video settings): Match display (the new default: one picture for every refresh of your screen - 144 a second on a 144 Hz screen), 60, 120, 144 or 240, or any of the old caps under Tools > Frame rate (advanced). Smooth Motion’s in-between pictures, the Fire & Ice, Buggy Boy and Wizball motion and frame generation all fill exactly these pictures; the game’s own speed never changes.
