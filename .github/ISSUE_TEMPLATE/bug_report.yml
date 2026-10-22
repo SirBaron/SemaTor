@@ -6,7 +6,7 @@ body:
     id: version
     attributes:
       label: SemaTor version
-      placeholder: "1.1.579"
+      placeholder: "1.1.580"
     validations:
       required: true
   - type: input

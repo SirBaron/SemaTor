@@ -1,5 +1,15 @@
 # SemaTor release history
 
+## 1.1.580 — Faster threaded runtime and Turrican II on the graphics card
+
+- **Faster Threaded runtime:** every game tick used to wait for the screen thread just to report the game’s enhancement status, even when nothing had changed, so a busy screen thread slowed the game down. The tick now sends the status only when it changes. Every game runs lighter in the Threaded runtime, most of all on slower machines and phones (on a desktop test: 4.2 ms a tick down to 3.2 ms).
+- **Turrican II at full speed:** with widescreen and Smooth Motion on, Turrican II now keeps full speed on slower hardware. It makes one copy of the game’s memory per frame instead of two, and the check of its drawing moved off the emulation thread. On a desktop its tick went from 7.7 to 5.1 ms; on a test phone the game went from 37 to 50 ticks a second (full speed) and the sound dropouts from 173 to 3.
+- **Lighter snapshot:** the snapshot of each game tick that the pictures are composed from now reuses the parts that did not change: about 0.37 MB copied per tick for Turrican II instead of 1.9 MB.
+- **Smooth Motion on the graphics card far more often:** Turrican II’s in-between pictures are now drawn by the graphics card almost every time. Its safety check turned down 6-7% of them over a difference in an internal effect flag only, never in a colour; those are now accepted, so in testing not one picture fell back to the slower processor route (66-78 per run before). The check also runs on a sample of pictures rather than every one, which halves its cost.
+- **Nothing else changes:** the games themselves, their timing and their sound are exactly as before (checked byte for byte against the Classic runtime).
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds and signed updates. Android remains a private phone-test APK; it is not included in the public release.
+
 ## 1.1.579 — Turrican II GPU Smooth Motion and lighter picture preparation
 
 - **Turrican II on the GPU:** Smooth Motion now uses indexed Vulkan composition in Original, Fit and wider views, including Amiga artwork, native sprite masks, scanline colours and environmental effects. Layers are prepared once per game interval and reused for its display-rate pictures. The GPU route takes priority over the older Auto/Processor preference. CPU replay remains the fallback for an unavailable compatible renderer or a rejected scene check.
