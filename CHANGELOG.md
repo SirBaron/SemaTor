@@ -1,5 +1,11 @@
 # SemaTor release history
 
+## 1.1.581 — The Chaos Engine one-disk edition recognised
+
+- **The Chaos Engine:** the one-disk Cynix/Superior edition (RAM-disk and hard-drive version) is now recognised, with all enhancements: cheats, 16:9/21:9/Fit widescreen and Smooth Motion.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds and signed updates. Android remains a private phone-test APK; it is not included in the public release.
+
 ## 1.1.580 — Faster threaded runtime and Turrican II on the graphics card
 
 - **Faster Threaded runtime:** every game tick used to wait for the screen thread just to report the game’s enhancement status, even when nothing had changed, so a busy screen thread slowed the game down. The tick now sends the status only when it changes. Every game runs lighter in the Threaded runtime, most of all on slower machines and phones (on a desktop test: 4.2 ms a tick down to 3.2 ms).
