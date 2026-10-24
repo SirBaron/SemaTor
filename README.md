@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.581 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.582 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.581:** The Chaos Engine’s one-disk Cynix/Superior edition (RAM-disk and hard-drive version) is now recognised, with all its enhancements: cheats, 16:9/21:9/Fit widescreen and Smooth Motion. Windows x64, Linux x86-64 and Linux ARM64 builds; Android remains in private testing.
+**1.1.582:** New two-pane desktop menus with four sizes, live CRT controls, a softer GEM theme, gamepad menu shortcuts and a separate Turbo fire binding. Windows x64, Linux x86-64 and Linux ARM64 builds; Android remains in private testing.
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
@@ -109,11 +109,11 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 - **Picture controls:** sharp pixels, simple filters and CRT presets with controls for the look of the screen and bezel.
 - **Smoother motion:** optional frame generation, with availability and results depending on the graphics backend, GPU and driver.
 - **Pick up where you left off:** four manual save slots with previews, plus rewind and session features where supported.
-- **A more comfortable desktop:** F11 is an overlay along the bottom of the game - save and load with a picture of every slot, rewind, disks and controls, with Resume, Library and Quit on its bar. Arrow keys or the D-pad reach every button. **F11 → Controls** shows the live controller picture with each button's action in the game you are playing. Public builds include basic diagnostics and an optional local support report.
+- **A more comfortable desktop:** F11 Session and F12 Settings share a compact two-pane menu at the bottom of the game. Choose its physical size separately from text size. Use Back/View + Y for Session or Back/View + Start for Settings; LB/RB switch tabs, B goes back and Start resumes. Adjust picture settings while watching the game. Public builds include basic diagnostics and an optional local support report.
 - **Your own disk collection:** ST, IMG, MSA, full-sector DIM, STX and supported disk images inside ZIP archives.
 
 ![Session controls](./session-overview.png)
-*Desktop header actions stay within reach: click, or use LB/RB then A. Sample game label shown.*
+*Session menu with example empty save slots. LB/RB switch between Session and Settings.*
 
 ![Settings](./settings-overview.png)
 *F12 settings in the public build.*
@@ -122,8 +122,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_581-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_581-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_582-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_582-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 

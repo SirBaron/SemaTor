@@ -1,5 +1,15 @@
 # SemaTor release history
 
+## 1.1.582 — New desktop menus, live picture controls and turbo fire
+
+- **New F11/F12 menus:** A two-pane Session and Settings interface, with four physical menu sizes and a bottom-of-screen position.
+- **Live picture controls:** Adjust CRT settings in the new menu while watching the game behind it, without switching to a separate studio page.
+- **GEM theme:** A muted green patterned background, warm cream panels and clearer selection contrast.
+- **Gamepad menu controls:** Back/View + Y opens Session; Back/View + Start opens Settings. LB/RB switch tabs, B goes back or closes the home page, and Start resumes. Left on the D-pad no longer closes the menu.
+- **Turbo fire:** Assign Turbo fire (hold) to a controller button for repeated presses, while keeping normal Fire available separately for games that use a held press.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds and signed updates. Android remains in private testing and is not included in the public release.
+
 ## 1.1.581 — The Chaos Engine one-disk edition recognised
 
 - **The Chaos Engine:** the one-disk Cynix/Superior edition (RAM-disk and hard-drive version) is now recognised, with all enhancements: cheats, 16:9/21:9/Fit widescreen and Smooth Motion.
