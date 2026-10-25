@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.582 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.583 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.582:** New two-pane desktop menus with four sizes, live CRT controls, a softer GEM theme, gamepad menu shortcuts and a separate Turbo fire binding. Windows x64, Linux x86-64 and Linux ARM64 builds; Android remains in private testing.
+**1.1.583:** GPU Smooth Motion for Vroom, Xenon and The Chaos Engine; improved racing, Vertical Xenon, boosted-CPU scrolling fixes and adjustable frame-rate caps. Android testing adds the shared intro, expanded Jukebox, touch Turbo and ST keyboard. [Get the Android testing APK on Discord](https://discord.gg/DdHfSGrdFc).
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
@@ -91,7 +91,7 @@ Prefer the classic library? **Settings → Start in** chooses SemaOS or the libr
 
 ## Game guides
 
-Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for guides to the best-known enhanced games, and the [list of all 99 profiles and their disks](https://sirbaron.github.io/SemaTor/games/profiles.html). Each guide lists the game's options, its original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
+Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for guides to the best-known enhanced games, and the [current profile enhancement catalogue](https://sirbaron.github.io/SemaTor/games/profiles.html). Each guide lists the game's options, its original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
 
 ## The classic library
 
@@ -122,8 +122,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_582-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_582-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_583-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_583-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 

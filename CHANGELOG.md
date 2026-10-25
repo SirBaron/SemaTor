@@ -1,5 +1,18 @@
 # SemaTor release history
 
+## 1.1.583 — GPU Smooth Motion, steadier racing and Android improvements
+
+- **Vroom GPU Smooth Motion:** Road, scenery and cockpit presentation use the graphics-card path in supported views, including widescreen and Fit. Scene preparation, artwork reuse and frame pacing have been improved, with fixes for stationary flicker and clipped scenery.
+- **Xenon GPU Smooth Motion:** Fractional background and object movement works with the Vertical enhancement. Fixes cover startup, level transitions, aircraft shadows, the lower background and boss placement within the original combat area.
+- **The Chaos Engine:** GPU Smooth Motion supports widescreen and Fit. Auto CPU uses a protected 2x setting to reduce busy-scene slowdown. Display timing and retained scene history fixes address the scrolling snap-back seen with boosted CPU speed.
+- **Frame-rate controls:** Desktop and Android have an adjustable FPS cap, separate from display refresh. Performance-panel controls and timing diagnostics have been improved. Actual performance still depends on the game, device and settings.
+- **Android startup and library:** The shared SemaOS-style intro replaces the old splash, loading adapts to portrait and landscape, and animated library backgrounds work again. Game import, touch controls and orientation handling have also been updated.
+- **Android Jukebox:** Portrait and landscape layouts, composers, favourites, recent plays, playlists and additional music tools. Supported Amiga music imports are available; the library returns to landscape when leaving the player.
+- **Android controls and second screen:** Touch Turbo fire, the ST-style keyboard, and shared Session/Settings menus. Thor's second-screen keyboard and menu handling have been updated, including reconnect and held-input cleanup.
+- **Phone stability and diagnostics:** Vroom touch-input and reset handling, rendering snapshots, surface transitions and diagnostic reporting receive fixes and improvements.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. The Android testing APK is distributed through the SemaTor Discord, separately from this desktop release. GPU Smooth Motion is game-specific; these changes do not promise a fixed frame rate on every device. Physical Thor testing remains limited, and the reported CRT-only HUD shimmer is still under investigation.
+
 ## 1.1.582 — New desktop menus, live picture controls and turbo fire
 
 - **New F11/F12 menus:** A two-pane Session and Settings interface, with four physical menu sizes and a bottom-of-screen position.

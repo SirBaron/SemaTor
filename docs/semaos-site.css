@@ -7,3 +7,5 @@
 .optional-studio{margin:0;border-block:1px solid var(--line);padding:0}.optional-studio>summary{padding:28px 5vw;color:var(--cyan)}.optional-studio .studio{border:0}.optional-studio .app-card p{padding-top:0}
 @media(max-width:950px){.play-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.play-grid,.game-showcase{grid-template-columns:1fr}.play-grid p{font-size:15px}.play-grid h3{font-size:28px}.game-showcase{gap:28px;margin-top:40px}.hero-copy{margin:30px 0}.hero-top .status{white-space:normal}.hero-screen .screen-label{flex-wrap:wrap}.optional-studio>summary{font-size:16px}.site-header nav{justify-content:flex-start}}
+
+.xenon-vertical-showcase .shot{max-width:420px;justify-self:center}.xenon-vertical-showcase .shot img{width:100%;height:auto;max-height:800px;object-fit:contain}

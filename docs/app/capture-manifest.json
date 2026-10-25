@@ -74,6 +74,14 @@
       "width": 2052,
       "height": 1283,
       "source": "hardware-original-normal.png"
+    },
+    {
+      "file": "../gameplay/xenon-vertical.png",
+      "version": "1.1.582 phone test 1001661",
+      "sha256": "afe68fafa9196330196168d7ca3afcc3f66ca7755a250966d559c03cf86cbdeb",
+      "width": 1344,
+      "height": 2992,
+      "source": "Actual Android gameplay capture, 2026-10-25; unmodified screenshot including touch controls"
     }
   ]
 }
