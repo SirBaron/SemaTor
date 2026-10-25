@@ -1,3 +1,11 @@
+## 1.1.584 — Populous II widescreen
+
+- **Populous II widescreen:** Optional 16:9 and 21:9 battlefield views extend the isometric map with the game's own terrain, buildings, people and effects at their native size. The original stone control panel is kept and widened, and mouse clicks work across the added land.
+- **Populous II camera and controls:** Smooth camera panning (on by default), mouse-wheel zoom from 50% to 150%, and edge scrolling. The original keyboard view controls still work.
+- **Populous II statue question:** A new option, on by default, skips the manual's statue-number question. Turn it off to play with the original check. Gameplay and difficulty are unchanged.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. The wider views are marked TEST in the enhancements menu: they were checked through the opening of the game, not a whole campaign. Populous II needs the default "Original drive" disk loading; the Fast setting can stop the game at its disk prompt.
+
 # SemaTor release history
 
 ## 1.1.583 — GPU Smooth Motion, steadier racing and Android improvements
