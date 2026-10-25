@@ -46,3 +46,36 @@ footer{background:#0c1220}
 .guide-page footer{width:100%;max-width:none;margin:0;padding:36px 5vw;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
 @media(max-width:1050px){.brand span{display:none}.nav nav,.site-header nav{gap:16px}.hero-copy{gap:5vw}}
 @media(max-width:650px){.nav,.site-header{padding:16px 5vw;align-items:center}.brand{font-size:17px;gap:7px}.brand img{width:31px;height:31px}.nav nav,.site-header nav{gap:10px}.nav nav>a:not(.nav-download){display:none}.site-header{flex-wrap:wrap}.site-header nav{width:100%;justify-content:space-between;gap:12px}.site-header nav a{font-size:11px}.nav-download{font-size:11px;padding:8px 12px}.hero h1{font-size:clamp(65px,16vw,104px)}.guide-page main{padding-top:35px}.hero-aside .translation-slogan{font-size:17px}}
+
+.site-header,.nav{background:linear-gradient(120deg,#10182a,#0c1220);border-bottom-color:#354362}
+.nav-download,.button{border-radius:9px;box-shadow:0 3px 18px #84e6ef12}
+.nav-download{color:var(--cyan)!important}.site-header nav a:hover{color:var(--cyan)}
+.home-page{background:radial-gradient(ellipse at 100% 0,#28204445,transparent 30%),var(--bg)}
+.home-page .hero{padding-top:35px;background:radial-gradient(ellipse at 85% 35%,#42306445,transparent 65%)}
+.home-page .hero-copy{grid-template-columns:1.2fr 1fr;align-items:center;margin:44px 0;gap:7vw}
+.home-page .hero h1{font-size:clamp(62px,7.7vw,110px);line-height:1.02;max-width:700px}
+.home-page .hero h1 em{background:linear-gradient(115deg,#b9f8ff,#84e6ef 40%,#c6abff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.home-page .hero-aside .lead{font-size:26px}.home-page .hero-aside>p:not(.lead){margin:18px 0}
+.home-page .hero-screen{border-radius:16px;padding:14px;box-shadow:0 22px 70px #0006,0 0 55px #84e6ef08}
+.home-page .hero-screen .shot{border-radius:8px}.home-page .caption{font-family:inherit;font-size:12px}
+.home-page .status{padding:8px 12px;border:1px solid #38435d;border-radius:30px;background:#151d30}.home-page .status i{background:#84e6ef;box-shadow:0 0 10px #84e6ef77}
+.release-spotlight{margin:0 auto 38px;width:min(1320px,90%);padding:24px 28px;display:grid;grid-template-columns:1fr 1.4fr auto;gap:30px;align-items:center;border:1px solid #454164;border-radius:14px;background:linear-gradient(110deg,#231c38,#121e30)}
+.release-spotlight h2{font-size:25px;margin:9px 0 0;letter-spacing:-.03em}.release-spotlight p{font-size:14px;color:var(--muted);margin:0}.release-spotlight a{font-size:13px;color:var(--cyan)}
+.home-page .ticker{background:transparent;padding:18px;color:var(--muted);font-size:10px}
+.home-page .section{padding-block:76px}.home-page .section-heading{gap:0 7vw}.home-page .section-heading h2{font-size:clamp(38px,4.2vw,60px)}
+.home-page .play-grid{gap:18px}.home-page .play-grid article{padding:26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#172237,#101827)}
+.home-page .number{font-size:10px;letter-spacing:.12em;margin-bottom:20px}.home-page .play-grid h3{font-size:26px}.home-page .play-grid p{line-height:1.7}
+.home-page .play-grid article:hover{border-color:#596985}.home-page .game-showcase>.shot{border-radius:12px;border:1px solid var(--line);box-shadow:0 15px 50px #0004}
+.home-page .game-showcase h2{font-size:clamp(36px,4vw,54px)}
+.home-page .xenon-vertical-showcase{background:radial-gradient(ellipse at 15% 60%,#24355060,transparent 60%),#0d1422;border-bottom:1px solid var(--line)}
+.home-page .xenon-vertical-showcase .game-showcase{grid-template-columns:1fr 1.2fr;margin-top:36px;gap:7vw}
+.home-page .xenon-vertical-showcase .shot{max-width:290px}.home-page .xenon-vertical-showcase .shot img{max-height:645px}
+.android-testing{padding:24px;margin-top:30px;background:#1b2238;border:1px solid #514368;border-radius:12px}.android-testing h3{margin:12px 0}.android-testing a{color:var(--cyan)}
+.home-page .download{grid-template-columns:1fr;gap:25px;background:radial-gradient(ellipse at 90% 10%,#24384755,transparent 65%),#101827}
+.home-page .download>div:first-child{max-width:800px}.home-page .download h2{font-size:clamp(40px,4.6vw,64px);margin:20px 0}.home-page .download .fix-note{max-width:700px}
+.home-page .download-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:24px}.home-page .download-options article{padding:25px;border-radius:14px;display:flex;flex-direction:column}.home-page .download-options p{flex:1}.home-page .download-options .button{gap:12px}.home-page .download-options h3{font-size:25px}
+.home-page .download details{margin:0;padding-top:20px}.home-page .download summary{font-size:16px}
+.home-page .theme-shot,.home-page .app-card{border-radius:14px}.home-page .theme,.home-page .filters button{border-radius:8px}
+.home-page .optional-studio>summary{padding-inline:max(5vw,calc((100vw - 1320px)/2));background:#121c2c}.home-page .capture-note{background:#0c1220}
+@media(max-width:1050px){.site-header{flex-wrap:wrap}.site-header nav{gap:18px}.release-spotlight{grid-template-columns:1fr 1.5fr}.release-spotlight>a{grid-column:1/-1}.home-page .download-options{grid-template-columns:1fr}.home-page .hero h1{font-size:clamp(58px,7.7vw,90px)}}
+@media(max-width:650px){.home-page .hero-copy,.home-page .xenon-vertical-showcase .game-showcase{grid-template-columns:1fr;gap:28px}.home-page .hero h1{font-size:clamp(55px,13vw,80px)}.home-page .section{padding-block:48px}.home-page .hero-top .status{display:inline-block;margin-top:15px}.home-page .hero-aside .lead{font-size:23px}.release-spotlight{grid-template-columns:1fr;gap:16px;padding:22px;margin-bottom:28px}.home-page .play-grid article{padding:23px}.home-page .section-heading{display:block}.home-page .xenon-vertical-showcase .shot{max-width:250px}.home-page .game-showcase h2{font-size:38px}.home-page .download-options{gap:15px}.site-header nav{justify-content:flex-start;gap:15px}.home-page .ticker{font-size:8px;gap:12px}.home-page .section-heading h2{font-size:40px}}
