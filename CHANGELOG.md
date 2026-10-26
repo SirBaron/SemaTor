@@ -1,3 +1,14 @@
+## 1.1.585 — Golden Axe, R-Type and a more polished SemaOS
+
+- **Golden Axe:** GPU Smooth Motion follows scenery and actors with fractional horizontal and vertical movement. Expanded View adapts to the selected aspect ratio; the separate Expanded Play Area option allows movement in the wider scene. Original encounter gates and exits remain in place. Scrolling seams and level-edge judder are fixed, and the gamepad B button defaults to Magic while preserving custom bindings.
+- **R-Type:** GPU Smooth Motion includes scenery, stars and objects. Choose extra scenery with the original combat area, or enable Expanded Play Area for wider movement and verified enemy/projectile boundaries. Ground-enemy entry, turning and removal now account for the wider view. Intentionally timed left-side arrivals and boss formations retain their original timing.
+- **R-Type sound and stability:** Music and effects play together with independent volume controls, including when loading a mid-game save. Power-up-related ultrawide dropouts and distant scenery-cache failures are fixed. Stars extend into the additional view.
+- **SemaOS tools:** Updated creative and utility apps include the sample editor, gallery, programming tools and debugging tools, alongside improvements to Paint, Explorer and the shared desktop.
+- **Session and Settings:** Clearer text and contrast, reliable slider dragging, corrected directional-key navigation and performance-panel shortcuts. Steady menu redraws avoid repeated settings-file reads. Editor selections, tab scroll positions, file renaming and debugger step-over receive fixes.
+- **Android packaging:** Runtime artwork and required licenses remain included; development/reference assets are excluded from the APK. Existing signing identity and user-folder compatibility are preserved.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. Android remains a separate testing APK. Golden Axe and R-Type were checked using saved-game replays, original-renderer comparisons and bounded later-stage tests; this is not a complete campaign playthrough. GPU Smooth Motion does not change the original game speed or guarantee a fixed frame rate on every device. Golden Axe CPU boost remains a manual choice because it also changes gameplay speed.
+
 ## 1.1.584 — Populous II widescreen
 
 - **Populous II widescreen:** Optional 16:9 and 21:9 battlefield views extend the isometric map with the game's own terrain, buildings, people and effects at their native size. The original stone control panel is kept and widened, and mouse clicks work across the added land.
