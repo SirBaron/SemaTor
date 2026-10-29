@@ -25,7 +25,7 @@ Created by David Baron with AI assistance in development, research, documentatio
 - **Make it look yours:** CRT bezels, scanlines, glow, Super ST colour and Auto HDR on compatible Vulkan/HDR setups.
 - **Keep your place:** save states, rewind, per-game settings and a searchable library with editions grouped under their game.
 
-SemaOS is the built-in library and desktop interface inside SemaTor. Its music, pixel-art and programming tools are included extras to explore between games.
+SemaOS is the built-in library and desktop interface inside SemaTor. Its Creator suite connects game building, pixel art, music, samples and programming. [Explore the Creator tools](https://sirbaron.github.io/SemaTor/creator.html) — see what you can make and how to build a native ST/STE game disk.
 
 ## Highlights and recent changes
 
