@@ -1,13 +1,151 @@
-## 1.1.586 — Desktop studio, Creator tools and smoother Xenon
+## 1.1.586 — Desktop studio, native game creation, SemaSynth and smoother play
 
-- **Desktop studio:** More usable toolbars, inspectors and resized layouts across Maker, Paint, Lab and Samples, with improved mouse, keyboard and Help workflows.
-- **Creator:** Editable game starters, including two-player examples, paths, particles, screen shake and pixel collisions. Per-room music and samples can be included in generated game disks.
-- **SemaSynth:** STE sample authoring, preview and export, with lessons and examples. Generated ST and STE games have been checked in emulation; demanding effects may exceed the original hardware's frame budget.
-- **Xenon:** Finer desktop scrolling and motion, improved reverse-driving rendering, and fixes for multi-part sprites. Long live tests and captured-scene comparisons pass; full campaign coverage remains incomplete.
-- **Speedball 2 and Double Dragon:** Optional experimental Smooth Motion and expanded-view improvements. Existing Golden Axe, R-Type and Populous II enhancements remain included.
-- **Compatibility and reliability:** Startup, keyboard-controller, save/load, audio and creative-tool fixes from the combined integration.
+Changes since public **1.1.585**. This release brings a substantial expansion of the desktop creative suite, native ST/STE game building and music authoring, together with rendering, input and compatibility fixes across SemaTor.
 
-Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. Android is a separate private testing APK. Physical phone/STE confirmation and full campaign playthroughs remain pending. Performance varies with the game, effects and device.
+### Desktop workspaces and creative workflow
+
+- Reworked Maker, Paint, Program Lab and Sample Editor around compact desktop menus, grouped tools and contextual inspectors, leaving more space for the document or canvas.
+- Refined spacing, labels, selection and property panels in both Violet and GEM themes, including narrower and resized windows.
+- Desktop authoring keeps its mouse-and-keyboard layout when a gamepad is used. Actual touch input retains adaptive controls without turning the desktop editors into controller menus.
+- Paint gains docked layers and timeline controls, document menus and more usable canvas space.
+- Maker replaces long button rows with workspace menus and compact Rules, Variables, Sounds and Object types inspectors. Dropdowns support keyboard operation.
+- Object Events uses a compact split desktop layout. Room settings make better use of wide windows, with room audio beside the main properties and a scrolling fallback in compact windows.
+- Rebuilt the Sample Editor workspace with clearer transport, zoom, selection, precision fields and sample tools. Added distinct waveform artwork for Violet and GEM.
+- Program Lab and Samples improve access to controls in compact and touch layouts, with clearer playtest shortcuts and contextual guidance.
+- Linked creative documents to their Studio projects, with clearer navigation between a project and its associated artwork, music and code.
+- Added typed file drops and shared pixel-clipboard workflows between creative apps.
+- Improved edit-in-another-app round trips between Maker, Paint, Code Reader, SemaSynth and Samples, including return/apply/cancel handling and protection against silent loss of edits.
+- Connected Program Lab assets, Maker routines and debugger source origins so build and playtest work is easier to follow.
+- Added searchable SemaSynth lessons to Help, including a playable STE sample lesson.
+
+### Creator: game logic, starters and native effects
+
+- Expanded object-type behaviours: rules can belong to a type, allowing instances to share their event logic.
+- Added key and joystick event rules, control mapping and editable sound-effect definitions.
+- Added an editable Puzzle starter: touch three numbered locks in order, then reach the door. Wrong-order contact resets the puzzle. Its rules, routines, variables, messages and artwork are ordinary project data.
+- Added the editable two-player Twin switches starter. Both players hold their switches together, then meet at the unlocked door; keyboard and native joystick controls are included.
+- Added visual native FOLLOW paths with numbered points over the room terrain. Unsupported attachment to a custom engine is rejected clearly.
+- Added installable, editable sparks/particle effects, camera shake and persistent high scores for native games.
+- Failed high-score writes remain pending and can retry, rather than silently losing the score.
+- Added opt-in native pixel collision queries with SELF/OTHER event scope, alongside the existing collision tools.
+- Fixed particle background restoration at the left screen edge, including clipped overlays.
+- Improved long HUD-message drawing and avoided redrawing numeric HUD fields when the message actually covers them.
+- Fixed room HUD numbering, repeated room-start rules, touch/contact bounds, invalid goal selection and a scrolling-speed mismatch.
+- New starters create clean projects. Project replacement and editing have more consistent Undo behaviour, including message typing, failed actions and selecting an object without moving it.
+- Changing rooms clears stale selections. Project names are made safe for generated filenames, and export-folder failures report an error.
+
+### Creator: artwork, worlds and camera
+
+- Import pictures as backdrops, scene images, tiles, sprite sheets or maps, with a before/after preview and memory-budget feedback.
+- Support includes Degas, NEOchrome, Spectrum 512, PNG, BMP, GIF and SemaPaint pictures. Spectrum artwork is reduced to the target palette with a warning.
+- Added target-aware ST/STE palette conversion, palette reuse, optional dithering, cropping/scaling and sprite-sheet transparency selection. Import is a single undoable action.
+- Expanded banks to 64 sprite assets and 128 tiles. Sprites support 16×16, 32×16, 16×32 and 32×32 sizes with up to four animation frames.
+- Added paged asset banks, size controls and separate storage for expanded sprite and tile slots. Existing terrain cannot accidentally be enlarged.
+- Map imports can reuse mirrored tiles while preserving their orientation. Larger artwork is preserved through supported Paint and import workflows.
+- Expanded projects support up to 48 objects and 64 rules. Native sprite drawing, clipping, erasing, collisions and playtest inspection understand the larger assets.
+- Added rooms larger than one screen, up to 16 screens, with room-size controls, editor panning, a minimap and camera coordinates.
+- Added camera-follow support and native scrolling-world generation, including double-buffered ST views, STE canvases and parallax support.
+- Creator Smooth Motion and expanded views understand larger worlds and sprite sizes. Builds can include the matching SemaTor profile beside their disks and in exports.
+
+### SemaBASIC, debugging and building games
+
+- Added SemaBASIC editing and compilation to native 68000 code, with an in-editor reference, syntax colouring, a full reference and tutorial.
+- Added code units on object and game events, reusable modules, typed procedures/functions and recursion.
+- Expanded the language with LONG values, arrays, constant arrays, DATA/READ/RESTORE, strings and font-based PRINT/TEXT drawing.
+- Added STOS-style game commands, world/camera access, a Main program and WAIT/VBL waits. STE-specific commands check the machine at runtime.
+- Extended music and sound commands, including playback position, channels, volume and looping where supported.
+- Playtest debugging now operates on the running child game, with breakpoints, instruction stepping and named live values. SemaBASIC supports source-line breakpoints, steps and watches.
+- Expanded debugger object inspection to cover larger projects and corrected alarm/field selection.
+- Build errors point back to the rule or routine that caused them. Assembler size, relocation and line limits stop the build at the relevant line.
+- Generated games boot directly from AUTO. The 520 ST target checks its available program memory before producing an oversized game.
+- Added packed programs and packed or disk-loaded room/scene resources, with memory checks that account for loading and unpacking.
+- Added 360 KB and 720 KB disk layouts and games spanning up to nine disks, with room/scene disk assignment and complete disk-set exports.
+- Disk prompts accept Fire or a key, including prompts before gameplay and intros. Cancellation and restored scrolling are handled more reliably, and collected builds retain their disk sets.
+
+### Creator music, samples and per-room audio
+
+- Added four-channel MOD import, preview and native STE playback, with project memory/rate feedback.
+- Expanded MOD playback with stereo placement, sample volume/loops and additional supported tracker effects, including retrigger, note/pattern delay, tremolo and pattern loops.
+- SemaSynth songs or individual patterns can become Maker MOD music. Instruments can become YM effects or STE samples, with unsupported conversion details reported.
+- Added Use in Maker / Edit in SemaSynth workflows with undoable application and cancellation. Maker-generated MOD music can reopen its associated SemaSynth song.
+- MOD instruments can open in the Sample Editor and return with their edited sample and valid loop selection.
+- Improved ADSR and YM effect playback, long song identities, sample-loop handling and protection of game PSG effects while music timers run.
+- Added per-room choices for the project song, silence or imported 50 Hz SemaSynth SNDH music, plus selection of which existing PCM effects load with the room.
+- Room audio can load from disk or be packed into the program. Room changes stop the old audio before replacing its resources; scenes restore project music, while re-entering an already loaded room preserves track position.
+- Room duplication, reordering, removal, save/open and Undo preserve room-audio choices.
+- Room audio currently accepts SemaSynth SNDH files up to 128 KB and uses the existing 16-effect/128 KB sample bank. It cannot be combined with global MOD music. High-rate stereo MOD plus sample effects is restricted when it would exhaust the native CPU budget; MOD E0 and EF are not implemented.
+
+### SemaSynth: composition and instrument editing
+
+- Expanded the synthesis engine with instrument lanes, macros, WAVE/SID waveforms, sync-square, buzzer locking, glide, portamento and vibrato.
+- Reworked instrument editing with cards, lanes, hardware views, presets and a waveform editor.
+- Added pattern effects, variable pattern lengths, transpose, groove, sub-song editing and block tools.
+- Pattern keyboard shortcuts act only while the pattern editor is shown, preserving the desktop's other shortcuts.
+- Improved song looping, Loop here, noise-column editing, envelope shapes and author/year metadata.
+- Improved the native SNDH player, timer selection, playback-rate support, sub-songs and game-driver integration, with CPU-budget information.
+- Fixed SID waveform phase agreement between preview and export, SNDH metadata and cleanup of timers, interrupt state and sound-chip port bits.
+- Improved YM voice mixing and consistency between SemaSynth preview and emulator playback. The separate experimental tone-counter behaviour remains disabled.
+
+### SemaSynth: samples, STE, MIDI and music formats
+
+- Added one- and three-channel 4-bit digi conversion, drum kits, Quartet playback and sample-editing tools.
+- Preserved digi data when saving songs and improved conversion/noise-shaping behaviour with the active YM model.
+- Added editable Quartet channel D and preserved all four sample voices through Maker MOD export.
+- Added an STE sample-track editor and sequencing lane, stereo WAV import, native SNDH export and stereo audio export.
+- Preserved stereo STE playback through preview, recording and A/B seeks, with shared DMA playback and tone-control handling in the runtime and Jukebox.
+- Integrated STE sample tracks with Creator song ownership and checked their coexistence with Quartet playback.
+- Added host MIDI input/output and recording/clock support, Standard MIDI File workflows and routing between the emulated ST MIDI port and host MIDI.
+- Fixed MIDI export sequencing and note timing. Live MIDI follows actual preview events and variable-length pattern positions.
+- Added YM2–YM6 and VTX import, including supported YM effects, plus YM6 export with effects and checked VTX export for register songs.
+- Improved STE music playback in the Jukebox, including DMA sound, tone controls and machine identification used by STE tunes.
+
+### Xenon and individual game fixes
+
+- **Xenon:** Finer desktop background and motion sampling, with four spatial rows on desktop and the lighter three-row setting retained on Android.
+- **Xenon:** Fixed reverse-driving replay-origin clipping, multipart-sprite placement and projectile matching around scrolling tiles.
+- **Xenon:** Reused identical background work to reduce unnecessary preparation, separated spatial precision from timing, and restored effects audio correctly after loading a state.
+- **Speedball 2:** Improved experimental Smooth Motion continuity, busy-presenter handling and fallback drawing when the GPU cannot supply a picture. Added recognition of the supported Replicants loader.
+- **Double Dragon:** Improved experimental Smooth Motion, removed a backward step at a blank-frame boundary and kept the expanded view through GPU fallback. Early Enemy Activation is a separate choice from the visual Expanded View.
+- **Golden Axe:** Kept widescreen output through GPU fallback. Phone touch/controller input no longer unintentionally starts player two.
+- **R-Type:** Improved independent music/effect rendering efficiency. Existing controller setups gain the default B = Space mapping while preserving custom assignments.
+- **Gods:** Preserved wide scenery strips and HUD icons through a torn field.
+- **Oids:** Side panels follow the completed video field, avoiding a mismatch with the main picture.
+- **Turrican II:** Retained wide scenery without black side areas when holding a GPU-rendered picture.
+- **Toki, Xenon and Turrican II:** Improved CPU intermediate-picture fallback when the GPU route supplies no picture.
+- Updated game-specific touch overlays and controller presets for Golden Axe, R-Type and Double Dragon.
+
+### Rendering, performance and emulator reliability
+
+- Moved more enhancement drawing away from the emulation lock, reducing contention between original game execution and picture preparation.
+- Reduced repeated memory copying and scene-capture work across Smooth Motion, expanded views and game-specific overlays.
+- This work covers Arkanoid II, Batman, Cannon Fodder, Double Dragon, Fire and Ice, Gods, Kick Off/Kick Off 2, Lemmings, Lotus, The New Zealand Story, Out Run, Populous II, Rainbow Islands, Return to Genesis, Sensible Soccer, Speedball 2 and The Chaos Engine, among others.
+- Extended the same separation to specialist interfaces and overlays in Dungeon Master, Lombard RAC Rally, Mega lo Mania, Phantasie, SWIV, Time Bandit, Xenon 2 and Zak McKracken.
+- Reduced capture/preparation overhead for Smooth 3D in Elite, Falcon, Formula One Grand Prix, Starglider/Starglider 2 and Stunt Car Racer.
+- Threaded mode avoids waiting for unused enhancement pictures when enhancements are off, and exchanges settings, sound controls and display state more consistently.
+- Frame generation presents complete pictures during busy UI updates, addressing mixed-picture menu flicker. Overload handling and respecting an explicitly disabled governor were improved.
+- Wide-view presentation is separated from optional extended gameplay, so seeing more scenery and changing the playable area remain distinct behaviours where offered.
+- Reduced rewind capture work by examining changed memory pages instead of repeatedly comparing the whole machine.
+- Corrected MFP timer timing and interrupt-priority behaviour, including 60 Hz operation. XBIOS Vsync now waits with interrupts enabled as expected.
+- Improved keyboard-controller reset/input handling and startup/save-state compatibility in the integrated runtime.
+
+### Android testing build
+
+- Android remains a separately distributed **private test APK**, not a public desktop-release attachment.
+- Updated Classic-default migration for phone installations and reduced avoidable work in the mobile rendering path.
+- Improved gameplay/menu display-mode requests, refresh-rate voting, surface lifecycle handling and frame deadlines.
+- Touch controls no longer also press the emulated mouse-port button in joystick games.
+- Link a folder reads the linked location in place instead of copying it. Avoided creating unintended User/games or User/media directories outside the Apple-specific layout.
+- Improved portrait and narrow-screen labels, control sizing and access to STE sample controls.
+- Performance diagnostics distinguish gameplay from menus, loading and pauses, making recorded timing more useful.
+
+### Distribution and validation
+
+- Public desktop packages and signed updates are available for Windows x64, Linux x86-64 and Linux ARM64. Windows portability fixes and required runtime artwork are included.
+- Refreshed the website enhancement catalogue and release documentation. The catalogue describes available enhancements, not a guarantee that every game or edition is compatible.
+- Public package checks exclude application source, debug symbols, private fixtures and development/reference assets; required runtime assets and licences remain included.
+- Creator validation includes complete generated disks running on emulated 520 ST and STE targets, native drawing/gameplay checks and modern/GEM desktop layout checks. Occasional particle bursts pass these checks; sustained heavy effects can still exceed an original machine's 50 Hz budget.
+- Xenon has extended live-run and captured-scene comparison coverage, including first-boss damage, but boss defeat, sector transitions and a complete campaign remain unverified.
+- Physical phone/STE confirmation and broader full-campaign testing remain pending. Experimental enhancements and actual performance depend on the game, scene, selected effects and device; Smooth Motion does not promise a fixed frame rate or change the original simulation speed.
 
 ## 1.1.585 — Golden Axe, R-Type and a more polished SemaOS
 
