@@ -1,3 +1,14 @@
+## 1.1.586 — Desktop studio, Creator tools and smoother Xenon
+
+- **Desktop studio:** More usable toolbars, inspectors and resized layouts across Maker, Paint, Lab and Samples, with improved mouse, keyboard and Help workflows.
+- **Creator:** Editable game starters, including two-player examples, paths, particles, screen shake and pixel collisions. Per-room music and samples can be included in generated game disks.
+- **SemaSynth:** STE sample authoring, preview and export, with lessons and examples. Generated ST and STE games have been checked in emulation; demanding effects may exceed the original hardware's frame budget.
+- **Xenon:** Finer desktop scrolling and motion, improved reverse-driving rendering, and fixes for multi-part sprites. Long live tests and captured-scene comparisons pass; full campaign coverage remains incomplete.
+- **Speedball 2 and Double Dragon:** Optional experimental Smooth Motion and expanded-view improvements. Existing Golden Axe, R-Type and Populous II enhancements remain included.
+- **Compatibility and reliability:** Startup, keyboard-controller, save/load, audio and creative-tool fixes from the combined integration.
+
+Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. Android is a separate private testing APK. Physical phone/STE confirmation and full campaign playthroughs remain pending. Performance varies with the game, effects and device.
+
 ## 1.1.585 — Golden Axe, R-Type and a more polished SemaOS
 
 - **Golden Axe:** GPU Smooth Motion follows scenery and actors with fractional horizontal and vertical movement. Expanded View adapts to the selected aspect ratio; the separate Expanded Play Area option allows movement in the wider scene. Original encounter gates and exits remain in place. Scrolling seams and level-edge judder are fixed, and the gamepad B button defaults to Magic while preserving custom bindings.
