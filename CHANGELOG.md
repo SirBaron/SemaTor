@@ -1,10 +1,14 @@
-## 1.1.592 — Strider widescreen and Smooth Motion upgrade
+## 1.1.592 — Strider upgrade and Shadow of the Beast fixes
 
 - Strider adds an expanded view that reveals original scenery and existing actors without stretching the picture or changing enemy activation rules.
 - Replaced its older Smooth Motion renderer with immutable captured scenes and lock-free presentation. Camera and character movement interpolate at the selected presentation rate while original game speed and animation artwork are retained.
 - Added independent volume for original music, chip effects and sampled effects. Equal music/effects volume preserves the original audio; the game's original voice sharing remains intact.
 - Added optional Infinite Time alongside Infinite Lives, plus a control guide and pad B jump shortcut. Cheats remain off by default.
 - Verified 1,123 captured frames from all five stage starts at four widths and 2,947 original-renderer camera replays. This is bounded route coverage, not a completed-campaign claim. Unsupported scenes retain the original picture.
+- Fixed Shadow of the Beast's garbled intro text: mixed low/medium-resolution frames now preserve the scrolling text's 640-pixel mode.
+- Fixed Beast Smooth Motion dropping interpolation when animation artwork changes or enemies appear. Camera motion and matching actors now continue independently, with original animation frames and game logic retained.
+- Beast now inserts the requested disk at its verified disk prompt; press Fire when ready. Unknown code and unrelated scenes do not trigger a swap.
+
 
 ## 1.1.591 — Shadow of the Beast expanded view and Smooth Motion
 
