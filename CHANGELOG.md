@@ -1,3 +1,10 @@
+## 1.1.591 — Shadow of the Beast expanded view and Smooth Motion
+
+- Shadow of the Beast adds expanded scenery and lock-free Smooth Motion for captured camera, parallax and actor movement, including vertical camera scrolling in interiors. Original gameplay speed and enemy activation rules are retained; unverified frames use the original picture.
+- Separate volume controls follow the original digital title music and gameplay effects. No extra soundtrack is added. Optional Infinite Energy prevents ordinary hit and poison damage; instant-death hazards remain dangerous.
+- The game now has a control guide and a pad jump shortcut. Its second disk belongs in drive A when requested.
+- Corrected floppy-controller handling of a seek sent during motor spin-up. The original Shadow of the Beast disk check now reads the requested track, preventing the incorrectly reversed cave picture.
+
 ## 1.1.590 — Gauntlet II expanded view and Smooth Motion
 
 - Gauntlet II adds a captured maze renderer, expanded view and camera/actor Smooth Motion using the shared frame-rate setting. Original gameplay timing and off-screen monster activation rules are retained.
