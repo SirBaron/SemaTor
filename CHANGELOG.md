@@ -1,3 +1,12 @@
+## 1.1.595 — RoboCop bottom HUD and widescreen gameplay
+
+- RoboCop now uses three enhanced layouts: 16:9, 21:9 and 32:9. One silver bottom HUD replaces the top credits and side panels; score, equipment, arrest timer and power remain live. The full score label and weapon icon are retained.
+- Horizontal gameplay expands with the view, including enemy activation and retirement. The original vertical view, game speed, collision map and actor limits remain unchanged. No extra top scenery is invented or repeated.
+- Replaced solid green damage-mask flashes on RoboCop and enemies with the original sprite artwork plus a brief pale edge highlight in widescreen presentation. Original hit and invulnerability timing is unchanged.
+- Independent HUD updates no longer cause the original HUD to flicker into enhanced gameplay. Scene transitions still use the original picture where a captured scene cannot be verified.
+- Shadow of the Beast I music can be imported into the jukebox through Insert Amiga Disk from the verified original Europe and Europe Alt music disks or their two-disk ZIPs. Each edition provides Intro, Outdoors, Caves and Castle, played from your own cached disk data. The alternate edition also works with the in-game music companion. Beast II/III imports and Amiga artwork are still in development.
+- Checked 1,468 captured RoboCop frames across six stage starts at all three layouts, original-engine expanded enemy activation, memory/thread sanitizers and three actual threaded gameplay runs. This is bounded route testing, not a completed campaign or physical-phone certification.
+
 ## 1.1.594 — Beast Amiga music and configurable jukebox autoplay
 
 Includes the RoboCop and game-directory work below; 1.1.593 was a development checkpoint, not a public desktop release.
