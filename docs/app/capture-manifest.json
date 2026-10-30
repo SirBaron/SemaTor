@@ -1,5 +1,5 @@
 {
-  "version": "1.1.541",
+  "version": "1.1.587",
   "method": "Actual production framebuffer captures on Linux with isolated data. Individual entries retain the version they depict; no interface redraws.",
   "fixtures": "Five real game filenames, built-in Synth demo, original sunset demo art and synthetic FAT12 art disk. No commercial artwork extraction implied.",
   "images": [
@@ -37,19 +37,19 @@
     },
     {
       "file": "semapaint.png",
-      "version": "1.1.540",
-      "sha256": "ebc0a8e1a10d1af4896b88a20dd762699e0a980eb62e14b1be8d14892778f709",
-      "width": 2052,
-      "height": 1283,
-      "source": "paint-disk-original-normal.png"
+      "version": "1.1.587",
+      "sha256": "53e5631aac4be8ef2510a037c2f3cc89ccf4880443b440f12c1176eb5f83fe9c",
+      "width": 1600,
+      "height": 1000,
+      "source": "creator/paint-animation.png"
     },
     {
       "file": "maker.png",
-      "version": "1.1.541",
-      "sha256": "b0fb33a3c932cba2fb31d854b939433f637971c32b9480bb3bf3e2fe66e04cd6",
+      "version": "1.1.587",
+      "sha256": "faa94b27493cb2ceda05f507390c49cc5cab0978db8cf05b659f9499f665d014",
       "width": 1600,
       "height": 1000,
-      "source": "maker-levels-original-normal.png"
+      "source": "creator/maker-workspace.png"
     },
     {
       "file": "disk-workshop.png",
@@ -69,11 +69,11 @@
     },
     {
       "file": "hardware-check.png",
-      "version": "1.1.540",
-      "sha256": "96abccdef03da849f854c057b69e0bcfcaed6cb3dcfb253501913c0b6b9d4561",
-      "width": 2052,
-      "height": 1283,
-      "source": "hardware-original-normal.png"
+      "version": "1.1.587",
+      "sha256": "a1b9eba1bee24bfa2f2f0de78c762802eda0150196d4594c48188db59eb38d2d",
+      "width": 1600,
+      "height": 1000,
+      "source": "creator/hardware-check.png"
     },
     {
       "file": "../gameplay/xenon-vertical.png",

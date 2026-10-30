@@ -1,21 +1,62 @@
-# SemaTor 1.1.562 — Smooth motion for Turrican, Rainbow Islands and Xenon; Turrican II at 32:9; an update prompt; options that switch together; a front end that never waits
+# SemaTor 1.1.587 — A clearer Creator studio, faithful hardware checks and library repairs
 
-Changes since 1.1.561. Unless noted, each enhancement is an option that is off until chosen; it is drawn by the game's own code and leaves the game exactly as it was when off.
+Changes since public **1.1.586**. This update concentrates on desktop authoring, clearer editing workflows, native-game correctness and reliable disk/library handling.
 
-- **Smooth motion** for Turrican (also in its wide view, and still stopping at a level's edge), Rainbow Islands and Xenon - a picture every ST refresh, 50 a second. Xenon's playfield is also never shown torn with the option on.
-- **Xenon:** STEADY SPEED (an even 16.7 frames a second where the ST wobbled) and ST SPEED EXACT. Games whose loop does not wait for the display now hold to the display's own blanks, which also fixed Xenon running 16% fast.
-- **Widescreen:** Turrican II reaches 32:9 with FIT THE WINDOW, stopping at a level's edge; The Chaos Engine gets FIT THE WINDOW up to 21:9 width.
-- **Frame generation, last in line:** frame generation now works from whatever picture is shown - smooth-motion and widescreen pictures included - so on a fast monitor it adds its in-betweens on top of smooth motion instead of being switched off.
-- **Update prompt:** when a newer SemaTor is out, the library and SemaOS say so as soon as they are up, with a few lines of what is new, and offer Update now or Not now. Update now downloads, checks and installs it and opens the new version; Not now asks again at a later start, at most once a day. Never during a game, offline, or with update checks turned off.
-- **Options that go together switch together.** Switching on an option that needs another now switches that one on too, and switches off what it cannot run with, with a one-line note saying so - in the library, SemaOS and F12, by keyboard, mouse or pad. Xenon's SMOOTH MOTION turns on STEADY SPEED and turns off ST SPEED EXACT; Toki's SMOOTH MOTION and its widescreen views switch each other off; Out Run's SMOOTH 3D and ST SPEED EXACT likewise; Lombard RAC Rally's WIDE WINDSCREEN turns on HIGH RES ROAD. Switching a needed option off switches off what needs it.
-- **Damaged disks:** a disk that cannot be read (a ZIP cut short, an image that does not decode) shows a DAMAGED badge, a plain explanation and, when another copy of the same game reads, "Play <that copy> instead"; a Damaged filter finds them. SemaTor never changes or deletes your files.
-- **A front end that never waits:** starting a game, Rescan and adding or removing a folder no longer wait for a library check - even one stuck on a missing network drive - and quitting never hangs on one. Folders list much faster (a 14,500-game folder in milliseconds), covers found for another edition now show on Windows, and cover downloads that GitHub limits stop politely. With a 14,000-game library a rescan takes about a third of the time, a first scan a fifth less, start-up half as long, and scrolling the library is smoother.
-- **First start:** an empty library and Games window now say SemaTor comes with no games and show both ways to add yours - add a folder, or copy disks into the games folder and rescan.
-- **Smaller screens:** on a first start at 1024x768 or 1280x720 SemaOS arranges itself to fit, with the making tools in one folder; at any size the first Games window opens beside the icons, and a narrow Games window keeps Rescan, the sort and Filters behind a "..." menu.
-- **Keyboard and gamepad:** every new control - the graphics backend and reset buttons, their questions, the library's Graphics & reset page, F12's backend switch (now asked in the menu, no pop-up) and the screenshot size - works without a mouse; the first press acts when the focus is already on a control. Back from a game, SemaOS shows the game you just played.
-- **Safer files:** settings, music indexes, SemaSynth exports and covers are written to the side and renamed, so a crash cannot leave a half-written file; background work pauses properly while a game runs.
-- **Stability:** an audit of the new code fixed 19 rare problems - smooth-motion and widescreen pictures that could read past their buffers, Turrican II drawing an old picture after a save state was loaded, and library checks that could be lost or left paused around a game.
-- **Profiles:** Bubble Bobble, Populous II, Another World, Indiana Jones and the Last Crusade, Maniac Mansion, Pirates!, SimCity, Kick Off, Civilization, Starglider 1 and 2, Zak McKracken, Arkanoid II, Gauntlet II and Super Sprint now run on the accurate TOS machine with every option checked.
-- **Saves:** save states from earlier versions still load.
+- Damaged SCP disk images now reject out-of-range track and flux offsets safely. Failed magnetic-image decoding also releases its temporary storage.
 
-You must supply your own supported game disks. No game artwork or music is bundled.
+### Maker: desktop workspaces and navigation
+
+- Redesigned the project dashboard, workspace pages and project library with clearer grouping, quieter panels and useful shortcuts in both Violet and GEM themes.
+- Replaced text dropdown markers with proper menu indicators. Improved page headings, spacing, responsive layouts and Build feedback.
+- The project library has dedicated filters for rooms, scenes, artwork, code, rules, types and sounds. Search includes named modules, object/game code and disabled rule drafts.
+- Exposed the complete artwork bank, all 48 code units and all 64 rules in navigation. Late pages and filtered lists select the right asset after project changes.
+- Rebuilt the Code page around the editor: more visible lines, a line gutter and status, tools alongside on wide desktops and below on compact windows. Code-unit controls are paged to keep the editor in view.
+- Code editing adds block indent/outdent, automatic indentation on Enter and Ctrl+/ to toggle SemaBASIC or assembly comments. Selected code is preserved, full-buffer edits are atomic and each block edit supports Undo.
+- Fixed overlapping command IDs that could make ordinary Code commands select an unrelated unit.
+- Object properties can open or create each type event's SemaBASIC code, retaining the correct owner and existing source.
+- Object types now show the objects you have defined, with unused slots available on demand. New type creation and duplication include clear capacity checks; duplication copies the type's rules and event code together and supports a single Undo.
+- Fixed module shortcuts opening the wrong Code control, sprite selection stopping at the original bank and room-audio panels stacking unnecessarily on wide desktops.
+- Fixed rule selection, paging, reordering and room duplication/remapping that still assumed the old 32-rule limit.
+- The sprite workspace adds independent animation preview, onion skin, grid controls and frame reordering, with Undo and responsive layouts for all supported sprite sizes.
+
+### Native Creator games
+
+- Fixed winning and losing pictures that could remain erased, incomplete or hidden by the player's damage flash.
+- One-screen arcade games now present completed buffered pictures, preventing active bullets from disappearing between erase and redraw. The extra screen buffer is included in the target memory budget.
+- Fixed disappearing sprites when a fixed-screen game draws text or graphics in its Draw event. Completed pictures are presented from a hidden screen, persistent drawings keep their existing behaviour and game logic follows the native field clock. The additional memory is included in build limits.
+- Added the SemaBASIC `SOLID(x, y)` terrain query. It uses world pixel coordinates, follows live `MAP` changes and treats points outside the room as blocked.
+- The two-player starter now checks the second player's corners against painted internal walls, including diagonal sliding.
+- Build failures remain readable on the Build page, with navigation back to the offending rule or source line.
+
+### SemaPaint and palette editing
+
+- Refined the painting workspace, tools, palette and preview presentation.
+- Added pixel-level grid support and clearer zoom/grid controls for ST-resolution artwork.
+- Exposed the ST's 512-colour and STE's 4,096-colour choices while retaining the indexed palette limits of the selected picture mode.
+- Separated adding a colour from editing an existing palette entry. Used slots and available capacity are visible; changing a used entry clearly affects the pixels that reference it.
+
+### SemaOS, Capture Gallery and Hardware Check
+
+- Reworked Capture Gallery's composition and browsing workspace, with clearer framing, caption and export controls.
+- Refined the top menus, removed duplicated View/Create app destinations, added keyboard navigation and kept long menus reachable on small windows.
+- Redesigned Hardware Check and clarified the difference between observed activity, estimates and physical-machine verification.
+- Hardware Check now enforces the selected RAM boundary for CPU reads, writes and instruction fetches, device transfers and OS file buffers. A 512 KB test runs with the 512 KB boundary enforced.
+- Auto Space now uses emulated time, reliably pressing at intervals during the test. Previously its instruction-based timing could put every press after the run had ended.
+- Restored Hardware Check’s captured-screen preview by decoding its PPM output on desktop and Android. In-memory picture decoding now uses the same pixel limit as file decoding.
+- Explorer refuses overlong paths instead of silently navigating to or exporting a truncated filename.
+
+### Games, Android and library reliability
+
+- Fire and Ice's recognized ICS edition detects its initial DATA disk request directly and inserts the uniquely matched disk 2 earlier. The game's Space/Fire confirmation remains under the player's control.
+- Next disk follows disk numbers among exact companions and wraps to disk 1. Missing or ambiguous twins leave the current disk inserted; loose same-title variants and save disks are excluded.
+- Refined companion matching for secondary Disk A/B labels while preserving edition/crack identities. Android provider-only paths are covered in both directions.
+- New games start with Frame Generation Off; an explicitly saved choice remains in effect.
+- Fixed Rick Dangerous 2's Android title-screen input route and Double Dragon's Smooth Motion visibility during enemy death flashing.
+- Unreadable or incomplete linked-folder scans retain unavailable catalogue entries and favourites until access returns, instead of treating the missing listing as an empty folder. Incomplete scans do not replace the saved catalogue.
+- Linked folders consistently remain read-only with Android All files access as well as the document provider. Explorer still allows copying files out to a writable folder.
+- Android disk copying rejects incomplete or changed-size provider streams and cleans up partial files. Long Unicode filenames are shortened on complete characters within the filesystem byte budget, keeping their disk extension.
+- Android folder operations recover cleanly after Java allocation/provider exceptions, releasing temporary references and rejecting incomplete metadata instead of carrying the failure into later reads.
+
+Validation includes automated desktop, native 68000 and host-side Android checks. Physical-phone and real ST/STE verification remain pending.
+
+See the [Creator tools guide](https://sirbaron.github.io/SemaTor/creator.html) for the updated workspaces and current limits.
