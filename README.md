@@ -12,7 +12,7 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 **1.1.589 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.589:** Polished desktop creative tools, editable game starters and effects, per-room music and samples, STE sample authoring, and smoother Xenon rendering. Includes experimental Speedball 2 and Double Dragon enhancements alongside existing game profiles. Windows x64, Linux x86-64 and Linux ARM64 builds; Android testing remains private.
+**1.1.589:** Cross-room object browsing, reusable types from placed objects, faster code navigation, precise MOD/STE sample loops, selection-aware painting and reliable paused playtest previews. Existing game enhancements remain included. Windows x64, Linux x86-64 and Linux ARM64 builds; Android testing remains private.
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
