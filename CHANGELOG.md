@@ -1,3 +1,11 @@
+## 1.1.593 — RoboCop expanded view and Smooth Motion
+
+- RoboCop gains expanded original scenery and existing actors, with a centered HUD and no stretching or changes to enemy activation.
+- Lock-free Smooth Motion interpolates camera and actor positions while retaining the original game speed. Sprite animation, spawns and animated scenery keep their native cadence without interrupting camera interpolation.
+- Separate music/effects volume follows the original PSG voices and sampled intro speech. Equal gains preserve original audio; no replacement soundtrack is added.
+- Added optional Infinite Energy for ordinary hits and Infinite Time, both off by default, plus a pad B jump shortcut and control guide.
+- Verified 1,468 complete frames across six stage starts at four widths and 6,000 original-renderer camera replays. Original RAM, native image and equal-gain audio remain bit-identical. These are bounded routes, not a completed campaign; unsupported scenes use the original picture.
+
 ## 1.1.592 — Strider upgrade and Shadow of the Beast fixes
 
 - Strider adds an expanded view that reveals original scenery and existing actors without stretching the picture or changing enemy activation rules.
