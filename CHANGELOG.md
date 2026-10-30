@@ -1,3 +1,13 @@
+## 1.1.594 — Beast Amiga music and configurable jukebox autoplay
+
+Includes the RoboCop and game-directory work below; 1.1.593 was a development checkpoint, not a public desktop release.
+
+- Shadow of the Beast can play the original Amiga intro, outdoor, cave and castle music from an owner-supplied original Europe Disk 2 IPF or two-disk ZIP. Music and ST effects retain separate volume controls. Missing or unsupported media retains native audio; no game media is bundled.
+- Fixed the remaining corrupted Beast intro text: mixed-resolution scanout now keeps every text pixel through presentation with Smooth Motion enabled or disabled.
+- Jukebox tracks with unknown duration no longer pretend to be three minutes long. The configurable autoplay timer offers 3, 5, 10 (default), 15 or 30 minutes, or Off. It affects unknown-length tracks only, pauses with playback, and is ignored by Repeat One. Known song durations still take precedence.
+- Desktop and phone jukeboxes show unknown duration honestly, disable percentage seeking for those tracks, and retain the timer setting. SemaSynth imports remain bounded to 5 minutes 30 seconds.
+- Amiga artwork and its additional background and foreground parallax layers are deferred to the following public build.
+
 ## 1.1.593 — RoboCop expanded view and Smooth Motion
 
 - Redesigned the GitHub game directory with compact feature comparisons, combined filters, pagination and shareable edition-detail panels. Only the selected page of games is rendered, keeping large collections manageable.
