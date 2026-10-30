@@ -1,3 +1,9 @@
+## 1.1.590 — Gauntlet II expanded view and Smooth Motion
+
+- Gauntlet II adds a captured maze renderer, expanded view and camera/actor Smooth Motion using the shared frame-rate setting. Original gameplay timing and off-screen monster activation rules are retained.
+- Separate volume ownership follows the original intro music and gameplay effects/speech drivers; no extra soundtrack or simultaneous playback is added.
+- Existing infinite health, retained keys and retained potions options remain available. Unknown rendering code or an unverified scene uses the original picture.
+
 ## 1.1.589 — Faster Creator workflows, precise sample loops and reliable playtests
 
 Changes since public 1.1.587. Includes the tested 1.1.588 development work; 1.1.588 was a local test package, not a public release.
