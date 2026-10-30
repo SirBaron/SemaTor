@@ -1,5 +1,7 @@
 ## 1.1.593 — RoboCop expanded view and Smooth Motion
 
+- Redesigned the GitHub game directory with compact feature comparisons, combined filters, pagination and shareable edition-detail panels. Only the selected page of games is rendered, keeping large collections manageable.
+
 - RoboCop gains expanded original scenery and existing actors, with a centered HUD and no stretching or changes to enemy activation.
 - Lock-free Smooth Motion interpolates camera and actor positions while retaining the original game speed. Sprite animation, spawns and animated scenery keep their native cadence without interrupting camera interpolation.
 - Separate music/effects volume follows the original PSG voices and sampled intro speech. Equal gains preserve original audio; no replacement soundtrack is added.
