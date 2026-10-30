@@ -1,3 +1,28 @@
+## 1.1.589 — Faster Creator workflows, precise sample loops and reliable playtests
+
+Changes since public 1.1.587. Includes the tested 1.1.588 development work; 1.1.588 was a local test package, not a public release.
+
+- Browse an object type's placed instances across rooms and jump to the exact placement. Navigation reveals hidden placements and retains map locks without changing the project.
+- Duplicate objects using the actual room bounds, including wide rooms. Create a named reusable type directly from an independent object, keeping its position and rules; one Undo restores it.
+- Code navigation adds Ctrl+G to jump to a line, backwards search with Shift+F3, match counts and search controls that fit compact windows with larger fields in touch mode.
+- Room audio adds Include all / Exclude all PCM controls, selected sample byte counts, direct editing links and visible MOD compatibility guidance. Re-selecting unchanged audio settings no longer creates empty undo steps.
+- The Sample Editor keeps ST digi loop markers aligned through resampling, cut/paste, trim and tuning. Audio Undo/Redo and linked editing restore loop positions. The waveform now shows the loop range; importing another WAV clears unrelated markers.
+
+- MOD instrument loops now follow sample edits and resampling, and loop-only changes support Done, Cancel and Undo. A conflicting MOD edit remains open. Set/clear loop is undoable, Select loop reveals its range, and the selection panel shows duration. WAV exports still contain audio only.
+- Rounded seconds in sample precision fields now apply to the correct sample frame, including at the end of the audio.
+- Program Lab adds Go to Line (Ctrl+L) and backward search (Shift+F3); its Ctrl+G find-next shortcut is preserved. Maker Go to Line preselects its value, and instance paging returns to the top.
+- Paused playtests retry a completed preview picture when the shared frame buffer was busy, without advancing the guest or blocking on the parent.
+- Oversized single sound effects are refused before they can overflow their 16-bit word count. The 128 KB bank can still hold multiple effects; one effect is limited to 131070 bytes.
+- Linked STE sound effects now load and retain their loop start through edits and rate conversion, with Done/Cancel/Undo and conflict protection. Their loop always ends with the sample, as STE playback requires.
+- Sample keyboard navigation adds frame steps, Ctrl+Left/Right for 10 ms steps, Shift selection, Home/End, Ctrl+L to select the loop and Ctrl++/-/0 for zoom/fit. Tab switches precision fields. Navigation leaves audio and Undo history unchanged.
+- Maker search match counts reuse unchanged results, keeping large source buffers responsive while checking exact text changes.
+- SemaPaint colour replacement respects the selected rectangle, identifies its scope in the menu and preserves Redo when nothing changes. Select all and Deselect are available in the Edit menu.
+
+
+## 1.1.588 — Local development checkpoint
+
+Local Creator suite test package only. The completed changes and release packages are published as 1.1.589, preserving the identity of the earlier development APK.
+
 ## 1.1.587 — A clearer Creator studio, faithful hardware checks and library repairs
 
 Changes since public **1.1.586**. This update concentrates on desktop authoring, clearer editing workflows, native-game correctness and reliable disk/library handling.
