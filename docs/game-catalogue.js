@@ -31,7 +31,7 @@ if(typeof document!=='undefined')(() => {
   for(const b of features){b.setAttribute('aria-pressed',String(state.features.includes(b.dataset.feature)));b.querySelector('span').textContent=games.filter(g=>(state.scope==='all'||g.enhanced)&&g.features.includes(b.dataset.feature)).length;}
  }
  function showDetail(id,focus=true){
-  const g=games.find(g=>g.id===id);if(!g){state.game='';if(dialog.open)dialog.close();return;}
+  const g=games.find(g=>g.id===id);if(!g){state.game='';if(dialog.open)dialog.close();document.body.classList.remove('detail-open');return;}
   if(activeGame===id&&dialog.open)return;activeGame=id;
   const body=$('detail-body');body.replaceChildren();
   body.append(el('p',[g.year,g.publisher].filter(Boolean).join(' / '),'detail-meta'));
@@ -48,14 +48,14 @@ if(typeof document!=='undefined')(() => {
    body.append(section);
   }
   $('detail-status').textContent='';
-  if(!dialog.open){returnFocus=document.activeElement;dialog.showModal();}dialog.scrollTop=0;if(focus)$('detail-close').focus();
+  if(!dialog.open){returnFocus=document.activeElement;dialog.showModal();}document.body.classList.add('detail-open');dialog.scrollTop=0;if(focus)$('detail-close').focus();
  }
  function render(write=true){
   const r=Catalogue.query(games,state);state.page=r.page;sync();results.replaceChildren();
   for(const g of r.rows){
    const tr=el('tr'),name=el('td',undefined,'game-name');
    const button=el('button',g.title,'game-title');button.type='button';button.addEventListener('click',()=>openGame(g.id));
-   name.append(button,el('span',[g.year,g.publisher,g.editions.length+' '+(g.editions.length===1?'profile':'profiles')].filter(Boolean).join(' · '),'game-meta'));tr.append(name);
+   name.append(button,el('span',[g.year,g.publisher,g.editions.length+' '+(g.editions.length===1?'profile':'profiles'),g.optionCount+' '+(g.optionCount===1?'option':'options')].filter(Boolean).join(' · '),'game-meta'));tr.append(name);
    for(const f of Object.keys(Catalogue.labels)){const cell=el('td',undefined,'feature-cell');if(g.features.includes(f)){cell.append(badge(f));}else{cell.classList.add('unavailable');cell.append(el('span','—','feature-absent'),el('span','No '+Catalogue.labels[f]+' option listed','sr-only'));}tr.append(cell);}
    const more=el('td',undefined,'game-action'),open=el('button','↗','open-game');open.type='button';open.setAttribute('aria-label','View '+g.title+' details');open.addEventListener('click',()=>openGame(g.id));more.append(open);tr.append(more);results.append(tr);
   }
@@ -64,11 +64,11 @@ if(typeof document!=='undefined')(() => {
   $('catalogue-reset').hidden=!state.q&&!state.features.length&&state.scope==='enhanced'&&state.sort==='az';
   $('page-prev').disabled=r.page<=1;$('page-next').disabled=r.page>=r.pages;
   const picker=$('catalogue-page');picker.replaceChildren();for(let i=1;i<=r.pages;i++){const o=el('option',String(i));o.value=String(i);picker.append(o);}picker.value=String(r.page);picker.disabled=!r.total;$('page-total').textContent='of '+r.pages;
-  if(state.game)showDetail(state.game,false);else if(dialog.open)dialog.close();
+  if(state.game)showDetail(state.game,false);else if(dialog.open){dialog.close();document.body.classList.remove('detail-open');}
   if(write)url();
  }
  function openGame(id){state.game=id;showDetail(id);url(true);}
- function closeDetail(){state.game='';activeGame='';if(dialog.open)dialog.close();url();if(returnFocus&&returnFocus.isConnected)returnFocus.focus();}
+ function closeDetail(){document.body.classList.remove('detail-open');state.game='';activeGame='';if(dialog.open)dialog.close();url();if(returnFocus&&returnFocus.isConnected)returnFocus.focus();}
  function changed(){state.page=1;state.game='';render();}
  function reset(){state={...Catalogue.readState(''),size:state.size};render();$('catalogue-search').focus();}
  function pageChanged(page){state.page=page;state.game='';render();document.querySelector('.result-bar').scrollIntoView({block:'start',behavior:'instant'});}
