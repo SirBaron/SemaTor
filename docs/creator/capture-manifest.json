@@ -1,54 +1,66 @@
 {
-  "version": "1.1.587",
-  "method": "Production SemaOS framebuffer captures on Linux. Original indexed Moonlight Station demonstration project. No interface redraws. Hardware Check uses an actual 30-second native disk run with 512 KB enforced.",
+  "version": "1.1.589",
+  "method": "Production SemaOS framebuffer captures on Linux using original Moonlight Station demonstration artwork and Lunar beacon sample. No interface redraws. Hardware Check uses a fresh native demo-disk run of 30 emulated seconds with 512 KB enforced; no CPU or RAM faults recorded. Room settings deliberately shows the ST-target warning for STE PCM effects.",
   "images": [
     {
       "file": "maker-workspace.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "faa94b27493cb2ceda05f507390c49cc5cab0978db8cf05b659f9499f665d014"
+      "sha256": "469d5da802dc11a0406260602883a4870255facb2bdb179456c4b54da4306a4b"
     },
     {
       "file": "maker-types.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "c9cc4db7ef906f64440ac7bb498ec0d5d7344db0e39fcd9e138da63ea800dedc"
+      "sha256": "9c9c9ad1835cec501d74742f0fcf396da55277a3087bd7f35965b34c55524237"
     },
     {
-      "file": "maker-code.png",
+      "file": "maker-instances.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "6920e6bef0981f4b36d44231c30b6fafff9d0e8bec32dbf31727f99e6c12443a"
+      "sha256": "6c40b4ee6e70a79d4431487caa681486f386e21318932efee4f7a440baafbe56"
     },
     {
       "file": "paint-animation.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "53e5631aac4be8ef2510a037c2f3cc89ccf4880443b440f12c1176eb5f83fe9c"
+      "sha256": "966b76c7ee4cef982f3c09c98cbbab83a4336006a38109430397fcfac174a0eb"
     },
     {
       "file": "paint-new-colour.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "e777a8d1b7a7b25e1e62cee205c91acb294a6472ed49395416aa6d889be1dbf5"
+      "sha256": "52205b42da17c0c07dc4600068e5f9fe8d11ce584eec0fc235799b76d8c66d9b"
     },
     {
-      "file": "capture-gallery.png",
+      "file": "maker-code.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "0d1782be99e911566f4fc1c429e72f2242552b6ddb777cde8b4f96bcf3dde16f"
+      "sha256": "ca845e5303e51091674b7e8e5e943aef2890bb8d548b033b5699d124cfc86e69"
     },
     {
-      "file": "hardware-check.png",
+      "file": "sample-editor.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "a1b9eba1bee24bfa2f2f0de78c762802eda0150196d4594c48188db59eb38d2d"
+      "sha256": "4957517e9a9ce07e4e0e9de23c4ce8da71a6920da408484f562902fea44f555e"
     },
     {
       "file": "maker-room-audio.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "7e476541d36538252f7906ac402b93a078b34ceb2333e61d492e060fbc787743"
+      "sha256": "678fb617fbd90f42502753076c9a0410e2fe682df6af10d8afc81224281ada10"
+    },
+    {
+      "file": "capture-gallery.png",
+      "width": 1600,
+      "height": 1000,
+      "sha256": "1fdcf408b8526c3cc078a61e4faa0e068d5f4b08a0d98197fc48e8557bf3fbf1"
+    },
+    {
+      "file": "hardware-check.png",
+      "width": 1600,
+      "height": 1000,
+      "sha256": "320432c86408676fc45a357f73553904eebe817eee04b4841b6947b2189119cb"
     }
   ]
 }
