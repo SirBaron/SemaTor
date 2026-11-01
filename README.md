@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.595 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.596 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.595: Gauntlet II expanded view and Smooth Motion.** See more of the maze, smooth camera and actor movement without changing game speed, and adjust original intro music separately from effects and speech. The Creator improvements and refreshed full Creator page remain included. Android testing remains private.
+**1.1.596: Gauntlet II expanded view and Smooth Motion.** See more of the maze, smooth camera and actor movement without changing game speed, and adjust original intro music separately from effects and speech. The Creator improvements and refreshed full Creator page remain included. Android testing remains private.
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
 
@@ -122,8 +122,8 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_595-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_595-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_596-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_596-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 
@@ -157,3 +157,7 @@ SemaTor © 2026 David Baron. All rights reserved; see [LICENSE](./LICENSE). Thir
 F12 > CRT & picture > Simple screen filters includes optional per-game dither blending, gentle gradients and corner smoothing. These process completed source pictures before frame generation and work independently of CRT mode. Split comparison temporarily suspends interpolation. Effects default off. Xorg reconstructs GPU endpoints and uses RGB blending for its CPU fallback when enabled. Dungeon Master reconstructs the guest source; native HD artwork stays separate.
 
 Drive B is independent of A: use **Session & exit** to insert/eject a companion, or `--disk-b FILE` to mount another image. **Sound > MIDI synthesis** enables the optional procedural synth; no external sound bank is required. Both colour reconstruction and MIDI default off.
+
+## SemaDrive — Mega Drive & Genesis
+
+SemaTor 1.1.596 adds a dedicated cartridge home, shared Session/Settings menus, supported-game widescreen enhancements and a soundtrack jukebox. Put your own cartridge images in `MegaDrive` beside SemaTor. [Explore SemaDrive](https://sirbaron.github.io/SemaTor/semadrive.html). No games are bundled.

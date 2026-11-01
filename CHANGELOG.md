@@ -1,3 +1,18 @@
+## 1.1.596 — SemaDrive arrives
+
+- A dedicated Mega Drive / Genesis home joins SemaOS, with a system switcher, cartridge library, region-aware artwork, enhanced-game filters and animated themes. ST creative apps stay together in their own suite.
+- Shared Session and Settings menus keep the same layout and controls across machines. Mega Drive has cartridge restart, save slots, rewind, controller settings and CRT Studio, with a blue accent. Shoulder buttons switch Session/Settings.
+- Mega Drive FM, PSG and sampled sound playback receive hardware-emulation improvements, including the Sonic startup voice. Cartridge scanning handles supported raw and ZIP formats more reliably.
+- Altered Beast gains extended widescreen gameplay, independent enhanced music/effects, optional full-level hard mode and boss-theme choices. Road Rash II and Sonic 1/2 receive widescreen fixes, including hills, tile seams and Sonic running beyond the extended view at the act finish. Sonic 2's special-stage halfpipe remains centered at its original aspect ratio.
+- SemaDrive Jukebox imports supported editions of Sonic 1, Sonic 2, Altered Beast, Road Rash II and OutRun from your own cartridges. Albums are retained, grouped by game and series, with favourites, recent tracks, search, a visualiser and configurable autoplay. Import games scans the Mega Drive folder and reports progress. Unknown track lengths are labelled honestly.
+- Animated coastal and arcade themes add masked water movement, drifting clouds, lights, cameos and licensed ambience. Appearance can hide the SemaDrive logo. Ambience yields to jukebox playback.
+- Android adds machine selection, separate Mega Drive library and jukebox, and system-specific touch layouts with per-game button choices.
+- EPIC gains verified-profile Smooth Motion for space and surface missions, full model detail, separate music/effects controls and phone action controls. Original simulation timing is retained.
+- Added CRT Shader - No Bezel, retaining the CRT preset collection without the cabinet. Removed Super ST Colour from the options. Fixed R-Type pickup motion and improved enhanced-cover sheen.
+- Runtime packages omit source, raw enhancement profiles, research tools and native debug symbols. GPU shader debug metadata is stripped without changing executable shader instructions. No games, ROMs or game music are included.
+
+These changes have automated and bounded gameplay coverage; they are not a claim of every-game compatibility, completed campaigns or physical Android-device certification.
+
 ## 1.1.595 — RoboCop bottom HUD and widescreen gameplay
 
 - RoboCop now uses three enhanced layouts: 16:9, 21:9 and 32:9. One silver bottom HUD replaces the top credits and side panels; score, equipment, arrest timer and power remain live. The full score label and weapon icon are retained.
