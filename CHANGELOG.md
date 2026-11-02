@@ -1,3 +1,15 @@
+## 1.1.597 — Verified Mega Drive enhancements and GPU worlds
+
+- Adds production Mega Drive enhancements for the verified revisions of Streets of Rage 1–3, Shinobi III, Gunstar Heroes, Bloodlines, Rocket Knight Adventures, Aladdin, Sonic 3, Sonic & Knuckles, Sonic 3 & Knuckles and Lightening Force (USA).
+- Widescreen follows verified authored gameplay bounds. Fixed rooms, cutscenes and Aladdin special stages retain native framing. Corrects Sonic and Altered Beast finite scene boundaries.
+- Adds independent Mega Drive music and sound-effect levels and improves supported GPU motion presentation without advancing game simulation or audio for extra display frames.
+- Adds Hunter, Simulcra and Virus GPU presentation. Virus adds widescreen sky particles and a single Original / 2× / 3× / 4× / 8× draw-distance control. Extended enemy activation, attacks and collisions are not fully verified beyond the original view.
+- Adds the EPIC Android Actions-button option under Game options.
+- Refreshes the jukebox with an independent Atari ST / Mega Drive switch, a compact playback layout and saved play/pause state. Starting in SemaDrive selects its soundtrack library.
+- Refreshes the website with machine filters and animated SemaDrive scenery.
+
+Only exact supported cartridge revisions receive the corresponding enhancements. Scene coverage follows the documented verified scope. Physical Android and monitor high-refresh behavior are not newly hardware-qualified by this release's PC checks. No games are bundled.
+
 ## 1.1.596 — SemaDrive arrives
 
 - A dedicated Mega Drive / Genesis home joins SemaOS, with a system switcher, cartridge library, region-aware artwork, enhanced-game filters and animated themes. ST creative apps stay together in their own suite.
