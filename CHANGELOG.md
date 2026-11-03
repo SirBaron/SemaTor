@@ -1,3 +1,12 @@
+## 1.1.598 — More cartridge soundtracks
+
+- Expands SemaDrive jukebox import to all 19 currently profiled game entries: 415 additional track selections, 486 total. Adds Sonic 3, Sonic & Knuckles, Sonic 3 & Knuckles, Golden Axe I/II, Streets of Rage 1–3, Shinobi III, Gunstar Heroes, Thunder Force IV / Lightening Force, Castlevania: Bloodlines, Rocket Knight Adventures and Aladdin.
+- Plays each soundtrack through its cartridge's native sound driver on an independent emulated board. Both verified Thunder Force regional revisions support music import; gameplay support is unchanged.
+- Uses Aladdin's native sound-test names. Other newly imported tracks retain their original music command labels. Empty slots, voice-only entries and confirmed aliases are omitted.
+- Pages the supported-games list so every entry remains accessible in smaller jukebox windows. Existing imports, favourites and the original five game profiles keep their identities.
+
+Import your own supported cartridges or ZIPs using Import games or Browse file. No games or soundtrack recordings are bundled.
+
 ## 1.1.597 — Verified Mega Drive enhancements and GPU worlds
 
 - Adds production Mega Drive enhancements for the verified revisions of Streets of Rage 1–3, Shinobi III, Gunstar Heroes, Bloodlines, Rocket Knight Adventures, Aladdin, Sonic 3, Sonic & Knuckles, Sonic 3 & Knuckles and Lightening Force (USA).
