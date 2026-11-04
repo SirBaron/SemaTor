@@ -1,3 +1,13 @@
+## 1.1.601 — 18 profiles, SimCity controls and input fixes
+
+- Adds profiles for Armour-Geddon, B-17 Flying Fortress, Carrier Command, Castle Master, F-29 Retaliator, Frontier, Hard Drivin', Infestation, Interphase, Maclean Pool, Maclean Snooker, Midwinter, Midwinter II, No Second Prize (demo), Powermonger, RoboCop 3, Shuttle, and Total Eclipse (Replicants crack). Per-game options vary; supported paths include selected Smooth Motion, render resolution, anti-aliasing, widescreen, draw distance, mouse sensitivity, audio and HUD controls.
+- SimCity adds independent 70 ms map-camera easing at native and wide layouts. This eases the map camera only; trains, helicopters, boats and other native objects retain their game update cadence. Experimental large maps default off and remain incompletely verified, including dense-city, disaster and long-play behavior.
+- Adds an optional user-file MIDI playlist in the automatically created `Add-ons/SimCity midi` folder, with Music controls and General MIDI or OPL2 output. OPL2 uses original GM-family FM mappings, not an exact SimCity 2000 sound-card or patch-bank reproduction; no game music or patch bank is included.
+- Fixes pointer and Music click handling, scrollbar gestures and related mouse input. CRT no-bezel mode returns the cabinet area to the game picture.
+- Carries forward SemaDrive HUD, parallax and authored-view fixes, shared menus, handheld touch choices, and game-specific 3D presentation improvements.
+- Total Eclipse improves checked-scene presentation for the supported Replicants build, retaining the last checked 3D scene before 2D overlays and falling back on failed frame checks. This is bounded start-area coverage; interiors and enemies were not walked and the visual audit is not clean.
+- Smooth Motion easing in SimCity applies to the map camera; it does not make all objects move at display rate. Frontier and Maclean Snooker remain baseline implementations; no general motion fix is claimed for them.
+
 ## 1.1.598 — More cartridge soundtracks
 
 - Expands SemaDrive jukebox import to all 19 currently profiled game entries: 415 additional track selections, 486 total. Adds Sonic 3, Sonic & Knuckles, Sonic 3 & Knuckles, Golden Axe I/II, Streets of Rage 1–3, Shinobi III, Gunstar Heroes, Thunder Force IV / Lightening Force, Castlevania: Bloodlines, Rocket Knight Adventures and Aladdin.
