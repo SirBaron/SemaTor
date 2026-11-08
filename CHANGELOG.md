@@ -1,3 +1,13 @@
+## 1.1.602 — Checked terrain, wider Simulcra and current controls
+
+- Improves Midwinter and Midwinter II checked terrain rendering, high-resolution coverage and anti-aliasing, including AA at Original resolution. Adds optional clean terrain shading and grain strength; native appearance remains available. Midwinter II draw distance is bounded to the checked 2x path.
+- Adds Simulcra 16:9, 21:9 and 32:9 world/HUD layouts using predicted geometry, matched shadows and authored distant objects. Adds an optional, default-off reverse steering correction for the exact supported edition.
+- Improves Buggy Boy GPU Smooth Motion, scenery ownership and native car animation. Fixes Armour-Geddon terrain interpolation identities and adds independent Virus render resolution and anti-aliasing.
+- Shows current keyboard/gamepad controls with readable actions across Atari ST and Mega Drive views, including portrait layouts. Opposing primary joystick directions cancel consistently. Verified disk editions are searchable in Game Details.
+- Adds optional guarded manual-security bypass settings for the supported Midwinter editions. Existing settings and Original choices remain available.
+
+Known limits: remaining Simulcra motion/shadow/flight-edge issues and Midwinter motion cadence are deferred; Midwinter II 3x/4x/8x is not included. Cold shader compilation can temporarily use CPU fallback. This release does not claim a new clean visual audit or general 60/120/144 Hz certification. No games are bundled.
+
 ## 1.1.601 — 18 profiles, SimCity controls and input fixes
 
 - Adds profiles for Armour-Geddon, B-17 Flying Fortress, Carrier Command, Castle Master, F-29 Retaliator, Frontier, Hard Drivin', Infestation, Interphase, Maclean Pool, Maclean Snooker, Midwinter, Midwinter II, No Second Prize (demo), Powermonger, RoboCop 3, Shuttle, and Total Eclipse (Replicants crack). Per-game options vary; supported paths include selected Smooth Motion, render resolution, anti-aliasing, widescreen, draw distance, mouse sensitivity, audio and HUD controls.
