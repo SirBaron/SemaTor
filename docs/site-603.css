@@ -1,0 +1,27 @@
+/* 1.1.603 additions shared by the new pages (Amiga, Spectrum Next) and the 603 home-page band. Uses site-theme.css's tokens. */
+.badge-experimental{display:inline-block;margin-right:8px;padding:2px 8px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-size:.78em;letter-spacing:.08em;vertical-align:1px}
+.badge-new{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:var(--cyan);color:var(--bg);font-size:.72em;font-weight:700;letter-spacing:.06em;vertical-align:2px}
+.experimental-note{max-width:760px;margin:22px 0 0;padding:14px 18px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;background:var(--panel);color:var(--muted);line-height:1.55}
+.experimental-note strong{color:var(--ink)}
+.wide-figure.narrow{max-width:760px}
+.wide-figure figcaption,.screenshot-pair figcaption{margin-top:10px;color:var(--muted);font-size:.9rem}
+.screenshot-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+.screenshot-pair img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px}
+.plain-list{max-width:820px;margin:20px 0 0;padding-left:1.2em;color:var(--muted);line-height:1.65}
+.plain-list li{margin:6px 0}
+.plain-list strong{color:var(--ink)}
+.spec-table{width:100%;max-width:900px;margin-top:26px;border-collapse:collapse;font-size:.95rem}
+.spec-table th,.spec-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.spec-table th{color:var(--muted);font-weight:600;white-space:nowrap}
+.spec-table td{color:var(--ink)}
+.core-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.core-card{padding:22px 22px 18px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.core-card h3{margin:.2em 0 .4em}
+.core-card p{color:var(--muted);line-height:1.55}
+.core-card ul{margin:10px 0 0;padding-left:1.1em;color:var(--muted);line-height:1.6}
+.highlights-603{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.highlights-603 a{display:block;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);text-decoration:none}
+.highlights-603 a:hover,.highlights-603 a:focus-visible{border-color:var(--cyan)}
+.highlights-603 small{display:block;margin-top:6px;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.highlights-603{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.screenshot-pair,.core-cards,.highlights-603{grid-template-columns:1fr}.spec-table th{white-space:normal}}

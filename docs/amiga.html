@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SemaBench — Amiga, experimental</title>
+<meta name="description" content="SemaBench is SemaTor's experimental Amiga 500 system: our own Amiga core, no Kickstart ROM needed, its own Workbench-style desktop and Amiga music in the Jukebox.">
+<meta name="theme-color" content="#090d18">
+<link rel="icon" href="readme/logo.png"><link rel="stylesheet" href="site-theme.css"><link rel="stylesheet" href="creator.css"><link rel="stylesheet" href="site-603.css">
+</head>
+<body class="creator-page amiga-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="readme/logo.png" width="40" height="40" alt="">SEMATOR</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="games/index.html">Enhanced games</a><a href="semadrive.html">SemaDrive</a><a href="amiga.html" aria-current="page">Amiga</a><a href="next.html">Spectrum Next</a><a href="creator.html">Creator tools</a><a href="changelog.html">Release notes</a><a class="nav-download" href="index.html#download">Get 1.1.603 ↓</a></nav></header>
+<main id="main">
+<section class="creator-hero wrap">
+<p class="eyebrow"><span class="badge-experimental">EXPERIMENTAL</span> SEMABENCH · AMIGA 500 · PART OF SEMATOR 1.1.603</p>
+<h1>The Amiga.<br><em>Our own way.</em></h1>
+<p class="intro">SemaBench is a new, experimental third system inside SemaTor: an Amiga 500 written from scratch,<br>with its own Workbench-style desktop. No Kickstart ROM to find, no other emulator inside.</p>
+<div class="actions"><a class="button" href="index.html#download">Get SemaTor <span aria-hidden="true">↓</span></a><a class="secondary" href="#start">How to start it <span aria-hidden="true">↘</span></a></div>
+<p class="availability">Windows &amp; Linux · Bring your own ADF and IPF disks · Desktop only (not in the phone build yet)</p>
+<div class="experimental-note"><strong>Experimental means experimental.</strong> Many Amiga games already boot and play, many do not yet. There are no enhancements for Amiga games, sound is not yet checked against real hardware, and saved states may not carry over to the next version. Please report what you find.</div>
+<figure class="hero-figure"><a href="amiga/desktop.png" aria-label="Open the SemaBench desktop screenshot"><img src="amiga/desktop.png" width="1280" height="720" fetchpriority="high" alt="The SemaBench desktop: a menu bar with Bench, Window, Game, Tools and Prefs, and Games, Favourites, Enhanced, Recent, Tools, Prefs, About and Trashcan icons on a blue backdrop"></a></figure>
+</section>
+<nav class="section-nav wrap" aria-label="On this page"><a href="#start">Start it</a><a href="#desktop">The desktop</a><a href="#games">Your games</a><a href="#music">Amiga music</a><a href="#inside">What's inside</a><a href="#limits">Not yet</a></nav>
+
+<section id="start" class="wrap section">
+<div class="section-heading"><p class="eyebrow">ONE APP / THREE SYSTEMS</p><h2>Pick Amiga.<br>That's it.</h2><p>SemaBench lives in the same SemaTor app as the Atari ST and SemaDrive. Open the system menu at the top left of the desktop and choose <strong>Amiga</strong>. Point the Games drawer at the folder that holds your Amiga disks, and they appear.</p></div>
+<div class="feature-strip"><div><span class="number">01 / CHOOSE</span><h3>The system menu.</h3><p>Atari ST, Mega Drive or Amiga: one click switches desktops. Each keeps its own library, look and settings.</p></div><div><span class="number">02 / POINT</span><h3>Your disks.</h3><p>ADF and IPF disks, loose or in zips. A zip is one game; multi-disk sets ("Disk 1 of 3") are grouped for you.</p></div><div><span class="number">03 / PLAY</span><h3>Start.</h3><p>Open a game's page and press Start. F11 and F12 bring up the same session and options menus you know from SemaTor.</p></div></div>
+<figure class="wide-figure narrow"><img src="amiga/system-chooser.png" width="560" height="300" loading="lazy" alt="SemaTor's system chooser listing Atari ST (SemaOS), Mega Drive (SemaDrive) and Amiga (SemaBench)"></figure>
+</section>
+
+<section id="desktop" class="paint-section"><div class="wrap section">
+<div class="section-heading"><p class="eyebrow">A WORKBENCH OF ITS OWN</p><h2>Familiar.<br>And new.</h2><p>A screen bar with pull-down menus (right mouse button or F10), drawers and icons on the backdrop, windows with close, depth and size gadgets. It has the feel of a 1.3-to-3.x desktop, but the drawing, layout and words are ours: no Workbench art or code is used.</p></div>
+<figure class="wide-figure"><a href="amiga/desktop-night.png" aria-label="Open the night-look desktop screenshot"><img src="amiga/desktop-night.png" width="1280" height="720" loading="lazy" alt="The SemaBench desktop in a dark violet look with a moon, stars and mountains"></a><figcaption>Looks are themes: colours, backdrop, icons, gadgets and font all change together.</figcaption></figure>
+<div class="feature-strip"><div><span class="number">FAVOURITES · RECENT</span><h3>Drawers that help.</h3><p>Star a game into Favourites, find it again in Recent, and put games you don't want to see in the Trashcan (the file is never deleted).</p></div><div><span class="number">TOOLS</span><h3>The shared apps.</h3><p>Music, Saved games, Pictures, Notes and Help, in SemaBench's own look.</p></div><div><span class="number">PREFS</span><h3>Your way.</h3><p>Pick a look, the icon size, icons or a list, and where your games live. Window places are remembered.</p></div></div>
+</div></section>
+
+<section id="games" class="wrap section">
+<div class="section-heading"><p class="eyebrow">YOUR COLLECTION</p><h2>Every disk.<br>One page each.</h2><p>Type to find a game. Each game page shows its region, languages, disks and which drive each goes in, and what is on the first disk. Get cover fetches box art for one game, or for the whole drawer.</p></div>
+<div class="screenshot-pair"><figure><a href="amiga/games-drawer.png"><img src="amiga/games-drawer.png" width="1280" height="800" loading="lazy" alt="The Games drawer window with disk icons and covers, Favourites, Unplayed and Saves filters and a Find box"></a><figcaption>The Games drawer (example names).</figcaption></figure><figure><a href="amiga/game-details.png"><img src="amiga/game-details.png" width="1280" height="800" loading="lazy" alt="A game's page with region, disks, the disk's drawers and files, controls, and Start, Get cover, Open disk, Favourite and Notes buttons"></a><figcaption>A game's page, with Open disk to look inside.</figcaption></figure></div>
+</section>
+
+<section id="music" class="paint-section"><div class="wrap section">
+<div class="section-heading"><p class="eyebrow">THE JUKEBOX / AMIGA TAB</p><h2>Paula,<br>on repeat.</h2><p>The Jukebox has an Amiga tab beside Atari ST and Mega Drive. It plays module files and the music found on your game disks through SemaBench's own Paula sound chip, four voices, with favourites, recent tunes, search and autoplay.</p></div>
+<figure class="wide-figure narrow"><a href="amiga/jukebox-amiga.png"><img src="amiga/jukebox-amiga.png" width="1100" height="800" loading="lazy" alt="The Jukebox's Amiga tab playing a module, with Game music and Modules lists, Add a file, Scan the drawer and Find game music buttons"></a><figcaption>Example tunes; add your own modules or let it find music on your disks.</figcaption></figure>
+</div></section>
+
+<section id="inside" class="wrap section">
+<div class="section-heading"><p class="eyebrow">WHAT'S INSIDE</p><h2>Built from<br>the manual up.</h2><p>SemaBench is our own Amiga 500 (OCS, PAL, 68000, 512 KB chip RAM plus 512 KB) written from the Amiga Hardware Reference Manual. It shares SemaTor's 68000 and adds its own copper, bitplanes, sprites, blitter, CIAs, disk DMA and Paula.</p></div>
+<div class="feature-strip"><div><span class="number">NO KICKSTART</span><h3>Starts by itself.</h3><p>Games that boot straight from the disk start through our own small boot ROM. Disks that run from AmigaDOS get our own stand-in: it reads the startup-sequence and runs the programs. No Kickstart file is needed.</p></div><div><span class="number">DISKS</span><h3>Bit by bit.</h3><p>Each track becomes the bits a real drive would read, timed as the IPF records them, so games with their own disk loaders work as on the machine.</p></div><div><span class="number">SESSION</span><h3>The SemaTor way.</h3><p>Save slots, rewind, screenshots, input recordings, gamepad and keyboard joystick, and backups of the Amiga side's files.</p></div></div>
+</section>
+
+<section id="limits" class="paint-section"><div class="wrap section">
+<div class="section-heading"><p class="eyebrow">HONEST STATUS</p><h2>Not yet.<br>But coming.</h2><p>SemaBench is experimental in 1.1.603. Here is what to expect.</p></div>
+<ul class="plain-list">
+<li><strong>Not every game runs.</strong> Some stop at a black screen or crash; games that need 1 MB of chip memory (AGA titles, some late OCS games) are out of reach on this A500.</li>
+<li><strong>No enhancements for Amiga games yet</strong>: no widescreen, Smooth Motion or cheats pages.</li>
+<li><strong>Sound and timing</strong> are not yet checked against a real Amiga; some games may run a little fast or slow.</li>
+<li><strong>Disk writes are kept only in saved states</strong>; the disk files themselves are never changed.</li>
+<li><strong>Saved states</strong> belong to this version and may not load in the next one.</li>
+<li><strong>Desktop only</strong>: SemaBench is not in the phone build yet.</li>
+</ul>
+<p class="release-link">Found a game that does something odd? <a href="https://github.com/SirBaron/SemaTor/issues">Tell us on GitHub</a> or on <a href="https://discord.gg/DdHfSGrdFc">Discord</a>. Screenshots on this page come from the 1.1.603 SemaBench desktop with made-up example game names.</p>
+</div></section>
+</main>
+<footer class="wrap footer">SemaTor 1.1.603 · Created by David Baron with AI assistance.<br><a href="index.html">SemaTor home</a> · <a href="https://github.com/SirBaron/SemaTor/issues">Report a problem</a> · <a href="https://discord.gg/DdHfSGrdFc">Discord</a></footer>
+</body></html>
