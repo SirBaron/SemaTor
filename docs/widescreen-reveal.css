@@ -1,10 +1,12 @@
 /* A fixed-size screenshot: only the 4:3 side masks move, never the layout. */
 .wide-reveal{display:block;position:relative;overflow:hidden;background:#030609;line-height:0;border-radius:inherit}
 .wide-reveal>img{clip-path:inset(0 var(--wide-inset,0px));transition:none}
-.wide-reveal.is-revealed>img{clip-path:inset(0 0px);transition:clip-path 3.8s cubic-bezier(.22,.61,.36,1) .45s}
+.wide-reveal.is-revealed>img{clip-path:inset(0 0px);transition:clip-path 3.8s cubic-bezier(.22,.61,.36,1) .8s}
 /* Preserve the gallery's existing image box after inserting the mask frame. */
 .discovery-card>.wide-reveal{height:175px;border-radius:0}
 .discovery-card>.wide-reveal>img{display:block;width:100%;height:100%;object-fit:contain;background:#050911;padding:8px}
 @media(max-width:1050px){.discovery-card>.wide-reveal{height:140px}}
 @media(max-width:700px){.discovery-card>.wide-reveal{height:100%;min-height:140px}.discovery-card>.wide-reveal>img{position:absolute;inset:0;padding:6px}}
 @media(prefers-reduced-motion:reduce){.wide-reveal>img{clip-path:none!important;transition:none!important}}
+
+.wide-replay{margin:12px 0 0;display:block;padding:9px 14px;border:1px solid var(--cyan,#84e6ef);border-radius:7px;background:#142535;color:var(--cyan,#84e6ef);font:inherit;cursor:pointer}.wide-replay[hidden]{display:none}.wide-replay:disabled{border-color:#45536c;color:#a8b6ce;cursor:default}.wide-replay:focus-visible{outline:2px solid var(--cyan,#84e6ef);outline-offset:3px}

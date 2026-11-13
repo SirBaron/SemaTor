@@ -2,21 +2,33 @@
 (() => {
   const images = [...document.querySelectorAll('img[data-wide-reveal]')];
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+  const replay = document.querySelector('[data-wide-replay]');
+  const updateReplay = () => {
+    if (!replay) return;
+    replay.hidden = !('IntersectionObserver' in window);
+    replay.disabled = reducedMotion.matches;
+    replay.textContent = reducedMotion.matches ? 'Full image shown · reduced motion' : 'Replay 4:3 → widescreen';
+  };
+  updateReplay();
+  if (!('IntersectionObserver' in window)) return;
 
   const pending = new Set();
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
-      if (!entry.isIntersecting || entry.intersectionRatio < 0.35) continue;
       const frame = entry.target;
-      observer.unobserve(frame);
-      pending.delete(frame);
+      if (!entry.isIntersecting) {
+        frame.classList.remove('is-revealed');
+        pending.delete(frame);
+        continue;
+      }
+      if (entry.intersectionRatio < 0.5 || pending.has(frame)) continue;
+      pending.add(frame);
       // Keep the original 4:3 crop still briefly before the sides open.
       requestAnimationFrame(() => requestAnimationFrame(() => {
-        frame.classList.add('is-revealed');
+        if (pending.has(frame)) frame.classList.add('is-revealed');
       }));
     }
-  }, {threshold: 0.35});
+  }, {threshold: [0, 0.5]});
 
   function prepare(image) {
     if (reducedMotion.matches || !image.naturalWidth || image.closest('.wide-reveal')) return;
@@ -38,13 +50,11 @@
     // Wait for the initial crop to paint before observing an already-visible hero.
     requestAnimationFrame(() => {
       if (reducedMotion.matches) { frame.classList.add('is-revealed'); return; }
-      pending.add(frame);
       observer.observe(frame);
     });
     if ('ResizeObserver' in window) {
       const resize = new ResizeObserver(() => {
-        if (!frame.classList.contains('is-revealed')) measure();
-        else resize.disconnect();
+        measure();
       });
       resize.observe(image);
     }
@@ -54,10 +64,26 @@
     if (image.complete) prepare(image);
     else image.addEventListener('load', () => prepare(image), {once:true});
   }
+  if (replay) replay.addEventListener('click', () => {
+    if (reducedMotion.matches) return;
+    const frame = document.querySelector('#wide .wide-reveal');
+    if (!frame) return;
+    frame.classList.remove('is-revealed');
+    void frame.offsetWidth;
+    requestAnimationFrame(() => requestAnimationFrame(() => frame.classList.add('is-revealed')));
+  });
   reducedMotion.addEventListener('change', event => {
-    if (!event.matches) return;
+    updateReplay();
     observer.disconnect();
     pending.clear();
-    document.querySelectorAll('.wide-reveal').forEach(frame => frame.classList.add('is-revealed'));
+    if (event.matches) {
+      document.querySelectorAll('.wide-reveal').forEach(frame => frame.classList.add('is-revealed'));
+    } else {
+      images.forEach(prepare);
+      document.querySelectorAll('.wide-reveal').forEach(frame => {
+        frame.classList.remove('is-revealed');
+        observer.observe(frame);
+      });
+    }
   });
 })();
