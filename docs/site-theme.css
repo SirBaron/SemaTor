@@ -102,3 +102,10 @@ footer{background:#0c1220}
 @media(prefers-reduced-motion:reduce){.hero-actions .button:hover,.hero-benefits>a:hover{transform:none}}
 
 .creator-callout{max-width:1180px;margin:50px auto;padding:32px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,#202340,#111a2a)}.creator-callout h2{font-size:clamp(30px,4vw,48px);margin:16px 0}.creator-callout>p:not(.eyebrow){max-width:800px;color:var(--muted)}@media(max-width:1240px){.creator-callout{margin-inline:24px}}
+
+/* Keep the Atari ST creation tools visible beneath their parent system. */
+.nav-system{display:flex;flex-direction:column;align-items:flex-start;gap:7px;flex-shrink:0}
+.nav nav .nav-creator,.site-header nav .nav-creator{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border:1px solid #52667d;border-radius:6px;background:#192c3c;color:var(--cyan);font-size:12px;line-height:1.2}
+.nav nav .nav-creator:hover,.site-header nav .nav-creator:hover,.nav-creator[aria-current="page"]{background:#243c50;border-color:var(--cyan)}
+.nav-creator:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+@media(max-width:650px){.nav-system{gap:5px}.nav nav .nav-creator,.site-header nav .nav-creator{font-size:11px;padding:5px 8px}}
