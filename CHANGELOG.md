@@ -47,7 +47,7 @@ SemaBench is experimental: many games still do not work, Datastorm keeps rebooti
 ## 1.1.602 — Checked terrain, wider Simulcra and current controls
 
 - Midwinter and Midwinter II: improves checked terrain rendering, high-resolution polygon coverage and anti-aliasing, including AA at Original resolution. Adds optional clean terrain shading and adjustable surface grain, with fixes for stretched grain bands, snow detail and transparent terrain rows. Native appearance remains available.
-- Midwinter II: adds the checked 2x draw-distance path and improves scene-generation matching, predicted endpoints and fallback after failed private renders. The 3x/4x/8x distance modes remain unavailable. Midwinter editions also gain optional, guarded manual-security bypass settings; Off retains the original check.
+- Midwinter II: adds the checked 2x draw-distance path and improves scene-generation matching, predicted endpoints and fallback after failed private renders. The 3x/4x/8x distance modes remain unavailable.
 - Hunter and Simulcra: anti-aliasing now works independently at Original render resolution. AA Off preserves the original rendering path; higher render resolution is no longer required to enable AA.
 - Simulcra: adds 16:9, 21:9 and 32:9 world/HUD layouts with owned predicted geometry, matched shadow interpolation and authored distant map objects. Reuses forward prediction at native view width and separates overview-camera capture. Adds a default-off reverse-steering correction for the exact supported edition.
 - Buggy Boy: composes retained scenes on the GPU with continuous object motion, corrects scenery/sprite ownership and stale references after failed capture, and preserves the native car-animation poses during smoothing.
