@@ -25,3 +25,5 @@
 .highlights-603 small{display:block;margin-top:6px;color:var(--muted);line-height:1.5}
 @media(max-width:900px){.highlights-603{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.screenshot-pair,.core-cards,.highlights-603{grid-template-columns:1fr}.spec-table th{white-space:normal}}
+.highlights-603 .eyebrow{display:block;margin-bottom:6px;font-size:.72rem}
+.highlights-603 strong{display:block;font-size:1.05rem}
