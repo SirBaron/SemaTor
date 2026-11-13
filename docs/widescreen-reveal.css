@@ -7,6 +7,6 @@
 .discovery-card>.wide-reveal>img{display:block;width:100%;height:100%;object-fit:contain;background:#050911;padding:8px}
 @media(max-width:1050px){.discovery-card>.wide-reveal{height:140px}}
 @media(max-width:700px){.discovery-card>.wide-reveal{height:100%;min-height:140px}.discovery-card>.wide-reveal>img{position:absolute;inset:0;padding:6px}}
-@media(prefers-reduced-motion:reduce){.wide-reveal>img{clip-path:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){.wide-reveal:not(.is-manual)>img{clip-path:none!important;transition:none!important}}
 
 .wide-replay{margin:12px 0 0;display:block;padding:9px 14px;border:1px solid var(--cyan,#84e6ef);border-radius:7px;background:#142535;color:var(--cyan,#84e6ef);font:inherit;cursor:pointer}.wide-replay[hidden]{display:none}.wide-replay:disabled{border-color:#45536c;color:#a8b6ce;cursor:default}.wide-replay:focus-visible{outline:2px solid var(--cyan,#84e6ef);outline-offset:3px}

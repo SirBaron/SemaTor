@@ -6,8 +6,8 @@
   const updateReplay = () => {
     if (!replay) return;
     replay.hidden = !('IntersectionObserver' in window);
-    replay.disabled = reducedMotion.matches;
-    replay.textContent = reducedMotion.matches ? 'Full image shown · reduced motion' : 'Replay 4:3 → widescreen';
+    replay.disabled = false;
+    replay.textContent = reducedMotion.matches ? 'Play 4:3 → widescreen · automatic motion off' : 'Replay 4:3 → widescreen';
   };
   updateReplay();
   if (!('IntersectionObserver' in window)) return;
@@ -30,8 +30,8 @@
     }
   }, {threshold: [0, 0.5]});
 
-  function prepare(image) {
-    if (reducedMotion.matches || !image.naturalWidth || image.closest('.wide-reveal')) return;
+  function prepare(image, allowMotion = false) {
+    if ((reducedMotion.matches && !allowMotion) || !image.naturalWidth || image.closest('.wide-reveal')) return;
     const frame = document.createElement('span');
     frame.className = 'wide-reveal';
     image.before(frame);
@@ -49,7 +49,10 @@
     measure();
     // Wait for the initial crop to paint before observing an already-visible hero.
     requestAnimationFrame(() => {
-      if (reducedMotion.matches) { frame.classList.add('is-revealed'); return; }
+      if (reducedMotion.matches) {
+        if (!allowMotion) frame.classList.add('is-revealed');
+        return;
+      }
       observer.observe(frame);
     });
     if ('ResizeObserver' in window) {
@@ -65,9 +68,13 @@
     else image.addEventListener('load', () => prepare(image), {once:true});
   }
   if (replay) replay.addEventListener('click', () => {
-    if (reducedMotion.matches) return;
-    const frame = document.querySelector('#wide .wide-reveal');
+    const image = document.querySelector('#wide img[data-wide-reveal]');
+    if (!image) return;
+    prepare(image, true);
+    const frame = image.closest('.wide-reveal');
     if (!frame) return;
+    // An explicit click opts this picture into one animation; automatic motion stays off.
+    frame.classList.toggle('is-manual', reducedMotion.matches);
     frame.classList.remove('is-revealed');
     void frame.offsetWidth;
     requestAnimationFrame(() => requestAnimationFrame(() => frame.classList.add('is-revealed')));
@@ -76,10 +83,11 @@
     updateReplay();
     observer.disconnect();
     pending.clear();
+    document.querySelectorAll('.wide-reveal').forEach(frame => frame.classList.remove('is-manual'));
     if (event.matches) {
       document.querySelectorAll('.wide-reveal').forEach(frame => frame.classList.add('is-revealed'));
     } else {
-      images.forEach(prepare);
+      images.forEach(image => prepare(image));
       document.querySelectorAll('.wide-reveal').forEach(frame => {
         frame.classList.remove('is-revealed');
         observer.observe(frame);
