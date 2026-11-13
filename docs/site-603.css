@@ -33,3 +33,6 @@
 .looks-grid figcaption{margin-top:8px;color:var(--muted);font-size:.9rem}
 @media(max-width:900px){.looks-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.looks-grid img{transition:none}}
+.live-grid{grid-template-columns:1fr 1fr}
+.live-grid img{background:#000}
+@media(max-width:650px){.live-grid{grid-template-columns:1fr}}
