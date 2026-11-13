@@ -1,4 +1,4 @@
-## 1.1.603 — Enhancements off by default, SemaBench preview, Starglider and copy-protection skips
+## 1.1.603 (upcoming) — Enhancements off by default, SemaBench preview, Starglider and copy-protection skips
 
 - Every enhancement now starts off in every profile: Smooth Motion, widescreen, extended gameplay, render resolution, draw distance, mouse sensitivity, separate music and effects. Turn one on and it stays on for that game. CPU BOOST and run-ahead also start off; STEADY SPEED stays on. Choices you made earlier are kept; settings you only left at the old defaults now start off.
 - Copy-protection: SKIP rows, on by default, answer or bypass the manual checks of Starglider 2, Elite (v1.3 and SuperGAU 386), Midwinter I and II, Populous II (including the D-Bug 078 build), F-19 Stealth Fighter v1.02, The Secret of Monkey Island and Civilization (the turn-50 quiz). Switch a row off for the original check.

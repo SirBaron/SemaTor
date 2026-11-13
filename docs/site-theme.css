@@ -102,3 +102,6 @@ footer{background:#0c1220}
 @media(prefers-reduced-motion:reduce){.hero-actions .button:hover,.hero-benefits>a:hover{transform:none}}
 
 .creator-callout{max-width:1180px;margin:50px auto;padding:32px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(120deg,#202340,#111a2a)}.creator-callout h2{font-size:clamp(30px,4vw,48px);margin:16px 0}.creator-callout>p:not(.eyebrow){max-width:800px;color:var(--muted)}@media(max-width:1240px){.creator-callout{margin-inline:24px}}
+
+/* Availability stays visible while the redesigned site previews the next release. */
+.release-preview-notice{padding:13px max(4vw,calc((100vw - 1320px)/2));background:#23203b;border-bottom:1px solid #605282;color:#d9d4ec;font:13px/1.7 Arial,sans-serif;text-align:center}.release-preview-notice strong{color:#f0ddaa}.release-preview-notice a{color:#a7eff2;text-decoration:underline;text-underline-offset:3px}@media(max-width:650px){.release-preview-notice{padding:12px 18px;font-size:12px;text-align:left}}
