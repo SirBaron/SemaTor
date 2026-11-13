@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SemaCore Light &amp; SemaDrive Light — Spectrum Next</title>
+<meta name="description" content="SemaCore Light and SemaDrive Light: our own Atari ST and Mega Drive cores for the ZX Spectrum Next KS3 FPGA, built from SemaTor and SemaDrive. In testing.">
+<meta name="theme-color" content="#090d18">
+<link rel="icon" href="readme/logo.png"><link rel="stylesheet" href="site-theme.css"><link rel="stylesheet" href="creator.css"><link rel="stylesheet" href="site-603.css">
+</head>
+<body class="creator-page next-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="readme/logo.png" width="40" height="40" alt="">SEMATOR</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><a href="atari-st.html">Atari ST</a><a href="semadrive.html">SemaDrive</a><a href="amiga.html">Amiga</a><a href="next.html" aria-current="page">Spectrum Next</a><a href="games/index.html">Enhanced games</a><a href="changelog.html">Release notes</a><a class="nav-download" href="index.html#download">Get 1.1.603 ↓</a></nav></header>
+<main id="main">
+<section class="creator-hero wrap">
+<p class="eyebrow"><span class="badge-experimental">IN TESTING</span> ZX SPECTRUM NEXT · KS3 FPGA</p>
+<h1>Real hardware.<br><em>Our own cores.</em></h1>
+<p class="intro">SemaCore Light and SemaDrive Light rebuild the Atari ST and the Mega Drive inside the Spectrum Next's FPGA,<br>made from SemaTor's and SemaDrive's own code, with the same menus you know from the desktop.</p>
+<p class="availability">Not a download: these cores are in testing on the owner's own KS3. This page describes what they do.</p>
+</section>
+<nav class="section-nav wrap" aria-label="On this page"><a href="#cores">The two cores</a><a href="#picture">Picture</a><a href="#games">Games &amp; saves</a><a href="#why">Why it matters</a></nav>
+
+<section id="cores" class="wrap section">
+<div class="section-heading"><p class="eyebrow">TWO SYSTEMS / ONE BOARD</p><h2>An ST and a Mega Drive,<br>made in gates.</h2><p>Not a computer pretending in software: each core is the machine itself, built in the FPGA from our own designs. No outside cores are used.</p></div>
+<div class="core-cards">
+<div class="core-card"><p class="eyebrow">ATARI ST</p><h3>SemaCore Light</h3><p>SemaTor's Atari ST, rebuilt for the KS3, with SemaTor's own menus.</p><ul>
+<li>Opens straight into its own game list: Recent, Favourites and all games, even for very large folders.</li>
+<li>Plays plain disk images (.st, .msa, .dim), Pasti (.stx) and IPF images, and zipped disks, from the SD card.</li>
+<li>Next keyboard, joysticks, Mega Drive 3- and 6-button pads and a PS/2 mouse.</li>
+<li>SemaTor's game help comes along: manual questions answered for you (per game, can be switched off), STEADY SPEED, and IPF games that load faster the second time.</li></ul></div>
+<div class="core-card"><p class="eyebrow">MEGA DRIVE</p><h3>SemaDrive Light</h3><p>SemaDrive's Mega Drive, rebuilt for the KS3: our own video, Z80 and sound designs.</p><ul>
+<li>Exact line timing: every line is the console's 3,420 clocks, and the 68000's memory refresh is there too.</li>
+<li>Sound checked against desktop SemaDrive: the same result on our five-game check.</li>
+<li>Big cartridge libraries from the card, battery saves kept safely as you play, and Realtec cartridges.</li>
+<li>The picture menu offers 240p, 480p and 720p.</li></ul></div>
+</div>
+</section>
+
+<section id="picture" class="paint-section"><div class="wrap section">
+<div class="section-heading"><p class="eyebrow">THE PICTURE</p><h2>Every frame<br>the same length.</h2><p>SemaCore Light sends HDMI at 576p50, 480p60, 720p50 or 720p60, plus VGA. Every frame lasts exactly one Atari field, so displays keep the picture and motion stays smooth, and the border areas that games open are shown. SemaDrive Light keeps the Mega Drive's own line timing and offers 240p, 480p and 720p.</p></div>
+</div></section>
+
+<section id="games" class="wrap section">
+<div class="section-heading"><p class="eyebrow">GAMES &amp; SAVES</p><h2>The same menu.<br>On the TV.</h2><p>The menu is drawn over the game picture, the same menu in both cores. Game saves live beside your disk images and cartridges on the card, and each game remembers its own settings, with extras off until you turn them on.</p></div>
+<p class="experimental-note"><strong>Bring your own.</strong> No TOS, ROMs or games are included. In this version SemaCore Light has no separate music and effects volumes and no floppy drive sounds.</p>
+</section>
+
+<section id="why" class="paint-section"><div class="wrap section">
+<div class="section-heading"><p class="eyebrow">WHY IT MATTERS</p><h2>One family,<br>desktop to FPGA.</h2><p>The cores are built from the same code as the desktop apps and checked against them: the desktop is the reference, picture for picture and sound for sound. What we learn on the board makes the desktop more exact, and the other way round.</p></div>
+<div class="actions"><a class="button" href="atari-st.html">SemaTor for Atari ST <span aria-hidden="true">→</span></a><a class="secondary" href="semadrive.html">SemaDrive for Mega Drive <span aria-hidden="true">→</span></a></div>
+</div></section>
+</main>
+<footer class="wrap footer">SemaTor 1.1.603 · Created by David Baron with AI assistance.<br><a href="index.html">SemaTor home</a> · <a href="https://github.com/SirBaron/SemaTor/issues">Report a problem</a> · <a href="https://discord.gg/DdHfSGrdFc">Discord</a></footer>
+</body></html>
