@@ -1,6 +1,6 @@
 'use strict';
 const Catalogue = (() => {
- const labels={wide:'Widescreen',motion:'Smooth motion',sound:'Sound',cheats:'Cheats'};
+ const labels={wide:'Widescreen',motion:'Smooth motion',sound:'Sound',view:'Sharper 3D',distance:'Draw distance',cheats:'Cheats'};
  const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const number=(v,fallback)=>/^\d+$/.test(String(v))?Math.max(1,Math.min(1000000,Number(v))):fallback;
  function readState(search){const p=new URLSearchParams(search);return {system:['st','md'].includes(p.get('system'))?p.get('system'):'all',q:(p.get('q')||'').slice(0,200),features:[...new Set((p.get('features')||'').split(',').filter(x=>labels[x]))],scope:p.get('scope')==='all'?'all':'enhanced',sort:['az','za','new','old'].includes(p.get('sort'))?p.get('sort'):'az',size:[12,24,48].includes(Number(p.get('size')))?Number(p.get('size')):12,page:number(p.get('page'),1),game:p.get('game')||''};}
@@ -22,6 +22,8 @@ const Catalogue = (() => {
 if(typeof module!=='undefined'&&module.exports)module.exports=Catalogue;
 if(typeof document!=='undefined')(() => {
  const games=JSON.parse(document.getElementById('catalogue-data').textContent);
+ // Feature badges also follow explicit option names in the frozen profiles.
+ for(const game of games){const names=game.editions.flatMap(e=>e.options.map(o=>o.name.toUpperCase()));const tags=new Set(game.features);if(names.some(n=>n==='SMOOTH MOTION'))tags.add('motion');if(names.some(n=>/^RENDER RESOLUTION|^ANTI-ALIASING/.test(n)))tags.add('view');if(names.some(n=>/^DRAW DISTANCE/.test(n)))tags.add('distance');game.features=[...tags];}
  const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
  let state=Catalogue.readState(location.search),returnFocus=null,activeGame='';
  const systems=[...document.querySelectorAll('[data-system]')];
@@ -42,7 +44,15 @@ if(typeof document!=='undefined')(() => {
   const badges=el('div',undefined,'detail-badges');for(const f of g.features)badges.append(badge(f));body.append(badges);
   body.append(el('p',g.editions.length+' shipped '+(g.editions.length===1?'profile':'profiles')+'. Options depend on the identified game edition and may vary by game mode or level.','detail-note'));
   if(g.guide){const a=el('a','Read the game guide ↗','guide-link');a.href=g.guide;body.append(a);}
-  function optionList(items){const ul=el('ul',undefined,'detail-options');for(const o of items){const li=el('li');li.append(el('strong',o.name));if(o.help)li.append(el('p',o.help));ul.append(li);}return ul;}
+  function optionList(items){
+   const groups=new Map();
+   for(const o of items){const family=o.name.match(/^(MOUSE SENSITIVITY|RENDER RESOLUTION|ANTI-ALIASING|DRAW DISTANCE|WIDESCREEN)(?:\s|$)/i);const key=family?family[1].toUpperCase():o.name;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(o);}
+   const ul=el('ul',undefined,'detail-options');
+   for(const [name,choices] of groups){const li=el('li'),o=choices[0];
+    if(choices.length>1){const detail=el('details');detail.append(el('summary',name+' · '+choices.length+' entries'));if(o.help)detail.append(el('p',o.help));const list=el('ul',undefined,'option-choices');for(const choice of choices){const item=el('li');item.append(el('strong',choice.name));if(choice.help&&choice.help!==o.help)item.append(el('p',choice.help));list.append(item);}detail.append(list);li.append(detail);}
+    else if(o.help){const detail=el('details');detail.append(el('summary',o.name),el('p',o.help));li.append(detail);}else li.append(el('strong',o.name));ul.append(li);
+   }return ul;
+  }
   for(const [i,edition] of g.editions.entries()){
    const section=el(g.editions.length>1?'details':'section',undefined,'edition-detail');
    if(g.editions.length>1){section.append(el('summary',edition.name));section.open=i===0;}else section.append(el('h3','Available options'));
@@ -56,11 +66,14 @@ if(typeof document!=='undefined')(() => {
  function render(write=true){
   const r=Catalogue.query(games,state);state.page=r.page;sync();results.replaceChildren();
   for(const g of r.rows){
-   const tr=el('tr'),name=el('td',undefined,'game-name');
-   const button=el('button',g.title,'game-title');button.type='button';button.addEventListener('click',()=>openGame(g.id));
-   name.append(button,el('span',[g.system==='md'?'Mega Drive':'Atari ST',g.year,g.publisher,g.editions.length+' '+(g.editions.length===1?'profile':'profiles'),g.optionCount+' '+(g.optionCount===1?'option':'options')].filter(Boolean).join(' · '),'game-meta'));tr.append(name);
-   for(const f of Object.keys(Catalogue.labels)){const cell=el('td',undefined,'feature-cell');if(g.features.includes(f)){cell.append(badge(f));}else{cell.classList.add('unavailable');cell.append(el('span','—','feature-absent'),el('span','No '+Catalogue.labels[f]+' option listed','sr-only'));}tr.append(cell);}
-   const more=el('td',undefined,'game-action'),open=el('button','↗','open-game');open.type='button';open.setAttribute('aria-label','View '+g.title+' details');open.addEventListener('click',()=>openGame(g.id));more.append(open);tr.append(more);results.append(tr);
+   const card=el('li',undefined,'game-card '+(g.system==='md'?'machine-md':'machine-st'));
+   const top=el('div',undefined,'card-top');top.append(el('span',g.system==='md'?'MEGA DRIVE':'ATARI ST','machine-label'),el('span',g.year,'card-year'));card.append(top);
+   const heading=el('h3'),button=el('button',g.title,'game-title');button.type='button';button.addEventListener('click',()=>openGame(g.id));heading.append(button);card.append(heading);
+   card.append(el('p',g.publisher||'Explore the game','card-publisher'));
+   const badges=el('div',undefined,'card-badges');for(const f of Object.keys(Catalogue.labels))if(g.features.includes(f))badges.append(badge(f));
+   if(!g.features.length)badges.append(el('span',g.enhanced?'Game-specific options':'Original experience','feature-pill neutral'));card.append(badges);
+   const foot=el('div',undefined,'card-footer');foot.append(el('span',g.editions.length+' '+(g.editions.length===1?'edition':'editions')));
+   const open=el('button','Explore upgrades ↗','card-explore');open.type='button';open.setAttribute('aria-label','Explore '+g.title+' upgrades');open.addEventListener('click',()=>openGame(g.id));foot.append(open);card.append(foot);results.append(card);
   }
   $('catalogue-count').textContent=r.total?`${r.start+1}–${r.start+r.rows.length} of ${r.total} games`:'0 games';
   $('catalogue-empty').hidden=!!r.total;document.querySelector('.game-table-wrap').hidden=!r.total;
@@ -85,5 +98,7 @@ if(typeof document!=='undefined')(() => {
  $('detail-share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);$('detail-status').textContent='Link copied';}catch{$('detail-status').textContent='Copy this page’s address to share this game.';}});
  window.addEventListener('popstate',()=>{state=Catalogue.readState(location.search);render(false);});
  document.addEventListener('keydown',e=>{if(e.key==='/'&&!dialog.open&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!document.activeElement.isContentEditable){e.preventDefault();$('catalogue-search').focus();}});
+ for(const b of document.querySelectorAll('[data-layout]'))b.addEventListener('click',()=>{results.classList.toggle('compact',b.dataset.layout==='compact');for(const sibling of document.querySelectorAll('[data-layout]'))sibling.setAttribute('aria-pressed',String(sibling===b));});
+ for(const b of document.querySelectorAll('[data-discover]'))b.addEventListener('click',()=>{state={...Catalogue.readState(''),q:b.dataset.discover,system:b.dataset.machine};render();$('browse-games').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});$('catalogue-search').focus({preventScroll:true});});
  $('enhanced-total').textContent=games.filter(g=>g.enhanced).length+' enhanced games';render();
 })();
