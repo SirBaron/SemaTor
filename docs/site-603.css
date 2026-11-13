@@ -57,3 +57,8 @@
 @media(max-width:900px){.gateways,.why-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.gateways,.why-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.gateway{transition:none}.gateway:hover{transform:none}}
+/* Make the gallery control as easy to reach by keyboard as the page links. */
+#backdrop-motion{font:inherit;cursor:pointer;margin-top:16px}
+#backdrop-motion:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
+#backdrop-motion:disabled{cursor:default;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

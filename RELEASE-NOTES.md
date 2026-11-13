@@ -1,12 +1,15 @@
-# SemaTor 1.1.590 — Gauntlet II
+# SemaTor 1.1.603 — Enhancements off by default, SemaBench preview, Starglider and copy-protection skips
 
-Gauntlet II now joins the enhanced games catalogue.
+- Every enhancement now starts off in every profile: Smooth Motion, widescreen, extended gameplay, render resolution, draw distance, mouse sensitivity, separate music and effects. Turn one on and it stays on for that game. CPU BOOST and run-ahead also start off; STEADY SPEED stays on. Choices you made earlier are kept; settings you only left at the old defaults now start off.
+- Copy-protection: SKIP rows, on by default, answer or bypass the manual checks of Starglider 2, Elite (v1.3 and SuperGAU 386), Midwinter I and II, Populous II (including the D-Bug 078 build), F-19 Stealth Fighter v1.02, The Secret of Monkey Island and Civilization (the turn-50 quiz). Switch a row off for the original check.
+- Starglider 1 and 2: Match display keeps the display's rate with variable refresh. Render resolution now really draws at the higher resolution, and render resolution, anti-aliasing and draw distance use the GPU at any Smooth Motion setting. New INVERT Y AXIS option. The VRR fix applies to every 3D port.
+- Infestation: render resolution and anti-aliasing draw at the higher resolution again. New 2x draw distance (off by default) that also draws far moving objects.
+- Separate music and effects (off by default) for IK+, Rick Dangerous and Rick Dangerous II.
+- Disks: games that wait for their next disk by polling drive A get it automatically (Afterburner). Civilization's disk sets are found again. A one-off file probe no longer swaps disks (Frantick), and Forgotten Worlds gets disk 2 at its prompt. Disks put into drive A from F12 or automatically are writable again, so save disks work.
+- ST light gun: the RS-232 West Phaser, aimed with the mouse and detected automatically.
+- SemaDrive: Menacer and Justifier light guns with the mouse (Auto-calibrate gun on by default), a hardware-accurate H counter, 68000/VDP timing closer to BlastEm, and Z80 RAM word access as on the console. Widescreen, reflections and separate audio now start off.
+- SemaBench (preview): the Amiga core with Kickstart 1.3 system structures, Workbench screen, many game fixes (Ishar, Millennium 2.2, Quadralien, Zoom, Operation Wolf and more), a Disk boot option (Real A500 by default), the Amiga Jukebox with its own visualiser and a catalogue of Amiga game music, and GPU-drawn games windows. The public preview uses SemaBench's built-in desktop look; the extra desktop themes come in a later update. SemaBench saves from earlier builds cannot be loaded.
+- Updates: from 1.1.603 an update can carry far more (up to 65,536 files and 1 GB), so later releases are no longer held back.
+- Shared fixes: a run-ahead thread race, the SemaDrive display-rate query, and several outdated tests.
 
-- Expanded maze view that fits the window, with the original HUD and off-screen enemy activation rules preserved.
-- Lock-free camera and actor Smooth Motion using the shared frame-rate setting; original gameplay speed is unchanged.
-- Independent original intro-music and gameplay effects/speech volume controls.
-- Existing infinite health, retained keys and retained potions options remain available.
-
-The catalogue now lists 54 enhanced games and 259 options. The refreshed full Creator page and its current screenshots are retained.
-
-Validation includes original-frame reconstruction, native CPU sprite-pose checks, concurrent compositor testing, exact baseline RAM/video/audio comparison and independent volume tests. Unknown code and unverified scenes fall back to the original picture. Physical phone and original ST/STE testing remain unverified.
+Known limits: SemaBench is a preview. Datastorm keeps rebooting, and some Amiga catalogue tracks may not import on this core. The SemaDrive light-gun timing has passed the full play check; its BlastEm sound check is not finished. Copy-protection skips cover the games listed above only. No games are bundled. The Android build is not part of this release.
