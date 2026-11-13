@@ -35,6 +35,7 @@
 @media(prefers-reduced-motion:reduce){.looks-grid img{transition:none}}
 .live-grid{grid-template-columns:1fr 1fr}
 .live-grid img{background:#000}
+.live-grid video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:10px}
 @media(max-width:650px){.live-grid{grid-template-columns:1fr}}
 .st-gallery{grid-template-columns:1fr 1fr}
 @media(max-width:650px){.st-gallery{grid-template-columns:1fr}}
