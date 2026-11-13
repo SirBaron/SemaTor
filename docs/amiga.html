@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SemaBench — Amiga, experimental</title>
-<meta name="description" content="SemaBench is SemaTor's experimental Amiga 500 system: our own Amiga core, no Kickstart ROM needed, its own Workbench-style desktop and Amiga music in the Jukebox.">
+<meta name="description" content="SemaBench is SemaTor's experimental Amiga 500 system: our own Amiga core and our own Kickstart replacement, its own Workbench-style desktop and Amiga music in the Jukebox.">
 <meta name="theme-color" content="#090d18">
 <link rel="icon" href="readme/logo.png"><link rel="stylesheet" href="site-theme.css"><link rel="stylesheet" href="creator.css"><link rel="stylesheet" href="site-603.css">
 </head>
@@ -14,7 +14,7 @@
 <section class="creator-hero wrap">
 <p class="eyebrow"><span class="badge-experimental">EXPERIMENTAL</span> SEMABENCH · AMIGA 500 · PART OF SEMATOR 1.1.603</p>
 <h1>The Amiga.<br><em>Our own way.</em></h1>
-<p class="intro">SemaBench is a new, experimental third system inside SemaTor: an Amiga 500 written from scratch, <br>with its own Workbench-style desktop. No Kickstart ROM to find, no other emulator inside.</p>
+<p class="intro">SemaBench is a new, experimental third system inside SemaTor: an Amiga 500 written from scratch, <br>with our own Kickstart replacement and our own Workbench-style desktop. The replacement is written by us; no original Amiga Kickstart ROM file is required.</p>
 <div class="actions"><a class="button" href="index.html#download">Get SemaTor <span aria-hidden="true">↓</span></a><a class="secondary" href="#start">How to start it <span aria-hidden="true">↘</span></a></div>
 <p class="availability">Windows &amp; Linux · Bring your own ADF and IPF disks · Desktop only (not in the phone build yet)</p>
 <div class="experimental-note"><strong>Experimental means experimental.</strong> Many Amiga games already boot and play, many do not yet. There are no enhancements for Amiga games, sound is not yet checked against real hardware, and saved states may not carry over to the next version. Please report what you find.</div>
@@ -52,7 +52,7 @@
 
 <section id="inside" class="wrap section">
 <div class="section-heading"><p class="eyebrow">WHAT'S INSIDE</p><h2>Built from<br>the manual up.</h2><p>SemaBench is our own Amiga 500 (OCS, PAL, 68000, 512 KB chip RAM plus 512 KB) written from the Amiga Hardware Reference Manual. It shares SemaTor's 68000 and adds its own copper, bitplanes, sprites, blitter, CIAs, disk DMA and Paula.</p></div>
-<div class="feature-strip"><div><span class="number">NO KICKSTART</span><h3>Starts by itself.</h3><p>Games that boot straight from the disk start through our own small boot ROM. Disks that run from AmigaDOS get our own stand-in: it reads the startup-sequence and runs the programs. No Kickstart file is needed.</p></div><div><span class="number">DISKS</span><h3>Bit by bit.</h3><p>Each track becomes the bits a real drive would read, timed as the IPF records them, so games with their own disk loaders work as on the machine.</p></div><div><span class="number">SESSION</span><h3>The SemaTor way.</h3><p>Save slots, rewind, screenshots, input recordings, gamepad and keyboard joystick, and backups of the Amiga side's files.</p></div></div>
+<div class="feature-strip"><div><span class="number">OUR OWN KICKSTART REPLACEMENT</span><h3>Written by us.</h3><p>SemaBench uses our own Kickstart replacement, written from scratch. Our boot ROM starts disks that boot directly, and our own AmigaDOS-compatible code reads the startup-sequence and runs programs on DOS disks. No original Amiga Kickstart ROM code or file is included or required.</p></div><div><span class="number">DISKS</span><h3>Bit by bit.</h3><p>Each track becomes the bits a real drive would read, timed as the IPF records them, so games with their own disk loaders work as on the machine.</p></div><div><span class="number">SESSION</span><h3>The SemaTor way.</h3><p>Save slots, rewind, screenshots, input recordings, gamepad and keyboard joystick, and backups of the Amiga side's files.</p></div></div>
 </section>
 
 <section id="limits" class="paint-section"><div class="wrap section">
