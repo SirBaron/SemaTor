@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.604 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.606 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.604 continues the experimental Amiga preview** with five SemaBench desktop looks, including animated Moonlit Workbench and Dark Violet backdrops. It also adds Amiga disk labels and folder scanning, Hunter inventory and keyboard-control improvements, and Simulcra far-object motion. Atari ST and Mega Drive improvements from 1.1.603 remain included. See [release notes](RELEASE-NOTES.md) for scope and known limits. Android remains private testing and is not part of this release.
+**1.1.606 adds Wi-Fi game/save sharing** across desktop and Android, thirteen shared desktop audit passes, Jukebox improvements, and SemaDrive/Amiga compatibility fixes. Windows and Linux public downloads are below; Android APK and AAB test packages remain private. See [release notes](RELEASE-NOTES.md) for scope, limits and update guidance.
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Version 1.1.604 adds a larger SemaBench theme package; update from 1.1.603 for the theme bundle. Users on older versions can install the full public-preview ZIP and keep their User folder. The optional Dungeon Master artwork add-on is separate.
 
