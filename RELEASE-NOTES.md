@@ -1,3 +1,11 @@
+## 1.1.607 — Nearby pairing, Amiga SemaSynth and compatibility fixes
+
+- Pair with a nearby SemaTor receiver and compare six digits on both screens; approving incoming files remains separate. Manual connection remains available for older compatible versions and networks that block discovery. Transfers authenticate but do not encrypt game data; use a trusted LAN. Physical Android transfer testing remains outstanding.
+- SemaBench adds a themed Amiga SemaSynth studio with four native Paula channels, supported MOD editing, sample-bank import and sample capture from supported game-music players. Drafts are separate by system; WAV, MP3 and MOD exports are available. Conversion approximates some tracker effects, and captured samples do not reconstruct complete songs from custom players.
+- Fixes include F1 Europe main-bus DMA suspension, Jammit sound-CPU control timing and Sports Talk Baseball EEPROM recognition/save-state migration.
+- Experimental Virtua Racing startup and portable save states cover only the specifically verified USA cartridge. SVP timing, interrupt and DMA behavior retain known limits; bounded startup/race checks do not establish full-game compatibility.
+- Desktop packages: Windows x64, Linux x86-64 and Linux ARM64. Android and FPGA builds are separate; no games are included.
+
 ## 1.1.606 — Wi-Fi sharing, library fixes and stronger system compatibility
 
 - Transfer selected games or whole libraries, with their saves, between desktop and Android in either direction. All three systems share pairing, search and selection, verified resumable transfers, duplicate skipping and save backups. Connect by IPv4 address and pairing code on a trusted local network; transfers are authenticated but not encrypted. App versions may differ when they support the same transfer protocol. Save loading still follows each emulator's compatibility rules.
