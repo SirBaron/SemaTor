@@ -1,3 +1,13 @@
+## 1.1.604 — SemaBench themes, Amiga library polish and game fixes
+
+- SemaBench now includes five desktop looks: SemaBench Night, Blue Four, Grey Bevel, Dark Violet and Moonlit Workbench. Optional backdrop motion animates the Moonlit coast and adds slow star twinkles and a dithered halo to Dark Violet. Motion depends on Vulkan support.
+- Amiga libraries gain printed and handwritten disk labels and a recursive scan of the configured Amiga games folder for supported disk images.
+- Hunter keeps its rendered world visible while the hover inventory is open and improves keyboard controls for that inventory.
+- Simulcra improves GPU presentation motion for supported far 3D objects. Distant pixel-sprite objects are not treated as moving 3D models.
+- Carries forward the desktop Atari ST and Mega Drive improvements from 1.1.603.
+
+SemaBench and game compatibility remain experimental and edition-specific. This release does not claim full game compatibility or universal 144 Hz motion. Results depend on game, scene, graphics backend, hardware and display. No games or original system ROMs are bundled. Android remains private testing and is not part of the public desktop release.
+
 ## 1.1.603 — SemaBench, expanded Jukebox, farther horizons and better controls
 
 ### Music and the shared desktop
@@ -10,7 +20,7 @@
 ### Experimental Amiga preview
 
 - SemaBench brings our own Amiga 500 core, our own Kickstart replacement written from scratch, and our own Workbench-style desktop into SemaTor. No original Amiga Kickstart ROM code or file is included or required. Select Amiga from the desktop's system menu and add your own ADF or IPF disks.
-- Desktop drawers, favourites, recent games and shared apps, plus four moving backdrops: Copper Rain, Vector Bobs, Plasma Pool and Mix. Backdrops can react to music. The public release includes the built-in desktop look; extra theme files are deferred to a later update.
+- Desktop drawers, favourites, recent games and shared apps, plus four moving backdrops: Copper Rain, Vector Bobs, Plasma Pool and Mix. Backdrops can react to music. The public 1.1.603 release included the built-in desktop look; the additional themes, deferred from that release, are included in 1.1.604.
 - Configurable Amiga memory and external drives, Amiga 500 sound filtering, and a Disk boot choice of Real A500 or Fast, with Real A500 the default. Improvements to disk booting, system calls, graphics, input and interrupts help games including Ishar, Bunny Bricks, Millennium 2.2, Quadralien, Zoom, Test Drive, Monkey Island II and Operation Wolf.
 
 ### Atari ST game enhancements
@@ -42,7 +52,7 @@
 
 ### Known limits
 
-SemaBench is experimental: many games still do not work, Datastorm keeps rebooting, some Amiga music may not import, and saves from older SemaBench builds cannot be loaded. Extra SemaBench desktop themes are not included in 603. Interphase's 32:9 view with 3x draw distance has known floor-rendering gaps; extended scenes and experimental artwork are not universally validated. The SemaDrive sound comparison against BlastEm is unfinished. This release does not claim every game has passed a complete visual audit or achieves every display rate. No games or original Amiga ROMs are bundled. Desktop downloads are Windows x64, Linux x64 and Linux ARM64; Android is not part of this public release.
+SemaBench is experimental: many games still do not work, Datastorm keeps rebooting, some Amiga music may not import, and saves from older SemaBench builds cannot be loaded. Extra SemaBench desktop themes were deferred from 1.1.603 and are included in 1.1.604. Interphase's 32:9 view with 3x draw distance has known floor-rendering gaps; extended scenes and experimental artwork are not universally validated. The SemaDrive sound comparison against BlastEm is unfinished. This release does not claim every game has passed a complete visual audit or achieves every display rate. No games or original Amiga ROMs are bundled. Desktop downloads are Windows x64, Linux x64 and Linux ARM64; Android is not part of this public release.
 
 ## 1.1.602 — Checked terrain, wider Simulcra and current controls
 

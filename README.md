@@ -10,11 +10,11 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.603 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.604 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.603 introduces experimental Amiga support through SemaBench**, alongside Atari ST and Mega Drive improvements, light guns, supported manual-check skips and enhancements off by default. SemaBench includes its built-in desktop look; extra themes are planned for 1.1.604. See [release notes](RELEASE-NOTES.md) for changes and known limits. Android remains private testing and is not part of this release.
+**1.1.604 continues the experimental Amiga preview** with five SemaBench desktop looks, including animated Moonlit Workbench and Dark Violet backdrops. It also adds Amiga disk labels and folder scanning, Hunter inventory and keyboard-control improvements, and Simulcra far-object motion. Atari ST and Mega Drive improvements from 1.1.603 remain included. See [release notes](RELEASE-NOTES.md) for scope and known limits. Android remains private testing and is not part of this release.
 
-**Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Public updates omit optional artwork.
+**Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. The optional Dungeon Master artwork add-on is separate.
 
 [Browse every current game enhancement](https://sirbaron.github.io/SemaTor/games/index.html) — searchable by game and feature, with cheats kept separate.
 
@@ -122,9 +122,9 @@ The library SemaTor had before SemaOS is still here. Browse covers or lists, sea
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_603-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_603-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
-| Linux ARM64 | `SemaTor-1_1_603-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
+| Linux x86-64 | `SemaTor-1_1_604-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Windows x64 | `SemaTor-1_1_604-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux ARM64 | `SemaTor-1_1_604-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
 
 The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
 
