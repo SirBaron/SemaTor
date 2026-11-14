@@ -1,12 +1,14 @@
-## 1.1.604 — SemaBench themes, Amiga library polish and game fixes
+## 1.1.604 — Three desktop homes, Amiga themes and compatibility fixes
 
-- SemaBench now includes five desktop looks: SemaBench Night, Blue Four, Grey Bevel, Dark Violet and Moonlit Workbench. Optional backdrop motion animates the Moonlit coast and adds slow star twinkles and a dithered halo to Dark Violet. Motion depends on Vulkan support.
-- Amiga libraries gain printed and handwritten disk labels and a recursive scan of the configured Amiga games folder for supported disk images.
-- Hunter keeps its rendered world visible while the hover inventory is open and improves keyboard controls for that inventory.
-- Simulcra improves GPU presentation motion for supported far 3D objects. Distant pixel-sprite objects are not treated as moving 3D models.
-- Carries forward the desktop Atari ST and Mega Drive improvements from 1.1.603.
+- SemaOS, SemaDrive and SemaBench share Continue actions, saved-game cards, notes and correctly scoped Find results. Amiga Details opens its own settings and imported soundtrack albums. ST drive commands stay on the ST desktop.
+- All five Amiga looks are included: SemaBench Night, Blue Four, Dark Violet, Grey Bevel and Moonlit Workbench. Moonlit scenery and Dark Violet stars have optional GPU animation with a still fallback. New ivory Amiga disks support printed and marker labels; SemaDrive now respects printed labels too.
+- Hunter retains enhanced scenery behind its hover inventory. Controls offers a per-game Keyboard mode: SemaTor or Native ST; Hunter defaults to Native ST to avoid clashes with original game keys.
+- Simulcra improves object and shadow continuity, including far geometry at maximum 8x draw distance. This is picture-only; no new general refresh-rate certification is claimed.
+- Amiga Jukebox scans the configured games folder and subfolders for compatible game soundtracks and modules, preserving existing albums and avoiding duplicates.
+- Amiga compatibility corrections cover 68000 instruction fetch, audio DMA completion, Workbench/copper ownership, graphics masks, fonts, DOS lists and shell startup. The core remains experimental; coverage varies by game and edition. Incompatible older Amiga state layouts are rejected rather than loaded unsafely.
+- Shared loader identity now requires disk proof, preventing unrelated ST games using the same menu loader from receiving the wrong game identity. Shared phone libraries also retain their system's desktop styling and import scope.
 
-SemaBench and game compatibility remain experimental and edition-specific. This release does not claim full game compatibility or universal 144 Hz motion. Results depend on game, scene, graphics backend, hardware and display. No games or original system ROMs are bundled. Android remains private testing and is not part of the public desktop release.
+Update from 1.1.603 for the larger theme package. Users on older versions can install the full public-preview ZIP, preserving their User folder. No games are included. Android and Spectrum Next test builds remain separate private distributions.
 
 ## 1.1.603 — SemaBench, expanded Jukebox, farther horizons and better controls
 

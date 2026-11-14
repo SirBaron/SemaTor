@@ -1,19 +1,11 @@
-# SemaTor 1.1.604 — SemaBench themes, Amiga library polish and game fixes
+# SemaTor 1.1.604 — Three desktop homes, Amiga themes and compatibility fixes
 
-### Experimental Amiga preview
+- SemaOS, SemaDrive and SemaBench share Continue actions, saved-game cards, notes and correctly scoped Find results. Amiga Details opens its own settings and imported soundtrack albums. ST drive commands stay on the ST desktop.
+- All five Amiga looks are included: SemaBench Night, Blue Four, Dark Violet, Grey Bevel and Moonlit Workbench. Moonlit scenery and Dark Violet stars have optional GPU animation with a still fallback. New ivory Amiga disks support printed and marker labels; SemaDrive now respects printed labels too.
+- Hunter retains enhanced scenery behind its hover inventory. Controls offers a per-game Keyboard mode: SemaTor or Native ST; Hunter defaults to Native ST to avoid clashes with original game keys.
+- Simulcra improves object and shadow continuity, including far geometry at maximum 8x draw distance. This is picture-only; no new general refresh-rate certification is claimed.
+- Amiga Jukebox scans the configured games folder and subfolders for compatible game soundtracks and modules, preserving existing albums and avoiding duplicates.
+- Amiga compatibility corrections cover 68000 instruction fetch, audio DMA completion, Workbench/copper ownership, graphics masks, fonts, DOS lists and shell startup. The core remains experimental; coverage varies by game and edition. Incompatible older Amiga state layouts are rejected rather than loaded unsafely.
+- Shared loader identity now requires disk proof, preventing unrelated ST games using the same menu loader from receiving the wrong game identity. Shared phone libraries also retain their system's desktop styling and import scope.
 
-- Includes five SemaBench desktop looks: SemaBench Night, Blue Four, Grey Bevel, Dark Violet and Moonlit Workbench. Moonlit offers optional animated water, clouds, stars and moonlight; Dark Violet can add slow star twinkles and a dithered halo. Motion is optional and depends on Vulkan support.
-- Adds Amiga-specific printed and handwritten disk labels, plus a folder scan that searches the configured Amiga games folder and its subfolders for supported disk images.
-- The Amiga core, its supported games and saved-state compatibility remain experimental; this release does not claim complete Amiga game compatibility.
-
-### Atari ST and Mega Drive
-
-- Hunter retains its rendered world while the hover inventory is open, keeping supported draw-distance and render-resolution options visible. Adds keyboard-control improvements for the inventory. These changes are picture and control handling; the game simulation remains unchanged.
-- Simulcra improves motion of supported distant 3D objects during GPU presentation. Coverage is profile- and scene-specific; distant pixel-sprite objects are not represented as moving 3D models.
-- Includes the Atari ST and Mega Drive improvements from 1.1.603, including its existing supported game profiles, input, audio, library and updater fixes.
-
-### Downloads and scope
-
-Desktop preview downloads are Windows x64, Linux x86-64 and Linux ARM64, with matching signed updates. Android remains private testing and is not part of this public release. No games or original system ROMs are bundled.
-
-SemaTor supports many game disks, but compatibility depends on the game, edition and settings. This release does not claim full compatibility for every game or that every supported game reaches 144 Hz. Smooth-motion results depend on the game, scene, graphics backend, hardware and display.
+Update from 1.1.603 for the larger theme package. Users on older versions can install the full public-preview ZIP, preserving their User folder. No games are included. Android and Spectrum Next test builds remain separate private distributions.
