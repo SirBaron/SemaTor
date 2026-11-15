@@ -10,7 +10,7 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.611 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.611 gives Wi-Fi sharing a movable, resizable desktop window, clear collection filters, enhanced-game selection and explicit save-conflict choices. Phones retain the full-screen flow.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
 **1.1.611 puts Wi-Fi sharing in a movable, resizable desktop window with matching colors, visible device scanning and Scan now. Phones retain the full-screen flow.** Android builds remain private tests; no physical-device validation is claimed.
 

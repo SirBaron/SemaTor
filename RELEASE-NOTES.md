@@ -1,12 +1,16 @@
 # 1.1.611 — Wi-Fi sharing in your desktop
 
-Wi-Fi Transfer now belongs on your desktop: move and resize its window, keep other apps accessible, and use colors that match your current SemaOS home. Phones keep the full-screen view.
+Wi-Fi Transfer is a movable, resizable and minimizable SemaOS window with colors matched to the current desktop. Other desktop apps stay usable while it is open; phones keep the full-screen view.
 
-Nearby-device discovery shows a scanning animation and a Scan now action, making it clear when SemaTor is looking for another device.
+Polished highlights and animated discovery show when nearby devices are being found. Scan now requests an immediate refresh; automatic discovery continues in the background.
 
-Android builds remain private tests; no physical-device validation is claimed.
+Desktop game selection uses a compact filter sidebar and scrollable game table. Search, system, No compilations, Enhanced only and selected-only filters narrow the list. Compilation filtering uses library metadata, not guesses from filenames.
 
-Wi-Fi game selection adds search and system filters, a No compilations filter, selected-only review and Shift-click ranges. Select shown and Clear shown act on matching results; Clear all selected resets the whole selection. Choices survive filter/device changes, and the summary counts selections hidden by filters so the Send total stays explicit.
+Select shown and Clear shown act on matching results; Clear all selected resets the selection. All enhanced games adds enhanced games from the whole collection, regardless of the current filters. Shift-click selects ranges. Choices survive filter/device changes, and hidden selections remain counted in the Send total.
+
+After transferred files are staged and verified, the receiver asks before replacing different existing saves. Keep existing saves is the default; Replace + backup preserves the original before replacement and checks that it has not changed since review. Identical games and saves are skipped, and different existing game content is preserved.
+
+Pairing and file acceptance remain separate decisions. Compatible transfer protocols can connect across different app versions. Android packages remain private tests; physical-device transfer and performance testing remain outstanding.
 
 # 1.1.610 — Clearer Wi-Fi sharing and Android game controls
 
