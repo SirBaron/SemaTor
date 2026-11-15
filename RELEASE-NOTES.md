@@ -16,7 +16,7 @@ An animated transfer indicator shows completed-file counts and progress when kno
 
 The optional Transfer sounds setting is remembered across desktops. Short musical YM-style cues mark transfer start, completion and errors, without a beep for every file.
 
-Transfer scenes match the current system: ST computers send floppy disks, Amiga computers use copper stripes and hopping disks, and Mega Drive consoles exchange cartridges. Waiting shows a radar instead of moving files; completion adds a small celebration. Actual transfer progress remains visible underneath.
+Transfer scenes use the existing Atari ST, Mega Drive and Amiga machine artwork. Named game covers or disk/cartridge artwork travel between the machines, with glossy retro glow and trails. The remembered Effects setting defaults on; turning it off keeps a lighter animation. Waiting and completion have their own states, while actual transfer progress remains visible underneath.
 
 # 1.1.610 — Clearer Wi-Fi sharing and Android game controls
 
