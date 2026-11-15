@@ -1,3 +1,11 @@
+# 1.1.611 — Wi-Fi sharing in your desktop
+
+Wi-Fi Transfer now belongs on your desktop: move and resize its window, keep other apps accessible, and use colors that match your current SemaOS home. Phones keep the full-screen view.
+
+Nearby-device discovery shows a scanning animation and a Scan now action, making it clear when SemaTor is looking for another device.
+
+Android builds remain private tests; no physical-device validation is claimed.
+
 # 1.1.610 — Clearer Wi-Fi sharing and Android game controls
 
 Wi-Fi Transfer is easier to reach and use: a focused desktop popup, a full-screen phone view, and a matching launch icon on Atari ST, Mega Drive and Amiga. Guided pairing, clear game selection and explicit transfer decisions keep the next step obvious.
