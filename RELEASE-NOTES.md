@@ -2,6 +2,7 @@
 
 - SemaOS resumes the last desktop you visited. Each system keeps its own window positions, sizes and minimized state, including empty desktops; Explorer windows retain their stacking order.
 - If a library scan is interrupted, completed soundtrack checks are retained. Unfinished generated album sources are checked again next time. New or changed files are still checked.
+- Default desktop icons use compact visible spacing, so hidden tools leave no gaps. Line Up fills the available height before starting another column. Saved custom positions take priority; Reset affects only the current desktop.
 
 ## 1.1.608 — Amiga copper skies and reliable library scanning
 
