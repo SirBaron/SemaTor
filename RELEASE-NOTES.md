@@ -6,6 +6,8 @@ Nearby-device discovery shows a scanning animation and a Scan now action, making
 
 Android builds remain private tests; no physical-device validation is claimed.
 
+Wi-Fi game selection adds search and system filters, a No compilations filter, selected-only review and Shift-click ranges. Select shown and Clear shown act on matching results; Clear all selected resets the whole selection. Choices survive filter/device changes, and the summary counts selections hidden by filters so the Send total stays explicit.
+
 # 1.1.610 — Clearer Wi-Fi sharing and Android game controls
 
 Wi-Fi Transfer is easier to reach and use: a focused desktop popup, a full-screen phone view, and a matching launch icon on Atari ST, Mega Drive and Amiga. Guided pairing, clear game selection and explicit transfer decisions keep the next step obvious.
