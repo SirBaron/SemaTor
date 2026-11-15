@@ -12,6 +12,10 @@ After transferred files are staged and verified, the receiver asks before replac
 
 Pairing and file acceptance remain separate decisions. Compatible transfer protocols can connect across different app versions. Android packages remain private tests; physical-device transfer and performance testing remain outstanding.
 
+An animated transfer indicator shows completed-file counts and progress when known, and a waiting animation while connecting. Completion is shown only after delivery finishes.
+
+The optional Transfer sounds setting is remembered across desktops. Short musical YM-style cues mark transfer start, completion and errors, without a beep for every file.
+
 # 1.1.610 — Clearer Wi-Fi sharing and Android game controls
 
 Wi-Fi Transfer is easier to reach and use: a focused desktop popup, a full-screen phone view, and a matching launch icon on Atari ST, Mega Drive and Amiga. Guided pairing, clear game selection and explicit transfer decisions keep the next step obvious.
