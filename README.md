@@ -10,9 +10,9 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.608 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.609 public preview — Windows x64, Linux x86-64 and Linux ARM64.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
 
-**1.1.608 improves Amiga copper backgrounds, resizable Jukebox sidebars, library scan persistence and soundtrack progress, and cleans up Xenon audio options.**
+**1.1.609 resumes the last SemaOS desktop, remembers each system’s window layout, and preserves completed soundtrack checks when a library scan is interrupted.**
 
 **Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Version 1.1.604 adds a larger SemaBench theme package; update from 1.1.603 for the theme bundle. Users on older versions can install the full public-preview ZIP and keep their User folder. The optional Dungeon Master artwork add-on is separate.
 

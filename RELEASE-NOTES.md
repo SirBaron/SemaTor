@@ -1,3 +1,8 @@
+## 1.1.609 — Resumable desktops and safer interrupted music scans
+
+- SemaOS resumes the last desktop you visited. Each system keeps its own window positions, sizes and minimized state, including empty desktops; Explorer windows retain their stacking order.
+- If a library scan is interrupted, completed soundtrack checks are retained. Unfinished generated album sources are checked again next time. New or changed files are still checked.
+
 ## 1.1.608 — Amiga copper skies and reliable library scanning
 
 - Drag the Jukebox divider to resize the game-name sidebar in every music system. The width is remembered; double-click restores the default.
