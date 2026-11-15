@@ -1,5 +1,7 @@
 ## 1.1.608 — Amiga copper skies and reliable library scanning
 
+- Drag the Jukebox divider to resize the game-name sidebar in every music system. The width is remembered; double-click restores the default.
+
 - Amiga's moving desktop backgrounds now use a richer AGA-style copper sky, replacing the three broad blue bands while retaining crisp pixels and the existing stars and bobs.
 - Game-library scans checkpoint completed discoveries, including interrupted scans and unavailable folders. Unchanged soundtrack sources are cached so routine checks do not repeatedly open the same disks.
 - Library scanning distinguishes disk checks, soundtrack checks, album/track preparation and saving. Preparing Amiga game music can involve running the game's own player; cancellation now interrupts that startup work.
