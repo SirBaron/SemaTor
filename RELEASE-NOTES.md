@@ -1,21 +1,8 @@
-## 1.1.607 — Nearby pairing, Amiga SemaSynth and compatibility fixes
+## 1.1.608 — Amiga copper skies and reliable library scanning
 
-- Pair with a nearby SemaTor receiver and compare six digits on both screens; approving incoming files remains separate. Manual connection remains available for older compatible versions and networks that block discovery. Transfers authenticate but do not encrypt game data; use a trusted LAN. Physical Android transfer testing remains outstanding.
-- SemaBench adds a themed Amiga SemaSynth studio with four native Paula channels, supported MOD editing, sample-bank import and sample capture from supported game-music players. Drafts are separate by system; WAV, MP3 and MOD exports are available. Conversion approximates some tracker effects, and captured samples do not reconstruct complete songs from custom players.
-- Fixes include F1 Europe main-bus DMA suspension, Jammit sound-CPU control timing and Sports Talk Baseball EEPROM recognition/save-state migration.
-- Experimental Virtua Racing startup and portable save states cover only the specifically verified USA cartridge. SVP timing, interrupt and DMA behavior retain known limits; bounded startup/race checks do not establish full-game compatibility.
-- Desktop packages: Windows x64, Linux x86-64 and Linux ARM64. Android and FPGA builds are separate; no games are included.
+- Amiga's moving desktop backgrounds now use a richer AGA-style copper sky, replacing the three broad blue bands while retaining crisp pixels and the existing stars and bobs.
+- Game-library scans checkpoint completed discoveries, including interrupted scans and unavailable folders. Unchanged soundtrack sources are cached so routine checks do not repeatedly open the same disks.
+- Library scanning distinguishes disk checks, soundtrack checks, album/track preparation and saving. Preparing Amiga game music can involve running the game's own player; cancellation now interrupts that startup work.
+- Xenon's obsolete layered-music control is removed from the menu and old saved layered settings are ignored. Modern Sound Engine and the separate 60 Hz music clock remain available.
 
-## 1.1.606 — Wi-Fi sharing, library fixes and stronger system compatibility
-
-- Transfer selected games or whole libraries, with their saves, between desktop and Android in either direction. All three systems share pairing, search and selection, verified resumable transfers, duplicate skipping and save backups. Connect by IPv4 address and pairing code on a trusted local network; transfers are authenticated but not encrypted. App versions may differ when they support the same transfer protocol. Save loading still follows each emulator's compatibility rules.
-- Thirteen shared desktop audits improve system isolation, large-library Continue lists, source-aware Find results, file pickers, Explorer selection and sessions, picture refresh and thumbnail limits, Notes and manual data preservation, settings controls and file-operation performance. Library scanning does less repeated work and keeps system identities separate; artwork matching preserves custom art and avoids incorrect sequel matches.
-- SemaDrive Jukebox restores configured-folder scans and missing catalogue names, expands verified music coverage and cue data, preserves albums during rescans, and adds three visualiser choices. Amiga Jukebox gains clearer scan paths, measured controls, a Phosphor visualiser and shuffled Paula trivia/screensavers. All homes retain shared controls and source-aware music routing.
-- Amiga homes gain the complete matte ivory, cobalt and amber icon family and consistent folder casing. Compact Display settings show full values, and window corners are easier to resize.
-- SemaDrive corrects interlace-2 fields, PAL save timing, pending CPU stalls, cartridge DMA mapping, DMA fill order, left-column blanking, oversized plane maps, Realtec banking, fine scrolling and sound-device reset/mirrors/bus ownership. Existing damaged Joe Montana states need a fresh cartridge restart.
-- Amiga compatibility improves Exec pools, deferred Kickstart interrupts, DOS handler metadata, CLI stack sizing, gameport ownership and asynchronous I/O, string gadgets, screen data, installed resources and library registration. SemaBench remains a preview; coverage varies by game and edition.
-- Android fixes diagnostics sharing, scoped-storage actions, SNDH selection and allowed-CPU-mask restoration. The private APK and Play test bundle use the same integrated source, with separate package/signing channels. Actual phone transfer and device performance checks remain to be completed.
-
-Known limits: SemaDrive still has unsupported SVP/Virtua Racing, residual Barkley placement issues, pre-existing F1 Europe race rendering and missing early Jammit intro audio. Automated checks do not certify complete games or complete Mega Drive compatibility. No games are included. Android and Spectrum Next packages remain separate from public desktop downloads.
-
-Desktop updates from 1.1.603 or newer support the larger theme package; 1.1.602 or older should first update through 1.1.603 or use the full ZIP while preserving the User folder.
+Windows x64, Linux x86-64 and Linux ARM64 packages and signed updates. No games included. Android APK/AAB remain private; no Play Console upload.
