@@ -1,3 +1,11 @@
+# 1.1.610 — Clearer Wi-Fi sharing and Android game controls
+
+Wi-Fi Transfer is easier to reach and use: a focused desktop popup, a full-screen phone view, and a matching launch icon on Atari ST, Mega Drive and Amiga. Guided pairing, clear game selection and explicit transfer decisions keep the next step obvious.
+
+Android SemaDrive and Amiga use the shared touch-control and layout-editing interface. The shared overlay renderer also handles Vulkan-only presentation, restoring controls that were missing from the game view.
+
+Android builds remain private tests; no physical-device transfer or performance validation is claimed.
+
 ## 1.1.609 — Resumable desktops and safer interrupted music scans
 
 - SemaOS resumes the last desktop you visited. Each system keeps its own window positions, sizes and minimized state, including empty desktops; Explorer windows retain their stacking order.
