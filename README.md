@@ -2,163 +2,100 @@
 
 # SemaTor
 
-**Atari ST games. A whole new view.**
+**Atari ST, Mega Drive and Amiga. Your classics, a whole new view.**
 
-Play your Atari ST favourites on **Windows and Linux** with **widescreen enhancements, smooth motion, CRT bezels, Auto HDR and run-ahead**. Bring your own game disks; no Atari TOS ROM is required. Choose enhancements per game, save your progress and jump back in. Feature support varies by game, disk edition and display hardware.
+SemaTor is one desktop for your own retro games on **Windows and Linux**. It runs **Atari ST** games, **Mega Drive / Genesis** games (SemaDrive) and, as an experimental preview, **Amiga** games (SemaBench). Many games get optional enhancements: **widescreen, smooth motion at your screen's refresh rate, sharper 3D, CRT looks and HDR**. Every enhancement starts off, is remembered per game, and the original game is always one switch away.
+
+Bring your own games. None are included, and no Atari TOS ROM or Amiga Kickstart ROM file is needed. Feature support varies by game, edition and display hardware.
 
 Created by David Baron with AI assistance in development, research, documentation and this website.
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.611 gives Wi-Fi sharing a movable, resizable desktop window, clear collection filters, enhanced-game selection and explicit save-conflict choices. Phones retain the full-screen flow.** This repository hosts the website, public documentation and issue tracker. SemaTor's source is private.
+**1.1.611 public preview: Windows x64, Linux x86-64 and Linux ARM64.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits.
 
-**1.1.611 puts Wi-Fi sharing in a movable, resizable desktop window with matching colors, visible device scanning and Scan now. Phones retain the full-screen flow.** Android builds remain private tests; no physical-device validation is claimed.
+![SemaOS, the Atari ST desktop, with a game's Details page](./semaos-desktop.png)
+*SemaOS on the Atari ST home. Your own disks wear handwritten labels; no games are bundled.*
 
-**Updating:** in SemaOS, the button at the top right of the menu bar shows where you are - green **Up to date**, or gold **Update available** when a new SemaTor is out. Select it to download (with progress), then **Install update and restart**. The classic library has the same button in its header, and **Library Settings → Updates** for the daily check. Signed Linux/Windows updates preserve your games, saves, settings and custom artwork. GitHub downloads remain available. Version 1.1.604 adds a larger SemaBench theme package; update from 1.1.603 for the theme bundle. Users on older versions can install the full public-preview ZIP and keep their User folder. The optional Dungeon Master artwork add-on is separate.
+## Three systems, one home
 
-[Browse every current game enhancement](https://sirbaron.github.io/SemaTor/games/index.html) — searchable by game and feature, with cheats kept separate.
+Atari ST, Mega Drive and Amiga share one app. Each has its own desktop and look, and all share the same library, Jukebox, saved games, notes and Wi-Fi transfer. The app reopens the desktop you used last.
 
-## Made for playing
+| Atari ST (SemaOS) | Mega Drive (SemaDrive) | Amiga (SemaBench preview) |
+| --- | --- | --- |
+| ![Atari ST desktop](./home-atari-st.png) | ![Mega Drive desktop](./home-mega-drive.png) | ![Amiga desktop](./home-amiga.png) |
+| The original. No TOS ROM needed. | Cartridges, with a coast or night scene. | An Amiga 500 with our own Kickstart replacement. Experimental: many games run, many do not yet. |
 
-- **See more:** game-specific widescreen and ultrawide views, up to 32:9 where supported, with FIT adapting within each profile’s limits.
-- **Smoother action:** dedicated smooth motion in supported games, plus frame generation and run-ahead options.
-- **Make it look yours:** CRT bezels, scanlines, glow, Super ST colour and Auto HDR on compatible Vulkan/HDR setups.
-- **Keep your place:** save states, rewind, per-game settings and a searchable library with editions grouped under their game.
+[More about SemaDrive](https://sirbaron.github.io/SemaTor/semadrive.html) · [More about SemaBench](https://sirbaron.github.io/SemaTor/amiga.html)
 
-SemaOS is the built-in library and desktop interface inside SemaTor. Its Creator suite connects game building, pixel art, music, samples and programming. [Explore the Creator tools](https://sirbaron.github.io/SemaTor/creator.html) — see what you can make and how to build a native ST/STE game disk.
+## Enhanced games
 
-## Highlights and recent changes
+Enhancements are made game by game and checked against the original. A picture option never changes the game's logic or sound.
 
-**1.1.544: the expanded SemaOS studio.** Paint adds a subtle grid, snap, selections, transforms and supported artwork editing into a separate disk copy. Maker saves editable projects with their assets. Explorer, Notes, Viewer and Workshop gain practical editing and navigation features, with save reliability and layouts reviewed in both themes.
+- **Widescreen:** real extra playfield, never a stretched picture. 16:9, 21:9 and up to 32:9 where the game allows it; fixed screens stay 4:3.
+- **Smooth motion:** extra pictures between the game's own updates, matched to your display's refresh rate in supported games, plus frame generation and run-ahead.
+- **Sharper 3D:** supported 3D games are redrawn on your graphics card at up to 4x resolution, with anti-aliasing and farther draw distance.
+- **CRT and HDR:** bezels, scanlines, phosphor glow, and Auto HDR on compatible Vulkan/HDR setups.
+- **Keep your place:** save states, rewind and per-game settings.
 
-**1.1.536: more disks run.** Damaged first file tables, boot-sector disk shapes, menu games loaded as on an ST, keyboard-check timing, and save states that put a game's second disk back by themselves.
+| | |
+| --- | --- |
+| ![Turrican II in widescreen](./enhanced-turrican-2-widescreen.png) | ![Vroom with a CRT bezel](./enhanced-vroom-crt.png) |
+| *Turrican II (ST), widescreen.* | *Vroom (ST), CRT bezel.* |
+| ![Starglider at 4x resolution](./enhanced-starglider-4x.png) | ![Sonic the Hedgehog in widescreen on Mega Drive](./enhanced-sonic-widescreen.png) |
+| *Starglider (ST), 4x resolution with anti-aliasing.* | *Sonic the Hedgehog (Mega Drive), widescreen.* |
 
-**1.1.535: 99 profiles for 75 games.** Twelve new profiles for more versions of the profiled games, folder-exact program starts, lettered disk sets that change by themselves, and save states that say which disk they need.
+[Browse every current game enhancement](https://sirbaron.github.io/SemaTor/games/index.html), searchable by game and feature, with cheats kept separate. Screenshots are real captures from the app; the pictures are the games' own and may be shown at a different size.
 
-**1.1.534: fixes.** Profile options beyond the 16th work, programs chosen from SemaOS find their files, profiles found through a launcher wait for the game, Out Run loads its title in 15 seconds and keeps widescreen under its menu.
+## Jukebox
 
-**Super ST colour and frame generation everywhere.** Super ST colour shows a game at 2x-4x its pixel count with smooth shades and sharp outlines; frame generation now works at any picture size - widescreen views, medium and high resolution, opened borders - including NVIDIA optical flow. Auto HDR for the CRT cabinet.
+One music player for all three systems: Atari ST (YM/SNDH), Mega Drive cartridges and Amiga disks and modules. Browse and search, shuffle, keep favourites, watch the visualiser, or minimise it into the menu bar. Nothing is bundled: it plays music found on the disks, cartridges and files you add. [See what is supported](https://sirbaron.github.io/SemaTor/jukebox.html).
 
-**Profiles for supported games and disk editions.** Out Run gets widescreen and smooth 3D; [see every profile and the disk it was made for](https://sirbaron.github.io/SemaTor/games/profiles.html). When a game has several versions, SemaTor starts the one its profile was made for.
+![The Jukebox on the Mega Drive desktop](./jukebox.png)
+*The Jukebox on the Mega Drive desktop, with the example library from the screenshots.*
 
-**Create on the ST.** SemaPaint, the Maker (your own Atari ST intro or game disk), the Code Reader, a Hardware Check and SemaSynth export - plus a GEM-style look for SemaOS.
+## Wi-Fi transfer
 
-**SemaOS with a gamepad.** The D-pad moves a focus over the whole desktop - icons, menus, buttons, games - A opens or starts, B goes back, X shows details, Y favourites, LB / RB switch windows, Start opens the menu.
+Send games and their saves from one desktop to another over your own network. (Android transfer is part of the private Android testing.) Pair by comparing six digits on both screens, pick games with filters (or all enhanced games), and choose what happens to saves that already exist. On the desktop it is a normal movable window, so the rest of SemaOS stays usable. Transfers are verified and resumable, but they are not encrypted: use a trusted network.
 
-**A desktop that keeps up.** Windows minimise to the taskbar and the Jukebox becomes a glowing mini player in the menu bar; the button at the top right says when a new SemaTor is out and installs it; each game window keeps its own order; many SemaOS fixes.
+![Wi-Fi Transfer window in SemaOS](./wifi-transfer.png)
+*Wi-Fi Transfer as a SemaOS window, looking for a nearby device.*
 
-**Every game in one place.** Details shows how often and how long you have played, your saves with their pictures, your notes, the enhancements and the game's music; new shelves list what was added recently, what you play most and what you have never tried. Report a problem from any game's menu, and a hint appears when a game waits on its title for one particular input.
+## SemaOS
 
-**Most ST disks now run.** Games, demos and menu disks that never started do now. SemaTor's start-up follows TOS's own: the AUTO folder on every boot, programs where TOS loads them, the boot sector's stack, the reset vector. The 68000 runs to the ST's bus timing, so counted delays, raster effects and opened borders land where they should. SemaTor is tested against a library of over 14,000 disks.
+SemaTor starts in **SemaOS**, a desktop of its own with Games, Enhanced, Favourites, Recent, Continue, Drives, Jukebox, Pictures, Notes and more. Use the mouse, the keyboard or a gamepad. Details shows play time, saves with pictures, notes, the profile and its enhancements and music for each game.
 
-**SemaOS is how SemaTor starts.** A desktop of its own opens first, with Games, Drives, Music, Pictures, Notes and more. Prefer the classic library? Switch under Settings.
-
-**Music on the ST, old and new.** The Jukebox browses the SNDH archive and plays tunes live, with channel scopes and favourites. SemaSynth is a music studio that makes what real ST tunes make: play it from a MIDI keyboard and save your songs as real SNDH tunes.
-
-**Your disks, labelled.** Handwritten labels like a copy from a mate, covers for every disk of a game, and a card size you choose.
-
-**SDL3, carried with it.** Nothing to install for graphics or sound on Linux. On Wayland the window no longer freezes when it is covered.
-
-**Optional Dungeon Master artwork:** the artwork add-on is shared on the [SemaTor Discord](https://discord.gg/DdHfSGrdFc). Extract its ZIP into the SemaTor application folder. It creates `Add-ons/dungeon-master`. Restart and enable Native Party Interface under F12 → Enhancements. Main program downloads omit this artwork. Existing artwork installations remain supported.
-
-Dungeon Master's optional native interface remains available for wider testing and is still experimental.
-
-Read the [release notes and testing guidance](./CHANGELOG.md).
-
-## SemaOS - a desktop for your ST collection
-
-![SemaOS](./semaos-desktop.png)
-*SemaOS with a Games window, Details of the selected game and the Jukebox minimised into the menu bar. Your own disks are shown with SemaTor's handwritten labels; the notes and play statistics here are sample data. No games are bundled.*
-
-SemaTor starts in **SemaOS**, a desktop of its own in the spirit of the ST. Everything is an icon, a window or a menu away - with the mouse, the keyboard or a gamepad.
-
-- **Your games, your order.** Games, Enhanced, Favourites, Compilations and Recent windows. Type to search; each window keeps its own order - name, year, publisher, recently played, recently added, most played or never played. Disks wear handwritten labels or their covers, at a card size you choose (- / +).
-- **Details for every game.** Times played and time spent, your saves with their pictures (click one to carry on), your notes, the SemaTor profile and its enhancements, and the game's music - with Play, Continue, Notes, Music and Report a problem as buttons. Click the **i** on a selected game.
-- **Continue** lists every game you have saved, newest first, with a picture of the save.
-- **Drive A and Drive B.** Drag a game onto a drive, look inside the disk, start any program on it, or add a second disk.
-- **Jukebox.** Play supported music from inserted ST disks, the SNDH archive and your verified Turrican II Amiga disk. Imported tracks stay available after ejecting the disk. Keep favourites or minimise to the menu-bar player with its visualiser, play, pause and stop. Amiga imports currently support the verified Turrican II IPF edition or a ZIP containing it.
-- **SemaSynth.** A three-channel music studio that makes what real ST tunes make. Play it from a MIDI keyboard and save your songs as real SNDH tunes.
-- **Notes, Pictures, Explorer, Documents, Disk Workshop, Program Lab.** Your notes for each game, your screenshots, the folders on your computer, the text files on your disks, a disk editor that copies files onto and off .ST images (the original is never changed), and a 68000 assembler whose program goes straight onto a new disk.
-- **Find (Ctrl+F)** searches windows, settings, games, your SemaSynth songs, the Jukebox and the SNDH archive at once.
-- **Make it yours.** Wallpapers (the retro scene is the default), accent colours, icon sizes, disk labels, a screensaver. Windows snap, maximise and minimise to the taskbar.
-- **A gamepad is enough.** The D-pad moves a focus ring over anything that can be clicked: A opens or starts, B goes back, X shows Details, Y favourites, LB / RB switch windows, Start opens the menu, Back opens Find.
-- **What's new** appears once after an update, and offers your previous look back if an update changed SemaOS's defaults.
-
-Prefer the classic library? **Settings → Start in** chooses SemaOS or the library.
-
-![What's new in SemaOS](./semaos-whats-new.png)
-*What's new, shown once after an update.*
-
-## Game guides
-
-Browse the [Enhanced Games overview](https://sirbaron.github.io/SemaTor/games/) for guides to the best-known enhanced games, and the [current profile enhancement catalogue](https://sirbaron.github.io/SemaTor/games/profiles.html). Each guide lists the game's options, its original controls and an interactive SemaTor controller showing the default mappings. Saved remaps take priority.
-
-## The classic library
-
-The library SemaTor had before SemaOS is still here. Browse covers or lists, search your collection, keep favourites and return to recently played games. Supported titles stand out with a gold **ENHANCED** badge. Add game folders and choose custom covers using a file browser; fetch artwork for one game or the whole library.
-
-![Desktop library](./desktop-library.png)
-*Desktop UI example rendered with sample entries and placeholder covers; no games are bundled.*
-
-![Ultrawide library](./desktop-ultrawide.png)
-*Room for a larger collection on a wider display.*
-
-## Make it your ST
-
-- **Enhanced titles:** per-game options for supported games, including native improvements, sound options and cheats where available.
-- **Picture controls:** sharp pixels, simple filters and CRT presets with controls for the look of the screen and bezel.
-- **Smoother motion:** optional frame generation, with availability and results depending on the graphics backend, GPU and driver.
-- **Pick up where you left off:** four manual save slots with previews, plus rewind and session features where supported.
-- **A more comfortable desktop:** F11 Session and F12 Settings share a compact two-pane menu at the bottom of the game. Choose its physical size separately from text size. Use Back/View + Y for Session or Back/View + Start for Settings; LB/RB switch tabs, B goes back and Start resumes. Adjust picture settings while watching the game. Public builds include basic diagnostics and an optional local support report.
-- **Your own disk collection:** ST, IMG, MSA, full-sector DIM, STX and supported disk images inside ZIP archives.
-
-![Session controls](./session-overview.png)
-*Session menu with example empty save slots. LB/RB switch between Session and Settings.*
-
-![Settings](./settings-overview.png)
-*F12 settings in the public build.*
+SemaOS also has creative tools: SemaPaint, SemaSynth, Maker and a 68000 Program Lab. [Explore the Creator tools](https://sirbaron.github.io/SemaTor/creator.html) to see how to build a native ST/STE game disk.
 
 ## Install the desktop preview
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_608-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Windows x64 | `SemaTor-1_1_608-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
-| Linux ARM64 | `SemaTor-1_1_608-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
+| Linux x86-64 | `SemaTor-1_1_611-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Linux ARM64 | `SemaTor-1_1_611-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
+| Windows x64 | `SemaTor-1_1_611-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
-The Linux installer copies the application into its installation folder; it does not rely on a link back to Downloads. Double-clicking a shell script may open an editor, depending on your file manager. Running `sh install.sh` executes it directly. SemaTor carries its own SDL3; Linux needs only Python 3 for the installer.
+SemaTor carries its own SDL3. On Linux you only need Python 3 for the installer. Put your own games in **Games** (Atari ST), **MegaDrive** and **Amiga** beside SemaTor, or add folders from SemaOS. Keep your **Games**, **Media**, **User** and **Add-ons** folders when updating.
 
-**Library maintenance:** Settings → Refresh library (or F5) rechecks your collections. Removing a collection folder removes its entries immediately; your game files stay where they are.
+**Updating:** the button at the top right of the SemaOS menu bar shows **Up to date** or **Update available**. Select it to download, then **Install update and restart**. Signed updates keep your games, saves, settings and custom artwork. GitHub downloads stay available. If an older Windows interface is unreadable, extract the new ZIP over your installation, keeping Games, Media, User and Add-ons.
 
-**Optional drive sounds:** F12 → Sound → ST Drive Sounds adds floppy-drive noise during virtual disk activity. Switch it off there, or adjust Effects / speech volume.
+**Bring your own games.** Atari ST disk images (ST, IMG, MSA, DIM, STX, or inside ZIPs), Mega Drive cartridge images and Amiga ADF/IPF disks. Most ST disks run; if one does not, please report it. This is a preview series: Linux has had hands-on testing; Windows has been built and checked automatically but still needs broader real-machine testing. SemaBench (Amiga) is experimental and its compatibility varies by game.
 
-Keep your **Games**, **Media**, **User** and **Add-ons** folders when updating. Games holds your disk collection, Media holds artwork and runtime resources, and User holds settings and saves. Add your game folders from the library after starting the app.
+The optional Dungeon Master artwork add-on is shared on the [SemaTor Discord](https://discord.gg/DdHfSGrdFc); extract its ZIP into the SemaTor folder. Its native interface is still experimental.
 
-**Bring your own disk images.** No commercial game disk images or Atari TOS ROM are supplied. Most ST disks run; if one does not, please report it. This public release continues the preview series: Linux has received hands-on testing; Windows has been built and checked automatically but still needs broader real-machine testing.
+## Phones and handhelds
 
-## Phone and dual-screen development
+An Android version is in **private testing**. There is no public APK and none is included in the desktop downloads, and no physical-device validation is claimed here. This is how the phone interface looks in development; it may change. Follow Android testing on [Discord](https://discord.gg/DdHfSGrdFc).
 
-Android builds are available only in private testing and are **not included in the desktop downloads**. There is no public APK, and no physical-device validation is claimed here. These development screenshots show the phone library and lower-screen interface; their appearance may change.
-
-![Phone library, development preview](./phone-library.png)
-![AYN Thor lower screen, development preview](./thor-deck.png)
+![Phone interface in development: Atari ST and Mega Drive libraries](./phone-ui.png)
+*Phone interface, development preview, with example library entries.*
 
 ## Help improve compatibility
 
-In SemaOS, right-click a game (or open its Details) and choose **Report a problem**; in the classic library use its action menu or press **U**. Either opens a prefilled GitHub draft. The compatibility notice also offers **Request compatibility check** before launching. You review and submit the draft using your GitHub account; no disks or logs are uploaded automatically.
+In SemaOS, right-click a game (or open its Details) and choose **Report a problem**. It opens a prefilled GitHub draft that you review and submit with your own GitHub account; no disks or logs are uploaded automatically.
 
-Open a [bug or game report](https://github.com/SirBaron/SemaTor/issues). Include the SemaTor version, OS, GPU and driver, game and the disk's name, steps to reproduce, relevant CRT/frame-generation/sound settings, and the last version that worked if known. Screenshots help. An optional report is available under **F12 → Support & diagnostics**; review it before attaching. Please do not upload game disks or ROMs.
+Open a [bug or game report](https://github.com/SirBaron/SemaTor/issues). Include the SemaTor version, OS, GPU and driver, the game and the disk's name, steps to reproduce, relevant CRT, smooth-motion and sound settings, and the last version that worked if you know it. Screenshots help. An optional local report is under **F12 → Support & diagnostics**; review it before attaching. Please do not upload game disks or ROMs.
 
 ## Credits and licence
 
-SemaTor © 2026 David Baron. All rights reserved; see [LICENSE](./LICENSE). Third-party notices are included under `Media/licenses` in the public builds. Atari and Atari ST are trademarks of their respective owners. SemaTor is not affiliated with Atari.
-
-### Source reconstruction
-
-F12 > CRT & picture > Simple screen filters includes optional per-game dither blending, gentle gradients and corner smoothing. These process completed source pictures before frame generation and work independently of CRT mode. Split comparison temporarily suspends interpolation. Effects default off. Xorg reconstructs GPU endpoints and uses RGB blending for its CPU fallback when enabled. Dungeon Master reconstructs the guest source; native HD artwork stays separate.
-
-Drive B is independent of A: use **Session & exit** to insert/eject a companion, or `--disk-b FILE` to mount another image. **Sound > MIDI synthesis** enables the optional procedural synth; no external sound bank is required. Both colour reconstruction and MIDI default off.
-
-## SemaDrive — Mega Drive & Genesis
-
-SemaTor 1.1.597 adds verified Mega Drive gameplay enhancements with authored scene bounds, independent music and effects levels, and Hunter, Simulcra and Virus GPU presentation. Virus includes widescreen and selectable draw distance. Put your own cartridge images in `MegaDrive` beside SemaTor. [Explore SemaDrive](https://sirbaron.github.io/SemaTor/semadrive.html). No games are bundled.
+SemaTor © 2026 David Baron. All rights reserved; see [LICENSE](./LICENSE). Third-party notices are included under `Media/licenses` in the public builds. Atari, Atari ST, Sega, Mega Drive, Genesis and Amiga are trademarks of their respective owners. SemaTor is not affiliated with or endorsed by them.
