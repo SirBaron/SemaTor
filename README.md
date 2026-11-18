@@ -12,7 +12,7 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.611 public preview: Windows x64, Linux x86-64 and Linux ARM64.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits.
+**1.1.612 public preview: Windows x64, Linux x86-64, Linux ARM64 and Android.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits. 1.1.612 says a special thank-you to tester Paul C for his detailed reports.
 
 ![SemaOS, the Atari ST desktop, with a game's Details page](./semaos-desktop.png)
 *SemaOS on the Atari ST home. Your own disks wear handwritten labels; no games are bundled.*
@@ -56,7 +56,7 @@ One music player for all three systems: Atari ST (YM/SNDH), Mega Drive cartridge
 
 ## Wi-Fi transfer
 
-Send games and their saves from one desktop to another over your own network. (Android transfer is part of the private Android testing.) Pair by comparing six digits on both screens, pick games with filters (or all enhanced games), and choose what happens to saves that already exist. On the desktop it is a normal movable window, so the rest of SemaOS stays usable. Transfers are verified and resumable, but they are not encrypted: use a trusted network.
+Send games and their saves from one desktop to another over your own network. Android phones join in with the same app. Pair by comparing six digits on both screens, pick games with filters (or all enhanced games), and choose what happens to saves that already exist. On the desktop it is a normal movable window, so the rest of SemaOS stays usable. Transfers are verified and resumable, but they are not encrypted: use a trusted network.
 
 ![Wi-Fi Transfer window in SemaOS](./wifi-transfer.png)
 *Wi-Fi Transfer as a SemaOS window, looking for a nearby device.*
@@ -71,9 +71,9 @@ SemaOS also has creative tools: SemaPaint, SemaSynth, Maker and a 68000 Program 
 
 | Platform | Release attachment | Start here |
 | --- | --- | --- |
-| Linux x86-64 | `SemaTor-1_1_611-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
-| Linux ARM64 | `SemaTor-1_1_611-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
-| Windows x64 | `SemaTor-1_1_611-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
+| Linux x86-64 | `SemaTor-1_1_612-linux-public-preview.zip` | Extract, open a terminal in that folder and run `sh install.sh`. The default installation is `~/Games/SemaTor`. |
+| Linux ARM64 | `SemaTor-1_1_612-linux-aarch64-public-preview.zip` | Extract and run `sh install.sh`; Python 3 is required. |
+| Windows x64 | `SemaTor-1_1_612-windows-public-preview.zip` | Extract the whole ZIP to a writable folder, then run `SemaTor.exe`. Keep `SDL3.dll` beside it. |
 
 SemaTor carries its own SDL3. On Linux you only need Python 3 for the installer. Put your own games in **Games** (Atari ST), **MegaDrive** and **Amiga** beside SemaTor, or add folders from SemaOS. Keep your **Games**, **Media**, **User** and **Add-ons** folders when updating.
 
@@ -85,7 +85,7 @@ The optional Dungeon Master artwork add-on is shared on the [SemaTor Discord](ht
 
 ## Phones and handhelds
 
-An Android version is in **private testing**. There is no public APK and none is included in the desktop downloads, and no physical-device validation is claimed here. This is how the phone interface looks in development; it may change. Follow Android testing on [Discord](https://discord.gg/DdHfSGrdFc).
+From 1.1.612 the **Android APK** (arm64) is attached to each [GitHub release](https://github.com/SirBaron/SemaTor/releases) beside the desktop downloads. Download the `.apk` file and install it on your phone or handheld (Android asks you to allow installs from your browser or file manager). It is a public preview: performance depends on the device, and it is not on Google Play yet. Talk about Android on [Discord](https://discord.gg/DdHfSGrdFc).
 
 ![Phone interface in development: Atari ST and Mega Drive libraries](./phone-ui.png)
 *Phone interface, development preview, with example library entries.*

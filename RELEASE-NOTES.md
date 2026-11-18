@@ -1,44 +1,29 @@
-# 1.1.611 — Wi-Fi sharing in your desktop
+# 1.1.612 — Thank you, Paul C
 
-Wi-Fi Transfer is a movable, resizable and minimizable SemaOS window with colors matched to the current desktop. Other desktop apps stay usable while it is open; phones keep the full-screen view.
+**Thank you, Paul C:** a big shout-out to tester Paul C, whose detailed reports on 1.1.611 led straight to many of the fixes below: Hunter on the keyboard, Elite II's widescreen and options, smooth motion in Infestation, Interphase and Armour-Geddon, Simulcra's lower edge, Virus on a gamepad, Starglider's INVERT Y AXIS, and Max all / Original for a game's enhancements. What's new has a thank-you page for him.
 
-Polished highlights and animated discovery show when nearby devices are being found. Scan now requests an immediate refresh; automatic discovery continues in the background.
+**First-start setup:** the first time a game with enhancements starts, a short animated page offers Original, Recommended or Everything, with each option explained. It can be turned off for all games and shown again from Settings.
 
-Desktop game selection uses a compact filter sidebar and scrollable game table. Search, system, No compilations, Enhanced only and selected-only filters narrow the list. Compilation filtering uses library metadata, not guesses from filenames.
+**Floppy loading:** a new FLOPPY LOADING option (Normal / Instant / Instant + skip intros) cuts disk waits; the game itself is unchanged. Less host work per emulated 68000 instruction makes every game a little lighter on the CPU.
 
-Select shown and Clear shown act on matching results; Clear all selected resets the selection. All enhanced games adds enhanced games from the whole collection, regardless of the current filters. Shift-click selects ranges. Choices survive filter/device changes, and hidden selections remain counted in the Send total.
+**Max all / Original:** SemaOS Details can switch every picture, motion and sound enhancement of a game on, or all of them off, in one step. Rows that change the game are left as they are.
 
-After transferred files are staged and verified, the receiver asks before replacing different existing saves. Keep existing saves is the default; Replace + backup preserves the original before replacement and checks that it has not changed since review. Identical games and saves are skipped, and different existing game content is preserved.
+**Star Wars and The Empire Strikes Back:** arcade-look options (vector glow, depth cueing, arcade colours, beam, cockpit, line width), an optional arcade sound mix and a finer flight-stick dead zone.
 
-Pairing and file acceptance remain separate decisions. Compatible transfer protocols can connect across different app versions. Android packages remain private tests; physical-device transfer and performance testing remain outstanding.
+**Lemmings 2:** GPU picture in Classic mode with whole lemmings at the screen edges. **Simulcra:** a GROUND RANGE row brings the ground out to the objects' reach. **Elite II:** widescreen and resolution options fixed. **Hunter:** keyboard controls default to SemaTor mode again and no longer glitch.
 
-An animated transfer indicator shows completed-file counts and progress when known, and a waiting animation while connecting. Completion is shown only after delivery finishes.
+**Smooth motion and input:** smoother in-between pictures in Infestation, Interphase and Armour-Geddon; INVERT Y AXIS turns steering only, never Starglider's speed control; Virus has an ANALOG THRUST option on a gamepad; held keys are released on load.
 
-The optional Transfer sounds setting is remembered across desktops. Short musical YM-style cues mark transfer start, completion and errors, without a beep for every file.
+**Xenon and variable-refresh screens:** with G-Sync/FreeSync a game that draws every few fields is presented every ST field again, so the FPS counter and motion stay steady.
 
-Transfer scenes use the existing Atari ST, Mega Drive and Amiga machine artwork. Named game covers or disk/cartridge artwork travel between the machines, with glossy retro glow and trails. The remembered Effects setting defaults on; turning it off keeps a lighter animation. Waiting and completion have their own states, while actual transfer progress remains visible underneath.
+**Mega Drive widescreen:** EXTENDED GAMEPLAY comes on with the wide view (it can still be switched off), Streets of Rage 2's top band shows the scene, and Aladdin's actors no longer blink in the wide margin.
 
-# 1.1.610 — Clearer Wi-Fi sharing and Android game controls
+**Amiga (SemaBench preview):** many more games start and play, including audio.device sound, and Buggy Boy gets a widescreen view.
 
-Wi-Fi Transfer is easier to reach and use: a focused desktop popup, a full-screen phone view, and a matching launch icon on Atari ST, Mega Drive and Amiga. Guided pairing, clear game selection and explicit transfer decisions keep the next step obvious.
+**Floppy timing:** seek and sector timing follow measured hardware more closely.
 
-Android SemaDrive and Amiga use the shared touch-control and layout-editing interface. The shared overlay renderer also handles Vulkan-only presentation, restoring controls that were missing from the game view.
+**Library:** the old pre-SemaOS desktop library has been removed; SemaOS keeps your filters and sort order. Zip files the library has not read yet can be picked from the disk list. The Android library is unchanged.
 
-Android builds remain private tests; no physical-device transfer or performance validation is claimed.
+**Wi-Fi transfer:** filters and selection respect the chosen system, identical copies from different folders no longer fail, and the list sorts alphabetically by default.
 
-## 1.1.609 — Resumable desktops and safer interrupted music scans
-
-- SemaOS resumes the last desktop you visited. Each system keeps its own window positions, sizes and minimized state, including empty desktops; Explorer windows retain their stacking order.
-- If a library scan is interrupted, completed soundtrack checks are retained. Unfinished generated album sources are checked again next time. New or changed files are still checked.
-- Default desktop icons use compact visible spacing, so hidden tools leave no gaps. Line Up fills the available height before starting another column. Saved custom positions take priority; Reset affects only the current desktop.
-
-## 1.1.608 — Amiga copper skies and reliable library scanning
-
-- Drag the Jukebox divider to resize the game-name sidebar in every music system. The width is remembered; double-click restores the default.
-
-- Amiga's moving desktop backgrounds now use a richer AGA-style copper sky, replacing the three broad blue bands while retaining crisp pixels and the existing stars and bobs.
-- Game-library scans checkpoint completed discoveries, including interrupted scans and unavailable folders. Unchanged soundtrack sources are cached so routine checks do not repeatedly open the same disks.
-- Library scanning distinguishes disk checks, soundtrack checks, album/track preparation and saving. Preparing Amiga game music can involve running the game's own player; cancellation now interrupts that startup work.
-- Xenon's obsolete layered-music control is removed from the menu and old saved layered settings are ignored. Modern Sound Engine and the separate 60 Hz music clock remain available.
-
-Windows x64, Linux x86-64 and Linux ARM64 packages and signed updates. No games included. Android APK/AAB remain private; no Play Console upload.
+**Android:** the signed Android APK is now published with the desktop downloads. Games copied to the phone can be removed from Settings.

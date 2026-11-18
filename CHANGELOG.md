@@ -1,3 +1,67 @@
+## 1.1.612 — Thank you, Paul C
+
+- **Thank you, Paul C:** a big shout-out to tester Paul C, whose detailed reports on 1.1.611 led straight to many of the fixes below: Hunter on the keyboard, Elite II's widescreen and options, smooth motion in Infestation, Interphase and Armour-Geddon, Simulcra's lower edge, Virus on a gamepad, Starglider's INVERT Y AXIS, and Max all / Original for a game's enhancements. What's new has a thank-you page for him.
+- **First-start setup:** the first time a game with enhancements starts, a short animated page offers Original, Recommended or Everything, with each option explained. It can be turned off for all games and shown again from Settings.
+- **Floppy loading:** a new FLOPPY LOADING option (Normal / Instant / Instant + skip intros) cuts disk waits; the game itself is unchanged. Less host work per emulated 68000 instruction makes every game a little lighter on the CPU.
+- **Max all / Original:** SemaOS Details can switch every picture, motion and sound enhancement of a game on, or all of them off, in one step. Rows that change the game are left as they are.
+- **Star Wars and The Empire Strikes Back:** arcade-look options (vector glow, depth cueing, arcade colours, beam, cockpit, line width), an optional arcade sound mix and a finer flight-stick dead zone.
+- **Lemmings 2:** GPU picture in Classic mode with whole lemmings at the screen edges. **Simulcra:** a GROUND RANGE row brings the ground out to the objects' reach. **Elite II:** widescreen and resolution options fixed. **Hunter:** keyboard controls default to SemaTor mode again and no longer glitch.
+- **Smooth motion and input:** smoother in-between pictures in Infestation, Interphase and Armour-Geddon; INVERT Y AXIS turns steering only, never Starglider's speed control; Virus has an ANALOG THRUST option on a gamepad; held keys are released on load.
+- **Xenon and variable-refresh screens:** with G-Sync/FreeSync a game that draws every few fields is presented every ST field again, so the FPS counter and motion stay steady.
+- **Mega Drive widescreen:** EXTENDED GAMEPLAY comes on with the wide view (it can still be switched off), Streets of Rage 2's top band shows the scene, and Aladdin's actors no longer blink in the wide margin.
+- **Amiga (SemaBench preview):** many more games start and play, including audio.device sound, and Buggy Boy gets a widescreen view.
+- **Floppy timing:** seek and sector timing follow measured hardware more closely.
+- **Library:** the old pre-SemaOS desktop library has been removed; SemaOS keeps your filters and sort order. Zip files the library has not read yet can be picked from the disk list. The Android library is unchanged.
+- **Wi-Fi transfer:** filters and selection respect the chosen system, identical copies from different folders no longer fail, and the list sorts alphabetically by default.
+- **Android:** the signed Android APK is now published with the desktop downloads. Games copied to the phone can be removed from Settings.
+
+## 1.1.611 — Wi-Fi sharing in your desktop
+
+- Wi-Fi Transfer is a movable, resizable and minimizable SemaOS window with colors matched to the current desktop. Other desktop apps stay usable while it is open; phones keep the full-screen view.
+- Polished highlights and animated discovery show when nearby devices are being found. Scan now requests an immediate refresh; automatic discovery continues in the background.
+- Desktop game selection uses a compact filter sidebar and scrollable game table. Search, system, No compilations, Enhanced only and selected-only filters narrow the list. Compilation filtering uses library metadata, not guesses from filenames.
+- Select shown and Clear shown act on matching results; Clear all selected resets the selection. All enhanced games adds enhanced games from the whole collection, regardless of the current filters. Shift-click selects ranges. Choices survive filter/device changes, and hidden selections remain counted in the Send total.
+- After transferred files are staged and verified, the receiver asks before replacing different existing saves. Keep existing saves is the default; Replace + backup preserves the original before replacement and checks that it has not changed since review. Identical games and saves are skipped, and different existing game content is preserved.
+- Pairing and file acceptance remain separate decisions. Compatible transfer protocols can connect across different app versions. Android packages remain private tests; physical-device transfer and performance testing remain outstanding.
+- An animated transfer indicator shows completed-file counts and progress when known, and a waiting animation while connecting. Completion is shown only after delivery finishes.
+- The optional Transfer sounds setting is remembered across desktops. Short musical YM-style cues mark transfer start, completion and errors, without a beep for every file.
+- Transfer scenes use the existing Atari ST, Mega Drive and Amiga machine artwork. Named game covers or disk/cartridge artwork travel between the machines, with glossy retro glow and trails. The remembered Effects setting defaults on; turning it off keeps a lighter animation. Waiting and completion have their own states, while actual transfer progress remains visible underneath.
+
+
+## 1.1.610 — Easier Wi-Fi sharing and shared touch controls
+
+- Refined the Wi-Fi sharing popup for desktop and full-screen phone layouts, with themed shortcuts on all three SemaOS desktops.
+- Grouped guided pairing and game selection more clearly, added selected and transferred item counts, disabled actions when unavailable, and made Back return to the meaningful previous step.
+- Mega Drive and Amiga use the shared SemaTor touch-control editor: move, resize, rename, add/remove and save controls, with separate per-game portrait and landscape layouts. Editing pauses gameplay; Amiga trackpad input is retained.
+- Fixed shared touch overlays bypassing the Vulkan renderer, which could leave controls invisible. SDL and Vulkan rendering and editor regression tests passed; physical Android device testing remains outstanding.
+
+## 1.1.609 — Remember your desktop and completed music scans
+
+- SemaTor reopens the last-used Atari ST, Mega Drive or Amiga desktop instead of always returning to the initial system choice.
+- Each desktop retains its open apps, window positions and sizes, maximized/minimized state and empty layouts. Explorer restoration preserves its window geometry and stacking; closing the application saves the current layout.
+- Interrupted library scans retain completed soundtrack-source checks. Unchanged sources are skipped next time; new or modified files are checked and unfinished generated-album sources are retried.
+- Desktop icon layouts are shared across Atari ST, Mega Drive and Amiga: visible defaults close hidden-tool gaps, Line Up fills available vertical space before starting another column, and saved icon positions take priority. Reset Layout affects only the current desktop.
+
+## 1.1.608 — Amiga copper skies and reliable library scanning
+
+- Resize the Jukebox game-name sidebar by dragging its divider in every music system; the width is saved, and double-click resets it.
+
+- Amiga's moving desktop backgrounds now use a richer AGA-style copper sky, replacing the three broad blue bands while retaining crisp pixels and the existing stars and bobs.
+- Game-library scans checkpoint completed discoveries, including interrupted scans and unavailable folders. Unchanged soundtrack sources are cached so routine checks do not repeatedly open the same disks.
+- Library scanning distinguishes disk checks, soundtrack checks, album/track preparation and saving. Preparing Amiga game music can involve running the game's own player; cancellation now interrupts that startup work.
+- Xenon's obsolete layered-music control is removed from the menu and old saved layered settings are ignored. Modern Sound Engine and the separate 60 Hz music clock remain available.
+
+## 1.1.607 — Nearby Wi-Fi pairing, Amiga SemaSynth and compatibility fixes
+
+- Select a nearby SemaTor receiver and compare six digits on both screens instead of typing an IP address and long code. File acceptance remains a separate step. Manual connection is retained for older compatible versions and networks that block discovery. App versions may differ when their transfer protocols are compatible.
+- SemaBench gains the shared SemaSynth studio with four native Paula channels, a themed sample browser and waveform/loop preview. Open supported MOD songs from Amiga Jukebox for editing, import their sample banks, or capture samples from supported game-music players. ST and Amiga drafts remain separate; WAV, MP3 and MOD exports are available.
+- Jukebox refresh no longer interrupts an active soundtrack scan or playback. Periodic library rescans are removed; startup and explicit refresh remain. Android gains the Amiga Jukebox home and improved visualiser controls. Soundtrack import follows library scans, including additional configured folders, without duplicating existing albums.
+- Hundreds of verified Mega Drive song and cue labels replace placeholders, with corrected Streets of Rage 3 labels and unchanged playback commands.
+- SemaDrive fixes CPU suspension during main-bus DMA for F1 Europe, sound-CPU control timing for the missing Jammit intro, and Sports Talk Baseball EEPROM recognition and older save-state migration.
+- Experimental Virtua Racing support adds normal startup and portable save states for the specifically verified USA cartridge. Other revisions are not covered. SVP timing, interrupt and DMA details retain known limits; bounded startup/race checks are not a full-game compatibility guarantee.
+
+Amiga MOD conversion approximates some tracker effects; unsupported cells are reported. Captured samples do not reconstruct a complete custom-player song. Wi-Fi transfers authenticate but do not encrypt game data; use a trusted LAN. Physical Android transfer testing remains outstanding. No games are included. This build provides Windows x64, Linux x86-64 and Linux ARM64 desktop packages; Android and FPGA builds are separate.
+
 ## 1.1.606 — Wi-Fi sharing, library fixes and stronger system compatibility
 
 - Transfer selected games or whole libraries, with their saves, between desktop and Android in either direction. All three systems share pairing, search and selection, verified resumable transfers, duplicate skipping and save backups. Connect by IPv4 address and pairing code on a trusted local network; transfers are authenticated but not encrypted. App versions may differ when they support the same transfer protocol. Save loading still follows each emulator's compatibility rules.
@@ -28,56 +92,25 @@ Desktop updates from 1.1.603 or newer support the larger theme package; 1.1.602 
 
 Update from 1.1.603 for the larger theme package. Users on older versions can install the full public-preview ZIP, preserving their User folder. No games are included. Android and Spectrum Next test builds remain separate private distributions.
 
-## 1.1.603 — SemaBench, expanded Jukebox, farther horizons and better controls
+## 1.1.603 — Enhancements off by default, SemaBench preview, Starglider and copy-protection skips
 
-### Music and the shared desktop
+- Every enhancement now starts off in every profile: Smooth Motion, widescreen, extended gameplay, render resolution, draw distance, mouse sensitivity, separate music and effects. Turn one on and it stays on for that game. CPU BOOST and run-ahead also start off; STEADY SPEED stays on. Choices you made earlier are kept; settings you only left at the old defaults now start off.
+- Copy-protection: SKIP rows, on by default, answer or bypass the manual checks of Starglider 2, Elite (v1.3 and SuperGAU 386), Midwinter I and II, Populous II (including the D-Bug 078 build), F-19 Stealth Fighter v1.02, The Secret of Monkey Island and Civilization (the turn-50 quiz). Switch a row off for the original check.
+- Starglider 1 and 2: Match display keeps the display's rate with variable refresh. Render resolution now really draws at the higher resolution, and render resolution, anti-aliasing and draw distance use the GPU at any Smooth Motion setting. New INVERT Y AXIS option. The VRR fix applies to every 3D port.
+- Infestation: render resolution and anti-aliasing draw at the higher resolution again. New 2x draw distance (off by default) that also draws far moving objects.
+- Separate music and effects (off by default) for IK+, Rick Dangerous and Rick Dangerous II.
+- Disks: games that wait for their next disk by polling drive A get it automatically (Afterburner). Civilization's disk sets are found again. A one-off file probe no longer swaps disks (Frantick), and Forgotten Worlds gets disk 2 at its prompt. Disks put into drive A from F12 or automatically are writable again, so save disks work.
+- ST light gun: the RS-232 West Phaser, aimed with the mouse and detected automatically.
+- SemaDrive: Menacer and Justifier light guns with the mouse (Auto-calibrate gun on by default), a hardware-accurate H counter, 68000/VDP timing closer to BlastEm, and Z80 RAM word access as on the console. Widescreen, reflections and separate audio now start off.
+- SemaBench (preview): the Amiga core with Kickstart 1.3 system structures, Workbench screen, many game fixes (Ishar, Millennium 2.2, Quadralien, Zoom, Operation Wolf and more), a Disk boot option (Real A500 by default), the Amiga Jukebox with its own visualiser and a catalogue of Amiga game music, and GPU-drawn games windows. SemaBench saves from earlier builds cannot be loaded.
+- Shared fixes: a run-ahead thread race, the SemaDrive display-rate query, and several outdated tests.
 
-- Mega Drive Jukebox: adds a generated catalogue for 275 supported cartridges with 4,100 track entries, alongside the existing hand-checked soundtracks. Music is found on supported cartridges you supply and played through SemaDrive's own sound chips. Generated entries use numbered track names; catalogue support is revision-specific, and not every entry has been individually auditioned.
-- One Jukebox across the Atari ST, Mega Drive and Amiga desktops, with a way back to the desktop you opened it from. The new Amiga tab includes game albums, Favourites, Recent, music found on disks and module playback through our own Paula emulation. Its visualiser shows Paula's four voices, with three looks and a larger view.
-- Shared desktop apps across all three systems: Continue, Pictures, Notes, Help, Documents, settings and backups. Amiga disk documents are read in the background. SemaDrive can resume directly into a saved game through Continue.
-- Faster library and desktop drawing: game cards are drawn on the GPU, unchanged window contents are reused, Jukebox redraws are reduced, and filtering very large game libraries is faster.
-
-### Experimental Amiga preview
-
-- SemaBench brings our own Amiga 500 core, our own Kickstart replacement written from scratch, and our own Workbench-style desktop into SemaTor. No original Amiga Kickstart ROM code or file is included or required. Select Amiga from the desktop's system menu and add your own ADF or IPF disks.
-- Desktop drawers, favourites, recent games and shared apps, plus four moving backdrops: Copper Rain, Vector Bobs, Plasma Pool and Mix. Backdrops can react to music. The public 1.1.603 release included the built-in desktop look; the additional themes, deferred from that release, are included in 1.1.604.
-- Configurable Amiga memory and external drives, Amiga 500 sound filtering, and a Disk boot choice of Real A500 or Fast, with Real A500 the default. Improvements to disk booting, system calls, graphics, input and interrupts help games including Ishar, Bunny Bricks, Millennium 2.2, Quadralien, Zoom, Test Drive, Monkey Island II and Operation Wolf.
-
-### Atari ST game enhancements
-
-- Midwinter and Midwinter II: extend draw distance up to 16x using the island's own terrain levels, including farther objects and extended haze. Improve motion during turns and newly revealed terrain, and make Terrain Shading's grain stay attached to the ground.
-- Hunter: draw distance includes farther objects, vehicles and people in the supported edition; adds a Retro waves sea option. Objects beyond active sectors do not gain extra game simulation and can remain stationary.
-- F1GP: extended draw distance includes farther cars in cockpit view. ALL CARS IN VIEW can show all 26 race cars instead of the original 12 when extended draw distance is enabled.
-- No Second Prize: extends draw distance to scenery and riders as well as the track, and fixes rejected extended-distance frames. Armour-Geddon extends it to vehicles and smoke; Virus adds a 16x choice and draws craft and scenery farther away. Simulcra improves distant sparks, debris and camera motion for unpaired objects.
-- Interphase: adds 16:9, 21:9 and 32:9 views for 3D flight, extended draw distance with farther objects and enemies, and render resolution and anti-aliasing independent of Smooth Motion. Fixed screens remain 4:3.
-- Powermonger: adds a GPU scene-rendering path, a 32:9 widescreen choice and FAR LAND to show bare terrain to the map edge. Improves object sizing and movement, and carries rain and snow across the wider view.
-- Starglider 1 and 2: improve Match display with variable refresh, higher render resolution and independent picture options. Add INVERT Y AXIS. Starglider fixes lost keyboard/mouse input after firing; Starglider 2 improves ground and clipped-face motion and avoids dropping to 4:3 when particles appear. Starglider 2's experimental draw-distance work is not exposed as a release option.
-- Infestation: render resolution and anti-aliasing draw at the higher resolution again; adds 2x draw distance including farther moving objects.
-- Buggy Boy: improves continuous road and wall motion and analog steering. Shadow of the Beast improves predicted motion and adds an experimental AMIGA ART option using artwork from supported Amiga disks supplied by you; scene coverage remains incomplete and unmatched artwork falls back to the ST version.
-- Separate music and effects for IK+, Rick Dangerous and Rick Dangerous II, off by default.
-
-### Controls, display and loading
-
-- Improved gamepad layouts and stick steering for Hard Drivin', Buggy Boy, F1GP, Virus, Starglider 1 and 2, No Second Prize, Midwinter I and II, Powermonger, Armour-Geddon and RoboCop 3. Corrects absolute mouse reports used by Hard Drivin'. Existing customised layouts are preserved.
-- Mouse light guns: automatically detected RS-232 West Phaser support on the ST, plus Menacer and Justifier support on SemaDrive. Aim follows the presented picture, including aspect ratio, cropping and CRT borders; SemaDrive includes automatic gun calibration.
-- More consistent F12 display options across systems, including Variable refresh screen and an automatic frame-generation multiplier. Frame generation better follows the game's actual drawing rate and the display refresh rate; results still depend on the game, scene and hardware.
-- Per-game Original / Fast disk loading in Game Details and F12. Games whose disks require original drive timing remember that requirement. Automatic disk changes improve for Afterburner, Civilization and Forgotten Worlds; one-off file probes no longer trigger unwanted swaps, and save disks inserted into drive A are writable again.
-- CPU BOOST backs down when extra emulation work would make the ST clock fall behind real time. Picture and gameplay enhancements, CPU BOOST and run-ahead start off unless you previously chose them; per-game choices are remembered. STEADY SPEED stays on.
-
-### Core and reliability fixes
-
-- SemaDrive: cartridge loading and mapper compatibility improvements, battery RAM fixes, 240-line video support, more accurate 68000/VDP/Z80 timing, and YM2612 sound improvements with Model 1 and Model 2 output filtering.
-- Atari ST: more accurate YM2149 tone counting, lower overhead in rendering and emulation, and clearer screenshot-save failures. Shared fixes include a run-ahead thread race and unnecessary display-rate queries.
-- The updater now accepts up to 65,536 files and 1 GB per update.
-
-### Known limits
-
-SemaBench is experimental: many games still do not work, Datastorm keeps rebooting, some Amiga music may not import, and saves from older SemaBench builds cannot be loaded. Extra SemaBench desktop themes were deferred from 1.1.603 and are included in 1.1.604. Interphase's 32:9 view with 3x draw distance has known floor-rendering gaps; extended scenes and experimental artwork are not universally validated. The SemaDrive sound comparison against BlastEm is unfinished. This release does not claim every game has passed a complete visual audit or achieves every display rate. No games or original Amiga ROMs are bundled. Desktop downloads are Windows x64, Linux x64 and Linux ARM64; Android is not part of this public release.
+Known limits: SemaBench is a preview. Datastorm keeps rebooting, and some Amiga catalogue tracks may not import on this core. The SemaDrive light-gun timing has passed the full play check; its BlastEm sound check is not finished. Copy-protection skips cover the games listed above only. No games are bundled. The Android build is not part of this release.
 
 ## 1.1.602 — Checked terrain, wider Simulcra and current controls
 
 - Midwinter and Midwinter II: improves checked terrain rendering, high-resolution polygon coverage and anti-aliasing, including AA at Original resolution. Adds optional clean terrain shading and adjustable surface grain, with fixes for stretched grain bands, snow detail and transparent terrain rows. Native appearance remains available.
-- Midwinter II: adds the checked 2x draw-distance path and improves scene-generation matching, predicted endpoints and fallback after failed private renders. The 3x/4x/8x distance modes remain unavailable.
+- Midwinter II: adds the checked 2x draw-distance path and improves scene-generation matching, predicted endpoints and fallback after failed private renders. The 3x/4x/8x distance modes remain unavailable. Midwinter editions also gain optional, guarded manual-security bypass settings; Off retains the original check.
 - Hunter and Simulcra: anti-aliasing now works independently at Original render resolution. AA Off preserves the original rendering path; higher render resolution is no longer required to enable AA.
 - Simulcra: adds 16:9, 21:9 and 32:9 world/HUD layouts with owned predicted geometry, matched shadow interpolation and authored distant map objects. Reuses forward prediction at native view width and separates overview-camera capture. Adds a default-off reverse-steering correction for the exact supported edition.
 - Buggy Boy: composes retained scenes on the GPU with continuous object motion, corrects scenery/sprite ownership and stale references after failed capture, and preserves the native car-animation poses during smoothing.
@@ -436,6 +469,7 @@ Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. 
 
 - **Populous II widescreen:** Optional 16:9 and 21:9 battlefield views extend the isometric map with the game's own terrain, buildings, people and effects at their native size. The original stone control panel is kept and widened, and mouse clicks work across the added land.
 - **Populous II camera and controls:** Smooth camera panning (on by default), mouse-wheel zoom from 50% to 150%, and edge scrolling. The original keyboard view controls still work.
+- **Populous II statue question:** A new option, on by default, skips the manual's statue-number question. Turn it off to play with the original check. Gameplay and difficulty are unchanged.
 
 Windows x64, Linux x86-64 and Linux ARM64 public builds include signed updates. The wider views are marked TEST in the enhancements menu: they were checked through the opening of the game, not a whole campaign. Populous II needs the default "Original drive" disk loading; the Fast setting can stop the game at its disk prompt.
 
@@ -1021,7 +1055,7 @@ Start-up as TOS does it: the AUTO folder on every boot and AUTO programs where T
 
 ## 1.1.527
 
-SemaOS is how SemaTor starts (the classic library is a setting away). No more freezes on Wayland when the window is covered. The Jukebox keeps playing your favourites in order. A SemaSynth crash fixed.
+SemaOS is how SemaTor starts. No more freezes on Wayland when the window is covered. The Jukebox keeps playing your favourites in order. A SemaSynth crash fixed.
 
 ## 1.1.526
 
