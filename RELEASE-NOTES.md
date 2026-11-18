@@ -1,29 +1,27 @@
-# 1.1.612 — Thank you, Paul C
+# 1.1.613 — Space and Ctrl fixed, Mega Drive widescreen, SemaGear, Amiga fixes and thanks to our testers
 
-**Thank you, Paul C:** a big shout-out to tester Paul C, whose detailed reports on 1.1.611 led straight to many of the fixes below: Hunter on the keyboard, Elite II's widescreen and options, smooth motion in Infestation, Interphase and Armour-Geddon, Simulcra's lower edge, Virus on a gamepad, Starglider's INVERT Y AXIS, and Max all / Original for a game's enhancements. What's new has a thank-you page for him.
-
-**First-start setup:** the first time a game with enhancements starts, a short animated page offers Original, Recommended or Everything, with each option explained. It can be turned off for all games and shown again from Settings.
-
-**Floppy loading:** a new FLOPPY LOADING option (Normal / Instant / Instant + skip intros) cuts disk waits; the game itself is unchanged. Less host work per emulated 68000 instruction makes every game a little lighter on the CPU.
-
-**Max all / Original:** SemaOS Details can switch every picture, motion and sound enhancement of a game on, or all of them off, in one step. Rows that change the game are left as they are.
-
-**Star Wars and The Empire Strikes Back:** arcade-look options (vector glow, depth cueing, arcade colours, beam, cockpit, line width), an optional arcade sound mix and a finer flight-stick dead zone.
-
-**Lemmings 2:** GPU picture in Classic mode with whole lemmings at the screen edges. **Simulcra:** a GROUND RANGE row brings the ground out to the objects' reach. **Elite II:** widescreen and resolution options fixed. **Hunter:** keyboard controls default to SemaTor mode again and no longer glitch.
-
-**Smooth motion and input:** smoother in-between pictures in Infestation, Interphase and Armour-Geddon; INVERT Y AXIS turns steering only, never Starglider's speed control; Virus has an ANALOG THRUST option on a gamepad; held keys are released on load.
-
-**Xenon and variable-refresh screens:** with G-Sync/FreeSync a game that draws every few fields is presented every ST field again, so the FPS counter and motion stay steady.
-
-**Mega Drive widescreen:** EXTENDED GAMEPLAY comes on with the wide view (it can still be switched off), Streets of Rage 2's top band shows the scene, and Aladdin's actors no longer blink in the wide margin.
-
-**Amiga (SemaBench preview):** many more games start and play, including audio.device sound, and Buggy Boy gets a widescreen view.
-
-**Floppy timing:** seek and sector timing follow measured hardware more closely.
-
-**Library:** the old pre-SemaOS desktop library has been removed; SemaOS keeps your filters and sort order. Zip files the library has not read yet can be picked from the disk list. The Android library is unchanged.
-
-**Wi-Fi transfer:** filters and selection respect the chosen system, identical copies from different folders no longer fail, and the list sorts alphabetically by default.
-
-**Android:** the signed Android APK is now published with the desktop downloads. Games copied to the phone can be removed from Settings.
+- **Space and Ctrl no longer pause ST games.** In SemaTor keyboard mode your joystick keys (directions and fire) now only work the joystick; Space reaches the game only where it has a real function (e.g. Xenon's Transform). Native ST keyboard mode is unchanged. Known limit: games whose Space mixes a prompt with pause (Double Dragon, Maniac Mansion, Arkanoid II) need fire or Native ST mode for those prompts.
+- **Mega Drive widescreen (SemaDrive desktop):** more cartridges show real extra playfield beside the original view. Off by default and set per game; picture only unless EXTENDED GAMEPLAY is on. A game capped at 16:9 or 21:9 is shown centred with plain black bars in a wider window, never stretched.
+  - Vectorman, Vectorman 2, Sparkster, Mickey Mania and Earthworm Jim: Off / 16:9 / 21:9 / Fit window (up to 854 pixels wide), with EXTENDED GAMEPLAY. In Earthworm Jim only the scenes drawn on a fixed 320-pixel backdrop stay 4:3.
+  - Ristar: one Widescreen switch that fits the window (up to 854), with EXTENDED GAMEPLAY.
+  - Dynamite Headdy: up to 16:9 (428 pixels), picture only (no EXTENDED GAMEPLAY). The tower stage, title cards, locked rooms and boss arenas stay 4:3.
+  - Kid Chameleon: up to 21:9, no EXTENDED GAMEPLAY row.
+  - Ecco the Dolphin: up to 21:9, no EXTENDED GAMEPLAY row; title and password screens stay 4:3.
+  - ToeJam & Earl: up to 21:9 with EXTENDED GAMEPLAY; the full-screen map stays 4:3.
+  - Sonic 3D Blast: up to 21:9 with EXTENDED GAMEPLAY.
+  - Earthworm Jim 2 stays 4:3: every backdrop is a fixed 320-pixel plane that never scrolls, so there is nothing real to show beside it.
+  - ToeJam & Earl in Panic on Funkotron stays 4:3: its tiles load on demand and its scenery is drawn by objects that exist only on screen.
+  - Streets of Rage 3: the HUD is no longer drawn twice at 21:9 and no longer goes missing in off-centre scenes (motorway, club boss, escape); room walls are no longer blanked.
+  - Golden Axe: stage-reveal screens no longer show wide wings beside a black centre.
+  - Road Rash II: widescreen no longer drops to 4:3 when riding on the grass.
+  - Known limit: EXTENDED GAMEPLAY level completion sampled, not fully proven, in Ristar, Vectorman 2, Earthworm Jim and ToeJam & Earl.
+- **Star Wars:** widescreen no longer cuts text, TIEs and explosions in half at the old 4:3 edge; the starfield now fills the wide view. TIE fighters no longer smear and the wide view no longer drops to 4:3 in TIE waves.
+- **Lemmings 1 and 2:** with Extended Gameplay the mouse works in the wide margins; skills and fast scrolling no longer flash back to 4:3.
+- **Simulcra:** widescreen no longer drops to 4:3 in some later missions.
+- **Elite 2 / Frontier:** wide view no longer flashes to 4:3 or jitters; Smooth Motion now runs on the GPU at display rate.
+- **Interphase:** Smooth Motion in-betweens now hold together: dither moves with surfaces, objects no longer blink, horizon follows the view.
+- **Virus:** Smooth Motion no longer doubles particles and stars or splits the ship; new Draw distance 24X with a soft horizon.
+- **SemaGear (Master System and Game Gear):** the Mega Drive home now also plays Master System, Game Gear and SG-1000 cartridges, with their own libraries, folders and sessions. Game Gear games get an LCD screen look and SemaTor's own handheld bezel (picture only). An FM SOUND UNIT option (off by default, per cartridge) plays the Japanese FM music where a game has it; Light Phaser games are supported. More than 500 cartridges were swept for fixes.
+- **Jukebox:** a system drop-down (desktop and phone) to switch between each system's music, now including Master System and Game Gear.
+- **SemaBench (Amiga preview):** each game can keep its own memory setting (F12 > Speed & saving > Memory); IPF disks with weak bits read as on a real drive; Gobliins 2, Highway 42 and Warlords display correctly again; more games start thanks to fixes in the DOS filesystem, exec and timer.device; commands copied to RAM: no longer wait for the disk.
+- **Thanks to our testers:** What's new now has a lasting thank-you page for the people who test SemaTor and send detailed reports, starting with Paul C. It is shown once whenever a name is added, and every What's new page has a "Thanks to our testers" button.
