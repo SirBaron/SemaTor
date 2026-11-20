@@ -2,55 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SemaCore Light &amp; SemaDrive Light — Spectrum Next</title>
-<meta name="description" content="SemaCore Light and SemaDrive Light: our own Atari ST and Mega Drive cores for the ZX Spectrum Next KS3 FPGA, built from SemaTor and SemaDrive. In testing.">
+<title>SemaCore, SemaDrive and SemaGear for Spectrum Next KS3</title>
+<meta name="description" content="Install the Atari ST, Mega Drive and Master System / Game Gear test cores on a ZX Spectrum Next KS3 and try SemaDrive widescreen.">
 <meta name="theme-color" content="#090d18">
 <link rel="icon" href="readme/logo.png"><link rel="stylesheet" href="site-theme.css"><link rel="stylesheet" href="creator.css"><link rel="stylesheet" href="site-603.css">
 </head>
 <body class="creator-page next-page">
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><a class="brand" href="index.html"><img src="readme/logo.png" width="40" height="40" alt="">SEMATOR</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><span class="nav-system"><a href="atari-st.html">Atari ST</a><a class="nav-creator" href="creator.html">Creator <span aria-hidden="true">↗</span></a></span><a href="semadrive.html">SemaDrive</a><a href="amiga.html">Amiga</a><a href="next.html" aria-current="page">Spectrum Next</a><a href="games/index.html">Enhanced games</a><a href="jukebox.html">Jukebox</a><a href="changelog.html">Release notes</a><a class="nav-download" href="index.html#download">Get 1.1.613 ↓</a></nav></header>
+<header class="site-header"><a class="brand" href="index.html"><img src="readme/logo.png" width="40" height="40" alt="">SEMATOR</a><nav aria-label="Main navigation"><a href="index.html">Overview</a><span class="nav-system"><a href="atari-st.html">Atari ST</a><a class="nav-creator" href="creator.html">Creator <span aria-hidden="true">↗</span></a></span><a href="semadrive.html">SemaDrive</a><a href="amiga.html">Amiga</a><a href="next.html" aria-current="page">Spectrum Next</a><a href="games/index.html">Enhanced games</a><a href="jukebox.html">Jukebox</a><a href="changelog.html">Release notes</a><a class="nav-download" href="index.html#download">Get 1.1.614 ↓</a></nav></header>
 <main id="main">
-<section class="creator-hero wrap">
-<p class="eyebrow"><span class="badge-experimental">IN TESTING</span> ZX SPECTRUM NEXT · KS3 FPGA</p>
-<h1>Real hardware.<br><em>Our own cores.</em></h1>
-<p class="intro">SemaCore Light and SemaDrive Light rebuild the Atari ST and the Mega Drive inside the Spectrum Next's FPGA, <br>made from SemaTor's and SemaDrive's own code, with familiar game and picture controls.</p>
-<p class="availability">These cores are in testing. Test versions for your own KS3 are shared on <a href="https://discord.gg/DdHfSGrdFc">our Discord</a>; this page describes what they do.</p>
-</section>
-<nav class="section-nav wrap" aria-label="On this page"><a href="#cores">The two cores</a><a href="#picture">Picture</a><a href="#games">Games &amp; saves</a><a href="#why">Why it matters</a></nav>
-
-<section id="cores" class="wrap section">
-<div class="section-heading"><p class="eyebrow">TWO SYSTEMS / ONE BOARD</p><h2>An ST and a Mega Drive,<br>made in gates.</h2><p>The machine’s chips are recreated in the FPGA. SemaDrive Light uses our own 68000, video, Z80 and sound designs. SemaCore Light brings our Atari ST hardware design, firmware and game features to the board.</p></div>
+<section class="creator-hero wrap"><p class="eyebrow"><span class="badge-experimental">IN TESTING</span> ZX SPECTRUM NEXT · KS3 FPGA</p>
+<h1>Three cores for<br><em>your Spectrum Next.</em></h1>
+<p class="intro">Play Atari ST disks, Mega Drive cartridges and Sega’s 8-bit games on the KS3. Each core starts in its own library and keeps its games and saves in its own folder.</p>
+<div class="actions"><a class="button" href="#install">Install a core</a><a class="secondary" href="#widescreen">See widescreen in testing</a></div></section>
+<nav class="section-nav wrap" aria-label="On this page"><a href="#cores">Choose a core</a><a href="#install">Installation</a><a href="#widescreen">Widescreen</a><a href="#recovery">Video recovery</a></nav>
+<section class="wrap section" id="cores"><div class="section-heading"><h2>Choose a core</h2></div>
 <div class="core-cards">
-<div class="core-card"><p class="eyebrow">ATARI ST</p><h3>SemaCore Light</h3><p>SemaTor's Atari ST, rebuilt for the KS3, with SemaTor's own menus.</p><ul>
-<li>Opens straight into its own game list: Recent, Favourites and all games, even for very large folders.</li>
-<li>Plays plain disk images (.st, .msa, .dim), Pasti (.stx) and IPF images, and zipped disks, from the SD card.</li>
-<li>Next keyboard, joysticks, Mega Drive 3- and 6-button pads and a PS/2 mouse.</li>
-<li>STEADY SPEED and cached IPF decoding for faster repeat loads.</li>
-<li>Automatic disk changes in supported games, including Ishar I and II. Writable plain-disk saves are kept separately, preserving your original images.</li>
-<li>Opened border areas and optional black-border cropping, with a safe startup mode for display troubleshooting.</li></ul></div>
-<div class="core-card"><p class="eyebrow">MEGA DRIVE</p><h3>SemaDrive Light</h3><p>SemaDrive's Mega Drive, rebuilt for the KS3: our own 68000, video, Z80 and sound designs.</p><ul>
-<li>Exact line timing: every line is the console's 3,420 clocks, and the 68000's memory refresh is there too.</li>
-<li>Sound checked against desktop SemaDrive: the same result in the five-game simulation check. Testing on real boards continues.</li>
-<li>Big cartridge libraries from the card, battery saves kept safely as you play, and Realtec cartridges.</li>
-<li>Menacer and Justifier light-gun games, aimed with a PS/2 mouse or a second pad. Automatic gun selection for supported cartridges, off-screen reload and an optional crosshair.</li>
-<li>The picture menu offers 240p, 480p and 720p. European-only cartridges run at PAL speed with 576p50 output, including when 720p is selected.</li></ul></div>
-</div>
-</section>
-
-<section id="picture" class="paint-section"><div class="wrap section">
-<div class="section-heading"><p class="eyebrow">THE PICTURE</p><h2>Every frame<br>the same length.</h2><p>SemaCore Light sends HDMI at 576p50, 480p60, 720p50 or 720p60, plus VGA. The output follows Atari field timing while keeping a fixed number of lines; some 60 Hz modes vary by one pixel clock between frames. Supported opened border areas are shown, with optional black-border cropping. SemaDrive Light keeps the Mega Drive’s own line timing and offers 240p, 480p and 720p for NTSC games; PAL games use 576p50. Display compatibility is still being tested.</p></div>
-</div></section>
-
-<section id="games" class="wrap section">
-<div class="section-heading"><p class="eyebrow">GAMES &amp; SAVES</p><h2>The same menu.<br>On the TV.</h2><p>The menu is drawn over the game picture, the same menu in both cores. Both cores browse large libraries, subfolders and zipped games from SD cards. The external card is preferred when it has games; settings and saves prefer it when writable, with internal-card fallback. Saves are kept in each system’s own folders, and existing saves can be found on either card. SemaDrive journals battery saves and save states to protect against interrupted writes. Scanlines, sound choices and the gun cursor are remembered per game.</p></div>
-<p class="experimental-note"><strong>Bring your own.</strong> No commercial TOS ROMs, cartridge games or game disks are included. These are experimental cores: game, controller and display testing is ongoing. In the current test version SemaCore Light has no separate music and effects volumes or floppy drive sounds. Its Turrican II loading/title-border issues remain open.</p>
-</section>
-
-<section id="why" class="paint-section"><div class="wrap section">
-<div class="section-heading"><p class="eyebrow">WHY IT MATTERS</p><h2>One family,<br>desktop to FPGA.</h2><p>The cores share SemaTor’s machine knowledge and firmware work, with hardware-specific chip implementations checked against the desktop apps. The desktop is a reference for picture and sound comparisons; that does not mean every game has been proven identical. What we learn on the board makes the desktop more exact, and the other way round.</p></div>
-<div class="actions"><a class="button" href="atari-st.html">SemaTor for Atari ST <span aria-hidden="true">→</span></a><a class="secondary" href="semadrive.html">SemaDrive for Mega Drive <span aria-hidden="true">→</span></a></div>
-</div></section>
+<article class="core-card"><p class="eyebrow">ATARI ST</p><h3>SemaCore Light</h3><p>Browse floppy images and zipped disks. Use the Next keyboard, a joystick or a PS/2 mouse. Supported multi-disk games can change disks automatically.</p><p>Put your disks in <code>/SemaTor/Games</code>.</p></article>
+<article class="core-card"><p class="eyebrow">MEGA DRIVE</p><h3>SemaDrive Light</h3><p>Play cartridge images, keep battery saves and save states, and try wider playfields in supported editions. A Mega Drive pad gives you the console controls.</p><p>Put your cartridges in <code>/SemaDrive/Games</code>.</p></article>
+<article class="core-card"><p class="eyebrow">MASTER SYSTEM · GAME GEAR · SG-1000</p><h3>SemaGear</h3><p>Give Master System and Game Gear their own picture settings in <strong>Global settings → Display</strong>. Try scanlines for the TV and the LCD filter for the handheld.</p><p>Use <code>/SemaGear/Games/Master System</code> or <code>/SemaGear/Games/Game Gear</code> for the corresponding cartridges.</p></article></div></section>
+<section id="install" class="paint-section"><div class="wrap section"><div class="section-heading"><h2>Install on a KS3</h2><p>You need a ZX Spectrum Next KS3, its boot card, a computer with an SD card reader, a free additional core slot and your own game images. A second FAT32 games card is optional. Get the matching full test archive for each core from <a href="https://discord.gg/DdHfSGrdFc">the SemaTor tester Discord</a>.</p></div>
+<ol><li><strong>Back up your cards and power off the Next.</strong> Unzip the test archive on your computer. Open the folder named <code>SD-CARD</code>.</li>
+<li><strong>Copy the machine folder to the boot card.</strong> Merge the supplied <code>machines</code> folder into the root of the card. You should see <code>/machines/semacore</code>, <code>/machines/semadrv</code> or <code>/machines/semagear</code> for the core you chose.</li>
+<li><strong>Copy the library folder.</strong> Merge the supplied <code>SemaTor</code>, <code>SemaDrive</code> or <code>SemaGear</code> folder into the root of your games card. With one card, put both folders on the boot card. Add your games to the path shown above.</li>
+<li><strong>Install and launch.</strong> Put the cards back. Hold <kbd>C</kbd> on the Next keyboard while powering on or performing a hard reset. Choose the core in the Next’s core menu, install it in a free additional slot, then start it from that menu. Pick a game from its library.</li></ol>
+<p class="experimental-note"><strong>Updating an existing install?</strong> Keep your games, saves and states. Copy both supplied folders from the same archive. SemaCore’s firmware banks and all 11 modules belong together. SemaDrive needs both copies of <code>sd3.dat</code>. SemaGear needs the matching <code>core3.bit</code> and <code>menu.sdm</code>.</p></div></section>
+<section id="widescreen" class="wrap section"><div class="section-heading"><p class="eyebrow">SEMADRIVE LIGHT · IN TESTING</p><h2>See farther into the stage</h2><p>Open the <strong>Enhanced</strong> library to find a recognised cartridge edition. In the game open <strong>Options → Enhancements → Widescreen (SemaEnhanced)</strong>. Choose 16:9 or 21:9 and close the menu. Choose Off to return to the original 4:3 view.</p></div>
+<div class="core-cards"><figure class="core-card"><img src="gameplay/ks3-sonic-green-hill.png" width="560" height="224" style="width:100%;height:auto;image-rendering:pixelated" loading="lazy" alt="Sonic in Green Hill with palm trees and platforms visible across the wide playfield"><figcaption><strong>Sonic the Hedgehog</strong> · Green Hill Zone in the 21:9 mode, captured from the FPGA simulation.</figcaption></figure>
+<figure class="core-card"><img src="gameplay/ks3-golden-axe.png" width="560" height="224" style="width:100%;height:auto;image-rendering:pixelated" loading="lazy" alt="Golden Axe’s opening fight with the forest and enemies visible on both sides"><figcaption><strong>Golden Axe</strong> · The opening fight in 21:9, captured from the FPGA simulation. The latest test build keeps the side scenery in step during magic and camera movement.</figcaption></figure></div>
+<p>Wide Games 16 recognises 29 cartridge editions. Support depends on the edition and scene. Road Rash II has been played widescreen on a physical KS3. Golden Axe’s first fight passed the 16:9 and 21:9 simulation checks and still needs a board retest.</p></section>
+<section id="recovery" class="paint-section"><div class="wrap section"><div class="section-heading"><h2>If the display goes blank</h2><p>Use a three- or six-button Mega Drive pad. Hold <strong>Start + B on the same pad</strong> before loading the core or resetting the Next. On SemaCore, release both buttons when prompted. On SemaDrive, hold through reset and then release. On SemaGear, release when the library appears. SemaDrive and SemaGear restore 480p HDMI with sound and 31 kHz VGA. Holding <strong>B</strong> alone on either of those two cores selects safe video for one boot.</p></div></div></section>
 </main>
-<footer class="wrap footer">SemaTor 1.1.613 · Created by David Baron with AI assistance.<br><a href="index.html">SemaTor home</a> · <a href="https://github.com/SirBaron/SemaTor/issues">Report a problem</a> · <a href="https://discord.gg/DdHfSGrdFc">Discord</a></footer>
+<footer class="wrap footer">SemaTor 1.1.614 · Created by David Baron with AI assistance.<br><a href="index.html">SemaTor home</a> · <a href="https://github.com/SirBaron/SemaTor/issues">Report a problem</a> · <a href="https://discord.gg/DdHfSGrdFc">Discord</a></footer>
 </body></html>

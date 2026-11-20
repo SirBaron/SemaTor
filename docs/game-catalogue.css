@@ -55,3 +55,6 @@
 .page-controls{flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){.catalogue-page .game-card:hover{transform:none}}
 .option-choices{list-style:none;margin:0;padding:0 16px 12px}.option-choices li{border-top:1px solid #34445e!important;padding:12px 0!important;margin:0!important}.option-choices strong{padding:0!important;font-size:11px}.detail-options .option-choices p{padding:6px 0 0;font-size:12px}
+
+.system-buttons{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:700px){.system-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}}

@@ -3,7 +3,7 @@ const Catalogue = (() => {
  const labels={wide:'Widescreen',motion:'Smooth motion',sound:'Sound',view:'Sharper 3D',distance:'Draw distance',cheats:'Cheats'};
  const normalize=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const number=(v,fallback)=>/^\d+$/.test(String(v))?Math.max(1,Math.min(1000000,Number(v))):fallback;
- function readState(search){const p=new URLSearchParams(search);return {system:['st','md'].includes(p.get('system'))?p.get('system'):'all',q:(p.get('q')||'').slice(0,200),features:[...new Set((p.get('features')||'').split(',').filter(x=>labels[x]))],scope:p.get('scope')==='all'?'all':'enhanced',sort:['az','za','new','old'].includes(p.get('sort'))?p.get('sort'):'az',size:[12,24,48].includes(Number(p.get('size')))?Number(p.get('size')):12,page:number(p.get('page'),1),game:p.get('game')||''};}
+ function readState(search){const p=new URLSearchParams(search);return {system:['st','md','amiga'].includes(p.get('system'))?p.get('system'):'all',q:(p.get('q')||'').slice(0,200),features:[...new Set((p.get('features')||'').split(',').filter(x=>labels[x]))],scope:p.get('scope')==='all'?'all':'enhanced',sort:['az','za','new','old'].includes(p.get('sort'))?p.get('sort'):'az',size:[12,24,48].includes(Number(p.get('size')))?Number(p.get('size')):12,page:number(p.get('page'),1),game:p.get('game')||''};}
  function query(games,state){
   const terms=normalize(state.q).split(/\s+/).filter(Boolean);
   const matches=games.filter(g=>{
@@ -26,6 +26,7 @@ if(typeof document!=='undefined')(() => {
  for(const game of games){const names=game.editions.flatMap(e=>e.options.map(o=>o.name.toUpperCase()));const tags=new Set(game.features);if(names.some(n=>n==='SMOOTH MOTION'))tags.add('motion');if(names.some(n=>/^RENDER RESOLUTION|^ANTI-ALIASING/.test(n)))tags.add('view');if(names.some(n=>/^DRAW DISTANCE/.test(n)))tags.add('distance');game.features=[...tags];}
  const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
  let state=Catalogue.readState(location.search),returnFocus=null,activeGame='';
+ const machineNames={st:'Atari ST',md:'Mega Drive / Genesis',amiga:'Amiga'};
  const systems=[...document.querySelectorAll('[data-system]')];
  const dialog=$('game-detail'),results=$('catalogue-results'),features=[...document.querySelectorAll('[data-feature]')];
  function url(push=false){const p=Catalogue.params(state),next=location.pathname+(p?'?'+p:'');history[push?'pushState':'replaceState'](null,'',next);}
@@ -39,7 +40,7 @@ if(typeof document!=='undefined')(() => {
   const g=games.find(g=>g.id===id);if(!g){state.game='';if(dialog.open)dialog.close();document.body.classList.remove('detail-open');return;}
   if(activeGame===id&&dialog.open)return;activeGame=id;
   const body=$('detail-body');body.replaceChildren();
-  body.append(el('p',[g.system==='md'?'MEGA DRIVE / GENESIS':'ATARI ST',g.year,g.publisher].filter(Boolean).join(' / '),'detail-meta'));
+  body.append(el('p',[machineNames[g.system].toUpperCase(),g.year,g.publisher].filter(Boolean).join(' / '),'detail-meta'));
   const title=el('h2',g.title);title.id='detail-title';body.append(title);
   const badges=el('div',undefined,'detail-badges');for(const f of g.features)badges.append(badge(f));body.append(badges);
   body.append(el('p',g.editions.length+' shipped '+(g.editions.length===1?'profile':'profiles')+'. Options depend on the identified game edition and may vary by game mode or level.','detail-note'));
@@ -66,8 +67,8 @@ if(typeof document!=='undefined')(() => {
  function render(write=true){
   const r=Catalogue.query(games,state);state.page=r.page;sync();results.replaceChildren();
   for(const g of r.rows){
-   const card=el('li',undefined,'game-card '+(g.system==='md'?'machine-md':'machine-st'));
-   const top=el('div',undefined,'card-top');top.append(el('span',g.system==='md'?'MEGA DRIVE':'ATARI ST','machine-label'),el('span',g.year,'card-year'));card.append(top);
+   const card=el('li',undefined,'game-card machine-'+g.system);
+   const top=el('div',undefined,'card-top');top.append(el('span',machineNames[g.system].toUpperCase(),'machine-label'),el('span',g.year,'card-year'));card.append(top);
    const heading=el('h3'),button=el('button',g.title,'game-title');button.type='button';button.addEventListener('click',()=>openGame(g.id));heading.append(button);card.append(heading);
    card.append(el('p',g.publisher||'Explore the game','card-publisher'));
    const badges=el('div',undefined,'card-badges');for(const f of Object.keys(Catalogue.labels))if(g.features.includes(f))badges.append(badge(f));
