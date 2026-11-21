@@ -1,28 +1,57 @@
 ## 1.1.615 — Faster SemaOS libraries and expanded Jukebox support
 
-- Large libraries open and search faster. Searching in a SemaOS window keeps the launcher's search and category counts intact. Favourites and Recent load faster, and editing a large favourites list preserves all entries.
-- Animated desktop backgrounds and overlapping windows take less time to draw. Opening Fetch Artwork keeps the dialog above game cards. Custom artwork stays in place while missing images are fetched, and the result reports whether a download succeeded.
-- In Pictures, click a screenshot once to open it. Use Delete beneath its thumbnail and confirm to remove it. Statistics updates when you play a game or finish a session.
-- First-start setup uses a more compact layout for game options and control help.
-- The Master System Jukebox adds verified soundtrack selections for 122 cartridges and a browsable album view. Recognised Mega Drive tracks use their known playback lengths. Amiga album search and system switching are faster, and the system selector stays above the playing track.
+### Desktop, libraries and controls
+
+- **Library and Favourites** — Large collections open and search faster. Each desktop window keeps its own results and preserves the launcher’s active search and counts. Favourites and Recent restore faster after a scan. Editing a favourites file larger than 4 MiB keeps entries beyond the old limit.
+- **Desktop rendering** — Windows skip controls outside their visible area and draw overlapping shadows more efficiently. The Arcade background reuses its skyline while stars move; SemaDrive’s game grid keeps its GPU-rendered cards over animated backgrounds. The desktop also handles a missing window size during resize, and the public updater avoids checking for its executable on idle frames.
+- **Pictures and Statistics** — Click a screenshot once to open it. To remove one, choose Delete beneath its thumbnail and confirm. Statistics updates when a game starts or a session ends, without periodically recounting an unchanged library.
+- **Artwork, bezels and first-start setup** — Fetch Artwork stays above the game grid. It preserves custom covers, fills missing title screens and snapshots separately, and reports actual downloads. Master System uses the SemaSystem logo on its CRT bezel; Game Gear uses SemaGear. The first-start sheet fits more choices and control help into the available screen space.
+
+### Jukebox
+
+- **Master System** — The searchable album browser now has 1,311 selectable songs and cues across 125 of 280 audited cartridge editions, adding 122 multi-track albums to the previous three. The other 155 editions keep their live Game music entry. Six previously silent cartridge routes were recovered. Of the 1,311 selections, 360 have numbered labels; the rest have titles or scene descriptions.
+- **Mega Drive** — The Jukebox knows the first complete loop or ending for 631 tracks across 68 editions, including all tracks in the verified Altered Beast, Sonic, Sonic 2 and OutRun editions. Autoplay can advance at that point. Tracks without verified timing show Unknown and use the existing playback controls.
+- **Amiga and system switching** — Searching or switching tabs reuses the album list. If the selected album disappears during a scan, the remaining tracks are visible immediately. The system selector opens above the now-playing panel.
+
+### Game enhancements included from 1.1.614
+
+- **Powermonger** gained live Fit width, smoother hills and individual walkers, map-anchored ground textures, optional STE terrain lighting and wind, and Painted Sunset skies in the world and throne room.
+- **Star Wars** gained connected TIE and tower meshes, smoother Death Star surface flight and approach, and widescreen cockpit fire. **The Empire Strikes Back** keeps vector edges joined during turns.
+- **Interphase** improved Smooth Motion inside and beyond the tunnel. **Virus** improved fast-flight craft motion and distant terrain at up to 24× draw distance.
+- **Xenon 2** keeps its intro at normal speed with TurboLoad. **Turrican II** finds its Amiga Art companion in nested libraries. **Arkanoid** supports direct paddle input in six ST profiles. **Ecco the Dolphin** draws moving objects into the wider playfield.
+- The 1.1.614 changelog details the Amiga game changes for **Superfrog, Ruff ’n’ Tumble, Legion, Buggy Boy, The Settlers, SWOS, UFO: Enemy Unknown, Mortal Kombat II, Syndicate, Moonstone** and **Slam Tilt**.
 
 Download the ZIP for your desktop or the signed arm64 APK for Android. Existing desktop users can use the built-in updater. Supply your own game files.
 
 ## 1.1.614 — Sega libraries, direct controls, TurboLoad and enhanced games
 
+### Atari ST and Mega Drive games
+
+- **Powermonger** — Fit width now responds during play. The wider view handles terrain fallback and draws roads, hills, weather and the HUD in the right order. Smooth Hills rounds the slopes; Anchored Original keeps ground patterns fixed to the map as you turn. Optional STE Detail adds shaded hills, painted grass, animated water, cloud shadows and wind in the vegetation. Painted Sunset adds a weather-sensitive sky behind the landscape and throne-room windows. Smooth Motion moves individual walkers between their game positions. The setup menu also shows the correct option states and mouse controls.
+- **Star Wars** — Smooth Motion keeps TIE fighter edges connected and pairs whole towers as the Death Star surface scrolls. The distant Death Star moves smoothly during the first-wave dogfight and the approach to the trench. Widescreen moves the cockpit wing tips to the outer edges and anchors laser fire to the widened cockpit.
+- **The Empire Strikes Back** — Vector model edges now stay joined through turns with Smooth Motion enabled.
+- **Interphase** — Smooth Motion captures the tunnel’s shaded wires and cage bars, preserves the full aiming sight, and pairs objects more reliably after the tunnel exit. Scene cuts return to the original frame.
+- **Virus** — Fast flight and turns handle moving craft more smoothly. Terrain transitions at long draw distances produce fewer cracks, and scene geometry stays on the GPU between refreshes. The draw-distance selector was verified through 24×.
+- **Xenon 2** — TurboLoad lets the animated intro play at its original speed. First-start setup and F12 show the full loading choices. Automatic disk switching also recognises numbered ZIPs containing unnumbered disks and responds to repeated reads at a disk change.
+- **Turrican II, Arkanoid and Ecco the Dolphin** — Turrican II finds its Amiga Art companion in configured and nested libraries. All six supported Atari ST Arkanoid profiles gained direct mouse and touch paddle controls. In Ecco’s supported Mega Drive edition, fish, spikes and other moving objects continue into the widescreen margins.
+
+### Amiga games and SemaBench
+
+- **Superfrog and Ruff ’n’ Tumble** — Both have playable 16:9 and 21:9 widescreen in verified stages: Forest, Castle and Ancient in Superfrog, and the forest in Ruff. Enemies can enter at the wider edge. Superfrog’s Smooth Motion covers verified movement in all six worlds. The profiles also include jump or separate music and effects options.
+- **Legion and Buggy Boy** — Legion gains smooth widescreen scrolling on the campaign map; town dialogs stay 4:3. Buggy Boy improves steering prediction, the car’s motion over changes in road height, and crash motion on its widescreen courses.
+- **The Settlers, Sensible World of Soccer ’96–’97 and UFO: Enemy Unknown** — Smooth Motion covers settlement camera drags, SWOS kickoff play, and UFO Battlescape camera steps and cursor movement. The verified European and French Settlers editions can answer the three-symbol manual check automatically. SWOS gets a separate writable save disk, and UFO preserves writes during mission transfers.
+- **Mortal Kombat II, Syndicate, Moonstone and Slam Tilt** — Mortal Kombat II improves fighter motion and arena pans beneath the scoreboard and adds separate fight music and effects levels. Syndicate smooths walking agents and camera pans at Mercenary Camp. Moonstone smooths verified Practice and Wheat Field combat and adds a shoulder-button overhead chop. Ball and camera motion were verified on Slam Tilt’s Mean Machines table.
+- **Amiga compatibility and controls** — SemaBench can gather numbered disks when a loose disk image is opened. Startup and disk handling improved for the verified English Legion disks, the original Electronic Zoo Cardiaxx and the original Mortal Kombat II on its 1 MB chip-only configuration. Two Amiga players can share a keyboard and one gamepad. The A1200 preview improves EC020 instruction handling, AmigaDOS command execution and AGA playfield, palette and sprite display.
+
+### Libraries, controls and scanning
+
 - SemaOS now finds games in nested library folders. Mega Drive, Master System and Game Gear each have their own app folder, library filters, hidden games and cartridge edition choices. Master System and Game Gear have new icons and show SemaGear branding on launch. The Amiga desktop uses the SemaBench bezel.
 - Use the − and + buttons in the F11 or F12 header to resize the menu in 10% steps. Portrait layouts reserve space for touch controls.
-- In Star Wars and The Empire Strikes Back, wide-screen vector models stay joined through turns. Star Wars also aligns cockpit fire with the wide picture and smooths the distant Death Star during the first wave. Interphase fixes Smooth Motion in the tunnel and after the exit. Virus improves fast-flight motion and reduces visible cracks in distant terrain.
-- Powermonger improves the wide view, terrain, sky and weather. An optional STE colour treatment adds skies to the terrain and throne room. Individual walkers move more smoothly between the game's own positions.
 - Thanks to eightiesjapan and Paul C for testing and reporting what they see in play.
-- TurboLoad keeps Xenon 2’s animated loading intro at its original speed. Automatic disk changes now recognise numbered ZIP sets containing unnumbered disks and respond when the game retries a read.
 - Game-library and Jukebox scans can process files across CPU cores. Library scans follow links to individual game files. Master System music discovery includes Out Run’s three radio choices and high-score tune, and Sonic Chaos has 16 verified Sound Test songs.
 - Android’s SemaDrive and SemaBench use the shared SemaCore touch controls. Supported Atari ST, Amiga and Sega profiles can accept direct mouse or touch input. This includes paddle controls in the supported Arkanoid editions.
-- Turrican II can find its Amiga Art companion in configured and nested libraries.
-
-- Ecco the Dolphin on SemaDrive draws fish, spikes and other moving objects across the old screen edges during widescreen play.
-- SemaBench improves A500 disk changes and game startup, including the verified English Legion disks and the original Electronic Zoo release of Cardiaxx. The experimental A1200 path improves EC020 instruction handling, AmigaDOS command execution and AGA playfield and sprite display. Supported game profiles include new jump or separate music and effects options for Superfrog and Ruff ’n’ Tumble.
 - The website’s enhanced-game directory includes Amiga profiles. The Spectrum Next page lists all three KS3 cores, their installation steps and board requirements, and shows SemaDrive widescreen testing.
+- The six systems share in-game menu navigation. SemaGear can replay recorded input. Verified strategy profiles remember mouse sensitivity in Game options. Sega music scans report progress per system and hide editing controls that do not apply to live cartridge tracks.
 
 Download the ZIP for your desktop or the signed arm64 APK for Android. Existing desktop users can use the built-in updater. Supply your own game files.
 
