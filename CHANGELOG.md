@@ -10,7 +10,7 @@
 
 ### Star Wars and The Empire Strikes Back
 
-- **Star Wars.** Smooth Motion carries the green trench walls, red panels and crossbars past the cockpit as you fly. The Death Star surface dots now follow the ground through steering and wraparound and continue into both widescreen views.
+- **Star Wars.** Smooth Motion carries the green trench walls, red panels and crossbars past the cockpit as you fly. The Death Star surface dots now follow the ground through steering and wraparound and continue into both widescreen views. If you load a Star Wars save made during Game Over, the cockpit returns at widescreen width, but scenery outside the original screen is missing. Reaching Game Over during play preserves that scenery.
 - **The Empire Strikes Back.** The Executor's outline stays together during the introduction. Hoth ground markers follow the bank of the camera into the distance. The walkers' legs follow their joints through each pose. After Hoth, the distant Star Destroyer, turning TIE fighters and rotating projectiles move between game frames. The Game Over lettering appears over the widescreen scene.
 - **Custom Soundtrack.** In F12, open Game options → Audio → Custom Soundtrack. Put your own MP3 or MIDI files in Add-ons/Star Wars or Add-ons/The Empire Strikes Back. You can replace individual scenes and keep the game's sound for the rest. Loading a save selects the music for the restored scene. For example, use trench.mp3 for the Death Star trench or walkers.mid for the Hoth walker battle.
 - Empire can play one song continuously through the probe droids and walkers on Hoth, or from the Star Destroyer into the asteroid field. You can also supply separate tracks for those encounters and for Game Over.
