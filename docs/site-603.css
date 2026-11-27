@@ -63,3 +63,9 @@
 #backdrop-motion:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
 #backdrop-motion:disabled{cursor:default;color:var(--muted)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.cartridge-homes{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cartridge-homes .shot{width:100%;padding:0;border:0;background:#101827}
+.cartridge-homes .shot img{display:block;aspect-ratio:2.35;object-fit:contain}
+.cartridge-homes .go{margin-top:auto;padding-top:14px}
+@media(max-width:650px){.cartridge-homes{grid-template-columns:1fr}}

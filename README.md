@@ -4,7 +4,7 @@
 
 **Atari ST, Mega Drive, Amiga, NES and SNES.**
 
-SemaTor is one desktop for your own retro games on **Windows and Linux**. It runs **Atari ST** games, **Mega Drive / Genesis** games (SemaDrive) and, as an experimental preview, **Amiga** games (SemaBench). SemaCom and SemaSuper run NES and SNES cartridges. Many games get optional enhancements: **widescreen, smooth motion at your screen's refresh rate, sharper 3D, CRT looks and HDR**. Every enhancement starts off, is remembered per game, and the original game is always one switch away.
+Play your **NES, SNES, Atari ST and Mega Drive / Genesis** games in SemaTor on Windows, Linux and Android. Amiga emulation is available through the experimental SemaBench preview. Supported games have individual settings for widescreen, Smooth Motion and enhanced graphics.
 
 Bring your own games. None are included, and no Atari TOS ROM or Amiga Kickstart ROM file is needed. Feature support varies by game, edition and display hardware.
 
@@ -19,7 +19,18 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 ## System homes
 
-Atari ST, Mega Drive, Amiga, NES and SNES share one app. Each has its own desktop and look, and all share the same library, Jukebox, saved games, notes and Wi-Fi transfer. The app reopens the desktop you used last.
+Atari ST, Mega Drive, Amiga, NES and SNES share one app. The system picker opens each library. NES and SNES share the SemaCom desktop, with saves, notes and Jukebox support. The app reopens the desktop you used last.
+
+### NES and SNES
+
+| SemaCom · NES | SemaSuper · SNES |
+| --- | --- |
+| ![Super Mario Bros. tracks in the SemaCom Jukebox](./docs/gameplay/semacom-nes.webp) | ![Star Fox in widescreen on SemaSuper](./docs/gameplay/semasuper-star-fox.webp) |
+| Open an NES cartridge image or ZIP. Keep saves, use supported cheats and play individual songs from supported cartridges in the Jukebox. | Star Fox has optional widescreen, smoother motion, projected shadows and extended scenery draw distance. Star Fox 2 has lighting for both flight and Walker views. |
+
+Super Mario World, Super Mario All-Stars, Super Mario Kart and Yoshi’s Island also have game-specific picture options. Available effects and widths depend on the game and scene. [Explore NES and SNES](https://sirbaron.github.io/SemaTor/#nes-snes) · [Read the 1.1.620 announcement](https://github.com/SirBaron/SemaTor/releases/tag/v1.1.620)
+
+### Atari ST, Mega Drive and Amiga
 
 | Atari ST (SemaOS) | Mega Drive (SemaDrive) | Amiga (SemaBench preview) |
 | --- | --- | --- |
