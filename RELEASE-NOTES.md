@@ -1,13 +1,13 @@
-# 1.1.619 — Stunt Car road fix and Powermonger rain
+# 1.1.620 — NES and SNES join SemaTor
 
-### Atari ST games
+### SemaCom and SemaSuper
 
-- **Stunt Car Racer.** The road just in front of the car no longer opens up or shows the kerb through it.
-- **Powermonger.** New RAIN option. Original rain now fills the whole widescreen picture; 3D rain is a light fall on the map itself, with small splashes, ripples and snow that keep the map readable, and never over the panels.
-- **Start-up hints.** The controller hint shown at the start of Powermonger, Out Run, Vroom, Midwinter, Speedball 2 and Populous is no longer cut off.
+- Play your own NES and SNES cartridges. The new home includes game libraries, saves, cheats and Jukebox support for selected games. Retro Grid and Starlight Arcade have updated artwork and animation.
+- Star Fox has optional widescreen flight, smooth motion, higher-resolution polygons, projected shadows, sunlight, canopy reflections and engine glow. On Corneria, wind moves two cloud layers across the mountain panorama. Extended draw distance brings buildings, arches and wire pylons into view earlier. Always highest model detail and fixed scenery colour are separate options.
+- Star Fox 2 has its own enhancement profile, including lighting for flight and Walker views. Super Mario World, Super Mario All-Stars, Super Mario Kart and Yoshi's Island have game-specific picture options. Available widths and effects depend on the game and scene.
 
-### Thanks to our testers
+### Other systems
 
-- Thank you to eightiesjapan and Paul C for testing and for the detailed reports. Their names stay on the "Thanks to our testers" page in What's new.
+- Mega Drive gains game-specific cheat controls. This release also includes Atari ST input and game-profile fixes and Amiga compatibility updates.
 
-Download the ZIP for your desktop or the signed arm64 APK for Android. Existing desktop installations can use the built-in updater. Supply your own game files.
+Download the ZIP for Windows x64, Linux x86-64 or Linux ARM64, or install the signed Android ARM64 APK. Existing desktop installations can use the built-in updater. Supply your own games.

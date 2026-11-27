@@ -2,9 +2,9 @@
 
 # SemaTor
 
-**Atari ST, Mega Drive and Amiga. Your classics, a whole new view.**
+**Atari ST, Mega Drive, Amiga, NES and SNES.**
 
-SemaTor is one desktop for your own retro games on **Windows and Linux**. It runs **Atari ST** games, **Mega Drive / Genesis** games (SemaDrive) and, as an experimental preview, **Amiga** games (SemaBench). Many games get optional enhancements: **widescreen, smooth motion at your screen's refresh rate, sharper 3D, CRT looks and HDR**. Every enhancement starts off, is remembered per game, and the original game is always one switch away.
+SemaTor is one desktop for your own retro games on **Windows and Linux**. It runs **Atari ST** games, **Mega Drive / Genesis** games (SemaDrive) and, as an experimental preview, **Amiga** games (SemaBench). SemaCom and SemaSuper run NES and SNES cartridges. Many games get optional enhancements: **widescreen, smooth motion at your screen's refresh rate, sharper 3D, CRT looks and HDR**. Every enhancement starts off, is remembered per game, and the original game is always one switch away.
 
 Bring your own games. None are included, and no Atari TOS ROM or Amiga Kickstart ROM file is needed. Feature support varies by game, edition and display hardware.
 
@@ -12,14 +12,14 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.619 public preview: Windows x64, Linux x86-64, Linux ARM64 and Android.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits. Thanks to eightiesjapan and Paul C for testing and sharing detailed reports.
+**1.1.620 public preview: Windows x64, Linux x86-64, Linux ARM64 and Android.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits. Thanks to eightiesjapan and Paul C for testing and sharing detailed reports.
 
 ![SemaOS, the Atari ST desktop, with a game's Details page](./semaos-desktop.png)
 *SemaOS on the Atari ST home. Your own disks wear handwritten labels; no games are bundled.*
 
-## Three systems, one home
+## System homes
 
-Atari ST, Mega Drive and Amiga share one app. Each has its own desktop and look, and all share the same library, Jukebox, saved games, notes and Wi-Fi transfer. The app reopens the desktop you used last.
+Atari ST, Mega Drive, Amiga, NES and SNES share one app. Each has its own desktop and look, and all share the same library, Jukebox, saved games, notes and Wi-Fi transfer. The app reopens the desktop you used last.
 
 | Atari ST (SemaOS) | Mega Drive (SemaDrive) | Amiga (SemaBench preview) |
 | --- | --- | --- |
