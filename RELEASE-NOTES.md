@@ -1,13 +1,4 @@
-# 1.1.620 — NES and SNES join SemaTor
+# 1.1.621 — System picker and Heroes of the Lance
 
-### SemaCom and SemaSuper
-
-- Play your own NES and SNES cartridges. The new home includes game libraries, saves, cheats and Jukebox support for selected games. Retro Grid and Starlight Arcade have updated artwork and animation.
-- Star Fox has optional widescreen flight, smooth motion, higher-resolution polygons, projected shadows, sunlight, canopy reflections and engine glow. On Corneria, wind moves two cloud layers across the mountain panorama. Extended draw distance brings buildings, arches and wire pylons into view earlier. Always highest model detail and fixed scenery colour are separate options.
-- Star Fox 2 has its own enhancement profile, including lighting for flight and Walker views. Super Mario World, Super Mario All-Stars, Super Mario Kart and Yoshi's Island have game-specific picture options. Available widths and effects depend on the game and scene.
-
-### Other systems
-
-- Mega Drive gains game-specific cheat controls. This release also includes Atari ST input and game-profile fixes and Amiga compatibility updates.
-
-Download the ZIP for Windows x64, Linux x86-64 or Linux ARM64, or install the signed Android ARM64 APK. Existing desktop installations can use the built-in updater. Supply your own games.
+- Click the desktop system picker once to open it. It stays open while you move to a system card. Click a card to switch, or click outside to dismiss.
+- Heroes of the Lance on Atari ST gains a Skip manual check option for the verified European IPF and three-disk v1.0 ST editions. It is on by default and can be changed in F12 under Gameplay. Disk C is still required.
