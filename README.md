@@ -30,6 +30,10 @@ Atari ST, Mega Drive and Amiga share one app. Each has its own desktop and look,
 
 ## Enhanced games
 
+**Which copy of my game works?** Find your title in the 1.1.619 edition lists below. Match the disk label, compilation, region or cartridge revision, then check the options listed for that edition. In SemaTor, the game’s Details page shows its detected profile.
+
+[Atari ST disks](./ATARI-ST-EDITIONS.md) · [Amiga disks](./AMIGA-DISKS.md) · [Sega cartridges](./SEGA-CARTRIDGES.md)
+
 Enhancements are made game by game and checked against the original. A picture option never changes the game's logic or sound.
 
 - **Widescreen:** real extra playfield, never a stretched picture. 16:9, 21:9 and up to 32:9 where the game allows it; fixed screens stay 4:3.

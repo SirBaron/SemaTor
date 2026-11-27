@@ -10,7 +10,7 @@ const Catalogue = (() => {
    if(state.system&&state.system!=='all'&&(g.system||'st')!==state.system)return false;
    if(state.scope!=='all'&&!g.enhanced)return false;
    if(!state.features.every(f=>g.features.includes(f)))return false;
-   const hay=normalize([g.title,g.year,g.publisher,...g.aliases,...g.features.map(f=>labels[f]),...g.editions.flatMap(e=>[e.name,...e.options.flatMap(o=>[o.name,o.help]),...e.cheats.flatMap(o=>[o.name,o.help])])].join(' '));
+   const hay=normalize([g.title,g.year,g.publisher,...(g.mediaSearch||[]),...g.aliases,...g.features.map(f=>labels[f]),...g.editions.flatMap(e=>[e.name,...(e.diskLabels||[]),...(e.programNames||[]),...e.options.flatMap(o=>[o.name,o.help]),...e.cheats.flatMap(o=>[o.name,o.help])])].join(' '));
    return terms.every(t=>hay.includes(t));
   }).sort((a,b)=>{const title=a.title.localeCompare(b.title,undefined,{numeric:true,sensitivity:'base'});if(state.sort==='za')return -title;if(state.sort==='new'||state.sort==='old'){const ay=Number(a.year)||0,by=Number(b.year)||0;return (state.sort==='new'?by-ay:ay-by)||title;}return title;});
   const pages=Math.max(1,Math.ceil(matches.length/state.size)),page=Math.min(Math.max(1,state.page),pages),start=(page-1)*state.size;
@@ -44,6 +44,10 @@ if(typeof document!=='undefined')(() => {
   const title=el('h2',g.title);title.id='detail-title';body.append(title);
   const badges=el('div',undefined,'detail-badges');for(const f of g.features)badges.append(badge(f));body.append(badges);
   body.append(el('p',g.editions.length+' shipped '+(g.editions.length===1?'profile':'profiles')+'. Options depend on the identified game edition and may vary by game mode or level.','detail-note'));
+  const editionGuides={st:'ATARI-ST-EDITIONS.md',md:'SEGA-CARTRIDGES.md',amiga:'AMIGA-DISKS.md'};
+  const media=el('a',g.system==='md'?'Check supported cartridge revisions':'Check supported disks and editions','guide-link');
+  media.href='https://github.com/SirBaron/SemaTor/blob/main/'+editionGuides[g.system]+'#'+g.id;
+  body.append(media);
   if(g.guide){const a=el('a','Read the game guide ↗','guide-link');a.href=g.guide;body.append(a);}
   function optionList(items){
    const groups=new Map();
@@ -56,7 +60,12 @@ if(typeof document!=='undefined')(() => {
   }
   for(const [i,edition] of g.editions.entries()){
    const section=el(g.editions.length>1?'details':'section',undefined,'edition-detail');
-   if(g.editions.length>1){section.append(el('summary',edition.name));section.open=i===0;}else section.append(el('h3','Available options'));
+   if(g.editions.length>1){section.append(el('summary',edition.name));section.open=i===0;}else section.append(el('h3',edition.name));
+   if(edition.diskLabels?.length){
+    section.append(el('strong','Known disk labels'));
+    const list=el('ul');for(const label of edition.diskLabels)list.append(el('li',label));section.append(list);
+   }
+   if(edition.programNames?.length)section.append(el('p','Program names: '+edition.programNames.join(', ')));
    if(edition.options.length)section.append(optionList(edition.options));else section.append(el('p','No game-specific enhancements are listed for this edition. Shared SemaTor settings are still available.'));
    if(edition.cheats.length){const cheats=el('div',undefined,'detail-cheats');cheats.append(el('h3','Optional cheats'),optionList(edition.cheats));section.append(cheats);}
    body.append(section);
