@@ -1,8 +1,8 @@
 SemaTor
 Copyright (C) 2026 David Baron. All rights reserved.
 
-SemaTor's source code is not published. This notice covers the released
-binaries and everything distributed with them.
+SemaTor's source code is not published. The permissions below apply to SemaTor's own
+software. Third-party components retain their respective terms.
 
 YOU MAY
   Download, install and use the released binaries, for any purpose,
@@ -17,14 +17,36 @@ YOU MAY NOT, without written permission
   Sell it, or bundle it with anything sold.
 
 THIRD-PARTY COMPONENTS
-  SemaTor links against SDL2 (zlib licence) and optionally SDL2_image, and
-  includes the Vulkan headers (Apache-2.0 OR MIT) and stb_image (public
-  domain). Those components keep their own licences; this notice covers
-  SemaTor's own work only. Media/licenses in the download has the detail.
+  The desktop and Android releases include the SDL3 runtime (zlib licence).
+  The Windows build uses the MinGW-w64 runtime. Android also distributes
+  the NDK's LLVM C++ shared runtime (libc++_shared.so).
 
-NO BUNDLED DISKS OR ROMS
-  No commercial game disk images or Atari TOS ROM are supplied.
-  No Atari TOS ROM is required. Bring your own disk images.
+  Graphics and image decoding: Khronos Vulkan and video headers (Apache-2.0
+  or MIT, as specified per file), AMD FidelityFX SDK code (MIT), NVIDIA
+  Optical Flow SDK declarations (NVIDIA redistribution terms), and stb_image
+  (MIT). GPU features depend on the platform and available hardware.
+
+  Audio and file decoding: ymfm by Aaron Giles (BSD-3-Clause), the ICE
+  depacker ported from ym2149-rs (MIT), and dr_mp3 by David Reid (public
+  domain or MIT-0), based on minimp3 (CC0). The LHA decoder's Huffman table
+  construction follows Haruhiko Okumura's freely reusable ar002 routine.
+
+  Cryptography: Monocypher (BSD-2-Clause or CC0).
+  Fonts and glyph atlases: DejaVu (see its font notice), Open Sans (SIL
+  Open Font License 1.1), and Permanent Marker by Font Diner (Apache-2.0).
+  SemaDrive ambience uses wave recordings by jasinski, prepared by qubodup,
+  and a rocket effect by Person (CC0). SemaTor also includes user-supplied
+  floppy-drive recordings. The CC0 credit applies to the SemaDrive sounds.
+
+  Component notices and credits are in Media/licenses on desktop and in
+  licenses inside Android's assets/semator-app.zip. The Permanent Marker
+  licence accompanies the SemaOS marker atlas.
+
+GAME MEDIA AND ENHANCEMENTS
+  Supply your own game disks or cartridges. SemaTor includes no commercial
+  game disk or cartridge images. Xorg Unbound for Arkanoid II and the
+  replacement artwork for Dungeon Master are available as separate
+  optional add-ons.
 
 NO WARRANTY
   SemaTor is provided as is, without warranty of any kind. The author is

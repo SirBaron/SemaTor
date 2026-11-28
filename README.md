@@ -12,7 +12,7 @@ Created by David Baron with AI assistance in development, research, documentatio
 
 [Download the public preview](https://github.com/SirBaron/SemaTor/releases) · [Website](https://sirbaron.github.io/SemaTor/) · [Discord](https://discord.gg/DdHfSGrdFc) · [YouTube](https://www.youtube.com/@SemaTorST) · [Report a problem](https://github.com/SirBaron/SemaTor/issues)
 
-**1.1.621 public preview: Windows x64, Linux x86-64, Linux ARM64 and Android.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits. Thanks to eightiesjapan and Paul C for testing and sharing detailed reports.
+**1.1.622 public preview: Windows x64, Linux x86-64, Linux ARM64 and Android.** This repository holds the website, public documentation and issue tracker. SemaTor's source is private. See the [release notes](./CHANGELOG.md) for what changed and the known limits. Thanks to eightiesjapan and Paul C for testing and sharing detailed reports.
 
 ![SemaOS, the Atari ST desktop, with a game's Details page](./semaos-desktop.png)
 *SemaOS on the Atari ST home. Your own disks wear handwritten labels; no games are bundled.*
